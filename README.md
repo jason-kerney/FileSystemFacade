@@ -1,7 +1,21 @@
-# FileSystemFacade
-A thin wrapper around .Net File Primitives to enable testing and refactoring.
 
-## Contributors ✨
+<!-- GENERATED DOCUMENT! DO NOT EDIT! -->
+# File System Facade #
+#### A thin wrapper around .Net File Primitives to enable testing and refactoring. ####
+
+## Table Of Contents ##
+
+- [Section 1: Introduction](#user-content-introduction)
+- [Section 2: Contributors ✨](#user-content-contributors-✨)
+
+## Introduction ##
+
+In my professional life I am often thrown into a code base that is badly in need of testing. One of the things that constantly throws people is interaction with the filesystem. How do you test code that creates, modifies or deletes actual files. This library is in response to those experiences.
+
+My hope is that this library makes testing those things easier and thereby enable safe refactoring.
+    
+
+## Contributors ✨ ##
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -20,3 +34,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+    
+
+<!-- GENERATED DOCUMENT! DO NOT EDIT! -->
+    
