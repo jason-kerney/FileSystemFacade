@@ -9,7 +9,7 @@ namespace FileSystemFacade
     public interface IAtomicFileSystem
     {
         /// <summary>
-        /// Returns a builder that allow parts of the file system to be replaced temporarily.
+        /// Replace builds an IAtomicReplacementBuilder to allow for the testing of code that takes an Atomic File System.
         /// </summary>
         IAtomicReplacementBuilder Replace { get; }
         

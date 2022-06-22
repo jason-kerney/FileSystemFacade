@@ -42,7 +42,7 @@
     },
     {
       "name": "docs",
-      "command": "booklisp ./documentation/readme/_main.md ./README.md",
+      "command": "booklisp ./documentation/readme/_main.md ./README.md && booklisp ./documentation/structures/_main.md ./structures.md",
       "description": "generates the main documentation"
     },
     {
