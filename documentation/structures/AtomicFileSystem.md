@@ -11,6 +11,10 @@ There is one interface and one concrete class. The concrete class inherits the i
 
 ## IAtomicActions
 
+[1.1 Description](#user-content-description)
+[1.2 Replace](#user-content-replace)
+[1.3 File Stream](#user-content-filestream)
+
 ### Description
 
  Represents a way to interact with the file system through atomic actions which dispose of disposable filesystem objects after the actions have completed.
