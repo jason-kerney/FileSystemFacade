@@ -25,7 +25,7 @@ There is one interface and one concrete class. The concrete class inherits the i
 
 ### Replace
 
-Replace builds an [Atomic Replacement Builder](#atomc-replacement-builder) to allow for the testing of code that takes an Atomic File System.
+Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-builder) to allow for the testing of code that takes an Atomic File System.
 
 ```csharp
 IAtomicReplacementBuilder Replace { get; }
@@ -33,7 +33,7 @@ IAtomicReplacementBuilder Replace { get; }
 
 ### FileStream
 
-Returns an atomic action allowing the interaction with a [IFileStream](#file-stream) specified by the parameters.
+Returns an atomic action allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters.
 
 
     
