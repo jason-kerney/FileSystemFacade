@@ -18,7 +18,7 @@ namespace FileSystemFacade
         /// </summary>
         /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="options">A bitwise combination of the enumeration values that specifies additional file options.</param>
@@ -31,7 +31,7 @@ namespace FileSystemFacade
         /// </summary>
         /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
@@ -39,11 +39,11 @@ namespace FileSystemFacade
             int bufferSize);
 
         /// <summary>
-        /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
+        /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. The IFileStream object is created before and disposed of after each atomic action method call.
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
         IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
@@ -51,9 +51,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="useAsync">Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.</param>
@@ -64,9 +64,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
         IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access);
 
@@ -154,9 +154,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters.
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="options">A bitwise combination of the enumeration values that specifies additional file options.</param>
@@ -172,9 +172,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
@@ -188,9 +188,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
         public IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share)
@@ -201,9 +201,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="useAsync">Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.</param>
@@ -218,9 +218,9 @@ namespace FileSystemFacade
         /// <summary>
         /// Returns an atomic action allowing the interaction with a IFileStream specified by the parameters. 
         /// </summary>
-        /// <param name="path">A relative or absolute path for the file that the current FileStream object will encapsulate.</param>
+        /// <param name="path">A relative or absolute path for the file that the current IFileStream object will encapsulate.</param>
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
-        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
+        /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <returns>An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.</returns>
         public IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access)
         {
