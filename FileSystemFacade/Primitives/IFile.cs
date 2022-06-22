@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FileSystemFacade.Primitives
 {
+    /// <summary>
+    /// Provides methods for the creation, copying, deletion, moving, and opening of a single file, and aids in the creation of IFileStream objects.
+    /// </summary>
     public interface IFile
     {
         /// <summary>
@@ -179,64 +182,358 @@ namespace FileSystemFacade.Primitives
         /// <returns>A DateTime structure set to the date and time that the specified file or directory was last accessed. This value is expressed in UTC time.</returns>
         DateTime GetLastAccessTimeUtc(string path);
         
-        
+        /// <summary>
+        /// Returns the date and time the specified file or directory was last written to.
+        /// </summary>
+        /// <param name="path">The file or directory for which to obtain write date and time information.</param>
+        /// <returns>A DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in local time.</returns>
         DateTime GetLastWriteTime(string path);
+        
+        /// <summary>
+        /// Returns the date and time, in coordinated universal time (UTC), that the specified file or directory was last written to.
+        /// </summary>
+        /// <param name="path">The file or directory for which to obtain write date and time information.</param>
+        /// <returns>A DateTime structure set to the date and time that the specified file or directory was last written to. This value is expressed in UTC time.</returns>
         DateTime GetLastWriteTimeUtc(string path);
+        
+        /// <summary>
+        /// Moves a specified file to a new location, providing the option to specify a new file name.
+        /// </summary>
+        /// <param name="sourceFileName">The name of the file to move. Can include a relative or absolute path.</param>
+        /// <param name="destFileName">The new path and name for the file.</param>
         void Move(string sourceFileName, string destFileName);
+        
+        /// <summary>
+        /// Moves a specified file to a new location, providing the options to specify a new file name and to overwrite the destination file if it already exists.
+        /// </summary>
+        /// <param name="sourceFileName">The name of the file to move. Can include a relative or absolute path.</param>
+        /// <param name="destFileName">The new path and name for the file.</param>
+        /// <param name="overwrite">true to overwrite the destination file if it already exists; false otherwise.</param>
         void Move(string sourceFileName, string destFileName, bool overwrite);
+        
+        /// <summary>
+        /// Opens a FileStream on the specified path with read/write access with no sharing.
+        /// </summary>
+        /// <param name="path">The file to open.</param>
+        /// <param name="mode">A FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.</param>
+        /// <returns>A FileStream opened in the specified mode and path, with read/write access and not shared.</returns>
         IFileStream Open(string path, System.IO.FileMode mode);
+        
+        /// <summary>
+        /// Opens a FileStream on the specified path, with the specified mode and access with no sharing.
+        /// </summary>
+        /// <param name="path">The file to open.</param>
+        /// <param name="mode">A FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.</param>
+        /// <param name="access">A FileAccess value that specifies the operations that can be performed on the file.</param>
+        /// <returns>An unshared FileStream that provides access to the specified file, with the specified mode and access.</returns>
         IFileStream Open(string path, System.IO.FileMode mode, System.IO.FileAccess access);
+        
+        /// <summary>
+        /// Opens a FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.
+        /// </summary>
+        /// <param name="path">The file to open.</param>
+        /// <param name="mode">A FileMode value that specifies whether a file is created if one does not exist, and determines whether the contents of existing files are retained or overwritten.</param>
+        /// <param name="access">A FileAccess value that specifies the operations that can be performed on the file.</param>
+        /// <param name="share">A FileShare value specifying the type of access other threads have to the file.</param>
+        /// <returns>A FileStream on the specified path, having the specified mode with read, write, or read/write access and the specified sharing option.</returns>
         IFileStream Open(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
+        
+        /// <summary>
+        /// Opens an existing file for reading.
+        /// </summary>
+        /// <param name="path">The file to be opened for reading.</param>
+        /// <returns>A read-only FileStream on the specified path.</returns>
         IFileStream OpenRead(string path);
+        
+        /// <summary>
+        /// Opens an existing UTF-8 encoded text file for reading. 
+        /// </summary>
+        /// <param name="path">The file to be opened for reading.</param>
+        /// <returns>A StreamReader on the specified path.</returns>
         System.IO.StreamReader OpenText(string path);
+        
+        /// <summary>
+        /// Opens an existing file or creates a new file for writing.
+        /// </summary>
+        /// <param name="path">The file to be opened for writing.</param>
+        /// <returns>An unshared FileStream object on the specified path with Write access.</returns>
         IFileStream OpenWrite(string path);
+        
+        /// <summary>
+        /// Opens a binary file, reads the contents of the file into a byte array, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <returns>A byte array containing the contents of the file.</returns>
         byte[] ReadAllBytes(string path);
+        
+        /// <summary>
+        /// Asynchronously opens a binary file, reads the contents of the file into a byte array, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous read operation, which wraps the byte array containing the contents of the file.</returns>
         Task<byte[]> ReadAllBytesAsync(string path, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Opens a text file, reads all lines of the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <returns>A string array containing all lines of the file.</returns>
         string[] ReadAllLines(string path);
+        
+        /// <summary>
+        /// Opens a file, reads all lines of the file with the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="encoding">The encoding applied to the contents of the file.</param>
+        /// <returns>A string array containing all lines of the file.</returns>
         string[] ReadAllLines(string path, Encoding encoding);
+        
+        /// <summary>
+        /// Asynchronously opens a text file, reads all lines of the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous read operation, which wraps the string array containing all lines of the file.</returns>
         Task<string[]> ReadAllLinesAsync(string path, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Asynchronously opens a text file, reads all lines of the file with the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="encoding">The encoding applied to the contents of the file.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous read operation, which wraps the string array containing all lines of the file.</returns>
         Task<string[]> ReadAllLinesAsync(string path, Encoding encoding, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        ///Opens a file, reads all text in the file with the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="encoding">The encoding applied to the contents of the file.</param>
+        /// <returns>A string containing all text in the file.</returns>
         string ReadAllText(string path, Encoding encoding);
+        
+        /// <summary>
+        /// Opens a text file, reads all the text in the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <returns>A string containing all the text in the file.</returns>
         string ReadAllText(string path);
+        
+        /// <summary>
+        /// Asynchronously opens a text file, reads all the text in the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous read operation, which wraps the string containing all text in the file.</returns>
         Task<string> ReadAllTextAsync(string path, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Asynchronously opens a text file, reads all text in the file with the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to open for reading.</param>
+        /// <param name="encoding">The encoding applied to the contents of the file.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous read operation, which wraps the string containing all text in the file.</returns>
         Task<string> ReadAllTextAsync(string path, Encoding encoding, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Reads the lines of a file.
+        /// </summary>
+        /// <param name="path">The file to read.</param>
+        /// <returns>All the lines of the file, or the lines that are the result of a query.</returns>
         IEnumerable<string> ReadLines(string path);
+        
+        /// <summary>
+        /// Read the lines of a file that has a specified encoding.
+        /// </summary>
+        /// <param name="path">The file to read.</param>
+        /// <param name="encoding">The encoding that is applied to the contents of the file.</param>
+        /// <returns>All the lines of the file, or the lines that are the result of a query.</returns>
         IEnumerable<string> ReadLines(string path, Encoding encoding);
+        
+        /// <summary>
+        /// Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file.
+        /// </summary>
+        /// <param name="sourceFileName">The name of a file that replaces the file specified by destinationFileName.</param>
+        /// <param name="destinationFileName">The name of the file being replaced.</param>
+        /// <param name="destinationBackupFileName">The name of the backup file.</param>
         void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName);
 
+        /// <summary>
+        /// Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file and optionally ignores merge errors.
+        /// </summary>
+        /// <param name="sourceFileName">The name of a file that replaces the file specified by destinationFileName.</param>
+        /// <param name="destinationFileName">The name of the file being replaced.</param>
+        /// <param name="destinationBackupFileName">The name of the backup file.</param>
+        /// <param name="ignoreMetadataErrors">true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise, false.</param>
         void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName,
             bool ignoreMetadataErrors);
 
+        /// <summary>
+        /// Sets the specified FileAttributes of the file on the specified path.
+        /// </summary>
+        /// <param name="path">The path to the file.</param>
+        /// <param name="fileAttributes">A bitwise combination of the enumeration values.</param>
         void SetAttributes(string path, System.IO.FileAttributes fileAttributes);
+        
+        /// <summary>
+        /// Sets the date and time the file was created.
+        /// </summary>
+        /// <param name="path">The file for which to set the creation date and time information.</param>
+        /// <param name="creationTime">A DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.</param>
         void SetCreationTime(string path, DateTime creationTime);
+        
+        /// <summary>
+        /// Sets the date and time, in coordinated universal time (UTC), that the file was created.
+        /// </summary>
+        /// <param name="path">The file for which to set the creation date and time information.</param>
+        /// <param name="creationTimeUtc">A DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.</param>
         void SetCreationTimeUtc(string path, DateTime creationTimeUtc);
+        
+        /// <summary>
+        /// Sets the date and time the specified file was last accessed.
+        /// </summary>
+        /// <param name="path">The file for which to set the access date and time information.</param>
+        /// <param name="lastAccessTime">A DateTime containing the value to set for the last access date and time of path. This value is expressed in local time.</param>
         void SetLastAccessTime(string path, DateTime lastAccessTime);
+        
+        /// <summary>
+        /// Sets the date and time, in coordinated universal time (UTC), that the specified file was last accessed.
+        /// </summary>
+        /// <param name="path">The file for which to set the access date and time information.</param>
+        /// <param name="lastAccessTimeUtc">A DateTime containing the value to set for the last access date and time of path. This value is expressed in UTC time.</param>
         void SetLastAccessTimeUtc(string path, DateTime lastAccessTimeUtc);
+        
+        /// <summary>
+        /// Sets the date and time that the specified file was last written to.
+        /// </summary>
+        /// <param name="path">The file for which to set the date and time information.</param>
+        /// <param name="lastWriteTime">A DateTime containing the value to set for the last write date and time of path. This value is expressed in local time.</param>
         void SetLastWriteTime(string path, DateTime lastWriteTime);
+        
+        /// <summary>
+        /// Sets the date and time, in coordinated universal time (UTC), that the specified file was last written to.
+        /// </summary>
+        /// <param name="path">The file for which to set the date and time information.</param>
+        /// <param name="lastWriteTimeUtc">A DateTime containing the value to set for the last write date and time of path. This value is expressed in UTC time.</param>
         void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc);
+        
+        /// <summary>
+        /// Creates a new file, writes the specified byte array to the file, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="bytes">The bytes to write to the file.</param>
         void WriteAllBytes(string path, byte[] bytes);
+        
+        /// <summary>
+        /// Asynchronously creates a new file, writes the specified byte array to the file, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="bytes">The bytes to write to the file.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous write operation.</returns>
         Task WriteAllBytesAsync(string path, byte[] bytes, CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Creates a new file, writes the specified string array to the file by using the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string array to write to the file.</param>
+        /// <param name="encoding">An Encoding object that represents the character encoding applied to the string array.</param>
         void WriteAllLines(string path, string[] contents, Encoding encoding);
+        
+        /// <summary>
+        /// Creates a new file by using the specified encoding, writes a collection of strings to the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The lines to write to the file.</param>
+        /// <param name="encoding">The character encoding to use.</param>
         void WriteAllLines(string path, IEnumerable<string> contents, Encoding encoding);
+        
+        /// <summary>
+        /// Creates a new file, writes a collection of strings to the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The lines to write to the file.</param>
         void WriteAllLines(string path, IEnumerable<string> contents);
+        
+        /// <summary>
+        /// Creates a new file, write the specified string array to the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string array to write to the file.</param>
         void WriteAllLines(string path, string[] contents);
 
+        
+        /// <summary>
+        /// Asynchronously creates a new file, writes the specified lines to the file, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The lines to write to the file.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous write operation.</returns>
         Task WriteAllLinesAsync(string path, IEnumerable<string> contents,
             CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Asynchronously creates a new file, write the specified lines to the file by using the specified encoding, and then closes the file.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The lines to write to the file.</param>
+        /// <param name="encoding">The character encoding to use.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous write operation.</returns>
         Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
             CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string to write to the file.</param>
         void WriteAllText(string path, string? contents);
+        
+        /// <summary>
+        /// Creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string to write to the file.</param>
+        /// <param name="encoding">The encoding to apply to the string.</param>
         void WriteAllText(string path, string? contents, Encoding encoding);
+        
+        /// <summary>
+        /// Asynchronously creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string to write to the file.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous write operation.</returns>
         Task WriteAllTextAsync(string path, string? contents, CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Asynchronously creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
+        /// </summary>
+        /// <param name="path">The file to write to.</param>
+        /// <param name="contents">The string to write to the file.</param>
+        /// <param name="encoding">The encoding to apply to the string.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
+        /// <returns>A task that represents the asynchronous write operation.</returns>
         Task WriteAllTextAsync(string path, string? contents, Encoding encoding,
             CancellationToken cancellationToken = default);
 
+        /// <summary>
+        /// Decrypts a file that was encrypted by the current account using the Encrypt(String) method.
+        /// </summary>
+        /// <param name="path">A path that describes a file to decrypt.</param>
         [System.Runtime.Versioning.SupportedOSPlatform("windows")]
         void Decrypt(string path);
-
+        
+        /// <summary>
+        /// Encrypts a file so that only the account used to encrypt the file can decrypt it.
+        /// </summary>
+        /// <param name="path">A path that describes a file to encrypt.</param>
         [System.Runtime.Versioning.SupportedOSPlatform("windows")]
         void Encrypt(string path);
     }
@@ -477,7 +774,7 @@ namespace FileSystemFacade.Primitives
         public void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName,
             bool ignoreMetadataErrors)
         {
-            System.IO.File.Replace(sourceFileName, destinationFileName, destinationFileName, ignoreMetadataErrors);
+            System.IO.File.Replace(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
         }
 
         public void SetAttributes(string path, System.IO.FileAttributes fileAttributes)

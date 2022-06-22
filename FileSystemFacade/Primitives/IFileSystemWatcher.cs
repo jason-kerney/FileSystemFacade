@@ -4,6 +4,9 @@ using System.ComponentModel;
 
 namespace FileSystemFacade.Primitives
 {
+    /// <summary>
+    /// Contains information on the change that occurred.
+    /// </summary>
     public interface IWaitForChangedResult
     {
         /// <summary>
@@ -70,6 +73,9 @@ namespace FileSystemFacade.Primitives
         }
     }
 
+    /// <summary>
+    /// Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
+    /// </summary>
     public interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
     {
         /// <summary>
@@ -143,7 +149,10 @@ namespace FileSystemFacade.Primitives
         IWaitForChangedResult WaitForChanged(System.IO.WatcherChangeTypes changeType, int timeout);
     }
 
-    public interface IFilesSystemWatcherBuilder
+    /// <summary>
+    /// A factory to build IFileSystemWatcher objects
+    /// </summary>
+    public interface IFilesSystemWatcherFactory
     {
         /// <summary>
         /// Creates a new instance of the FileSystemWatcher class.
@@ -165,7 +174,7 @@ namespace FileSystemFacade.Primitives
         IFileSystemWatcher GetFileSystemWatcher(string path, string filter);
     }
 
-    internal class FilesSystemWatcherBuilder : IFilesSystemWatcherBuilder
+    internal class FilesSystemWatcherFactory : IFilesSystemWatcherFactory
     {
         /// <summary>
         /// Creates a new instance of the FileSystemWatcher class.

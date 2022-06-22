@@ -2,46 +2,72 @@
 
 namespace FileSystemFacade.Alternate
 {
+    /// <summary>
+    /// The items to use in replacing drive objects in the static file system. This class makes testing easier.
+    /// </summary>
     public interface IStaticDriveReplacement
     {
-        IDriveInfoBuilder DriveInfo { get; }
+        /// <summary>
+        /// The IDriveInfoFactory to use when the static file system is set to replacement mode.
+        /// </summary>
+        IDriveInfoFactory DriveInfo { get; }
+        /// <summary>
+        /// The IDrives to use when the static file system is set to replacement mode.
+        /// </summary>
         IDrives Drives { get; }
     }
 
+    /// <summary>
+    /// A builder used to aid in replacing drive items in the static file system. This object makes testing easier.
+    /// </summary>
     public interface IStaticDriveReplacementBuilder
     {
-        IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoBuilder builder);
+        /// <summary>
+        /// Configures the IDriveInfoFactory to use when the static file system is put into replacement mode.
+        /// </summary>
+        /// <param name="factory">The IDriveInfoFactory to use.</param>
+        /// <returns>An instance of the builder with IDriveInfoFactory configured to be replaced.</returns>
+        IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoFactory factory);
+        /// <summary>
+        /// Configures the IDrives to use when the static file system is put into replacement mode.
+        /// </summary>
+        /// <param name="drives">The IDrives to use when the static file system is put into replacement mode.</param>
+        /// <returns>An instance of the builder with the IDrives configured to be replaced.</returns>
         IStaticDriveReplacementBuilder ReplaceDrives(IDrives drives);
 
+        /// <summary>
+        /// Builds the configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
+        /// </summary>
+        /// <returns>The configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.</returns>
         IStaticDriveReplacement Build();
     }
 
     internal class StaticDriveReplacement : IStaticDriveReplacement
     {
-        public StaticDriveReplacement(IDriveInfoBuilder driveInfo, IDrives drives)
+        public StaticDriveReplacement(IDriveInfoFactory driveInfo, IDrives drives)
         {
             DriveInfo = driveInfo;
             Drives = drives;
         }
 
-        public IDriveInfoBuilder DriveInfo { get; }
+        public IDriveInfoFactory DriveInfo { get; }
         public IDrives Drives { get; }
     }
 
     internal class StaticDriveReplacementBuilder: IStaticDriveReplacementBuilder
     {
-        public StaticDriveReplacementBuilder(IDriveInfoBuilder driveInfo, IDrives drives)
+        public StaticDriveReplacementBuilder(IDriveInfoFactory driveInfo, IDrives drives)
         {
             DriveInfo = driveInfo;
             Drives = drives;
         }
 
-        private IDriveInfoBuilder DriveInfo { get; set; }
+        private IDriveInfoFactory DriveInfo { get; set; }
         private IDrives Drives { get; set; }
         
-        public IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoBuilder builder)
+        public IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoFactory factory)
         {
-            DriveInfo = builder;
+            DriveInfo = factory;
             return this;
         }
 

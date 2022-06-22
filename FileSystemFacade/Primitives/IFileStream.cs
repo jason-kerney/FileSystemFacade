@@ -6,6 +6,9 @@ using Microsoft.Win32.SafeHandles;
 
 namespace FileSystemFacade.Primitives
 {
+    /// <summary>
+    /// Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
+    /// </summary>
     public interface IFileStream : IDisposable, IAsyncDisposable
     {
         /// <summary>
@@ -299,7 +302,10 @@ namespace FileSystemFacade.Primitives
         void WriteByte (byte value);
     }
 
-    public interface IFileStreamBuilder
+    /// <summary>
+    /// A factory to build IFileStream objects
+    /// </summary>
+    public interface IFileStreamFactory
     {
         /// <summary>
         /// Creates a new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, the access other FileStreams can have to the same file, the buffer size, and additional file options.
@@ -359,7 +365,7 @@ namespace FileSystemFacade.Primitives
         IFileStream GetFileStream(string path, FileMode mode, FileAccess access);
     }
 
-    internal class FileStreamBuilder : IFileStreamBuilder
+    internal class FileStreamFactory : IFileStreamFactory
     {
         public IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize,
             FileOptions options)

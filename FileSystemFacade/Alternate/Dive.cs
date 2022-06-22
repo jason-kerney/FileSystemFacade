@@ -19,7 +19,7 @@ namespace FileSystemFacade.Alternate
             });
         }
         
-        public static IDriveInfoBuilder DriveInfo { get; private set; }
+        public static IDriveInfoFactory DriveInfo { get; private set; }
         private static IDrives Obj { get; set; }
 
         public static IDriveInfo[] GetDrives() => Obj.GetDrives();

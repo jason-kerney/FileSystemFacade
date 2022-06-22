@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using System.Runtime.Serialization;
-
+﻿
 namespace FileSystemFacade.Primitives
 {
+    /// <summary>
+    /// Provides properties and instance methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of IFileStream objects.
+    /// </summary>
     public interface IFileInfo: IFileSystemInfo
     {
         /// <summary>
@@ -128,7 +128,10 @@ namespace FileSystemFacade.Primitives
         IFileInfo Replace (string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors);
     }
 
-    public interface IFileInfoBuilder
+    /// <summary>
+    /// A factory to build IFileInfo Objects
+    /// </summary>
+    public interface IFileInfoFactory
     {
         /// <summary>
         /// Creates a new instance of the FileInfo class, which acts as a wrapper for a file path.
@@ -138,7 +141,7 @@ namespace FileSystemFacade.Primitives
         IFileInfo GetFileInfo(string fileName);
     }
 
-    internal class FileInfoBuilder : IFileInfoBuilder
+    internal class FileInfoFactory : IFileInfoFactory
     {
         public IFileInfo GetFileInfo(string fileName)
         {
@@ -146,79 +149,16 @@ namespace FileSystemFacade.Primitives
         }
     }
 
-    internal class FileInfo: IFileInfo
+    internal sealed class FileInfo: FileSystemInfo, IFileInfo
     {
         private readonly System.IO.FileInfo fileInfo;
 
-        internal FileInfo(System.IO.FileInfo fileInfo)
+        internal FileInfo(System.IO.FileInfo fileInfo) : base(fileInfo)
         {
             this.fileInfo = fileInfo;
         }
         
         internal FileInfo (string fileName) : this(new System.IO.FileInfo(fileName)) { }
-        
-        public System.IO.FileAttributes Attributes
-        {
-            get => fileInfo.Attributes;
-            set => fileInfo.Attributes = value;
-        }
-        
-        public DateTime CreationTime
-        {
-            get => fileInfo.CreationTime;
-            set => fileInfo.CreationTime = value;
-        }
-        
-        public DateTime CreationTimeUtc
-        {
-            get => fileInfo.CreationTimeUtc;
-            set => fileInfo.CreationTimeUtc = value;
-        }
-
-        public bool Exists => fileInfo.Exists;
-        public string Extension => fileInfo.Extension;
-        public string FullName => fileInfo.FullName;
-        
-        public DateTime LastAccessTime
-        {
-            get => fileInfo.LastAccessTime;
-            set => fileInfo.LastAccessTime = value;
-        }
-        
-        public DateTime LastAccessTimeUtc
-        {
-            get => fileInfo.LastAccessTimeUtc;
-            set => fileInfo.LastAccessTimeUtc = value;
-        }
-        
-        public DateTime LastWriteTime
-        {
-            get => fileInfo.LastWriteTime;
-            set => fileInfo.LastWriteTime = value;
-        }
-
-        public DateTime LastWriteTimeUtc
-        {
-            get => fileInfo.LastWriteTimeUtc;
-            set => fileInfo.LastWriteTimeUtc = value;
-        }
-
-        public string Name => fileInfo.Name;
-        
-        public void Delete()
-        {
-            fileInfo.Delete();
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            fileInfo.GetObjectData(info, context);
-        }
-
-        public void Refresh()
-        {
-            fileInfo.Refresh();
-        }
         
         public IDirectoryInfo? Directory => new DirectoryInfo(fileInfo.Directory);
 
@@ -299,7 +239,7 @@ namespace FileSystemFacade.Primitives
             return new FileStream(fileInfo.OpenRead());
         }
 
-        public StreamReader OpenText()
+        public System.IO.StreamReader OpenText()
         {
             return fileInfo.OpenText();
         }

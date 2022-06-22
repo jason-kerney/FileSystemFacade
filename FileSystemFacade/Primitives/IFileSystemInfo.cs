@@ -4,6 +4,9 @@ using System.Runtime.Serialization;
 
 namespace FileSystemFacade.Primitives
 {
+    /// <summary>
+    /// Provides the interface class for both IFileInfo and IDirectoryInfo objects.
+    /// </summary>
     public interface IFileSystemInfo
     {
         /// <summary>

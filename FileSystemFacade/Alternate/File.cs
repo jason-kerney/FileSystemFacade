@@ -7,35 +7,64 @@ using FileSystemFacade.Primitives;
 
 namespace FileSystemFacade.Alternate
 {
+    /// <summary>
+    /// This is to replace the System.IO.File object. Provides static methods for the creation, copying, deletion, moving, and opening of a single file, and aids in the creation of IFileStream objects.
+    /// It is preferable to use the Atomic File System. This should only be used when you are creating long file items that live longer then a single method.
+    /// </summary>
     public static class File
     {
+        /// <summary>
+        /// Puts the static File object into replacement mode. This is used to allow testing. It changes the way the static File class behaves.
+        /// WARNING: the static File's behavior will be changed until dispose is called on the returned value.
+        /// </summary>
+        /// <param name="replacement">Configures how the underlying class behaves.</param>
+        /// <returns>
+        /// An IDisposable that when disposed returns the static File class to its default behavior.
+        /// WARNING: the static File's behavior will be changed until dispose is called on the returned value.
+        /// </returns>
         public static IDisposable Replace(IStaticFileReplacement replacement)
         {
-            var original = new StaticFileReplacement(FileStreamBuilder, FileInfoBuilder, Obj);
+            var original = new StaticFileReplacement(FileStreamBuilder, FileInfoFactory, Obj);
 
             FileStreamBuilder = replacement.FileStream;
-            FileInfoBuilder = replacement.FileInfo;
+            FileInfoFactory = replacement.FileInfo;
             Obj = replacement.File;
 
             return new DisposableAction(() =>
             {
                 FileStreamBuilder = original.FileStream;
-                FileInfoBuilder = original.FileInfo;
+                FileInfoFactory = original.FileInfo;
                 Obj = original.File;
             });
         }
 
+        /// <summary>
+        /// Is used to aid in the building of the configuration object used in the 'Replace' method.
+        /// This is only used to facilitate testing.
+        /// </summary>
+        /// <returns>A builder that allows for the replacement of only items that need to be replaced to enable testing.</returns>
         public static IStaticFileReplacementBuilder BuildReplacement()
         {
-            return new StaticFileReplacementBuilder(FileStreamBuilder, FileInfoBuilder, Obj);
+            return new StaticFileReplacementBuilder(FileStreamBuilder, FileInfoFactory, Obj);
         }
 
         private static IFile Obj { get; set; } = new Primitives.File();
 
-        public static IFileInfoBuilder FileInfoBuilder { get; private set; } = new FileInfoBuilder();
+        /// <summary>
+        /// Returns a factory that enables the creation of IFileInfo objects.
+        /// </summary>
+        public static IFileInfoFactory FileInfoFactory { get; private set; } = new FileInfoFactory();
 
-        public static IFileStreamBuilder? FileStreamBuilder { get; private set; } = new FileStreamBuilder();
+        /// <summary>
+        /// Returns a factory that enables the creation of IFileStream objects.
+        /// </summary>
+        public static IFileStreamFactory? FileStreamFactory { get; private set; } = new FileStreamFactory();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="contents"></param>
         public static void AppendAllLines(string path, IEnumerable<string> contents) =>
             Obj.AppendAllLines(path, contents);
 

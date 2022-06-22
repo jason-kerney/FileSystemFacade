@@ -6,8 +6,8 @@ namespace FileSystemFacade.Alternate
 {
     public static class Directory
     {
-        public static IDirectoryInfoBuilder DirectoryInfo { get; private set; } = new DirectoryInfoBuilder();
-        public static IFilesSystemWatcherBuilder FileSystemWatcher { get; private set; } = new FilesSystemWatcherBuilder();
+        public static IDirectoryInfoFactory DirectoryInfo { get; private set; } = new DirectoryInfoFactory();
+        public static IFilesSystemWatcherFactory FileSystemWatcher { get; private set; } = new FilesSystemWatcherFactory();
         private static IDirectory Obj { get; set; } = new Primitives.Directory();
 
         public static IDirectoryInfo CreateDirectory(string path) => Obj.CreateDirectory(path);
