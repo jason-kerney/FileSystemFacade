@@ -6,6 +6,7 @@
 (table-of-contents
     (section-main "./AtomicFileSystem.md")
     (section-main "./AtomicReplacementBuilder.md")
+    (section-main "./AtomicActions.md")
     (section-main "./FileStream.md")
 )
 /bl-->
