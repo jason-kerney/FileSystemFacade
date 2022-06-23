@@ -293,7 +293,7 @@ This object allows for the interaction with filesystem objects in a discrete and
 
 - [2.1 Description](#user-content-iatomicactions-description)
 - [2.2 Preform](#user-content-iatomicactionspreform)
-- [2.3 Preform](#user-content-iatomicactionsgetby)
+- [2.3 Get By](#user-content-iatomicactionsgetby)
 
 ### IAtomicActions Description
 
