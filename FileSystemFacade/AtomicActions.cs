@@ -5,22 +5,22 @@ namespace FileSystemFacade
     /// <summary>
     /// An interface to interact with a value in an atomic way.
     /// </summary>
-    /// <typeparam name="TValue">The type to which will be interacted with in an atomic way.</typeparam>
-    public interface IAtomicActions<TValue>
+    /// <typeparam name="TFileSystem">The type to which will be interacted with in an atomic way.</typeparam>
+    public interface IAtomicActions<out TFileSystem>
     {
         /// <summary>
-        /// Allows a non returning action to be performed on the TValue.
+        /// Allows a non returning action to be performed on the TFileSystem.
         /// </summary>
         /// <param name="doer">An action that takes a TValue and acts on it.</param>
-        void Preform(Action<TValue> doer);
+        void Preform(Action<TFileSystem> doer);
         
         /// <summary>
-        /// Allows for an activity to be done on TValue that also returns a value. 
+        /// Allows for an activity to be done on TFileSystem that also returns a value. 
         /// </summary>
         /// <param name="getter">A func that takes a type TValue and returns T.</param>
-        /// <typeparam name="T">The type to return.</typeparam>
-        /// <returns>A type T, that is returned from the getter.</returns>
-        T GetBy<T>(Func<TValue, T> getter);
+        /// <typeparam name="TReturn">The type to return.</typeparam>
+        /// <returns>A type TReturn, that is returned from the getter.</returns>
+        TReturn GetBy<TReturn>(Func<TFileSystem, TReturn> getter);
     }
     
     internal class AtomicActions<TValue> : IAtomicActions<TValue> where TValue : IDisposable

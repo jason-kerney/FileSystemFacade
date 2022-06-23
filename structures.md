@@ -25,19 +25,14 @@ There is one interface and one concrete class. The concrete class inherits the i
 
 ### IAtomicFileSystem
 
-- [1.1 Description](#user-content-iatomicfilesystem-description)
-- [1.2 Replace](#user-content-iatomicfilesystemreplace)
-- [1.3 File Stream](#user-content-iatomicfilesystemfilestream)
-- [1.4 Drive Info](#user-content-iatomicfilesystemdriveinfo)
-- [1.5 Directory Info](#user-content-iatomicfilesystemdirectoryinfo)
-- [1.6 File Info](#user-content-iatomicfilesystemfileinfo)
-- [1.7 Drives](#user-content-iatomicfilesystemdrives)
-- [1.8 Directory](#user-content-iatomicfilesystemdirectory)
-- [1.9 File](#user-content-iatomicfilesystemfile)
-
-#### IAtomicFileSystem Description
-
- Represents a way to interact with the file system through atomic actions which dispose of disposable filesystem objects after the actions have completed.
+- [1.1 Replace](#user-content-iatomicfilesystemreplace)
+- [1.2 File Stream](#user-content-iatomicfilesystemfilestream)
+- [1.3 Drive Info](#user-content-iatomicfilesystemdriveinfo)
+- [1.4 Directory Info](#user-content-iatomicfilesystemdirectoryinfo)
+- [1.5 File Info](#user-content-iatomicfilesystemfileinfo)
+- [1.6 Drives](#user-content-iatomicfilesystemdrives)
+- [1.7 Directory](#user-content-iatomicfilesystemdirectory)
+- [1.8 File](#user-content-iatomicfilesystemfile)
 
 #### IAtomicFileSystem.Replace
 
@@ -290,7 +285,38 @@ An atomic action allowing the interaction with IFile.
 
 ## Atomic Actions ##
 
-##
+### Summary
+
+This object allows for the interaction with filesystem objects in a discrete and short lived way.
+
+### IAtomicActions
+
+- [2.1 Description](#user-content-iatomicactions-description)
+- [2.2 Preform](#user-content-iatomicactionspreform)
+
+### IAtomicActions Description
+
+```csharp
+public interface IAtomicActions<out TFileSystem>
+```
+
+**TFileSystem**
+
+The type of file system object it interacts with.
+
+### IAtomicActions.Preform
+
+```csharp
+void Preform(Action<TFileSystem> doer);
+```
+
+Allows a non returning action to be performed on the TFileSystem.
+
+**doer** [Action\<T\>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=net-6.0)
+
+An action that takes a TValue and acts on it.</param>
+
+
     
 
 ## Atomic Replacement Builder ##
