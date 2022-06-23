@@ -11,6 +11,9 @@
 - [Section 4: File Stream](#user-content-file-stream)
 - [Section 5: Drive Info](#user-content-drive-info)
 - [Section 6: Directory Info](#user-content-directory-info)
+- [Section 7: File Info](#user-content-file-info)
+- [Section 8: Drives](#user-content-drives)
+- [Section 9: Directory](#user-content-directory)
 
 ## Atomic File System ##
 
@@ -28,6 +31,8 @@ There is one interface and one concrete class. The concrete class inherits the i
 - [1.4 Drive Info](#user-content-iatomicfilesystemdriveinfo)
 - [1.5 Directory Info](#user-content-iatomicfilesystemdirectoryinfo)
 - [1.6 File Info](#user-content-iatomicfilesystemfileinfo)
+- [1.7 Drives](#user-content-iatomicfilesystemdrives)
+- [1.8 Directory](#user-content-iatomicfilesystemdirectory)
 
 ### IAtomicFileSystem Description
 
@@ -231,7 +236,55 @@ An atomic action allowing the interaction with a IDirectoryInfo specified by the
 
 ### IAtomicFileSystem.FileInfo
 
-TBD Stuff
+```csharp
+IAtomicActions<IFileInfo> FileInfo(string fileName);
+```
+
+Returns an atomic action allowing the interaction with a IFileInfo specified by the file name.
+
+**fileName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
+
+**returns ** [IAtomicActions](#user-content-atomic-actions)<[IFileInfo](#user-content-file-info)>
+
+An atomic action allowing the interaction with a IFileInfo specified by the file name.
+
+## IAtomicFileSystem.Drives
+
+```csharp
+IAtomicActions<IDrives> Drives { get; }
+```
+
+Returns an atomic action allowing the interaction with a IDrives.
+
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDrives](#user-content-drives)>
+
+An atomic action allowing the interaction with a IDrives.
+
+## IAtomicFileSystem.Directory
+
+```csharp
+IAtomicActions<IDirectory> Directory { get; }
+```
+
+Returns an atomic action allowing the interaction with IDirectory.
+
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectory](#user-content-directory)>
+
+An atomic action allowing the interaction with IDirectory.
+
+## IAtomicFileSystem.File
+
+```csharp
+IAtomicActions<IFile> File { get; }
+```
+
+Returns an atomic action allowing the interaction with IFile.
+
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFile](#user-content-file)>
+
+An atomic action allowing the interaction with IFile.
     
 
 ## Atomic Replacement Builder ##
@@ -255,6 +308,21 @@ TBD
     
 
 ## Directory Info ##
+
+TBD
+    
+
+## File Info ##
+
+TBD
+    
+
+## Drives ##
+
+TBD
+    
+
+## Directory ##
 
 TBD
     

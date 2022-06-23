@@ -31,6 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", 
 		documentation\structures\FileStream.md = documentation\structures\FileStream.md
 		documentation\structures\DriveInfo.md = documentation\structures\DriveInfo.md
 		documentation\structures\DirectoryInfo.md = documentation\structures\DirectoryInfo.md
+		documentation\structures\FileInfo.md = documentation\structures\FileInfo.md
+		documentation\structures\Drives.md = documentation\structures\Drives.md
+		documentation\structures\Directory.md = documentation\structures\Directory.md
 	EndProjectSection
 EndProject
 Global

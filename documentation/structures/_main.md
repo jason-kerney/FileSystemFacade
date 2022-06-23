@@ -10,5 +10,8 @@
     (section-main "./FileStream.md")
     (section-main "./DriveInfo.md")
     (section-main "./DirectoryInfo.md")
+    (section-main "./FileInfo.md")
+    (section-main "./Drives.md")
+    (section-main "./Directory.md")
 )
 /bl-->
