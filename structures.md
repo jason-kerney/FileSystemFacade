@@ -22,18 +22,18 @@ There is one interface and one concrete class. The concrete class inherits the i
 
 ## IAtomicFileSystem
 
-- [1.1 Description](#user-content-iatomicfilesystemdescription)
+- [1.1 Description](#user-content-iatomicfilesystem-description)
 - [1.2 Replace](#user-content-iatomicfilesystemreplace)
 - [1.3 File Stream](#user-content-iatomicfilesystemfilestream)
 - [1.4 Drive Info](#user-content-iatomicfilesystemdriveinfo)
 - [1.5 Directory Info](#user-content-iatomicfilesystemdirectoryinfo)
 - [1.6 File Info](#user-content-iatomicfilesystemfileinfo)
 
-### Description
+### IAtomicFileSystem Description
 
  Represents a way to interact with the file system through atomic actions which dispose of disposable filesystem objects after the actions have completed.
 
-### Replace
+### IAtomicFileSystem.Replace
 
 ```csharp
 IAtomicReplacementBuilder Replace { get; }
