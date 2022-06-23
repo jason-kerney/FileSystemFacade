@@ -10,7 +10,7 @@ namespace FileSystemFacade.Alternate
         /// <summary>
         /// The IFilesSystemWatcherFactory to use when the static file system is put into replacement mode.
         /// </summary>
-        IFilesSystemWatcherFactory FileSystemWatcher { get; }
+        IFileSystemWatcherFactory FileSystemWatcher { get; }
         /// <summary>
         /// The IDirectoryInfoFactory to use when the static file system is put into replacement mode.
         /// </summary>
@@ -45,7 +45,7 @@ namespace FileSystemFacade.Alternate
         /// </summary>
         /// <param name="factory">The IFilesSystemWatcherFactory to use when the static file system is put into replacement mode.</param>
         /// <returns>An instance of the builder with the IFilesSystemWatcherFactory configured to be replaced when the static file system is put into replacement mode.</returns>
-        IStaticDirectoryReplacementBuilder ReplaceFileSystemWatcher(IFilesSystemWatcherFactory factory);
+        IStaticDirectoryReplacementBuilder ReplaceFileSystemWatcher(IFileSystemWatcherFactory factory);
 
         /// <summary>
         /// Builds the configuration object used when the static file system is put into replacement mode.
@@ -56,30 +56,30 @@ namespace FileSystemFacade.Alternate
 
     internal class StaticDirectoryReplacement: IStaticDirectoryReplacement
     {
-        public StaticDirectoryReplacement(IDirectoryInfoFactory directorInfo, IDirectory directory, IFilesSystemWatcherFactory fileSystemWatcher)
+        public StaticDirectoryReplacement(IDirectoryInfoFactory directorInfo, IDirectory directory, IFileSystemWatcherFactory fileSystemWatcher)
         {
             DirectorInfo = directorInfo;
             Directory = directory;
             FileSystemWatcher = fileSystemWatcher;
         }
 
-        public IFilesSystemWatcherFactory FileSystemWatcher { get; }
+        public IFileSystemWatcherFactory FileSystemWatcher { get; }
         public IDirectoryInfoFactory DirectorInfo { get; }
         public IDirectory Directory { get; }
     }
 
     internal class StaticDirectoryReplacementBuilder: IStaticDirectoryReplacementBuilder
     {
-        public StaticDirectoryReplacementBuilder(IDirectoryInfoFactory directoryInfo, IDirectory directory, IFilesSystemWatcherFactory filesSystemWatcher)
+        public StaticDirectoryReplacementBuilder(IDirectoryInfoFactory directoryInfo, IDirectory directory, IFileSystemWatcherFactory fileSystemWatcher)
         {
             DirectoryInfo = directoryInfo;
             Directory = directory;
-            FilesSystemWatcher = filesSystemWatcher;
+            FileSystemWatcher = fileSystemWatcher;
         }
 
         private IDirectoryInfoFactory DirectoryInfo { get; set; }
         private IDirectory Directory { get; set;  }
-        private IFilesSystemWatcherFactory FilesSystemWatcher { get; set; }
+        private IFileSystemWatcherFactory FileSystemWatcher { get; set; }
         
         public IStaticDirectoryReplacementBuilder ReplaceDirectoryInfo(IDirectoryInfoFactory factory)
         {
@@ -93,15 +93,15 @@ namespace FileSystemFacade.Alternate
             return this;
         }
 
-        public IStaticDirectoryReplacementBuilder ReplaceFileSystemWatcher(IFilesSystemWatcherFactory factory)
+        public IStaticDirectoryReplacementBuilder ReplaceFileSystemWatcher(IFileSystemWatcherFactory factory)
         {
-            FilesSystemWatcher = factory;
+            FileSystemWatcher = factory;
             return this;
         }
 
         public IStaticDirectoryReplacement Build()
         {
-            return new StaticDirectoryReplacement(DirectoryInfo, Directory, FilesSystemWatcher);
+            return new StaticDirectoryReplacement(DirectoryInfo, Directory, FileSystemWatcher);
         }
     }
 }

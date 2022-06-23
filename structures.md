@@ -8,12 +8,15 @@
 - [Section 1: Atomic File System](#user-content-atomic-file-system)
 - [Section 2: Atomic Actions](#user-content-atomic-actions)
 - [Section 3: Atomic Replacement Builder](#user-content-atomic-replacement-builder)
-- [Section 4: File Stream](#user-content-file-stream)
-- [Section 5: Drive Info](#user-content-drive-info)
-- [Section 6: Directory Info](#user-content-directory-info)
-- [Section 7: File Info](#user-content-file-info)
-- [Section 8: Drives](#user-content-drives)
-- [Section 9: Directory](#user-content-directory)
+- [Section 4: File Stream Factory](#user-content-file-stream-factory)
+- [Section 5: File Stream](#user-content-file-stream)
+- [Section 6: File System Watcher Factory](#user-content-file-system-watcher-factory)
+- [Section 7: File System Watcher](#user-content-file-system-watcher)
+- [Section 8: Drive Info](#user-content-drive-info)
+- [Section 9: Directory Info](#user-content-directory-info)
+- [Section 10: File Info](#user-content-file-info)
+- [Section 11: Drives](#user-content-drives)
+- [Section 12: Directory](#user-content-directory)
 
 ## Atomic File System ##
 
@@ -22,6 +25,10 @@
 The Atomic File System represent short lived use of the file system. This represents a way to handle when we have objects that live for the length of a method or function but do not persist as file system objects afterwards.
 
 There is one interface and one concrete class. The concrete class inherits the interface. It is recommended you access the class through the interface.
+
+```csharp
+public interface IAtomicFileSystem
+```
 
 ### IAtomicFileSystem
 
@@ -289,14 +296,6 @@ An atomic action allowing the interaction with IFile.
 
 This object allows for the interaction with filesystem objects in a discrete and short lived way.
 
-### IAtomicActions
-
-- [2.1 Description](#user-content-iatomicactions-description)
-- [2.2 Preform](#user-content-iatomicactionspreform)
-- [2.3 Get By](#user-content-iatomicactionsgetby)
-
-### IAtomicActions Description
-
 ```csharp
 public interface IAtomicActions<out TFileSystem>
 ```
@@ -304,6 +303,11 @@ public interface IAtomicActions<out TFileSystem>
 **TFileSystem**
 
 The type of file system object it interacts with.
+
+### IAtomicActions
+
+- [2.1 Preform](#user-content-iatomicactionspreform)
+- [2.2 Get By](#user-content-iatomicactionsgetby)
 
 ### IAtomicActions.Preform
 
@@ -341,12 +345,74 @@ A type TReturn, that is returned from the getter.
 
 ## Atomic Replacement Builder ##
 
-TBD
+### Summary
+
+A Builder for temporarily replacing the file system. This object is intended to make testing easier.
+
+```csharp
+public interface IAtomicReplacementBuilder
+```
+
+### IAtomicReplacementBuilder
+
+- [3.1 File Stream](#user-content-iatomicreplacementbuilderfilestream)
+- [3.2 File System Watcher](#user-content-iatomicreplacementbuilderfilesystemwatcher)
+
+### IAtomicReplacementBuilder.FileStream
+
+```csharp
+IAtomicReplacementBuilder FileStream(IFileStreamFactory factory);
+```
+
+Allows for the factory that builds IFileStream objects to be temporarily replaced.
+
+**factory** [IFileStreamFactory](#user-content-file-stream-factory)
+
+The IFileStream Factory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with the IFileStreamFactory configured to be replaced.
+
+### IAtomicReplacementBuilder.FilesSystemWatcher
+
+```csharp
+IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory);
+```
+
+Allows for the factory that builds IFileSystemWatcher objects to be replaced.
+
+**factory** [IFileSystemWatcherFactory](#user-content-files-system-watcher-factory)
+
+The IFileSystemWatcher Factory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with the IFileWatcherFactory configured to be replaced.
+
+    
+
+## File Stream Factory ##
+
+FileStreamFactory
+
     
 
 ## File Stream ##
 
 TBD
+    
+
+## File System Watcher Factory ##
+
+FileSystemWatcherFactory
+
+    
+
+## File System Watcher ##
+
+FileSystemWatcher
+
     
 
 ## Drive Info ##

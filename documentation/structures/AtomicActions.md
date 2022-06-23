@@ -7,21 +7,18 @@
 
 This object allows for the interaction with filesystem objects in a discrete and short lived way.
 
-### IAtomicActions
-
-- [2.1 Description](#user-content-iatomicactions-description)
-- [2.2 Preform](#user-content-iatomicactionspreform)
-- [2.3 Get By](#user-content-iatomicactionsgetby)
-
-### IAtomicActions Description
-
 ```csharp
 public interface IAtomicActions<out TFileSystem>
 ```
 
-**TFileSystem** 
+**TFileSystem**
 
 The type of file system object it interacts with.
+
+### IAtomicActions
+
+- [2.1 Preform](#user-content-iatomicactionspreform)
+- [2.2 Get By](#user-content-iatomicactionsgetby)
 
 ### IAtomicActions.Preform
 

@@ -152,7 +152,7 @@ namespace FileSystemFacade.Primitives
     /// <summary>
     /// A factory to build IFileSystemWatcher objects
     /// </summary>
-    public interface IFilesSystemWatcherFactory
+    public interface IFileSystemWatcherFactory
     {
         /// <summary>
         /// Creates a new instance of the FileSystemWatcher class.
@@ -174,7 +174,7 @@ namespace FileSystemFacade.Primitives
         IFileSystemWatcher GetFileSystemWatcher(string path, string filter);
     }
 
-    internal class FilesSystemWatcherFactory : IFilesSystemWatcherFactory
+    internal class FileSystemWatcherFactory : IFileSystemWatcherFactory
     {
         /// <summary>
         /// Creates a new instance of the FileSystemWatcher class.

@@ -110,11 +110,11 @@ namespace FileSystemFacade
     public class FileSystemAtom : IAtomicFileSystem
     {
         private IFileStreamFactory fileStreamFactory;
-        private IFilesSystemWatcherFactory filesSystemWatcherFactory;
+        private IFileSystemWatcherFactory fileSystemWatcherFactory;
         private IFileInfoFactory fileInfoFactory;
         private IDirectoryInfoFactory directoryInfoFactory;
         private IFile file;
-        private IFilesSystemWatcherFactory systemWatcherFactory;
+        private IFileSystemWatcherFactory systemWatcherFactory;
         private IDirectory directory;
         private IDriveInfoFactory driveInfoFactory;
         private IDrives drives;
@@ -122,12 +122,12 @@ namespace FileSystemFacade
         /// <summary>
         /// Instantiates a new FileSystemAtom
         /// </summary>
-        public FileSystemAtom() : this(new FileStreamFactory(), new FilesSystemWatcherFactory(), new DriveInfoFactory(), new DirectoryInfoFactory(), new FileInfoFactory(), new Drives(), new Directory(), new File())
+        public FileSystemAtom() : this(new FileStreamFactory(), new FileSystemWatcherFactory(), new DriveInfoFactory(), new DirectoryInfoFactory(), new FileInfoFactory(), new Drives(), new Directory(), new File())
         {
         }
 
         private FileSystemAtom(IFileStreamFactory fileStreamFactory,
-            IFilesSystemWatcherFactory systemWatcherFactory,
+            IFileSystemWatcherFactory systemWatcherFactory,
             IDriveInfoFactory driveInfoFactory,
             IDirectoryInfoFactory directoryInfoFactory, IFileInfoFactory fileInfoFactory,
             IDrives drives, IDirectory directory,
@@ -270,7 +270,7 @@ namespace FileSystemFacade
         }
         
         internal IDisposable ReplaceInternals(IFileStreamFactory newFileStreamFactory,
-            IFilesSystemWatcherFactory newSystemWatcherFactory,
+            IFileSystemWatcherFactory newSystemWatcherFactory,
             IDriveInfoFactory newDriveInfoFactory,
             IDirectoryInfoFactory newDirectoryInfoFactory, IFileInfoFactory newFileInfoFactory,
             IDrives newDrives, IDirectory newDirectory, IFile newFile)

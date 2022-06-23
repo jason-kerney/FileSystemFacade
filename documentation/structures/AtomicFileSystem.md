@@ -9,6 +9,10 @@ The Atomic File System represent short lived use of the file system. This repres
 
 There is one interface and one concrete class. The concrete class inherits the interface. It is recommended you access the class through the interface.
 
+```csharp
+public interface IAtomicFileSystem
+```
+
 ### IAtomicFileSystem
 
 - [1.1 Replace](#user-content-iatomicfilesystemreplace)

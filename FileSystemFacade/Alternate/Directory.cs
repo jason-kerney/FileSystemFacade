@@ -18,7 +18,7 @@ namespace FileSystemFacade.Alternate
         /// <summary>
         /// Returns a factory to build IFileSystemWatcher objects
         /// </summary>
-        public static IFilesSystemWatcherFactory FileSystemWatcher { get; private set; } = new FilesSystemWatcherFactory();
+        public static IFileSystemWatcherFactory FileSystemWatcher { get; private set; } = new FileSystemWatcherFactory();
         
         private static IDirectory Obj { get; set; } = new Primitives.Directory();
 

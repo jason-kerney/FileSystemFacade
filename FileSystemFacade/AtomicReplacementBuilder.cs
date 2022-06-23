@@ -4,7 +4,7 @@ using FileSystemFacade.Primitives;
 namespace FileSystemFacade
 {
     /// <summary>
-    /// A Builder for temporarily replacing the file system. This class is intended to make testing easier.
+    /// A Builder for temporarily replacing the file system. This object is intended to make testing easier.
     /// </summary>
     public interface IAtomicReplacementBuilder
     {
@@ -19,7 +19,7 @@ namespace FileSystemFacade
         /// </summary>
         /// <param name="factory">The IFileSystemWatcher Factory to use when 'Use' is called.</param>
         /// <returns>The current instance of the builder with the IFileWatcherFactory configured to be replaced.</returns>
-        IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory);
+        IAtomicReplacementBuilder FilesSystemWatcher(IFileSystemWatcherFactory factory);
         /// <summary>
         /// Allows for the factory that builds IFileInfo objects to be temporarily replaced.
         /// </summary>
@@ -66,7 +66,7 @@ namespace FileSystemFacade
     internal class AtomicAtomicReplacementBuilder : IAtomicReplacementBuilder
     {
         private IFileStreamFactory fileStreamFactory = new FileStreamFactory();
-        private IFilesSystemWatcherFactory filesSystemWatcherFactory = new FilesSystemWatcherFactory();
+        private IFileSystemWatcherFactory fileSystemWatcherFactory = new FileSystemWatcherFactory();
         private IFileInfoFactory fileInfoFactory = new FileInfoFactory();
         private IDirectoryInfoFactory directoryInfoFactory = new DirectoryInfoFactory();
         private IDriveInfoFactory driveInfoFactory = new DriveInfoFactory();
@@ -80,9 +80,9 @@ namespace FileSystemFacade
             return this;
         }
 
-        public IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
+        public IAtomicReplacementBuilder FilesSystemWatcher(IFileSystemWatcherFactory factory)
         {
-            filesSystemWatcherFactory = factory;
+            fileSystemWatcherFactory = factory;
             return this;
         }
 
@@ -125,7 +125,7 @@ namespace FileSystemFacade
         public void Use(Action<IAtomicFileSystem> doer)
         {
             var atomic = new FileSystemAtom();
-            using (atomic.ReplaceInternals(fileStreamFactory, filesSystemWatcherFactory, driveInfoFactory, directoryInfoFactory, fileInfoFactory, drives, directory, file))
+            using (atomic.ReplaceInternals(fileStreamFactory, fileSystemWatcherFactory, driveInfoFactory, directoryInfoFactory, fileInfoFactory, drives, directory, file))
             {
                 doer(atomic);
             }
