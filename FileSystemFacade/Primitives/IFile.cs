@@ -68,7 +68,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="path">The file to append the specified string to.</param>
         /// <param name="contents">The string to append to the file.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous append operation.</returns>
         Task AppendAllTextAsync(string path, string? contents, CancellationToken cancellationToken = default);
 
         /// <summary>
