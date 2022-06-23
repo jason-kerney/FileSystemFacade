@@ -20,14 +20,14 @@ The Atomic File System represent short lived use of the file system. This repres
 
 There is one interface and one concrete class. The concrete class inherits the interface. It is recommended you access the class through the interface.
 
-## IAtomicActions
+## IAtomicFileSystem
 
-- [1.1 Description](#user-content-iatomicactions_description)
-- [1.2 Replace](#user-content-iatomicactions_replace)
-- [1.3 File Stream](#user-content-iatomicactions_filestream)
-- [1.4 Drive Info](#user-content-iatomicactions_driveinfo)
-- [1.5 Directory Info](#user-content-iatomicactions_directoryinfo)
-- [1.6 File Info](#user-content-iatomicactions_fileinfo)
+- [1.1 Description](#user-content-iatomicfilesystemdescription)
+- [1.2 Replace](#user-content-iatomicfilesystemreplace)
+- [1.3 File Stream](#user-content-iatomicfilesystemfilestream)
+- [1.4 Drive Info](#user-content-iatomicfilesystemdriveinfo)
+- [1.5 Directory Info](#user-content-iatomicfilesystemdirectoryinfo)
+- [1.6 File Info](#user-content-iatomicfilesystemfileinfo)
 
 ### Description
 
@@ -41,7 +41,7 @@ IAtomicReplacementBuilder Replace { get; }
 
 Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-builder) to allow for the testing of code that takes an Atomic File System.
 
-### IAtomicActions.FileStream
+### IAtomicFileSystem.FileStream
 
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
@@ -197,7 +197,7 @@ A bitwise combination of the enumeration values that determines how the file can
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
-### IAtomicActions.DriveInfo
+### IAtomicFileSystem.DriveInfo
 
 ```csharp
 IAtomicActions<IDriveInfo> DriveInfo(string driveName);
@@ -229,7 +229,7 @@ A string specifying the path on which to create the IDirectoryInfo.
 
 An atomic action allowing the interaction with a IDirectoryInfo specified by the path.
 
-### IAtomicActions.FileInfo
+### IAtomicFileSystem.FileInfo
 
 TBD Stuff
     
