@@ -5,8 +5,8 @@
 
 (table-of-contents
     (section-main "./AtomicFileSystem.md")
-    (section-main "./AtomicReplacementBuilder.md")
     (section-main "./AtomicActions.md")
+    (section-main "./AtomicReplacementBuilder.md")
     (section-main "./FileStream.md")
     (section-main "./DriveInfo.md")
     (section-main "./DirectoryInfo.md")

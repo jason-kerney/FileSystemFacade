@@ -6,8 +6,8 @@
 ## Table Of Contents ##
 
 - [Section 1: Atomic File System](#user-content-atomic-file-system)
-- [Section 2: Atomic Replacement Builder](#user-content-atomic-replacement-builder)
-- [Section 3: Atomic Actions](#user-content-atomic-actions)
+- [Section 2: Atomic Actions](#user-content-atomic-actions)
+- [Section 3: Atomic Replacement Builder](#user-content-atomic-replacement-builder)
 - [Section 4: File Stream](#user-content-file-stream)
 - [Section 5: Drive Info](#user-content-drive-info)
 - [Section 6: Directory Info](#user-content-directory-info)
@@ -17,13 +17,13 @@
 
 ## Atomic File System ##
 
-## Summary
+### Summary
 
 The Atomic File System represent short lived use of the file system. This represents a way to handle when we have objects that live for the length of a method or function but do not persist as file system objects afterwards.
 
 There is one interface and one concrete class. The concrete class inherits the interface. It is recommended you access the class through the interface.
 
-## IAtomicFileSystem
+### IAtomicFileSystem
 
 - [1.1 Description](#user-content-iatomicfilesystem-description)
 - [1.2 Replace](#user-content-iatomicfilesystemreplace)
@@ -33,12 +33,13 @@ There is one interface and one concrete class. The concrete class inherits the i
 - [1.6 File Info](#user-content-iatomicfilesystemfileinfo)
 - [1.7 Drives](#user-content-iatomicfilesystemdrives)
 - [1.8 Directory](#user-content-iatomicfilesystemdirectory)
+- [1.9 File](#user-content-iatomicfilesystemfile)
 
-### IAtomicFileSystem Description
+#### IAtomicFileSystem Description
 
  Represents a way to interact with the file system through atomic actions which dispose of disposable filesystem objects after the actions have completed.
 
-### IAtomicFileSystem.Replace
+#### IAtomicFileSystem.Replace
 
 ```csharp
 IAtomicReplacementBuilder Replace { get; }
@@ -46,7 +47,7 @@ IAtomicReplacementBuilder Replace { get; }
 
 Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-builder) to allow for the testing of code that takes an Atomic File System.
 
-### IAtomicFileSystem.FileStream
+#### IAtomicFileSystem.FileStream
 
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
@@ -202,7 +203,7 @@ A bitwise combination of the enumeration values that determines how the file can
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
-### IAtomicFileSystem.DriveInfo
+#### IAtomicFileSystem.DriveInfo
 
 ```csharp
 IAtomicActions<IDriveInfo> DriveInfo(string driveName);
@@ -218,7 +219,7 @@ A valid drive path or drive letter. This can be either uppercase or lowercase, '
 
 An atomic action allowing the interaction with a IDriveInfo specified by the drive name.
 
-### IAtomicActions.DirectoryInfo
+#### IAtomicActions.DirectoryInfo
 
 ```csharp
 IAtomicActions<IDirectoryInfo> DirectoryInfo(string path);
@@ -234,7 +235,7 @@ A string specifying the path on which to create the IDirectoryInfo.
 
 An atomic action allowing the interaction with a IDirectoryInfo specified by the path.
 
-### IAtomicFileSystem.FileInfo
+#### IAtomicFileSystem.FileInfo
 
 ```csharp
 IAtomicActions<IFileInfo> FileInfo(string fileName);
@@ -250,7 +251,7 @@ The fully qualified name of the new file, or the relative file name. Do not end 
 
 An atomic action allowing the interaction with a IFileInfo specified by the file name.
 
-## IAtomicFileSystem.Drives
+### IAtomicFileSystem.Drives
 
 ```csharp
 IAtomicActions<IDrives> Drives { get; }
@@ -262,7 +263,7 @@ Returns an atomic action allowing the interaction with a IDrives.
 
 An atomic action allowing the interaction with a IDrives.
 
-## IAtomicFileSystem.Directory
+### IAtomicFileSystem.Directory
 
 ```csharp
 IAtomicActions<IDirectory> Directory { get; }
@@ -274,7 +275,7 @@ Returns an atomic action allowing the interaction with IDirectory.
 
 An atomic action allowing the interaction with IDirectory.
 
-## IAtomicFileSystem.File
+### IAtomicFileSystem.File
 
 ```csharp
 IAtomicActions<IFile> File { get; }
@@ -287,12 +288,12 @@ Returns an atomic action allowing the interaction with IFile.
 An atomic action allowing the interaction with IFile.
     
 
-## Atomic Replacement Builder ##
+## Atomic Actions ##
 
-TBD
+##
     
 
-## Atomic Actions ##
+## Atomic Replacement Builder ##
 
 TBD
     
