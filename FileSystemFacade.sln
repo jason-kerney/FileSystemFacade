@@ -8,6 +8,28 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{98B5ED01-348C-4846-9D7A-10BBBD413CE6}"
 	ProjectSection(SolutionItems) = preProject
 		gittey-config.json = gittey-config.json
+		documentation\readme\introduction.md = documentation\readme\introduction.md
+		README.md = README.md
+		structures.md = structures.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{C8902A6A-A240-4FC4-A39A-0A8C803ED738}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{FF9F9993-0D67-4467-9A1F-8CAA5B8027D7}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\readme\_main.md = documentation\readme\_main.md
+		documentation\readme\contributors.md = documentation\readme\contributors.md
+		documentation\readme\introduction.md = documentation\readme\introduction.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", "{8299C243-1B95-46C1-B7A4-A374B47E4F99}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\structures\_main.md = documentation\structures\_main.md
+		documentation\structures\AtomicActions.md = documentation\structures\AtomicActions.md
+		documentation\structures\AtomicFileSystem.md = documentation\structures\AtomicFileSystem.md
+		documentation\structures\AtomicReplacementBuilder.md = documentation\structures\AtomicReplacementBuilder.md
+		documentation\structures\FileStream.md = documentation\structures\FileStream.md
+		documentation\structures\DriveInfo.md = documentation\structures\DriveInfo.md
 	EndProjectSection
 EndProject
 Global
@@ -35,5 +57,9 @@ Global
 		{BB6AD9AA-AC2C-4600-9E9C-81CF6D4EF658}.Release|x64.Build.0 = Release|Any CPU
 		{BB6AD9AA-AC2C-4600-9E9C-81CF6D4EF658}.Release|x86.ActiveCfg = Release|Any CPU
 		{BB6AD9AA-AC2C-4600-9E9C-81CF6D4EF658}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF9F9993-0D67-4467-9A1F-8CAA5B8027D7} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
+		{8299C243-1B95-46C1-B7A4-A374B47E4F99} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
 	EndGlobalSection
 EndGlobal

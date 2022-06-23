@@ -8,5 +8,6 @@
     (section-main "./AtomicReplacementBuilder.md")
     (section-main "./AtomicActions.md")
     (section-main "./FileStream.md")
+    (section-main "./DriveInfo.md")
 )
 /bl-->
