@@ -10,6 +10,7 @@
 - [Section 3: Atomic Actions](#user-content-atomic-actions)
 - [Section 4: File Stream](#user-content-file-stream)
 - [Section 5: Drive Info](#user-content-drive-info)
+- [Section 6: Directory Info](#user-content-directory-info)
 
 ## Atomic File System ##
 
@@ -21,10 +22,12 @@ There is one interface and one concrete class. The concrete class inherits the i
 
 ## IAtomicActions
 
-- [1.1 Description](#user-content-description)
-- [1.2 Replace](#user-content-replace)
-- [1.3 File Stream](#user-content-filestream)
-- [1.4 Drive Info](#user-content-driveinfo)
+- [1.1 Description](#user-content-iatomicactions_description)
+- [1.2 Replace](#user-content-iatomicactions_replace)
+- [1.3 File Stream](#user-content-iatomicactions_filestream)
+- [1.4 Drive Info](#user-content-iatomicactions_driveinfo)
+- [1.5 Directory Info](#user-content-iatomicactions_directoryinfo)
+- [1.6 File Info](#user-content-iatomicactions_fileinfo)
 
 ### Description
 
@@ -38,7 +41,7 @@ IAtomicReplacementBuilder Replace { get; }
 
 Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-builder) to allow for the testing of code that takes an Atomic File System.
 
-### FileStream
+### IAtomicActions.FileStream
 
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
@@ -194,7 +197,7 @@ A bitwise combination of the enumeration values that determines how the file can
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
-### DriveInfo
+### IAtomicActions.DriveInfo
 
 ```csharp
 IAtomicActions<IDriveInfo> DriveInfo(string driveName);
@@ -208,8 +211,27 @@ A valid drive path or drive letter. This can be either uppercase or lowercase, '
 
 **returns** [IAtomicActions](#user-content-atomic-actions)<[IDriveInfo](#use-content-drive-info)>
 
-An atomic action allowing the interaction with a IDriveInfo specified by the drive name.</returns>
+An atomic action allowing the interaction with a IDriveInfo specified by the drive name.
 
+### IAtomicActions.DirectoryInfo
+
+```csharp
+IAtomicActions<IDirectoryInfo> DirectoryInfo(string path);
+```
+
+Returns an atomic action allowing the interaction with a IDirectoryInfo specified by the path.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+A string specifying the path on which to create the IDirectoryInfo.
+
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectoryInfo](#user-content-directory-info)>
+
+An atomic action allowing the interaction with a IDirectoryInfo specified by the path.
+
+### IAtomicActions.FileInfo
+
+TBD Stuff
     
 
 ## Atomic Replacement Builder ##
@@ -228,6 +250,11 @@ TBD
     
 
 ## Drive Info ##
+
+TBD
+    
+
+## Directory Info ##
 
 TBD
     

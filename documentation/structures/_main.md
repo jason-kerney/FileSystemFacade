@@ -9,5 +9,6 @@
     (section-main "./AtomicActions.md")
     (section-main "./FileStream.md")
     (section-main "./DriveInfo.md")
+    (section-main "./DirectoryInfo.md")
 )
 /bl-->
