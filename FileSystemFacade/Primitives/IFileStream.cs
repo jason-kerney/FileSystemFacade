@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles;
@@ -14,7 +13,7 @@ namespace FileSystemFacade.Primitives
         /// <summary>
         /// Gets the underlying stream.
         /// </summary>
-        Stream Stream { get; }
+        System.IO.Stream Stream { get; }
         /// <summary>
         /// Gets a value that indicates whether the current stream supports reading.
         /// </summary>
@@ -88,7 +87,7 @@ namespace FileSystemFacade.Primitives
         /// Reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
-        void CopyTo (Stream destination);
+        void CopyTo (System.IO.Stream destination);
         /// <summary>
         /// Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -99,7 +98,7 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="bufferSize">The size of the buffer. This value must be greater than zero. The default size is 81920.</param>
-        void CopyTo (Stream destination, int bufferSize);
+        void CopyTo (System.IO.Stream destination, int bufferSize);
         /// <summary>
         /// Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -113,7 +112,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (Stream destination, int bufferSize, CancellationToken cancellationToken);
+        Task CopyToAsync (System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -128,7 +127,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (Stream destination, CancellationToken cancellationToken);
+        Task CopyToAsync (System.IO.Stream destination, CancellationToken cancellationToken);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -142,7 +141,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (Stream destination, int bufferSize);
+        Task CopyToAsync (System.IO.Stream destination, int bufferSize);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -155,7 +154,7 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (Stream destination);
+        Task CopyToAsync (System.IO.Stream destination);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -252,7 +251,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="offset">The point relative to origin from which to begin seeking.</param>
         /// <param name="origin">Specifies the beginning, the end, or the current position as a reference point for offset, using a value of type SeekOrigin.</param>
         /// <returns>The new position in the stream.</returns>
-        long Seek (long offset, SeekOrigin origin);
+        long Seek (long offset, System.IO.SeekOrigin origin);
         /// <summary>
         /// Sets the length of this stream to the given value.
         /// </summary>
@@ -317,8 +316,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="options">A bitwise combination of the enumeration values that specifies additional file options.</param>
         /// <returns>A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, the access other FileStreams can have to the same file, the buffer size, and additional file options.</returns>
-        IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share,
-            int bufferSize, FileOptions options);
+        IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
 
         /// <summary>
         /// Creates a new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, and buffer size.
@@ -329,8 +327,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <returns>A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, and buffer size.</returns>
-        IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share,
-            int bufferSize);
+        IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 
         /// <summary>
         /// Creates a new instance of the FileStream class with the specified path, creation mode, read/write permission, and sharing permission.
@@ -340,7 +337,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <param name="share">A bitwise combination of the enumeration values that determines how the file will be shared by processes.</param>
         /// <returns>A new instance of the FileStream class with the specified path, creation mode, read/write permission, and sharing permission.</returns>
-        IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share);
+        IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 
         /// <summary>
         /// Creates a new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, buffer size, and synchronous or asynchronous state.
@@ -352,8 +349,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="bufferSize">A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.</param>
         /// <param name="useAsync">Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.</param>
         /// <returns>A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, buffer size, and synchronous or asynchronous state.</returns>
-        IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share,
-            int bufferSize, bool useAsync);
+        IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync);
 
         /// <summary>
         /// Creates a new instance of the FileStream class with the specified path, creation mode, and read/write permission.
@@ -362,33 +358,33 @@ namespace FileSystemFacade.Primitives
         /// <param name="mode">One of the enumeration values that determines how to open or create the file.</param>
         /// <param name="access">A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.</param>
         /// <returns>A new instance of the FileStream class with the specified path, creation mode, and read/write permission.</returns>
-        IFileStream GetFileStream(string path, FileMode mode, FileAccess access);
+        IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access);
     }
 
     internal class FileStreamFactory : IFileStreamFactory
     {
-        public IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize,
-            FileOptions options)
+        public IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize,
+            System.IO.FileOptions options)
         {
             return new FileStream(path, mode, access, share, bufferSize, options);
         }
 
-        public IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize)
+        public IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize)
         {
             return new FileStream(path, mode, access, share, bufferSize);
         }
 
-        public IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share)
+        public IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share)
         {
             return new FileStream(path, mode, access, share);
         }
 
-        public IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool useAsync)
+        public IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync)
         {
             return new FileStream(path, mode, access, share, bufferSize, useAsync);
         }
 
-        public IFileStream GetFileStream(string path, FileMode mode, FileAccess access)
+        public IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access)
         {
             return new FileStream(path, mode, access);
         }
@@ -409,28 +405,28 @@ namespace FileSystemFacade.Primitives
             this.stream = stream;
         }
 
-        internal FileStream(string path, FileMode mode, FileAccess access, FileShare share,
-            int bufferSize, FileOptions options): this(new System.IO.FileStream(path, mode, access, share, bufferSize, options)) { }
+        internal FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share,
+            int bufferSize, System.IO.FileOptions options): this(new System.IO.FileStream(path, mode, access, share, bufferSize, options)) { }
 
-        internal FileStream(string path, FileMode mode, FileAccess access, FileShare share,
+        internal FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share,
             int bufferSize) : this(new System.IO.FileStream(path, mode, access, share, bufferSize)) { }
 
-        internal FileStream(string path, FileMode mode, FileAccess access, FileShare share) : this(new System.IO.FileStream(path, mode, access, share)) { }
+        internal FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share) : this(new System.IO.FileStream(path, mode, access, share)) { }
 
-        internal FileStream(string path, FileMode mode, FileAccess access, FileShare share,
+        internal FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share,
             int bufferSize, bool useAsync) : this(new System.IO.FileStream(path, mode, access, share, bufferSize,
             useAsync)) { }
         
-        internal FileStream (string path, FileMode mode, FileAccess access) : this(new System.IO.FileStream(path, mode, access)) { }
+        internal FileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access) : this(new System.IO.FileStream(path, mode, access)) { }
         
-        internal FileStream (SafeFileHandle handle, FileAccess access, int bufferSize) : this(new System.IO.FileStream(handle, access, bufferSize)) { }
+        internal FileStream (SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) : this(new System.IO.FileStream(handle, access, bufferSize)) { }
         
-        internal FileStream (SafeFileHandle handle, FileAccess access, int bufferSize, bool isAsync) 
+        internal FileStream (SafeFileHandle handle, System.IO.FileAccess access, int bufferSize, bool isAsync) 
             : this(new System.IO.FileStream(handle, access, bufferSize, isAsync)) { }
         
-        internal FileStream (string path, FileMode mode) : this(new System.IO.FileStream(path, mode)) { }
+        internal FileStream (string path, System.IO.FileMode mode) : this(new System.IO.FileStream(path, mode)) { }
 
-        public Stream Stream => stream;
+        public System.IO.Stream Stream => stream;
 
         public void EndWrite(IAsyncResult asyncResult)
         {
@@ -492,7 +488,7 @@ namespace FileSystemFacade.Primitives
             return stream.ReadByte();
         }
 
-        public long Seek(long offset, SeekOrigin origin)
+        public long Seek(long offset, System.IO.SeekOrigin origin)
         {
             return stream.Seek(offset, origin);
         }
@@ -569,7 +565,7 @@ namespace FileSystemFacade.Primitives
             stream.Close();
         }
 
-        public void CopyTo(Stream destination)
+        public void CopyTo(System.IO.Stream destination)
         {
             stream.CopyTo(destination);
         }
@@ -579,7 +575,7 @@ namespace FileSystemFacade.Primitives
             stream.CopyTo(destination.Stream);
         }
 
-        public void CopyTo(Stream destination, int bufferSize)
+        public void CopyTo(System.IO.Stream destination, int bufferSize)
         {
             stream.CopyTo(destination, bufferSize);
         }
@@ -589,7 +585,7 @@ namespace FileSystemFacade.Primitives
             stream.CopyTo(destination.Stream, bufferSize);
         }
 
-        public Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken)
+        public Task CopyToAsync(System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken)
         {
             return stream.CopyToAsync(destination, bufferSize, cancellationToken);
         }
@@ -599,7 +595,7 @@ namespace FileSystemFacade.Primitives
             return stream.CopyToAsync(destination.Stream, bufferSize, cancellationToken);
         }
 
-        public Task CopyToAsync(Stream destination, CancellationToken cancellationToken)
+        public Task CopyToAsync(System.IO.Stream destination, CancellationToken cancellationToken)
         {
             return stream.CopyToAsync(destination, cancellationToken);
         }
@@ -609,7 +605,7 @@ namespace FileSystemFacade.Primitives
             return stream.CopyToAsync(destination.Stream, cancellationToken);
         }
 
-        public Task CopyToAsync(Stream destination, int bufferSize)
+        public Task CopyToAsync(System.IO.Stream destination, int bufferSize)
         {
             return stream.CopyToAsync(destination, bufferSize);
         }
@@ -619,7 +615,7 @@ namespace FileSystemFacade.Primitives
             return stream.CopyToAsync(destination.Stream, bufferSize);
         }
 
-        public Task CopyToAsync(Stream destination)
+        public Task CopyToAsync(System.IO.Stream destination)
         {
             return stream.CopyToAsync(destination);
         }
