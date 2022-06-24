@@ -12,7 +12,7 @@
 - [Section 5: File Stream](#user-content-file-stream)
 - [Section 6: File System Watcher Factory](#user-content-file-system-watcher-factory)
 - [Section 7: File System Watcher](#user-content-file-system-watcher)
-- [Section 8: Drive Info](#user-content-drive-info)
+- [Section 8: Drive Info Factory](#user-content-drive-info-factory)
 - [Section 9: Drive Info](#user-content-drive-info)
 - [Section 10: Directory Info Factory](#user-content-directory-info-factory)
 - [Section 11: Directory Info](#user-content-directory-info)
@@ -533,7 +533,7 @@ FileSystemWatcher
 
     
 
-## Drive Info ##
+## Drive Info Factory ##
 
 TBD
     
