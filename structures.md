@@ -393,7 +393,7 @@ IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
 
 Allows for the factory that builds IFileSystemWatcher objects to be replaced.
 
-**factory** [IFileSystemWatcherFactory](#user-content-files-system-watcher-factory)
+**factory** [IFileSystemWatcherFactory](#user-content-file-system-watcher-factory)
 
 The IFileSystemWatcher Factory to use when 'Use' is called.
 
