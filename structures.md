@@ -13,10 +13,14 @@
 - [Section 6: File System Watcher Factory](#user-content-file-system-watcher-factory)
 - [Section 7: File System Watcher](#user-content-file-system-watcher)
 - [Section 8: Drive Info](#user-content-drive-info)
-- [Section 9: Directory Info](#user-content-directory-info)
-- [Section 10: File Info](#user-content-file-info)
-- [Section 11: Drives](#user-content-drives)
-- [Section 12: Directory](#user-content-directory)
+- [Section 9: Drive Info](#user-content-drive-info)
+- [Section 10: Directory Info Factory](#user-content-directory-info-factory)
+- [Section 11: Directory Info](#user-content-directory-info)
+- [Section 12: File Info Factory](#user-content-file-info-factory)
+- [Section 13: File Info](#user-content-file-info)
+- [Section 14: Drives](#user-content-drives)
+- [Section 15: Directory](#user-content-directory)
+- [Section 16: File](#user-content-file)
 
 ## Atomic File System ##
 
@@ -357,6 +361,13 @@ public interface IAtomicReplacementBuilder
 
 - [3.1 File Stream](#user-content-iatomicreplacementbuilderfilestream)
 - [3.2 File System Watcher](#user-content-iatomicreplacementbuilderfilesystemwatcher)
+- [3.3 File Info](#user-content-iatomicreplacementbuilderfileinfo)
+- [3.4 Directory Info](#user-content-iatomicreplacementbuilderdirectoryinfo)
+- [3.5 Drive Info](#user-content-iatomicreplacementbuilderdriveinfo)
+- [3.6 Drives](#user-content-iatomicreplacementbuilderdrives)
+- [3.7 Directory](#user-content-iatomicreplacementbuilderdirectory)
+- [3.8 File](#user-content-iatomicreplacementbuilderfile)
+- [3.9 Use](#user-content-iatomicreplacementbuilderuse)
 
 ### IAtomicReplacementBuilder.FileStream
 
@@ -390,6 +401,113 @@ The IFileSystemWatcher Factory to use when 'Use' is called.
 
 The current instance of the builder with the IFileWatcherFactory configured to be replaced.
 
+### IAtomicReplacementBuilder.FileInfo
+
+```csharp
+IAtomicReplacementBuilder FileInfo(IFileInfoFactory factory);
+```
+
+Allows for the factory that builds IFileInfo objects to be temporarily replaced.
+
+**factory** [IFileInfoFactory](#user-content-file-info-factory)
+
+The IFileInfo Factory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IFileInfoFactory configured to be replaced.
+
+### IAtomicReplacementBuilder.DirectoryInfo
+
+```csharp
+IAtomicReplacementBuilder DirectoryInfo(IDirectoryInfoFactory factory);
+```
+
+Allows for the factory that builds IDirectoryInfo objects to be replaced.
+
+**factory** [IDirectoryInfoFactory](#user-content-directory-info-factory)
+
+The IDirectoryInfo Factory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IDirectoryInfoFactory configured to be replaced.
+
+### IAtomicReplacementBuilder.DriveInfo
+
+```csharp
+IAtomicReplacementBuilder DriveInfo(IDriveInfoFactory factory);
+```
+
+Allows for the factory that builds IDriveInfo objects to be replaced.
+
+**factory** [IDriveInfoFactory](#user-content-drive-info-factory)
+
+The IDriveInfo Factory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IDiveInfoFactory configured to be replaced.
+
+### IAtomicReplacementBuilder.Drives
+
+```csharp
+IAtomicReplacementBuilder Drives(IDrives newDrives);
+```
+
+Configures IDrives to be replaced.
+
+**newDrives** [IDrives](#user-content-drives)
+
+The IDrives to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IDrives configured to be replaced.
+
+### IAtomicReplacementBuilder.Directory
+
+```csharp
+IAtomicReplacementBuilder Directory(IDirectory newDirectory);
+```
+
+Configures IDirectory to be replaced.
+
+**newDirectory** [IDirectory](#user-content-directory)
+
+The IDirectory to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IDirectory configured to be replaced.
+
+### IAtomicReplacementBuilder.File
+
+```csharp
+IAtomicReplacementBuilder File(IFile newFile);
+```
+
+Configures IFile to be replaced.
+
+**newFile** [IFile](#user-content-file)
+
+The IFile to use when 'Use' is called.
+
+**returns** [IAtomicReplacementBuilder](#user-content-atomic-replacement-builder)
+
+The current instance of the builder with IFile configured to be replaced.
+
+### IAtomicReplacementBuilder.Use
+
+```csharp
+void Use(Action<IAtomicFileSystem> doer);
+```
+
+Takes an action, and calls it with a specially configured instance of IAtomicFileSystem where any item configured to be replaced is replaced. This allows testing of the use of the file system. NOTE: When 'Use' exits, the IAtomicFileSystem reverts to using the real file system. If captured during this time, when use exits, it will have no lasting effect of replacing the underlying file system.
+
+**doer** [Action\<T\>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=net-6.0)
+
+An action to call with the replaced file system.
     
 
 ## File Stream Factory ##
@@ -420,7 +538,22 @@ FileSystemWatcher
 TBD
     
 
+## Drive Info ##
+
+TBD
+    
+
+## Directory Info Factory ##
+
+TBD
+    
+
 ## Directory Info ##
+
+TBD
+    
+
+## File Info Factory ##
 
 TBD
     
@@ -436,6 +569,11 @@ TBD
     
 
 ## Directory ##
+
+TBD
+    
+
+## File ##
 
 TBD
     

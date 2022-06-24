@@ -54,7 +54,7 @@ namespace FileSystemFacade
         /// Configures IFile to be replaced.
         /// </summary>
         /// <param name="newFile">The IFile to use when 'Use' is called.</param>
-        /// <returns></returns>
+        /// <returns>The current instance of the builder with IFile configured to be replaced.</returns>
         IAtomicReplacementBuilder File(IFile newFile);
         /// <summary>
         /// Takes an action, and calls it with a specially configured instance of IAtomicFileSystem where any item configured to be replaced is replaced. This allows testing of the use of the file system. NOTE: When 'Use' exits, the IAtomicFileSystem reverts to using the real file system. If captured during this time, when use exits, it will have no lasting effect of replacing the underlying file system.
