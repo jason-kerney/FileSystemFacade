@@ -684,11 +684,11 @@ A new instance of the FileStream class with the specified path, creation mode, a
 
 ## File Stream ##
 
-<!-- 5 -->
-
 ### Summary
 
 Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
+
+This class is a facade around [System.IO.FileSystem](https://docs.microsoft.com/en-us/dotnet/api/system.io.filesysteminfo?view=net-6.0)
 
 ```csharp
 public interface IFileStream : IDisposable, IAsyncDisposable
@@ -709,6 +709,24 @@ public interface IFileStream : IDisposable, IAsyncDisposable
 - [5.10 Safe File Handle](#user-content-ifilestreamsafefilehandle)
 - [5.11 Write Timeout](#user-content-ifilestreamwritetimeout)
 - [5.12 Begin Read](#user-content-ifilestreambeginread)
+- [5.13 Begin Write](#user-content-ifilestreambeginwrite)
+- [5.14 Close](#user-content-ifilestreamclose)
+- [5.15 Copy To](#user-content-ifilestreamcopyto)
+- [5.16 Copy To Async](#user-content-ifilestreamcopytoasync)
+- [5.17 End Read](#user-content-ifilestreamendread)
+- [5.18 End Write](#user-content-ifilestreamendwrite)
+- [5.19 Flush](#user-content-ifilestreamflush)
+- [5.20 Flush Async](#user-content-ifilestreamflushasync)
+- [5.21 Lock](#user-content-ifilestreamlock)
+- [5.22 Read](#user-content-ifilestreamread)
+- [5.23 Read Async](#user-content-ifilestreamreadasync)
+- [5.24 Read Byte](#user-content-ifilestreamreadbyte)
+- [5.25 Seek](#user-content-ifilestreamseek)
+- [5.26 Set Length](#user-content-ifilestreamsetlength)
+- [5.27 Unlock](#user-content-ifilestreamunlock)
+- [5.28 Write](#user-content-ifilestreamwrite)
+- [5.29 Write Async](#user-content-ifilestreamwriteasync)
+- [5.30 Write Byte](#user-content-ifilestreamwritebyte)
 
 ### IFileStream.Stream
 
@@ -894,10 +912,623 @@ The method to be called when the asynchronous read operation is completed
 
 A user-provided object that distinguishes this particular asynchronous read request from other requests.
 
-**returns**
+**returns** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
 
 An object that references the asynchronous read.
 
+### IFileStream.BeginWrite
+
+```csharp
+IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+```
+
+Begins an asynchronous write operation. Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer containing data to write to the current stream.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The zero-based byte offset in array at which to begin copying bytes to the current stream.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to write.
+
+**callback** [Nullable](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)\<[AsyncCallback](https://docs.microsoft.com/en-us/dotnet/api/system.asynccallback?view=net-6.0)\>
+
+The method to be called when the asynchronous write operation is completed.
+
+**state** [Nullable](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)\<[object](https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0)\>
+
+A user-provided object that distinguishes this particular asynchronous write request from other requests.
+
+**returns** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
+
+An object that references the asynchronous write.
+
+### IFileStream.Close
+
+```csharp
+void Close ();
+```
+
+Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.
+
+### IFileStream.CopyTo
+
+```csharp
+void CopyTo (System.IO.Stream destination);
+```
+
+Reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+---
+
+```csharp
+void CopyTo(IFileStream destination);
+```
+
+Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+---
+
+```csharp
+void CopyTo (System.IO.Stream destination, int bufferSize);
+```
+
+Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size of the buffer. This value must be greater than zero. The default size is 81920.
+
+---
+
+```csharp
+void CopyTo(IFileStream destination, int bufferSize);
+```
+
+Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size of the buffer. This value must be greater than zero. The default size is 81920.
+
+### IFileStream.CopyToAsync
+
+```csharp
+Task CopyToAsync (System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken cancellationToken);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (System.IO.Stream destination, CancellationToken cancellationToken);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (IFileStream destination, CancellationToken cancellationToken);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (System.IO.Stream destination, int bufferSize);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (IFileStream destination, int bufferSize);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+**bufferSize** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (System.IO.Stream destination);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [System.IO.Stream](https://docs.microsoft.com/en-us/dotnet/api/system.io.stream?view=net-6.0)
+
+The stream to which the contents of the current stream will be copied.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+---
+
+```csharp
+Task CopyToAsync (IFileStream destination);
+```
+
+Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
+
+**destination** [IFileStream](#user-content-file-stream)
+
+The stream to which the contents of the current stream will be copied.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous copy operation.
+
+### IFileStream.EndRead
+
+```csharp
+int EndRead (IAsyncResult asyncResult);
+```
+
+Waits for the pending asynchronous read operation to complete. (Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+
+**asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
+
+The reference to the pending asynchronous request to wait for.
+
+**returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block until at least 1 byte is available.
+
+### IFileStream.EndWrite
+
+```csharp
+void EndWrite (IAsyncResult asyncResult);
+```
+
+Ends an asynchronous write operation and blocks until the I/O operation is complete. (Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+
+**asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
+
+The pending asynchronous I/O request.
+
+### IFileStream.Flush
+
+```csharp
+void Flush ();
+```
+
+Clears buffers for this stream and causes any buffered data to be written to the file.
+
+---
+
+```csharp
+void Flush (bool flushToDisk);
+```
+
+Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.
+
+**flushToDisk** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+
+true to flush all intermediate file buffers; otherwise, false.
+
+### IFileStream.FlushAsync
+
+```csharp
+Task FlushAsync ();
+```
+
+Asynchronously clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous flush operation.
+
+---
+
+```csharp
+Task FlushAsync (CancellationToken cancellationToken);
+```
+
+Asynchronously clears all buffers for this stream, causes any buffered data to be written to the underlying device, and monitors cancellation requests.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous flush operation.
+
+### IFileStream.Lock
+
+```csharp
+[System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
+[System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
+[System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
+void Lock (long position, long length);
+```
+
+Prevents other processes from reading from or writing to the FileStream.
+
+**position** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+
+The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).
+
+**length** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+
+The range to be locked.
+
+### IFileStream.Read
+
+```csharp
+int Read (byte[] buffer, int offset, int count);
+```
+
+Reads a block of bytes from the stream and writes the data in a given buffer.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+When this method returns, contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The byte offset in array at which the read bytes will be placed.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to read.
+
+**returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.
+
+---
+
+```csharp
+int Read (Span<byte> buffer);
+```
+
+Reads a sequence of bytes from the current file stream and advances the position within the file stream by the number of bytes read.
+
+**buffer** [Span](https://docs.microsoft.com/en-us/dotnet/api/system.span-1?view=net-6.0)<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)>
+
+A region of memory. When this method returns, the contents of this region are replaced by the bytes read from the current file stream.
+
+**returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The total number of bytes read into the buffer. This can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+
+### IFileStream.ReadAsync
+
+```csharp
+ValueTask<int> ReadAsync (Memory<byte> buffer, CancellationToken cancellationToken = default);
+```
+
+Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
+
+**buffer** [Memory](https://docs.microsoft.com/en-us/dotnet/api/system.memory-1?view=net-6.0)<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)>
+
+The region of memory to write the data into.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [ValueTask](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1?view=net-6.0)<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)>
+
+A task that represents the asynchronous read operation. The value of its Result property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.
+
+---
+
+```csharp
+Task<int> ReadAsync (byte[] buffer, int offset, int count);
+```
+
+Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer to write the data into.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The byte offset in buffer at which to begin writing data from the stream.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to read.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)\>
+
+A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.
+
+---
+
+```csharp
+Task<int> ReadAsync (byte[] buffer, int offset, int count, CancellationToken cancellationToken);
+```
+
+Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer to write the data into.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The byte offset in buffer at which to begin writing data from the stream.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to read.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)\>
+
+A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.
+
+### IFileStream.ReadByte
+
+```csharp
+int ReadByte ();
+```
+
+Reads a byte from the file and advances the read position one byte.
+
+**returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The byte, cast to an Int32, or -1 if the end of the stream has been reached.
+
+### IFileStream.Seek
+
+```csharp
+long Seek (long offset, System.IO.SeekOrigin origin);
+```
+
+Sets the current position of this stream to the given value.
+
+**offset** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+
+The point relative to origin from which to begin seeking.
+
+**origin** [System.IO.SeekOrigin](https://docs.microsoft.com/en-us/dotnet/api/system.io.seekorigin?view=net-6.0)
+
+Specifies the beginning, the end, or the current position as a reference point for offset, using a value of type SeekOrigin.
+
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+
+The new position in the stream.
+
+### IFileStream.SetLength
+
+```csharp
+void SetLength (long value);
+```
+
+Sets the length of this stream to the given value.
+
+**value**
+
+The new length of the stream.
+
+### IFileStream.Unlock
+
+```csharp
+[System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
+[System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
+[System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
+void Unlock (long position, long length);
+```
+
+Allows access by other processes to all or part of a file that was previously locked.
+
+**position**
+
+The beginning of the range to unlock.
+
+**length**
+
+The range to be unlocked.
+
+### IFileStream.Write
+
+```csharp
+void Write (byte[] buffer, int offset, int count);
+```
+
+Writes a block of bytes to the file stream.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer containing data to write to the stream.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The zero-based byte offset in array from which to begin copying bytes to the stream.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to write.
+
+---
+
+```csharp
+void Write (ReadOnlySpan<byte> buffer);
+```
+
+Writes a sequence of bytes from a read-only span to the current file stream and advances the current position within this file stream by the number of bytes written.
+
+**buffer** [ReadOnlySpan](https://docs.microsoft.com/en-us/dotnet/api/system.readonlyspan-1?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
+
+A region of memory. This method copies the contents of this region to the current file stream.
+
+### IFileStream.WriteAsync
+
+```csharp
+ValueTask WriteAsync (ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
+```
+
+Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.
+
+**buffer** [ReadOnlyMemory](https://docs.microsoft.com/en-us/dotnet/api/system.readonlymemory-1?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
+
+The region of memory to write data from.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [ValueTask](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+---
+
+```csharp
+Task WriteAsync (byte[] buffer, int offset, int count);
+```
+
+Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer to write data from.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The zero-based byte offset in buffer from which to begin copying bytes to the stream.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to write.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+### IFileStream.WriteByte
+
+```csharp
+void WriteByte (byte value);
+```
+
+Writes a byte to the current position in the file stream.
+
+**value**
+
+A byte to write to the stream.
     
 
 ## File System Watcher Factory ##
