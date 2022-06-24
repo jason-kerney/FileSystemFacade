@@ -10,7 +10,7 @@ Provides a Stream for a file, supporting both synchronous and asynchronous read 
 ```csharp
 public interface IFileStreamFactory
 ```
-<!-- 4 -->
+
 ### IFileStreamFactory
 
 - [4.1 Get File Stream](#user-content-ifilestreamfactorygetfilestream)
