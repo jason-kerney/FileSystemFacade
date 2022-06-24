@@ -15,16 +15,19 @@ public interface IFileStream : IDisposable, IAsyncDisposable
 
 ### IFileStream
 
-- [5.1 Stream](#user-content-ifilestreamstream)
-- [5.2 Can Read](#user-content-ifilestreamcanread)
-- [5.2 Can Seek](#user-content-ifilestreamcanseek)
-- [5.3 Can Timeout](#user-content-ifilestreamcantimeout)
-- [5.4 Can Write](#user-content-ifilestreamcanwrite)
-- [5.5 Is Async](#user-content-ifilestreamisasync)
-- [5.6 Length](#user-content-ifilestreamlength)
-- [5.7 Name](#user-content-ifilestreamname)
-- [5.8 Position](#user-content-ifilestreamposition)
-- [5.9 Read Timeout](#user-content-ifilestreamreadtimeout)
+- [5.01 Stream](#user-content-ifilestreamstream)
+- [5.02 Can Read](#user-content-ifilestreamcanread)
+- [5.02 Can Seek](#user-content-ifilestreamcanseek)
+- [5.03 Can Timeout](#user-content-ifilestreamcantimeout)
+- [5.04 Can Write](#user-content-ifilestreamcanwrite)
+- [5.05 Is Async](#user-content-ifilestreamisasync)
+- [5.06 Length](#user-content-ifilestreamlength)
+- [5.07 Name](#user-content-ifilestreamname)
+- [5.08 Position](#user-content-ifilestreamposition)
+- [5.09 Read Timeout](#user-content-ifilestreamreadtimeout)
+- [5.10 Safe File Handle](#user-content-ifilestreamsafefilehandle)
+- [5.11 Write Timeout](#user-content-ifilestreamwritetimeout)
+- [5.12 Begin Read](#user-content-ifilestreambeginread)
 
 ### IFileStream.Stream
 
@@ -153,3 +156,63 @@ A value, in milliseconds, that determines how long the stream will attempt to re
 **returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
 
 A value, in milliseconds, that determines how long the stream will attempt to read before timing out.
+
+### IFileStream.SafeFileHandle
+
+```csharp
+SafeFileHandle SafeFileHandle { get; }
+```
+
+Gets a SafeFileHandle object that represents the operating system file handle for the file that the current FileStream object encapsulates.
+
+**returns** [SafeFileHandle](https://docs.microsoft.com/en-us/dotnet/api/microsoft.win32.safehandles.safefilehandle?view=net-6.0)
+
+A SafeFileHandle object that represents the operating system file handle for the file that the current FileStream object encapsulates.
+
+### IFileStream.WriteTimeout
+
+```csharp
+int WriteTimeout { get; set; }
+```
+
+Gets or sets a value, in milliseconds, that determines how long the stream will attempt to write before timing out.
+
+**value parameter** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+A value, in milliseconds, that determines how long the stream will attempt to write before timing out.
+
+**returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+A value, in milliseconds, that determines how long the stream will attempt to write before timing out.
+
+### IFileStream.BeginRead
+
+```csharp
+IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+```
+
+Begins an asynchronous read operation. Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.
+
+**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+
+The buffer to read data into.
+
+**offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The byte offset in array at which to begin reading.
+
+**count** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
+
+The maximum number of bytes to read.
+
+**callback** [Nullable](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)\<[AsyncCallback](https://docs.microsoft.com/en-us/dotnet/api/system.asynccallback?view=net-6.0)\>
+
+The method to be called when the asynchronous read operation is completed
+
+**state**
+
+A user-provided object that distinguishes this particular asynchronous read request from other requests.
+
+**returns**
+
+An object that references the asynchronous read.
