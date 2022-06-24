@@ -522,6 +522,7 @@ public interface IFileStreamFactory
 <!-- 4 -->
 ### IFileStreamFactory
 
+- [4.1 Get File Stream](#user-content-ifilestreamfactorygetfilestream)
 
 ### IFileStreamFactory.GetFileStream
 
