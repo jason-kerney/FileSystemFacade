@@ -385,7 +385,7 @@ The IFileStream Factory to use when 'Use' is called.
 
 The current instance of the builder with the IFileStreamFactory configured to be replaced.
 
-### IAtomicReplacementBuilder.FilesSystemWatcher
+### IAtomicReplacementBuilder.FileSystemWatcher
 
 ```csharp
 IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory);
