@@ -56,6 +56,13 @@ Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-
 
 #### IAtomicFileSystem.FileStream
 
+|                                            | Code                                                                                                                                           | Description                                                                                                                                                                                                                                                                                 |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#iatomicactionsfilestream1'>1</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` | Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call. |
+
+---
+
+<a id='iatomicactionsfilestream1'></a>
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
 ```
