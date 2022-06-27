@@ -28,19 +28,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", 
 		documentation\structures\AtomicActions.md = documentation\structures\AtomicActions.md
 		documentation\structures\AtomicFileSystem.md = documentation\structures\AtomicFileSystem.md
 		documentation\structures\AtomicReplacementBuilder.md = documentation\structures\AtomicReplacementBuilder.md
-		documentation\structures\FileStream.md = documentation\structures\FileStream.md
-		documentation\structures\DriveInfo.md = documentation\structures\DriveInfo.md
-		documentation\structures\DirectoryInfo.md = documentation\structures\DirectoryInfo.md
-		documentation\structures\FileInfo.md = documentation\structures\FileInfo.md
-		documentation\structures\Drives.md = documentation\structures\Drives.md
-		documentation\structures\Directory.md = documentation\structures\Directory.md
-		documentation\structures\FileStreamFactory.md = documentation\structures\FileStreamFactory.md
-		documentation\structures\FileSystemWatcherFactory.md = documentation\structures\FileSystemWatcherFactory.md
-		documentation\structures\FileSystemWatcher.md = documentation\structures\FileSystemWatcher.md
-		documentation\structures\FileInfoFactory.md = documentation\structures\FileInfoFactory.md
-		documentation\structures\DirectoryInfoFactory.md = documentation\structures\DirectoryInfoFactory.md
-		documentation\structures\DriveInfoFactory.md = documentation\structures\DriveInfoFactory.md
-		documentation\structures\File.md = documentation\structures\File.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "primitives", "primitives", "{D68CDB94-0B2E-4DB6-9A50-3C6BB9E39B0F}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\structures\primitives\Directory.md = documentation\structures\primitives\Directory.md
+		documentation\structures\primitives\DirectoryInfo.md = documentation\structures\primitives\DirectoryInfo.md
+		documentation\structures\primitives\DirectoryInfoFactory.md = documentation\structures\primitives\DirectoryInfoFactory.md
+		documentation\structures\primitives\DriveInfo.md = documentation\structures\primitives\DriveInfo.md
+		documentation\structures\primitives\DriveInfoFactory.md = documentation\structures\primitives\DriveInfoFactory.md
+		documentation\structures\primitives\Drives.md = documentation\structures\primitives\Drives.md
+		documentation\structures\primitives\File.md = documentation\structures\primitives\File.md
+		documentation\structures\primitives\FileInfo.md = documentation\structures\primitives\FileInfo.md
+		documentation\structures\primitives\FileInfoFactory.md = documentation\structures\primitives\FileInfoFactory.md
+		documentation\structures\primitives\FileStream.md = documentation\structures\primitives\FileStream.md
+		documentation\structures\primitives\FileStreamFactory.md = documentation\structures\primitives\FileStreamFactory.md
+		documentation\structures\primitives\FileSystemWatcher.md = documentation\structures\primitives\FileSystemWatcher.md
+		documentation\structures\primitives\FileSystemWatcherFactory.md = documentation\structures\primitives\FileSystemWatcherFactory.md
 	EndProjectSection
 EndProject
 Global
@@ -72,5 +76,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FF9F9993-0D67-4467-9A1F-8CAA5B8027D7} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
 		{8299C243-1B95-46C1-B7A4-A374B47E4F99} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
+		{D68CDB94-0B2E-4DB6-9A50-3C6BB9E39B0F} = {8299C243-1B95-46C1-B7A4-A374B47E4F99}
 	EndGlobalSection
 EndGlobal
