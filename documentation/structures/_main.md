@@ -11,6 +11,7 @@
     (section-main "./primitives/FileStream.md")
     (section-main "./primitives/FileSystemWatcherFactory.md")
     (section-main "./primitives/FileSystemWatcher.md")
+    (section-main "./primitives/WaitForChangedResult.md")
     (section-main "./primitives/DriveInfoFactory.md")
     (section-main "./primitives/DriveInfo.md")
     (section-main "./primitives/DirectoryInfoFactory.md")

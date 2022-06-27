@@ -12,15 +12,16 @@
 - [Section 5: File Stream](#user-content-file-stream)
 - [Section 6: File System Watcher Factory](#user-content-file-system-watcher-factory)
 - [Section 7: File System Watcher](#user-content-file-system-watcher)
-- [Section 8: Drive Info Factory](#user-content-drive-info-factory)
-- [Section 9: Drive Info](#user-content-drive-info)
-- [Section 10: Directory Info Factory](#user-content-directory-info-factory)
-- [Section 11: Directory Info](#user-content-directory-info)
-- [Section 12: File Info Factory](#user-content-file-info-factory)
-- [Section 13: File Info](#user-content-file-info)
-- [Section 14: Drives](#user-content-drives)
-- [Section 15: Directory](#user-content-directory)
-- [Section 16: File](#user-content-file)
+- [Section 8: Wait For Changed Result](#user-content-wait-for-changed-result)
+- [Section 9: Drive Info Factory](#user-content-drive-info-factory)
+- [Section 10: Drive Info](#user-content-drive-info)
+- [Section 11: Directory Info Factory](#user-content-directory-info-factory)
+- [Section 12: Directory Info](#user-content-directory-info)
+- [Section 13: File Info Factory](#user-content-file-info-factory)
+- [Section 14: File Info](#user-content-file-info)
+- [Section 15: Drives](#user-content-drives)
+- [Section 16: Directory](#user-content-directory)
+- [Section 17: File](#user-content-file)
 
 ## Atomic File System ##
 
@@ -1533,7 +1534,67 @@ A byte to write to the stream.
 
 ## File System Watcher Factory ##
 
-FileSystemWatcherFactory
+<-- 6 -->
+
+## Summary
+
+A factory to build IFileSystemWatcher objects
+
+```csharp
+public interface IFileSystemWatcherFactory
+```
+
+## IFileSystemWatcherFactory
+
+- [6.1 Get File System Watcher](#user-content-ifilesystemwatcherfactorygetfilesystemwatcher)
+
+## IFileSystemWatcherFactory.GetFileSystemWatcher
+
+```csharp
+IFileSystemWatcher GetFileSystemWatcher();
+```
+
+Creates a new instance of the FileSystemWatcher class.
+
+**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+
+A  new instance of the FileSystemWatcher class.
+
+---
+
+```csharp
+IFileSystemWatcher GetFileSystemWatcher(string path);
+```
+
+Creates a new instance of the FileSystemWatcher class, given the specified directory to monitor.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The directory to monitor, in standard or Universal Naming Convention (UNC) notation.
+
+**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+
+A new instance of the FileSystemWatcher class, given the specified directory to monitor.
+
+---
+
+```csharp
+IFileSystemWatcher GetFileSystemWatcher(string path, string filter);
+```
+
+Creates a new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The directory to monitor, in standard or Universal Naming Convention (UNC) notation.
+
+**filter** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The type of files to watch. For example, "*.txt" watches for changes to all text files.
+
+**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+
+A new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.
 
     
 
@@ -1541,6 +1602,11 @@ FileSystemWatcherFactory
 
 FileSystemWatcher
 
+    
+
+## Wait For Changed Result ##
+
+IWaitForChangedResult
     
 
 ## Drive Info Factory ##
