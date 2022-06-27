@@ -34,7 +34,7 @@ Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-
 
 #### IAtomicFileSystem.FileStream
 
-|                                            | Code                                                                                                                                           |
+|                                            | Signature                                                                                                                                      |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | <a href='#iatomicactionsfilestream1'>1</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` |
 | <a href='#iatomicactionsfilestream2'>2</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize);`                      |

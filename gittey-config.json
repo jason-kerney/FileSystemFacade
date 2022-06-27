@@ -11,6 +11,7 @@
       "F": "Feature (<= 8 LoC)",
       "B": "Bug fix (<= 8 LoC)",
       "R": "Test-supported Procedural Refactoring",
+      "D": "User Facing Documentation",
       "t": "Test only",
       "d": "Developer documentation (non-user facing)",
       "a": "Automated formatting / code generation",

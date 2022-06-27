@@ -17,6 +17,16 @@ public interface IFileStreamFactory
 
 ### IFileStreamFactory.GetFileStream
 
+|                                                    | Signature                                                                                                                         |
+|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamfactorygetfilestream1'>1</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` |
+| <a href='#ifilestreamfactorygetfilestream2'>2</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize);`                      |
+| <a href='#ifilestreamfactorygetfilestream3'>3></a> | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share);`                                      |
+| <a href='#ifilestreamfactorygetfilestream4'>4</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool useAsync);`       |
+| <a href='#ifilestreamfactorygetfilestream5'>5</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access);`                                                       |
+---
+
+<a id='ifilestreamfactorygetfilestream1'></a>
 ```csharp
 IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
 ```
@@ -53,6 +63,7 @@ A new instance of the FileStream class with the specified path, creation mode, r
 
 ---
 
+<a id='ifilestreamfactorygetfilestream2'></a>
 ```csharp
 IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 ```
@@ -85,6 +96,7 @@ A new instance of the FileStream class with the specified path, creation mode, r
 
 ---
 
+<a id='ifilestreamfactorygetfilestream3'></a>
 ```csharp
 IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 ```
@@ -113,6 +125,7 @@ A new instance of the FileStream class with the specified path, creation mode, r
 
 ---
 
+<a id='ifilestreamfactorygetfilestream4'></a>
 ```csharp
 IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync);
 ```
@@ -149,6 +162,7 @@ A new instance of the FileStream class with the specified path, creation mode, r
 
 ---
 
+<a id='ifilestreamfactorygetfilestream5'></a>
 ```csharp
 IFileStream GetFileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access);
 ```
