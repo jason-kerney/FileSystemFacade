@@ -56,13 +56,13 @@ Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-
 
 #### IAtomicFileSystem.FileStream
 
-|                                            | Signature                                                                                             |
-|--------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| <a href='#iatomicactionsfilestream1'>1</a> | `IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int, FileOptions);`  |
-| <a href='#iatomicactionsfilestream2'>2</a> | `IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int);`               |
-| <a href='iatomicactionsfilestream3'>3</a>  | `IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare);`                    |
-| <a href='iatomicactionsfilestream4'>4</a>  | `IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int, bool);`         |
-| <a href='iatomicactionsfilestream5'>5</a>  | `IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess);`                               |
+| Signatures                                                                                                                                    |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#iatomicactionsfilestream1'>`IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int, FileOptions);`</a> |
+| <a href='#iatomicactionsfilestream2'>`IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int);`</a>              |
+| <a href='iatomicactionsfilestream3'>`IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare);`</a>                    |
+| <a href='iatomicactionsfilestream4'>`IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess, FileShare, int, bool);`</a>         |
+| <a href='iatomicactionsfilestream5'>`IAtomicActions<IFileStream> FileStream(string, FileMode, FileAccess);`</a>                               |
 
 ---
 
@@ -542,13 +542,13 @@ public interface IFileStreamFactory
 
 ### IFileStreamFactory.GetFileStream
 
-|                                                    | Signature                                                                                                                               |
-|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| <a href='#ifilestreamfactorygetfilestream1'>1</a>  | <a href='#ifilestreamfactorygetfilestream1'>`IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, FileOptions);`</a> |
-| <a href='#ifilestreamfactorygetfilestream2'>2</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int);`                                                              |
-| <a href='#ifilestreamfactorygetfilestream3'>3></a> | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare);`                                                                   |
-| <a href='#ifilestreamfactorygetfilestream4'>4</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, bool);`                                                        |
-| <a href='#ifilestreamfactorygetfilestream5'>5</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess);`                                                                              |
+| Signatures                                                                                                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamfactorygetfilestream1'>`IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, FileOptions);`</a> |
+| <a href='#ifilestreamfactorygetfilestream2'>`IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int);`</a>              |
+| <a href='#ifilestreamfactorygetfilestream3'>`IFileStream GetFileStream(string, FileMode, FileAccess, FileShare);`</a>                   |
+| <a href='#ifilestreamfactorygetfilestream4'>`IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, bool);`</a>        |
+| <a href='#ifilestreamfactorygetfilestream5'>`IFileStream GetFileStream(string, FileMode, FileAccess);`</a>                              |
 ---
 
 <a id='ifilestreamfactorygetfilestream1'></a>
