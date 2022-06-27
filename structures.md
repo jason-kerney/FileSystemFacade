@@ -988,6 +988,16 @@ Closes the current stream and releases any resources (such as sockets and file h
 
 ### IFileStream.CopyTo
 
+| Signatures                                                         |
+|--------------------------------------------------------------------|
+| <a href='#ifilestreamcopyto1'>`void CopyTo (Stream);`</a>          |
+| <a href='#ifilestreamcopyto2'>`void CopyTo(IFileStream);`</a>      |
+| <a href='#ifilestreamcopyto3>`void CopyTo (Stream, int);`</a>      |
+| <a href='#ifilestreamcopyto4'>`void CopyTo(IFileStream, int);`</a> |
+
+---
+
+<a id='ifilestreamcopyto1'></a>
 ```csharp
 void CopyTo (System.IO.Stream destination);
 ```
@@ -1000,6 +1010,7 @@ The stream to which the contents of the current stream will be copied.
 
 ---
 
+<a id='ifilestreamcopyto2'></a>
 ```csharp
 void CopyTo(IFileStream destination);
 ```
@@ -1012,6 +1023,7 @@ The stream to which the contents of the current stream will be copied.
 
 ---
 
+<a id='ifilestreamcopyto3></a>
 ```csharp
 void CopyTo (System.IO.Stream destination, int bufferSize);
 ```
@@ -1028,6 +1040,7 @@ The size of the buffer. This value must be greater than zero. The default size i
 
 ---
 
+<a id='ifilestreamcopyto4></a>
 ```csharp
 void CopyTo(IFileStream destination, int bufferSize);
 ```
@@ -1044,6 +1057,20 @@ The size of the buffer. This value must be greater than zero. The default size i
 
 ### IFileStream.CopyToAsync
 
+| Signatures                                                                                                                               |
+|------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamcopytoasync1'>`Task CopyToAsync(Stream, int, CancellationToken);`</a>                                               |
+| <a href='#ifilestreamcopytoasync2'>`Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken cancellationToken);`</a> |
+| <a href='#ifilestreamcopytoasync3'>`Task CopyToAsync(Stream, CancellationToken);`</a>                                                    |
+| <a href='#ifilestreamcopytoasync4'>`Task CopyToAsync(IFileStream, CancellationToken);`</a>                                               |
+| <a href='#ifilestreamcopytoasync5'>`Task CopyToAsync(Stream, int);`</a>                                                                  |
+| <a href='#ifilestreamcopytoasync6'>`Task CopyToAsync(IFileStream, int);`</a>                                                             |
+| <a href='#ifilestreamcopytoasync7'>`Task CopyToAsync (Stream);`</a>                                                                      |
+| <a href='#ifilestreamcopytoasync8'>`Task CopyToAsync (IFileStream);`</a>                                                                 |
+
+---
+
+<a id='ifilestreamcopytoasync1'></a>
 ```csharp
 Task CopyToAsync (System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
 ```
@@ -1068,6 +1095,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync2></a>
 ```csharp
 Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken cancellationToken);
 ```
@@ -1092,6 +1120,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync3'></a>
 ```csharp
 Task CopyToAsync (System.IO.Stream destination, CancellationToken cancellationToken);
 ```
@@ -1112,6 +1141,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync4'></a>
 ```csharp
 Task CopyToAsync (IFileStream destination, CancellationToken cancellationToken);
 ```
@@ -1132,6 +1162,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync5'></a>
 ```csharp
 Task CopyToAsync (System.IO.Stream destination, int bufferSize);
 ```
@@ -1152,6 +1183,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync6'></a>
 ```csharp
 Task CopyToAsync (IFileStream destination, int bufferSize);
 ```
@@ -1172,6 +1204,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync7'></a>
 ```csharp
 Task CopyToAsync (System.IO.Stream destination);
 ```
@@ -1188,6 +1221,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
+<a id='ifilestreamcopytoasync8'></a>
 ```csharp
 Task CopyToAsync (IFileStream destination);
 ```
@@ -1232,6 +1266,14 @@ The pending asynchronous I/O request.
 
 ### IFileStream.Flush
 
+| Signatures                                                        |
+|-------------------------------------------------------------------|
+| <a href='#ifilestreamflush1'>`void Flush ();`</a>                 |
+| <a href='#ifilestreamflush2'>`void Flush (bool flushToDisk);`</a> |
+
+---
+
+<a id='ifilestreamflush1'></a>
 ```csharp
 void Flush ();
 ```
@@ -1240,6 +1282,7 @@ Clears buffers for this stream and causes any buffered data to be written to the
 
 ---
 
+<a id='ifilestreamflush2'></a>
 ```csharp
 void Flush (bool flushToDisk);
 ```
@@ -1252,6 +1295,14 @@ true to flush all intermediate file buffers; otherwise, false.
 
 ### IFileStream.FlushAsync
 
+| Signatures                                                                   |
+|------------------------------------------------------------------------------|
+| <a href='#ifilestreamflushasync1'>`Task FlushAsync ();`</a>                  |
+| <a href='#ifilestreamflushasync2'>`Task FlushAsync (CancellationToken);`</a> |
+
+---
+
+<a id='ifilestreamflushasync1'></a>
 ```csharp
 Task FlushAsync ();
 ```
@@ -1264,6 +1315,7 @@ A task that represents the asynchronous flush operation.
 
 ---
 
+<a id='ifilestreamflushasync2'></a>
 ```csharp
 Task FlushAsync (CancellationToken cancellationToken);
 ```
@@ -1299,6 +1351,14 @@ The range to be locked.
 
 ### IFileStream.Read
 
+| Signatures                                                     |
+|----------------------------------------------------------------|
+| <a href='#ifilestreamread1'>`int Read (byte[], int, int);`</a> |
+| <a href='#ifilestreamread2'>`int Read (Span<byte>);`</a>       |
+
+---
+
+<a id='ifilestreamread1'></a>
 ```csharp
 int Read (byte[] buffer, int offset, int count);
 ```
@@ -1323,6 +1383,7 @@ The total number of bytes read into the buffer. This might be less than the numb
 
 ---
 
+<a id='ifilestreamread2'></a>
 ```csharp
 int Read (Span<byte> buffer);
 ```
@@ -1339,6 +1400,15 @@ The total number of bytes read into the buffer. This can be less than the number
 
 ### IFileStream.ReadAsync
 
+| Signatures                                                                                         |
+|----------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamreadasync1'>`ValueTask<int> ReadAsync (Memory<byte>, CancellationToken);`</a> |
+| <a href='#ifilestreamreadasync2'>`Task<int> ReadAsync (byte[], int, int);`</a>                     |
+| <a href='#ifilestreamreadasync3'>`Task<int> ReadAsync (byte[], int, int, CancellationToken);`</a>  |
+
+---
+
+<a id='ifilestreamreadasync1'></a>
 ```csharp
 ValueTask<int> ReadAsync (Memory<byte> buffer, CancellationToken cancellationToken = default);
 ```
@@ -1359,6 +1429,7 @@ A task that represents the asynchronous read operation. The value of its Result 
 
 ---
 
+<a id='ifilestreamreadasync2'></a>
 ```csharp
 Task<int> ReadAsync (byte[] buffer, int offset, int count);
 ```
@@ -1383,6 +1454,7 @@ A task that represents the asynchronous read operation. The value of the TResult
 
 ---
 
+<a id='ifilestreamreadasync3'></a>
 ```csharp
 Task<int> ReadAsync (byte[] buffer, int offset, int count, CancellationToken cancellationToken);
 ```
@@ -1474,6 +1546,14 @@ The range to be unlocked.
 
 ### IFileStream.Write
 
+| Signatures                                                         |
+|--------------------------------------------------------------------|
+| <a href='#ifilestreamwrite1'>`void Write(byte[], int, int);`</a>   |
+| <a href='#ifilestreamwrite2'>`void Write(ReadOnlySpan<byte>);`</a> |
+
+---
+
+<a id='ifilestreamwrite1'></a>
 ```csharp
 void Write (byte[] buffer, int offset, int count);
 ```
@@ -1494,6 +1574,7 @@ The maximum number of bytes to write.
 
 ---
 
+<a id='ifilestreamwrite2'></a>
 ```csharp
 void Write (ReadOnlySpan<byte> buffer);
 ```
@@ -1506,6 +1587,14 @@ A region of memory. This method copies the contents of this region to the curren
 
 ### IFileStream.WriteAsync
 
+| Signatures                                                                                             |
+|--------------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamwriteasync1'>`ValueTask WriteAsync(ReadOnlyMemory<byte>, CancellationToken);`</a> |
+| <a href='#ifilestreamwriteasync2'>`Task WriteAsync(byte[], int, int);`</a>                             |
+
+---
+
+<a id='ifilestreamwriteasync1'></a>
 ```csharp
 ValueTask WriteAsync (ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
 ```
@@ -1526,6 +1615,7 @@ A task that represents the asynchronous write operation.
 
 ---
 
+<a id='ifilestreamwriteasync2'></a>
 ```csharp
 Task WriteAsync (byte[] buffer, int offset, int count);
 ```
