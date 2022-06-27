@@ -281,7 +281,7 @@ Closes the current stream and releases any resources (such as sockets and file h
 |--------------------------------------------------------------------|
 | <a href='#ifilestreamcopyto1'>`void CopyTo (Stream);`</a>          |
 | <a href='#ifilestreamcopyto2'>`void CopyTo(IFileStream);`</a>      |
-| <a href='#ifilestreamcopyto3>`void CopyTo (Stream, int);`</a>      |
+| <a href='#ifilestreamcopyto3'>`void CopyTo (Stream, int);`</a>     |
 | <a href='#ifilestreamcopyto4'>`void CopyTo(IFileStream, int);`</a> |
 
 ---
