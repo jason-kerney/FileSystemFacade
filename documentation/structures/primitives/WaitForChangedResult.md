@@ -83,4 +83,3 @@ A value indicating whether the wait operation timed out.
 
 A value indicating whether the wait operation timed out.
 
-## TBD
