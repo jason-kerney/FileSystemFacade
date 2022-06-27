@@ -17,13 +17,13 @@ public interface IFileStreamFactory
 
 ### IFileStreamFactory.GetFileStream
 
-|                                                    | Signature                                                                                                                         |
-|----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <a href='#ifilestreamfactorygetfilestream1'>1</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` |
-| <a href='#ifilestreamfactorygetfilestream2'>2</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize);`                      |
-| <a href='#ifilestreamfactorygetfilestream3'>3></a> | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share);`                                      |
-| <a href='#ifilestreamfactorygetfilestream4'>4</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool useAsync);`       |
-| <a href='#ifilestreamfactorygetfilestream5'>5</a>  | `IFileStream GetFileStream(string path, FileMode mode, FileAccess access);`                                                       |
+|                                                    | Signature                                                                               |
+|----------------------------------------------------|-----------------------------------------------------------------------------------------|
+| <a href='#ifilestreamfactorygetfilestream1'>1</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, FileOptions);` |
+| <a href='#ifilestreamfactorygetfilestream2'>2</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int);`              |
+| <a href='#ifilestreamfactorygetfilestream3'>3></a> | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare);`                   |
+| <a href='#ifilestreamfactorygetfilestream4'>4</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess, FileShare, int, bool);`        |
+| <a href='#ifilestreamfactorygetfilestream5'>5</a>  | `IFileStream GetFileStream(string, FileMode, FileAccess);`                              |
 ---
 
 <a id='ifilestreamfactorygetfilestream1'></a>
