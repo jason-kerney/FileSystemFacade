@@ -16,7 +16,7 @@ interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 - [7.01 Container](#user-content-ifilesystemwatchercontainer)
 - [7.02 Enable Raising Events](#user-content-ifilesystemwatcherenableraisingevents)
 - [7.03 Filter](#user-content-ifilesystemwatcherfilter)
-- [7.04 Filters](#user-content-ifilesystemwatcherenablerfilters)
+- [7.04 Filters](#user-content-ifilesystemwatcherfilters)
 - [7.05 Include Subdirectories](#user-content-ifilesystemwatcherincludesubdirectories)
 - [7.06 Notify Filters](#user-content-ifilesystemwatchernotifyfilters)
 - [7.07 Synchronizing Object](#user-content-ifilesystemwatchersynchronizingobject)
