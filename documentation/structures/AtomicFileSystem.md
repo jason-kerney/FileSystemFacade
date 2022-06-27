@@ -34,9 +34,13 @@ Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-
 
 #### IAtomicFileSystem.FileStream
 
-|                                            | Code                                                                                                                                           | Description                                                                                                                                                                                                                                                                                 |
-|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <a href='#iatomicactionsfilestream1'>1</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` | Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call. |
+|                                            | Code                                                                                                                                           |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#iatomicactionsfilestream1'>1</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, FileOptions options);` |
+| <a href='#iatomicactionsfilestream2'>2</a> | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize);`                      |
+| <a href='iatomicactionsfilestream3'>3</a>  | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share);`                                      |
+| <a href='iatomicactionsfilestream4'>4</a>  | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access, FileShare share, int bufferSize, bool useAsync);`       |
+| <a href='iatomicactionsfilestream5'>5</a>  | `IAtomicActions<IFileStream> FileStream(string path, FileMode mode, FileAccess access);`                                                       |
 
 ---
 
@@ -77,6 +81,7 @@ An atomic action allowing the interaction with a [IFileStream](#user-content-fil
 
 ---
 
+<a id='iatomicactionsfilestream2'></a>
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 ```
@@ -109,6 +114,7 @@ An atomic action allowing the interaction with a [IFileStream](#user-content-fil
 
 ---
 
+<a id='iatomicactionsfilestream3'></a>
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 ```
@@ -137,6 +143,7 @@ An atomic action allowing the interaction with a [IFileStream](#user-content-fil
 
 ---
 
+<a id='iatomicactionsfilestream4'></a>
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, bool useAsync);
 ```
@@ -173,6 +180,7 @@ An atomic action allowing the interaction with a IFileStream specified by the pa
 
 ---
 
+<a id='iatomicactionsfilestream5'></a>
 ```csharp
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access);
 ```
