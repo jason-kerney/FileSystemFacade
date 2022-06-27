@@ -221,7 +221,7 @@ namespace FileSystemFacade.Primitives
             this.directoryInfo = directoryInfo;
         }
         
-        internal DirectoryInfo (string path) : this(new System.IO.DirectoryInfo(path)) {}
+        internal DirectoryInfo(string path) : this(new System.IO.DirectoryInfo(path)) {}
 
         public override string ToString()
         {

@@ -328,14 +328,14 @@ namespace FileSystemFacade.Primitives
             int bufferSize, bool useAsync) : this(new System.IO.FileStream(path, mode, access, share, bufferSize,
             useAsync)) { }
         
-        internal FileStream (string path, System.IO.FileMode mode, System.IO.FileAccess access) : this(new System.IO.FileStream(path, mode, access)) { }
+        internal FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access) : this(new System.IO.FileStream(path, mode, access)) { }
         
-        internal FileStream (SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) : this(new System.IO.FileStream(handle, access, bufferSize)) { }
+        internal FileStream(SafeFileHandle handle, System.IO.FileAccess access, int bufferSize) : this(new System.IO.FileStream(handle, access, bufferSize)) { }
         
         internal FileStream (SafeFileHandle handle, System.IO.FileAccess access, int bufferSize, bool isAsync) 
             : this(new System.IO.FileStream(handle, access, bufferSize, isAsync)) { }
         
-        internal FileStream (string path, System.IO.FileMode mode) : this(new System.IO.FileStream(path, mode)) { }
+        internal FileStream(string path, System.IO.FileMode mode) : this(new System.IO.FileStream(path, mode)) { }
 
         public System.IO.Stream Stream => stream;
 

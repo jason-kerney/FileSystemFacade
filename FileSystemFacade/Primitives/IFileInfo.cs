@@ -137,7 +137,7 @@ namespace FileSystemFacade.Primitives
             this.fileInfo = fileInfo;
         }
         
-        internal FileInfo (string fileName) : this(new System.IO.FileInfo(fileName)) { }
+        internal FileInfo(string fileName) : this(new System.IO.FileInfo(fileName)) { }
         
         public IDirectoryInfo? Directory => new DirectoryInfo(fileInfo.Directory);
 

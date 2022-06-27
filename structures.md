@@ -917,7 +917,7 @@ A value, in milliseconds, that determines how long the stream will attempt to wr
 ### IFileStream.BeginRead
 
 ```csharp
-IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
 ```
 
 Begins an asynchronous read operation. Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.
@@ -949,7 +949,7 @@ An object that references the asynchronous read.
 ### IFileStream.BeginWrite
 
 ```csharp
-IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
 ```
 
 Begins an asynchronous write operation. Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.
@@ -981,25 +981,25 @@ An object that references the asynchronous write.
 ### IFileStream.Close
 
 ```csharp
-void Close ();
+void Close();
 ```
 
-Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.
+Closes the current stream and releases any resources(such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.
 
 ### IFileStream.CopyTo
 
 | Signatures                                                         |
 |--------------------------------------------------------------------|
-| <a href='#ifilestreamcopyto1'>`void CopyTo (Stream);`</a>          |
+| <a href='#ifilestreamcopyto1'>`void CopyTo(Stream);`</a>           |
 | <a href='#ifilestreamcopyto2'>`void CopyTo(IFileStream);`</a>      |
-| <a href='#ifilestreamcopyto3'>`void CopyTo (Stream, int);`</a>     |
+| <a href='#ifilestreamcopyto3'>`void CopyTo(Stream, int);`</a>      |
 | <a href='#ifilestreamcopyto4'>`void CopyTo(IFileStream, int);`</a> |
 
 ---
 
 <a id='ifilestreamcopyto1'></a>
 ```csharp
-void CopyTo (System.IO.Stream destination);
+void CopyTo(System.IO.Stream destination);
 ```
 
 Reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
@@ -1025,7 +1025,7 @@ The stream to which the contents of the current stream will be copied.
 
 <a id='ifilestreamcopyto3></a>
 ```csharp
-void CopyTo (System.IO.Stream destination, int bufferSize);
+void CopyTo(System.IO.Stream destination, int bufferSize);
 ```
 
 Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
@@ -1065,14 +1065,14 @@ The size of the buffer. This value must be greater than zero. The default size i
 | <a href='#ifilestreamcopytoasync4'>`Task CopyToAsync(IFileStream, CancellationToken);`</a>                                               |
 | <a href='#ifilestreamcopytoasync5'>`Task CopyToAsync(Stream, int);`</a>                                                                  |
 | <a href='#ifilestreamcopytoasync6'>`Task CopyToAsync(IFileStream, int);`</a>                                                             |
-| <a href='#ifilestreamcopytoasync7'>`Task CopyToAsync (Stream);`</a>                                                                      |
-| <a href='#ifilestreamcopytoasync8'>`Task CopyToAsync (IFileStream);`</a>                                                                 |
+| <a href='#ifilestreamcopytoasync7'>`Task CopyToAsync(Stream);`</a>                                                                       |
+| <a href='#ifilestreamcopytoasync8'>`Task CopyToAsync(IFileStream);`</a>                                                                  |
 
 ---
 
 <a id='ifilestreamcopytoasync1'></a>
 ```csharp
-Task CopyToAsync (System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
+Task CopyToAsync(System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
@@ -1122,7 +1122,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync3'></a>
 ```csharp
-Task CopyToAsync (System.IO.Stream destination, CancellationToken cancellationToken);
+Task CopyToAsync(System.IO.Stream destination, CancellationToken cancellationToken);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
@@ -1143,7 +1143,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync4'></a>
 ```csharp
-Task CopyToAsync (IFileStream destination, CancellationToken cancellationToken);
+Task CopyToAsync(IFileStream destination, CancellationToken cancellationToken);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
@@ -1164,7 +1164,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync5'></a>
 ```csharp
-Task CopyToAsync (System.IO.Stream destination, int bufferSize);
+Task CopyToAsync(System.IO.Stream destination, int bufferSize);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
@@ -1185,7 +1185,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync6'></a>
 ```csharp
-Task CopyToAsync (IFileStream destination, int bufferSize);
+Task CopyToAsync(IFileStream destination, int bufferSize);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
@@ -1206,7 +1206,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync7'></a>
 ```csharp
-Task CopyToAsync (System.IO.Stream destination);
+Task CopyToAsync(System.IO.Stream destination);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
@@ -1223,7 +1223,7 @@ A task that represents the asynchronous copy operation.
 
 <a id='ifilestreamcopytoasync8'></a>
 ```csharp
-Task CopyToAsync (IFileStream destination);
+Task CopyToAsync(IFileStream destination);
 ```
 
 Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
@@ -1239,10 +1239,10 @@ A task that represents the asynchronous copy operation.
 ### IFileStream.EndRead
 
 ```csharp
-int EndRead (IAsyncResult asyncResult);
+int EndRead(IAsyncResult asyncResult);
 ```
 
-Waits for the pending asynchronous read operation to complete. (Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+Waits for the pending asynchronous read operation to complete.(Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.)
 
 **asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
 
@@ -1255,10 +1255,10 @@ The number of bytes read from the stream, between 0 and the number of bytes you 
 ### IFileStream.EndWrite
 
 ```csharp
-void EndWrite (IAsyncResult asyncResult);
+void EndWrite(IAsyncResult asyncResult);
 ```
 
-Ends an asynchronous write operation and blocks until the I/O operation is complete. (Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+Ends an asynchronous write operation and blocks until the I/O operation is complete.(Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.)
 
 **asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
 
@@ -1266,16 +1266,16 @@ The pending asynchronous I/O request.
 
 ### IFileStream.Flush
 
-| Signatures                                                        |
-|-------------------------------------------------------------------|
-| <a href='#ifilestreamflush1'>`void Flush ();`</a>                 |
-| <a href='#ifilestreamflush2'>`void Flush (bool flushToDisk);`</a> |
+| Signatures                                                       |
+|------------------------------------------------------------------|
+| <a href='#ifilestreamflush1'>`void Flush();`</a>                 |
+| <a href='#ifilestreamflush2'>`void Flush(bool flushToDisk);`</a> |
 
 ---
 
 <a id='ifilestreamflush1'></a>
 ```csharp
-void Flush ();
+void Flush();
 ```
 
 Clears buffers for this stream and causes any buffered data to be written to the file.
@@ -1284,7 +1284,7 @@ Clears buffers for this stream and causes any buffered data to be written to the
 
 <a id='ifilestreamflush2'></a>
 ```csharp
-void Flush (bool flushToDisk);
+void Flush(bool flushToDisk);
 ```
 
 Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.
@@ -1295,16 +1295,16 @@ true to flush all intermediate file buffers; otherwise, false.
 
 ### IFileStream.FlushAsync
 
-| Signatures                                                                   |
-|------------------------------------------------------------------------------|
-| <a href='#ifilestreamflushasync1'>`Task FlushAsync ();`</a>                  |
-| <a href='#ifilestreamflushasync2'>`Task FlushAsync (CancellationToken);`</a> |
+| Signatures                                                                  |
+|-----------------------------------------------------------------------------|
+| <a href='#ifilestreamflushasync1'>`Task FlushAsync();`</a>                  |
+| <a href='#ifilestreamflushasync2'>`Task FlushAsync(CancellationToken);`</a> |
 
 ---
 
 <a id='ifilestreamflushasync1'></a>
 ```csharp
-Task FlushAsync ();
+Task FlushAsync();
 ```
 
 Asynchronously clears all buffers for this stream and causes any buffered data to be written to the underlying device.
@@ -1317,7 +1317,7 @@ A task that represents the asynchronous flush operation.
 
 <a id='ifilestreamflushasync2'></a>
 ```csharp
-Task FlushAsync (CancellationToken cancellationToken);
+Task FlushAsync(CancellationToken cancellationToken);
 ```
 
 Asynchronously clears all buffers for this stream, causes any buffered data to be written to the underlying device, and monitors cancellation requests.
@@ -1336,14 +1336,14 @@ A task that represents the asynchronous flush operation.
 [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
 [System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
 [System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
-void Lock (long position, long length);
+void Lock(long position, long length);
 ```
 
 Prevents other processes from reading from or writing to the FileStream.
 
 **position** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
-The beginning of the range to lock. The value of this parameter must be equal to or greater than zero (0).
+The beginning of the range to lock. The value of this parameter must be equal to or greater than zero(0).
 
 **length** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
@@ -1351,23 +1351,23 @@ The range to be locked.
 
 ### IFileStream.Read
 
-| Signatures                                                     |
-|----------------------------------------------------------------|
-| <a href='#ifilestreamread1'>`int Read (byte[], int, int);`</a> |
-| <a href='#ifilestreamread2'>`int Read (Span<byte>);`</a>       |
+| Signatures                                                    |
+|---------------------------------------------------------------|
+| <a href='#ifilestreamread1'>`int Read(byte[], int, int);`</a> |
+| <a href='#ifilestreamread2'>`int Read(Span<byte>);`</a>       |
 
 ---
 
 <a id='ifilestreamread1'></a>
 ```csharp
-int Read (byte[] buffer, int offset, int count);
+int Read(byte[] buffer, int offset, int count);
 ```
 
 Reads a block of bytes from the stream and writes the data in a given buffer.
 
 **buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
 
-When this method returns, contains the specified byte array with the values between offset and (offset + count - 1) replaced by the bytes read from the current source.
+When this method returns, contains the specified byte array with the values between offset and(offset + count - 1) replaced by the bytes read from the current source.
 
 **offset** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
 
@@ -1385,7 +1385,7 @@ The total number of bytes read into the buffer. This might be less than the numb
 
 <a id='ifilestreamread2'></a>
 ```csharp
-int Read (Span<byte> buffer);
+int Read(Span<byte> buffer);
 ```
 
 Reads a sequence of bytes from the current file stream and advances the position within the file stream by the number of bytes read.
@@ -1396,21 +1396,21 @@ A region of memory. When this method returns, the contents of this region are re
 
 **returns** [int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)
 
-The total number of bytes read into the buffer. This can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.
+The total number of bytes read into the buffer. This can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or zero(0) if the end of the stream has been reached.
 
 ### IFileStream.ReadAsync
 
-| Signatures                                                                                         |
-|----------------------------------------------------------------------------------------------------|
-| <a href='#ifilestreamreadasync1'>`ValueTask<int> ReadAsync (Memory<byte>, CancellationToken);`</a> |
-| <a href='#ifilestreamreadasync2'>`Task<int> ReadAsync (byte[], int, int);`</a>                     |
-| <a href='#ifilestreamreadasync3'>`Task<int> ReadAsync (byte[], int, int, CancellationToken);`</a>  |
+| Signatures                                                                                        |
+|---------------------------------------------------------------------------------------------------|
+| <a href='#ifilestreamreadasync1'>`ValueTask<int> ReadAsync(Memory<byte>, CancellationToken);`</a> |
+| <a href='#ifilestreamreadasync2'>`Task<int> ReadAsync(byte[], int, int);`</a>                     |
+| <a href='#ifilestreamreadasync3'>`Task<int> ReadAsync(byte[], int, int, CancellationToken);`</a>  |
 
 ---
 
 <a id='ifilestreamreadasync1'></a>
 ```csharp
-ValueTask<int> ReadAsync (Memory<byte> buffer, CancellationToken cancellationToken = default);
+ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default);
 ```
 
 Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
@@ -1425,13 +1425,13 @@ The token to monitor for cancellation requests. The default value is None.
 
 **returns** [ValueTask](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1?view=net-6.0)<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)>
 
-A task that represents the asynchronous read operation. The value of its Result property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.
+A task that represents the asynchronous read operation. The value of its Result property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0(zero) if the end of the stream has been reached.
 
 ---
 
 <a id='ifilestreamreadasync2'></a>
 ```csharp
-Task<int> ReadAsync (byte[] buffer, int offset, int count);
+Task<int> ReadAsync(byte[] buffer, int offset, int count);
 ```
 
 Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
@@ -1450,13 +1450,13 @@ The maximum number of bytes to read.
 
 **returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)\>
 
-A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.
+A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0(zero) if the end of the stream has been reached.
 
 ---
 
 <a id='ifilestreamreadasync3'></a>
 ```csharp
-Task<int> ReadAsync (byte[] buffer, int offset, int count, CancellationToken cancellationToken);
+Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken);
 ```
 
 Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
@@ -1479,12 +1479,12 @@ The token to monitor for cancellation requests. The default value is None.
 
 **returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)\>
 
-A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0 (zero) if the end of the stream has been reached.
+A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0(zero) if the end of the stream has been reached.
 
 ### IFileStream.ReadByte
 
 ```csharp
-int ReadByte ();
+int ReadByte();
 ```
 
 Reads a byte from the file and advances the read position one byte.
@@ -1496,7 +1496,7 @@ The byte, cast to an Int32, or -1 if the end of the stream has been reached.
 ### IFileStream.Seek
 
 ```csharp
-long Seek (long offset, System.IO.SeekOrigin origin);
+long Seek(long offset, System.IO.SeekOrigin origin);
 ```
 
 Sets the current position of this stream to the given value.
@@ -1516,7 +1516,7 @@ The new position in the stream.
 ### IFileStream.SetLength
 
 ```csharp
-void SetLength (long value);
+void SetLength(long value);
 ```
 
 Sets the length of this stream to the given value.
@@ -1531,7 +1531,7 @@ The new length of the stream.
 [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
 [System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
 [System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
-void Unlock (long position, long length);
+void Unlock(long position, long length);
 ```
 
 Allows access by other processes to all or part of a file that was previously locked.
@@ -1555,7 +1555,7 @@ The range to be unlocked.
 
 <a id='ifilestreamwrite1'></a>
 ```csharp
-void Write (byte[] buffer, int offset, int count);
+void Write(byte[] buffer, int offset, int count);
 ```
 
 Writes a block of bytes to the file stream.
@@ -1576,7 +1576,7 @@ The maximum number of bytes to write.
 
 <a id='ifilestreamwrite2'></a>
 ```csharp
-void Write (ReadOnlySpan<byte> buffer);
+void Write(ReadOnlySpan<byte> buffer);
 ```
 
 Writes a sequence of bytes from a read-only span to the current file stream and advances the current position within this file stream by the number of bytes written.
@@ -1596,7 +1596,7 @@ A region of memory. This method copies the contents of this region to the curren
 
 <a id='ifilestreamwriteasync1'></a>
 ```csharp
-ValueTask WriteAsync (ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
+ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
 ```
 
 Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.
@@ -1617,7 +1617,7 @@ A task that represents the asynchronous write operation.
 
 <a id='ifilestreamwriteasync2'></a>
 ```csharp
-Task WriteAsync (byte[] buffer, int offset, int count);
+Task WriteAsync(byte[] buffer, int offset, int count);
 ```
 
 Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
@@ -1641,7 +1641,7 @@ A task that represents the asynchronous write operation.
 ### IFileStream.WriteByte
 
 ```csharp
-void WriteByte (byte value);
+void WriteByte(byte value);
 ```
 
 Writes a byte to the current position in the file stream.
