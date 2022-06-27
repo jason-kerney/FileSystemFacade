@@ -82,4 +82,3 @@ A value indicating whether the wait operation timed out.
 **return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether the wait operation timed out.
-
