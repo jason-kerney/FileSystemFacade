@@ -5,75 +5,6 @@ using System.ComponentModel;
 namespace FileSystemFacade.Primitives
 {
     /// <summary>
-    /// Contains information on the change that occurred.
-    /// </summary>
-    public interface IWaitForChangedResult
-    {
-        /// <summary>
-        /// Gets or sets the type of change that occurred.
-        /// </summary>
-        System.IO.WatcherChangeTypes ChangeType { get; set; }
-        /// <summary>
-        /// Gets or sets the name of the file or directory that changed.
-        /// </summary>
-        string? Name { get; set; }
-        /// <summary>
-        /// Gets or sets the original name of the file or directory that was renamed.
-        /// </summary>
-        string? OldName { get; set; }
-        /// <summary>
-        /// Gets or sets a value indicating whether the wait operation timed out.
-        /// </summary>
-        bool TimedOut { get; set; }
-    }
-
-    internal struct WaitForChangedResult : IWaitForChangedResult
-    {
-        private System.IO.WaitForChangedResult result;
-
-        public WaitForChangedResult(System.IO.WaitForChangedResult result)
-        {
-            this.result = result;
-        }
-
-        /// <summary>
-        /// Gets or sets the type of change that occurred.
-        /// </summary>
-        public System.IO.WatcherChangeTypes ChangeType
-        {
-            get => result.ChangeType;
-            set => result.ChangeType = value;
-        }
-
-        /// <summary>
-        /// Gets or sets the name of the file or directory that changed.
-        /// </summary>
-        public string Name
-        {
-            get => result.Name;
-            set => result.Name = value;
-        }
-
-        /// <summary>
-        /// Gets or sets the original name of the file or directory that was renamed.
-        /// </summary>
-        public string OldName
-        {
-            get => result.OldName;
-            set => result.OldName = value;
-        }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the wait operation timed out.
-        /// </summary>
-        public bool TimedOut
-        {
-            get => result.TimedOut;
-            set => result.TimedOut = value;
-        }
-    }
-
-    /// <summary>
     /// Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
     /// </summary>
     public interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
@@ -147,55 +78,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="timeout">The time (in milliseconds) to wait before timing out.</param>
         /// <returns>A WaitForChangedResult that contains specific information on the change that occurred.</returns>
         IWaitForChangedResult WaitForChanged(System.IO.WatcherChangeTypes changeType, int timeout);
-    }
-
-    /// <summary>
-    /// A factory to build IFileSystemWatcher objects
-    /// </summary>
-    public interface IFileSystemWatcherFactory
-    {
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class.
-        /// </summary>
-        /// <returns>A  new instance of the FileSystemWatcher class.</returns>
-        IFileSystemWatcher GetFileSystemWatcher();
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class, given the specified directory to monitor.
-        /// </summary>
-        /// <param name="path">The directory to monitor, in standard or Universal Naming Convention (UNC) notation.</param>
-        /// <returns>A new instance of the FileSystemWatcher class, given the specified directory to monitor.</returns>
-        IFileSystemWatcher GetFileSystemWatcher(string path);
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.
-        /// </summary>
-        /// <param name="path">The directory to monitor, in standard or Universal Naming Convention (UNC) notation.</param>
-        /// <param name="filter">The type of files to watch. For example, "*.txt" watches for changes to all text files.</param>
-        /// <returns>A new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.</returns>
-        IFileSystemWatcher GetFileSystemWatcher(string path, string filter);
-    }
-
-    internal class FileSystemWatcherFactory : IFileSystemWatcherFactory
-    {
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class.
-        /// </summary>
-        /// <returns>A  new instance of the FileSystemWatcher class.</returns>
-        public IFileSystemWatcher GetFileSystemWatcher() => new FileSystemWatcher();
-
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class, given the specified directory to monitor.
-        /// </summary>
-        /// <param name="path">he directory to monitor, in standard or Universal Naming Convention (UNC) notation.</param>
-        /// <returns>A new instance of the FileSystemWatcher class, given the specified directory to monitor.</returns>
-        public IFileSystemWatcher GetFileSystemWatcher(string path) => new FileSystemWatcher(path);
-
-        /// <summary>
-        /// Creates a new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.
-        /// </summary>
-        /// <param name="path">The directory to monitor, in standard or Universal Naming Convention (UNC) notation.</param>
-        /// <param name="filter">The type of files to watch. For example, "*.txt" watches for changes to all text files.</param>
-        /// <returns>A  new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.</returns>
-        public IFileSystemWatcher GetFileSystemWatcher(string path, string filter) => new FileSystemWatcher(path, filter);
     }
     
     internal class FileSystemWatcher : MarshalByRefObject, IFileSystemWatcher
