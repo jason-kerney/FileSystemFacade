@@ -1669,6 +1669,15 @@ public interface IFileSystemWatcherFactory
 
 ## IFileSystemWatcherFactory.GetFileSystemWatcher
 
+| Signatures                                                                                                               |
+|--------------------------------------------------------------------------------------------------------------------------|
+| <a href='#ifilesystemwatcherfactorygetfilesystemwatcher1'>`IFileSystemWatcher GetFileSystemWatcher();`</a>               |
+| <a href='#ifilesystemwatcherfactorygetfilesystemwatcher2'>`IFileSystemWatcher GetFileSystemWatcher(string);`</a>         |
+| <a href='#ifilesystemwatcherfactorygetfilesystemwatcher3'>`IFileSystemWatcher GetFileSystemWatcher(string, string);`</a> |
+
+---
+
+<a id='ifilesystemwatcherfactorygetfilesystemwatcher1'></a>
 ```csharp
 IFileSystemWatcher GetFileSystemWatcher();
 ```
@@ -1681,6 +1690,7 @@ A  new instance of the FileSystemWatcher class.
 
 ---
 
+<a id='ifilesystemwatcherfactorygetfilesystemwatcher2'></a>
 ```csharp
 IFileSystemWatcher GetFileSystemWatcher(string path);
 ```
@@ -1697,6 +1707,7 @@ A new instance of the FileSystemWatcher class, given the specified directory to 
 
 ---
 
+<a id='ifilesystemwatcherfactorygetfilesystemwatcher3'></a>
 ```csharp
 IFileSystemWatcher GetFileSystemWatcher(string path, string filter);
 ```
