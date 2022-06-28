@@ -312,7 +312,7 @@ The stream to which the contents of the current stream will be copied.
 
 ---
 
-<a id='ifilestreamcopyto3></a>
+<a id='ifilestreamcopyto3'></a>
 ```csharp
 void CopyTo(System.IO.Stream destination, int bufferSize);
 ```
@@ -329,7 +329,7 @@ The size of the buffer. This value must be greater than zero. The default size i
 
 ---
 
-<a id='ifilestreamcopyto4></a>
+<a id='ifilestreamcopyto4'></a>
 ```csharp
 void CopyTo(IFileStream destination, int bufferSize);
 ```
@@ -384,7 +384,7 @@ A task that represents the asynchronous copy operation.
 
 ---
 
-<a id='ifilestreamcopytoasync2></a>
+<a id='ifilestreamcopytoasync2'></a>
 ```csharp
 Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken cancellationToken);
 ```
