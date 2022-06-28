@@ -40,42 +40,35 @@ namespace FileSystemFacade.Primitives
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.</param>
         /// <returns>An enumerable collection of directories that matches searchPattern and searchOption.</returns>
         IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern, System.IO.SearchOption searchOption);
-
         /// <summary>
         /// Returns an enumerable collection of directory information that matches the specified search pattern and enumeration options.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of directories that matches searchPattern and enumerationOptions.</returns>
-        IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions);
-
+        IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern,  System.IO.EnumerationOptions enumerationOptions);
         /// <summary>
         /// Returns an enumerable collection of directory information in the current directory.
         /// </summary>
         /// <returns>An enumerable collection of directories in the current directory.</returns>
         IEnumerable<IDirectoryInfo> EnumerateDirectories();
-        
         /// <summary>
         /// Returns an enumerable collection of directory information that matches a specified search pattern.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of directories that matches searchPattern.</returns>
         IEnumerable<IDirectoryInfo> EnumerateDirectories(string searchPattern);
-        
         /// <summary>
         /// Returns an enumerable collection of file information in the current directory.
         /// </summary>
         /// <returns>An enumerable collection of the files in the current directory.</returns>
         IEnumerable<IFileInfo> EnumerateFiles();
-        
         /// <summary>
         /// Returns an enumerable collection of file information that matches a search pattern. 
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of files that matches searchPattern.</returns>
         IEnumerable<IFileInfo> EnumerateFiles(string searchPattern);
-        
         /// <summary>
         /// Returns an enumerable collection of file information that matches the specified search pattern and enumeration options.
         /// </summary>
@@ -83,7 +76,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of files that matches searchPattern and enumerationOptions.</returns>
         IEnumerable<IFileInfo> EnumerateFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
-        
         /// <summary>
         /// Returns an enumerable collection of file information that matches a specified search pattern and search subdirectory option.
         /// </summary>
@@ -91,51 +83,42 @@ namespace FileSystemFacade.Primitives
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.</param>
         /// <returns>An enumerable collection of files that matches searchPattern and searchOption.</returns>
         IEnumerable<IFileInfo> EnumerateFiles(string searchPattern, System.IO.SearchOption searchOption);
-
         /// <summary>
         /// Returns an enumerable collection of file system information that matches a specified search pattern and search subdirectory option.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.</param>
-        /// <returns></returns>
-        IEnumerable<IFileSystemInfo>
-            EnumerateFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption);
-
+        /// <returns>An enumerable collection of file system information objects that matches searchPattern and searchOption.</returns>
+        IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption);
         /// <summary>
         /// Returns an enumerable collection of file system information in the current directory.
         /// </summary>
         /// <returns>An enumerable collection of file system information in the current directory.</returns>
         IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos();
-        
         /// <summary>
         /// Returns an enumerable collection of file system information that matches a specified search pattern.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of file system information objects that matches searchPattern.</returns>
         IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern);
-
         /// <summary>
         /// Returns an enumerable collection of file system information that matches the specified search pattern and enumeration options.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of file system information objects that matches searchPattern and enumerationOptions.</returns>
-        IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions);
-
+        IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
         /// <summary>
         /// Returns the subdirectories of the current directory.
         /// </summary>
         /// <returns>An array of IDirectoryInfo objects.</returns>
         IDirectoryInfo[] GetDirectories();
-        
         /// <summary>
         /// Returns an array of directories in the current IDirectoryInfo matching the given search criteria.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An array of type IDirectoryInfo matching searchPattern.</returns>
         IDirectoryInfo[] GetDirectories(string searchPattern);
-        
         /// <summary>
         /// Returns an array of directories in the current IDirectoryInfo matching the specified search pattern and enumeration options.
         /// </summary>
@@ -143,7 +126,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An array of type IDirectoryInfo matching searchPattern and enumerationOptions.</returns>
         IDirectoryInfo[] GetDirectories(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
-        
         /// <summary>
         /// Returns an array of directories in the current IDirectoryInfo matching the given search criteria and using a value to determine whether to search subdirectories.
         /// </summary>
@@ -151,7 +133,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.</param>
         /// <returns></returns>
         IDirectoryInfo[] GetDirectories(string searchPattern, System.IO.SearchOption searchOption);
-        
         /// <summary>
         /// Returns a file list from the current directory matching the specified search pattern and enumeration options.
         /// </summary>
@@ -159,7 +140,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An array of IFileInfo objects that match searchPattern and enumerationOptions.</returns>
         IFileInfo[] GetFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
-
         /// <summary>
         /// Returns a file list from the current directory matching the given search pattern and using a value to determine whether to search subdirectories.
         /// </summary>

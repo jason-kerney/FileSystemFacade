@@ -211,7 +211,7 @@ IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? call
 
 Begins an asynchronous read operation. Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer to read data into.
 
@@ -243,7 +243,7 @@ IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? cal
 
 Begins an asynchronous write operation. Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer containing data to write to the current stream.
 
