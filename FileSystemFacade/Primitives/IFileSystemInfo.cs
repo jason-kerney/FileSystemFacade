@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Runtime.Serialization;
 
 namespace FileSystemFacade.Primitives
@@ -12,7 +11,7 @@ namespace FileSystemFacade.Primitives
         /// <summary>
         /// Gets or sets the attributes for the current file or directory.
         /// </summary>
-        FileAttributes Attributes { get; set; }
+        System.IO.FileAttributes Attributes { get; set; }
         /// <summary>
         /// Gets or sets the creation time of the current file or directory.
         /// </summary>
@@ -79,7 +78,7 @@ namespace FileSystemFacade.Primitives
             this.fileSystemInfo = fileSystemInfo;
         }
         
-        public FileAttributes Attributes
+        public System.IO.FileAttributes Attributes
         {
             get => fileSystemInfo.Attributes;
             set => fileSystemInfo.Attributes = value;

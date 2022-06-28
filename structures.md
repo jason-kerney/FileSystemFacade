@@ -2265,16 +2265,16 @@ public interface IFileSystemInfo
 ## IFileSystemInfo.Attributes
 
 ```csharp
-FileAttributes Attributes { get; set; }
+System.IO.FileAttributes Attributes { get; set; }
 ```
 
 Gets or sets the attributes for the current file or directory.
 
-**parameter value** [FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
+**parameter value** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
 
 The attributes for the current file or directory.
 
-**return** [FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
+**return** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
 
 The attributes for the current file or directory.
 
