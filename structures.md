@@ -1654,7 +1654,7 @@ A byte to write to the stream.
 
 ## File System Watcher Factory ##
 
-## Summary
+###Summary
 
 A factory to build IFileSystemWatcher objects
 
@@ -1662,11 +1662,11 @@ A factory to build IFileSystemWatcher objects
 public interface IFileSystemWatcherFactory
 ```
 
-## IFileSystemWatcherFactory
+###IFileSystemWatcherFactory
 
 - [6.1 Get File System Watcher](#user-content-ifilesystemwatcherfactorygetfilesystemwatcher)
 
-## IFileSystemWatcherFactory.GetFileSystemWatcher
+###IFileSystemWatcherFactory.GetFileSystemWatcher
 
 | Signatures                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------|
@@ -1729,7 +1729,7 @@ A new instance of the FileSystemWatcher class, given the specified directory and
 
 ## File System Watcher ##
 
-## Summary
+###Summary
 
 Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
 
@@ -1739,7 +1739,7 @@ This is a thin facade around [System.IO.FileSystemWatcher](https://docs.microsof
 interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 ```
 
-## IFileSystemWatcher
+###IFileSystemWatcher
 
 - [7.01 Container](#user-content-ifilesystemwatchercontainer)
 - [7.02 Enable Raising Events](#user-content-ifilesystemwatcherenableraisingevents)
@@ -1755,7 +1755,7 @@ interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 - [7.12 Renamed](#user-content-ifilesystemwatcherrenamed)
 - [7.13 Wait For Changed](#user-content-ifilesystemwatcherwaitforchanged)
 
-## IFileSystemWatcher.Container
+###IFileSystemWatcher.Container
 
 ```csharp
 [Browsable(false)] IContainer? Container { get; }
@@ -1767,7 +1767,7 @@ Gets the IContainer that contains the Component.
 
 The IContainer that contains the Component.
 
-## IFileSystemWatcher.EnableRaisingEvents
+###IFileSystemWatcher.EnableRaisingEvents
 
 ```csharp
 bool EnableRaisingEvents { get; set; }
@@ -1783,7 +1783,7 @@ A value indicating whether the component is enabled.
 
 A value indicating whether the component is enabled.
 
-## IFileSystemWatcher.Filter
+###IFileSystemWatcher.Filter
 
 ```csharp
 string Filter { get; set; }
@@ -1799,7 +1799,7 @@ The filter string used to determine what files are monitored in a directory.
 
 The filter string used to determine what files are monitored in a directory.
 
-## IFileSystemWatcher.Filters
+###IFileSystemWatcher.Filters
 
 ```csharp
 Collection<string> Filters { get; }
@@ -1811,7 +1811,7 @@ Gets the collection of all the filters used to determine what files are monitore
 
 The collection of all the filters used to determine what files are monitored in a directory.
 
-## IFileSystemWatcher.IncludeSubdirectories
+###IFileSystemWatcher.IncludeSubdirectories
 
 ```csharp
 bool IncludeSubdirectories { get; set; }
@@ -1827,7 +1827,7 @@ A value indicating whether subdirectories within the specified path should be mo
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
-## IFileSystemWatcher.InternalBufferSize
+###IFileSystemWatcher.InternalBufferSize
 
 ```csharp
 int InternalBufferSize { get; set; }
@@ -1843,7 +1843,7 @@ The size (in bytes) of the internal buffer.
 
 The size (in bytes) of the internal buffer.
 
-## IFileSystemWatcher.NotifyFilters
+###IFileSystemWatcher.NotifyFilters
 
 ```csharp
 System.IO.NotifyFilters NotifyFilter { get; set; }
@@ -1859,7 +1859,7 @@ The type of changes to watch for.
 
 The type of changes to watch for.
 
-## IFileSystemWatcher.SynchronizingObject
+###IFileSystemWatcher.SynchronizingObject
 
 ```csharp
 ISynchronizeInvoke? SynchronizingObject { get; set; }
@@ -1867,7 +1867,7 @@ ISynchronizeInvoke? SynchronizingObject { get; set; }
 
 Gets or sets the object used to marshal the event handler calls issued as a result of a directory change.
 
-## IFileSystemWatcher.Changed
+###IFileSystemWatcher.Changed
 
 ```csharp
 event System.IO.FileSystemEventHandler? Changed;
@@ -1879,7 +1879,7 @@ Occurs when a file or directory in the specified Path is changed.
 
 A handler that handles when a file or directory in the specified Path is changed.
 
-## IFileSystemWatcher.Created
+###IFileSystemWatcher.Created
 
 ```csharp
 event System.IO.FileSystemEventHandler? Created;
@@ -1891,7 +1891,7 @@ Occurs when a file or directory in the specified Path is created.
 
 A handler that handles when a file or directory in the specified Path is created.
 
-## IFileSystemWatcher.Deleted
+###IFileSystemWatcher.Deleted
 
 ```csharp
 event System.IO.FileSystemEventHandler? Deleted;
@@ -1903,7 +1903,7 @@ Occurs when a file or directory in the specified Path is deleted.
 
 A handler that handles when a file or directory in the specified Path is deleted.
 
-## IFileSystemWatcher.Error
+###IFileSystemWatcher.Error
 
 ```csharp
 event System.IO.ErrorEventHandler? Error;
@@ -1915,7 +1915,7 @@ Occurs when the instance of FileSystemWatcher is unable to continue monitoring c
 
 A handler that handles when the instance of FileSystemWatcher is unable to continue monitoring changes or when the internal buffer overflows.
 
-## IFileSystemWatcher.Renamed
+###IFileSystemWatcher.Renamed
 
 ```csharp
 event System.IO.RenamedEventHandler? Renamed;
@@ -1927,7 +1927,7 @@ Occurs when a file or directory in the specified Path is renamed.
 
 A handler that handles when a file or directory in the specified Path is renamed.
 
-## IFileSystemWatcher.WaitForChanged
+###IFileSystemWatcher.WaitForChanged
 
 | Signatures                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------|
@@ -1975,7 +1975,7 @@ A WaitForChangedResult that contains specific information on the change that occ
 
 ## Wait For Changed Result ##
 
-## Summary
+###Summary
 
 Contains information on the change that occurred.
 
@@ -1985,14 +1985,14 @@ This is a thin facade over [System.IO.WaitForChangedResult](https://docs.microso
 public interface IWaitForChangedResult
 ```
 
-## IWaitForChangedResult
+###IWaitForChangedResult
 
 - [8.1 Change Type](#user-content-iwaitforchangedresultchangetype)
 - [8.2 Name](#user-content-iwaitforchangedresultname)
 - [8.3 Old Name](#user-content-iwaitforchangedresultoldname)
 - [8.4 Timed Out](#user-content-iwaitforchangedresulttimedout)
 
-## IWaitForChangedResult.ChangeType
+###IWaitForChangedResult.ChangeType
 
 ```csharp
 System.IO.WatcherChangeTypes ChangeType { get; set; }
@@ -2008,7 +2008,7 @@ The type of change that occurred.
 
 The type of change that occurred.
 
-## IWaitForChangedResult.Name
+###IWaitForChangedResult.Name
 
 ```csharp
 string? Name { get; set; }
@@ -2024,7 +2024,7 @@ The name of the file or directory that changed.
 
 The name of the file or directory that changed.
 
-## IWaitForChangedResult.OldName
+###IWaitForChangedResult.OldName
 
 ```csharp
 string? OldName { get; set; }
@@ -2040,7 +2040,7 @@ The original name of the file or directory that was renamed.
 
 The original name of the file or directory that was renamed.
 
-## IWaitForChangedResult.TimedOut
+###IWaitForChangedResult.TimedOut
 
 ```csharp
 bool TimedOut { get; set; }
@@ -2060,7 +2060,7 @@ A value indicating whether the wait operation timed out.
 
 ## Drive Info Factory ##
 
-## Summary
+###Summary
 
 A factory to build IDriveInfos
 
@@ -2069,11 +2069,11 @@ public interface IDriveInfoFactory
 ```
 
 <!-- 9 -->
-## IDriveInfoFactory
+###IDriveInfoFactory
 
 - [9.1 Drive Info](#user-content-idriveinfofactorydriveInfo)
 
-## IDriveInfoFactory.DriveInfo
+###IDriveInfoFactory.DriveInfo
 
 ```csharp
 IDriveInfo DriveInfo(string driveName);
@@ -2092,7 +2092,7 @@ Information on the specified drive.
 
 ## Drive Info ##
 
-## Summary
+###Summary
 
 This interface models a drive and provides methods and properties to query for drive information. Use IDrives to determine what drives are available; and use IDriveInfo to determine what type of drive it is. You can also query to determine the capacity and available free space on the drive.
 
@@ -2102,7 +2102,7 @@ This is a thin facade around [System.IO.DriveInfo](https://docs.microsoft.com/en
 public interface IDriveInfo
 ```
 
-## IDriveInfo
+###IDriveInfo
 
 - [10.1 Available Free Space](#user-content-idriveinfoavailablefreespace)
 - [10.2 Drive Format](#user-content-idriveinfodriveformat)
@@ -2116,7 +2116,7 @@ public interface IDriveInfo
 
 <!-- user-content-idriveinfo -->
 
-## IDriveInfo.AvailableFreeSpace
+###IDriveInfo.AvailableFreeSpace
 
 ```csharp
 long AvailableFreeSpace { get; }
@@ -2128,7 +2128,7 @@ Indicates the amount of available free space on a drive, in bytes.
 
 The amount of available free space on a drive, in bytes.
 
-## IDriveInfo.DriveFormat
+###IDriveInfo.DriveFormat
 
 ```csharp
 string DriveFormat { get; }
@@ -2140,7 +2140,7 @@ Gets the name of the file system, such as NTFS or FAT32.
 
 The name of the file system, such as NTFS or FAT32.
 
-## IDriveInfo.DriveType
+###IDriveInfo.DriveType
 
 ```csharp
 System.IO.DriveType DriveType { get; }
@@ -2152,7 +2152,7 @@ Gets the drive type, such as CD-ROM, removable, network, or fixed.
 
 The drive type, such as CD-ROM, removable, network, or fixed.
 
-## IDriveInfo.IsReady
+###IDriveInfo.IsReady
 
 ```csharp
 bool IsReady { get; }
@@ -2164,7 +2164,7 @@ Gets a value that indicates whether a drive is ready.
 
 A value that indicates whether a drive is ready.
 
-## IDriveInfo.Name
+###IDriveInfo.Name
 
 ```csharp
 string Name { get; }
@@ -2176,7 +2176,7 @@ Gets the name of a drive, such as C:\.
 
 The name of a drive, such as C:\.
 
-## IDriveInfo.RootDirectory
+###IDriveInfo.RootDirectory
 
 ```csharp
 IDirectoryInfo RootDirectory { get; }
@@ -2188,7 +2188,7 @@ Gets the root directory of a drive.
 
 The root directory of a drive.
 
-## IDriveInfo.TotalFreeSpace
+###IDriveInfo.TotalFreeSpace
 
 ```csharp
 long TotalFreeSpace { get; }
@@ -2200,7 +2200,7 @@ Gets the total amount of free space available on a drive, in bytes.
 
 The total amount of free space available on a drive, in bytes.
 
-## IDriveInfo.TotalSize
+###IDriveInfo.TotalSize
 
 ```csharp
 long TotalSize { get; }
@@ -2212,7 +2212,7 @@ Gets the total size of storage space on a drive, in bytes.
 
 The total size of storage space on a drive, in bytes.
 
-## IDriveInfo.VolumeLabel
+###IDriveInfo.VolumeLabel
 
 ```csharp
 string VolumeLabel { get; [System.Runtime.Versioning.SupportedOSPlatform("windows")] set; }
@@ -2233,7 +2233,7 @@ The volume label of a drive.
 
 ## File System Info ##
 
-## Summary
+###Summary
 
 Provides the interface class for both IFileInfo and IDirectoryInfo objects.
 
@@ -2243,7 +2243,7 @@ This is a thin facade around [System.IO.FileSystemInfo](https://docs.microsoft.c
 public interface IFileSystemInfo
 ```
 
-## IFileSystemInfo
+###IFileSystemInfo
 
 - [11.01 Attributes](#user-content-ifilesysteminfoattributes)
 - [11.02 Creation Time](#user-content-ifilesysteminfocreationtime)
@@ -2260,7 +2260,7 @@ public interface IFileSystemInfo
 - [11.13 Get Object Data](#user-content-ifilesysteminfogetobjectdata)
 - [11.14 Refresh](#user-content-ifilesysteminforefresh)
 
-## IFileSystemInfo.Attributes
+###IFileSystemInfo.Attributes
 
 ```csharp
 System.IO.FileAttributes Attributes { get; set; }
@@ -2276,7 +2276,7 @@ The attributes for the current file or directory.
 
 The attributes for the current file or directory.
 
-## IFileSystemInfo.CreationTime
+###IFileSystemInfo.CreationTime
 
 ```csharp
 DateTime CreationTime { get; set; }
@@ -2292,7 +2292,7 @@ The creation time of the current file or directory.
 
 The creation time of the current file or directory.
 
-## IFileSystemInfo.CreationTimeUtc
+###IFileSystemInfo.CreationTimeUtc
 
 ```csharp
 DateTime CreationTimeUtc { get; set; }
@@ -2308,7 +2308,7 @@ The creation time, in coordinated universal time (UTC), of the current file or d
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
-## IFileSystemInfo.Exists
+###IFileSystemInfo.Exists
 
 ```csharp
 bool Exists { get; }
@@ -2320,7 +2320,7 @@ Gets a value indicating whether the file or directory exists.
 
 A value indicating whether the file or directory exists.
 
-## IFileSystemInfo.Extension
+###IFileSystemInfo.Extension
 
 ```csharp
 string Extension { get; }
@@ -2332,7 +2332,7 @@ Gets the extension part of the file name, including the leading dot . even if it
 
 The extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
-## IFileSystemInfo.FullName
+###IFileSystemInfo.FullName
 
 ```csharp
 string FullName { get; }
@@ -2344,7 +2344,7 @@ Gets the full path of the directory or file.
 
 The full path of the directory or file.
 
-## IFileSystemInfo.LastAccessTime
+###IFileSystemInfo.LastAccessTime
 
 ```csharp
 DateTime LastAccessTime { get; set; }
@@ -2356,7 +2356,7 @@ Gets or sets the time the current file or directory was last accessed.
 
 The time the current file or directory was last accessed.
 
-## IFileSystemInfo.LastAccessTimeUtc
+###IFileSystemInfo.LastAccessTimeUtc
 
 ```csharp
 DateTime LastAccessTimeUtc { get; set; }
@@ -2372,7 +2372,7 @@ The time, in coordinated universal time (UTC), that the current file or director
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
-## IFileSystemInfo.LastWriteTime
+###IFileSystemInfo.LastWriteTime
 
 ```csharp
 DateTime LastWriteTime { get; set; }
@@ -2388,7 +2388,7 @@ The time when the current file or directory was last written to.
 
 The time when the current file or directory was last written to.
 
-## IFileSystemInfo.LastWriteTimeUtc
+###IFileSystemInfo.LastWriteTimeUtc
 
 ```csharp
 DateTime LastWriteTimeUtc { get; set; }
@@ -2404,7 +2404,7 @@ The time, in coordinated universal time (UTC), when the current file or director
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
-## IFileSystemInfo.Name
+###IFileSystemInfo.Name
 ```csharp
 string Name { get; }
 ```
@@ -2415,7 +2415,7 @@ For files, gets the name of the file. For directories, gets the name of the last
 
 For files, returns the name of the file. For directories, returns the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property returns the name of the directory.
 
-## IFileSystemInfo.Delete
+###IFileSystemInfo.Delete
 
 ```csharp
 void Delete ();
@@ -2423,7 +2423,7 @@ void Delete ();
 
 Deletes a file or directory.
 
-## IFileSystemInfo.GetObjectData
+###IFileSystemInfo.GetObjectData
 
 ```csharp
 void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
@@ -2439,7 +2439,7 @@ The SerializationInfo that holds the serialized object data about the exception 
 
 The StreamingContext that contains contextual information about the source or destination.
 
-## IFileSystemInfo.Refresh
+###IFileSystemInfo.Refresh
 
 ```csharp
 void Refresh ();
@@ -2450,7 +2450,7 @@ Refreshes the state of the object.
 
 ## Directory Info Factory ##
 
-## Summary
+###Summary
 
 A factory for building IDirectoryInfo objects
 
@@ -2458,11 +2458,11 @@ A factory for building IDirectoryInfo objects
 public interface IDirectoryInfoFactory
 ```
 
-## IDirectoryInfoFactory
+###IDirectoryInfoFactory
 
 - [12.1 Get Directory Info](#user-content-idirectoryinfofactorygetdirectoryinfo)
 
-## IDirectoryInfoFactory.GetDirectoryInfo
+###IDirectoryInfoFactory.GetDirectoryInfo
 
 ```csharp
 IDirectoryInfo GetDirectoryInfo(string path);
@@ -2481,7 +2481,7 @@ A new instance of the IDirectoryInfo interface on the specified path.
 
 ## Directory Info ##
 
-## Summary
+###Summary
 
 Exposes methods for creating, moving, and enumerating through directories and subdirectories.
 
@@ -2491,7 +2491,7 @@ This is a thin facade around [System.IO.DirectoryInfo](https://docs.microsoft.co
 public interface IDirectoryInfo : IFileSystemInfo
 ```
 
-## IDirectoryInfo
+###IDirectoryInfo
 
 - [13.01 Parent](#user-content-idirectoryinfoparent)
 - [13.02 Root](#user-content-idirectoryinforoot)
@@ -2506,7 +2506,7 @@ public interface IDirectoryInfo : IFileSystemInfo
 - [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
 - [13.12 Move To](#user-content-idirectoryinfomoveto)
 
-## IDirectoryInfo.Parent
+###IDirectoryInfo.Parent
 
 ```csharp
 IDirectoryInfo? Parent { get; }
@@ -2518,7 +2518,7 @@ Gets the parent directory of a specified subdirectory.
 
 The parent directory of a specified subdirectory.
 
-## IDirectoryInfo.Root
+###IDirectoryInfo.Root
 
 ```csharp
 IDirectoryInfo Root { get; }
@@ -2530,7 +2530,7 @@ Gets the root portion of the directory.
 
 The root portion of the directory.
 
-## IDirectoryInfo.Create
+###IDirectoryInfo.Create
 
 ```csharp
 void Create();
@@ -2538,7 +2538,7 @@ void Create();
 
 Creates a directory.
 
-## IDirectoryInfo.CreateSubdirectory
+###IDirectoryInfo.CreateSubdirectory
 
 ```csharp
 IDirectoryInfo CreateSubdirectory(string path);
@@ -2554,7 +2554,7 @@ The specified path. This cannot be a different disk volume or Universal Naming C
 
 The last directory specified in path.
 
-## IDirectoryInfo.Delete
+###IDirectoryInfo.Delete
 
 ```csharp
 void Delete(bool recursive);
@@ -2566,7 +2566,7 @@ Deletes this instance of a DirectoryInfo, specifying whether to delete subdirect
 
 true to delete this directory, its subdirectories, and all files; otherwise, false.
 
-## IDirectoryInfo.EnumerateDirectories
+###IDirectoryInfo.EnumerateDirectories
 
 | Signatures                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -2647,7 +2647,7 @@ The search string to match against the names of directories. This parameter can 
 
 An enumerable collection of directories that matches searchPattern.
 
-## IDirectoryInfo.EnumerateFiles
+###IDirectoryInfo.EnumerateFiles
 
 | Signatures                                                                                                                     |
 |--------------------------------------------------------------------------------------------------------------------------------|
@@ -2727,7 +2727,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An enumerable collection of files that matches searchPattern and searchOption.
 
-## IDirectoryInfo.EnumerateFileSystemInfos
+###IDirectoryInfo.EnumerateFileSystemInfos
 
 | Signatures                                                                                                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -2808,7 +2808,7 @@ An object that describes the search and enumeration configuration to use.
 
 An enumerable collection of file system information objects that matches searchPattern and enumerationOptions.
 
-## IDirectoryInfo.GetDirectories
+###IDirectoryInfo.GetDirectories
 
 | Signatures                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------|
@@ -2888,7 +2888,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
-## IDirectoryInfo.GetFiles
+###IDirectoryInfo.GetFiles
 
 | Signatures                                                                                              |
 |---------------------------------------------------------------------------------------------------------|
@@ -2969,7 +2969,7 @@ The search string to match against the names of files. This parameter can contai
 
 An array of type IFileInfo.
 
-## IDirectoryInfo.GetFileSystemInfos
+###IDirectoryInfo.GetFileSystemInfos
 
 | Signatures                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------|
@@ -3051,7 +3051,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of file system entries that match the search criteria.
 
-## IDirectoryInfo.MoveTo
+###IDirectoryInfo.MoveTo
 
 ```csharp
 void MoveTo(string destDirName);
@@ -3066,7 +3066,7 @@ The name and path to which to move this directory. The destination cannot be ano
 
 ## File Info Factory ##
 
-## Summary
+###Summary
 
 A factory to build IFileInfo Objects
 
@@ -3074,11 +3074,11 @@ A factory to build IFileInfo Objects
 public interface IFileInfoFactory
 ```
 
-## IFileInfoFactory
+###IFileInfoFactory
 
 -[14.1 Get File Info](#user-content-ifileinfofactorygetfileinfo)
 
-## IFileInfoFactory.GetFileInfo
+###IFileInfoFactory.GetFileInfo
 
 ```csharp
 IFileInfo GetFileInfo(string fileName);

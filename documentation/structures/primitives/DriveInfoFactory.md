@@ -3,7 +3,7 @@
     (title "Drive Info Factory"))
 /bl-->
 
-## Summary
+###Summary
 
 A factory to build IDriveInfos
 
@@ -12,11 +12,11 @@ public interface IDriveInfoFactory
 ```
 
 <!-- 9 -->
-## IDriveInfoFactory
+###IDriveInfoFactory
 
 - [9.1 Drive Info](#user-content-idriveinfofactorydriveInfo)
 
-## IDriveInfoFactory.DriveInfo
+###IDriveInfoFactory.DriveInfo
 
 ```csharp
 IDriveInfo DriveInfo(string driveName);

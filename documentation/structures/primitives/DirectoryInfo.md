@@ -3,7 +3,7 @@
     (title "Directory Info"))
 /bl-->
 
-## Summary
+###Summary
 
 Exposes methods for creating, moving, and enumerating through directories and subdirectories.
 
@@ -13,7 +13,7 @@ This is a thin facade around [System.IO.DirectoryInfo](https://docs.microsoft.co
 public interface IDirectoryInfo : IFileSystemInfo
 ```
 
-## IDirectoryInfo
+###IDirectoryInfo
 
 - [13.01 Parent](#user-content-idirectoryinfoparent)
 - [13.02 Root](#user-content-idirectoryinforoot)
@@ -28,7 +28,7 @@ public interface IDirectoryInfo : IFileSystemInfo
 - [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
 - [13.12 Move To](#user-content-idirectoryinfomoveto)
 
-## IDirectoryInfo.Parent
+###IDirectoryInfo.Parent
 
 ```csharp
 IDirectoryInfo? Parent { get; }
@@ -40,7 +40,7 @@ Gets the parent directory of a specified subdirectory.
 
 The parent directory of a specified subdirectory.
 
-## IDirectoryInfo.Root
+###IDirectoryInfo.Root
 
 ```csharp
 IDirectoryInfo Root { get; }
@@ -52,7 +52,7 @@ Gets the root portion of the directory.
 
 The root portion of the directory.
 
-## IDirectoryInfo.Create
+###IDirectoryInfo.Create
 
 ```csharp
 void Create();
@@ -60,7 +60,7 @@ void Create();
 
 Creates a directory.
 
-## IDirectoryInfo.CreateSubdirectory
+###IDirectoryInfo.CreateSubdirectory
 
 ```csharp
 IDirectoryInfo CreateSubdirectory(string path);
@@ -76,7 +76,7 @@ The specified path. This cannot be a different disk volume or Universal Naming C
 
 The last directory specified in path.
 
-## IDirectoryInfo.Delete
+###IDirectoryInfo.Delete
 
 ```csharp
 void Delete(bool recursive);
@@ -88,7 +88,7 @@ Deletes this instance of a DirectoryInfo, specifying whether to delete subdirect
 
 true to delete this directory, its subdirectories, and all files; otherwise, false.
 
-## IDirectoryInfo.EnumerateDirectories
+###IDirectoryInfo.EnumerateDirectories
 
 | Signatures                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -169,7 +169,7 @@ The search string to match against the names of directories. This parameter can 
 
 An enumerable collection of directories that matches searchPattern.
 
-## IDirectoryInfo.EnumerateFiles
+###IDirectoryInfo.EnumerateFiles
 
 | Signatures                                                                                                                     |
 |--------------------------------------------------------------------------------------------------------------------------------|
@@ -249,7 +249,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An enumerable collection of files that matches searchPattern and searchOption.
 
-## IDirectoryInfo.EnumerateFileSystemInfos
+###IDirectoryInfo.EnumerateFileSystemInfos
 
 | Signatures                                                                                                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -330,7 +330,7 @@ An object that describes the search and enumeration configuration to use.
 
 An enumerable collection of file system information objects that matches searchPattern and enumerationOptions.
 
-## IDirectoryInfo.GetDirectories
+###IDirectoryInfo.GetDirectories
 
 | Signatures                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------|
@@ -410,7 +410,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
-## IDirectoryInfo.GetFiles
+###IDirectoryInfo.GetFiles
 
 | Signatures                                                                                              |
 |---------------------------------------------------------------------------------------------------------|
@@ -491,7 +491,7 @@ The search string to match against the names of files. This parameter can contai
 
 An array of type IFileInfo.
 
-## IDirectoryInfo.GetFileSystemInfos
+###IDirectoryInfo.GetFileSystemInfos
 
 | Signatures                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------|
@@ -573,7 +573,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of file system entries that match the search criteria.
 
-## IDirectoryInfo.MoveTo
+###IDirectoryInfo.MoveTo
 
 ```csharp
 void MoveTo(string destDirName);

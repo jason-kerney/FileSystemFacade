@@ -3,7 +3,7 @@
     (title "Drive Info"))
 /bl-->
 
-## Summary
+###Summary
 
 This interface models a drive and provides methods and properties to query for drive information. Use IDrives to determine what drives are available; and use IDriveInfo to determine what type of drive it is. You can also query to determine the capacity and available free space on the drive.
 
@@ -13,7 +13,7 @@ This is a thin facade around [System.IO.DriveInfo](https://docs.microsoft.com/en
 public interface IDriveInfo
 ```
 
-## IDriveInfo
+###IDriveInfo
 
 - [10.1 Available Free Space](#user-content-idriveinfoavailablefreespace)
 - [10.2 Drive Format](#user-content-idriveinfodriveformat)
@@ -27,7 +27,7 @@ public interface IDriveInfo
 
 <!-- user-content-idriveinfo -->
 
-## IDriveInfo.AvailableFreeSpace
+###IDriveInfo.AvailableFreeSpace
 
 ```csharp
 long AvailableFreeSpace { get; }
@@ -39,7 +39,7 @@ Indicates the amount of available free space on a drive, in bytes.
 
 The amount of available free space on a drive, in bytes.
 
-## IDriveInfo.DriveFormat
+###IDriveInfo.DriveFormat
 
 ```csharp
 string DriveFormat { get; }
@@ -51,7 +51,7 @@ Gets the name of the file system, such as NTFS or FAT32.
 
 The name of the file system, such as NTFS or FAT32.
 
-## IDriveInfo.DriveType
+###IDriveInfo.DriveType
 
 ```csharp
 System.IO.DriveType DriveType { get; }
@@ -63,7 +63,7 @@ Gets the drive type, such as CD-ROM, removable, network, or fixed.
 
 The drive type, such as CD-ROM, removable, network, or fixed.
 
-## IDriveInfo.IsReady
+###IDriveInfo.IsReady
 
 ```csharp
 bool IsReady { get; }
@@ -75,7 +75,7 @@ Gets a value that indicates whether a drive is ready.
 
 A value that indicates whether a drive is ready.
 
-## IDriveInfo.Name
+###IDriveInfo.Name
 
 ```csharp
 string Name { get; }
@@ -87,7 +87,7 @@ Gets the name of a drive, such as C:\.
 
 The name of a drive, such as C:\.
 
-## IDriveInfo.RootDirectory
+###IDriveInfo.RootDirectory
 
 ```csharp
 IDirectoryInfo RootDirectory { get; }
@@ -99,7 +99,7 @@ Gets the root directory of a drive.
 
 The root directory of a drive.
 
-## IDriveInfo.TotalFreeSpace
+###IDriveInfo.TotalFreeSpace
 
 ```csharp
 long TotalFreeSpace { get; }
@@ -111,7 +111,7 @@ Gets the total amount of free space available on a drive, in bytes.
 
 The total amount of free space available on a drive, in bytes.
 
-## IDriveInfo.TotalSize
+###IDriveInfo.TotalSize
 
 ```csharp
 long TotalSize { get; }
@@ -123,7 +123,7 @@ Gets the total size of storage space on a drive, in bytes.
 
 The total size of storage space on a drive, in bytes.
 
-## IDriveInfo.VolumeLabel
+###IDriveInfo.VolumeLabel
 
 ```csharp
 string VolumeLabel { get; [System.Runtime.Versioning.SupportedOSPlatform("windows")] set; }
