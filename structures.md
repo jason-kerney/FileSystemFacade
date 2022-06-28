@@ -1795,7 +1795,7 @@ Gets or sets the filter string used to determine what files are monitored in a d
 
 The filter string used to determine what files are monitored in a directory.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The filter string used to determine what files are monitored in a directory.
 
@@ -1823,7 +1823,7 @@ Gets or sets a value indicating whether subdirectories within the specified path
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
@@ -1855,7 +1855,7 @@ Gets or sets the type of changes to watch for.
 
 The type of changes to watch for.
 
-**return** [System.IO.NotifyFilters](https://docs.microsoft.com/en-us/dotnet/api/system.io.notifyfilters?view=net-6.0)
+**returns** [System.IO.NotifyFilters](https://docs.microsoft.com/en-us/dotnet/api/system.io.notifyfilters?view=net-6.0)
 
 The type of changes to watch for.
 
@@ -2004,7 +2004,7 @@ Gets or sets the type of change that occurred.
 
 The type of change that occurred.
 
-**return** [System.IO.WatcherChangeTypes](https://docs.microsoft.com/en-us/dotnet/api/system.io.watcherchangetypes?view=net-6.0)
+**returns** [System.IO.WatcherChangeTypes](https://docs.microsoft.com/en-us/dotnet/api/system.io.watcherchangetypes?view=net-6.0)
 
 The type of change that occurred.
 
@@ -2020,7 +2020,7 @@ Gets or sets the name of the file or directory that changed.
 
 The name of the file or directory that changed.
 
-**return** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
 
 The name of the file or directory that changed.
 
@@ -2036,7 +2036,7 @@ Gets or sets the original name of the file or directory that was renamed.
 
 The original name of the file or directory that was renamed.
 
-**return** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
 
 The original name of the file or directory that was renamed.
 
@@ -2053,7 +2053,7 @@ Gets or sets a value indicating whether the wait operation timed out.
 
 A value indicating whether the wait operation timed out.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether the wait operation timed out.
     
@@ -2124,7 +2124,7 @@ long AvailableFreeSpace { get; }
 
 Indicates the amount of available free space on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The amount of available free space on a drive, in bytes.
 
@@ -2136,7 +2136,7 @@ string DriveFormat { get; }
 
 Gets the name of the file system, such as NTFS or FAT32.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The name of the file system, such as NTFS or FAT32.
 
@@ -2148,7 +2148,7 @@ System.IO.DriveType DriveType { get; }
 
 Gets the drive type, such as CD-ROM, removable, network, or fixed.
 
-**return** [System.IO.DriveType](https://docs.microsoft.com/en-us/dotnet/api/system.io.drivetype?view=net-6.0)
+**returns** [System.IO.DriveType](https://docs.microsoft.com/en-us/dotnet/api/system.io.drivetype?view=net-6.0)
 
 The drive type, such as CD-ROM, removable, network, or fixed.
 
@@ -2160,7 +2160,7 @@ bool IsReady { get; }
 
 Gets a value that indicates whether a drive is ready.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value that indicates whether a drive is ready.
 
@@ -2172,7 +2172,7 @@ string Name { get; }
 
 Gets the name of a drive, such as C:\.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The name of a drive, such as C:\.
 
@@ -2184,7 +2184,7 @@ IDirectoryInfo RootDirectory { get; }
 
 Gets the root directory of a drive.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The root directory of a drive.
 
@@ -2196,7 +2196,7 @@ long TotalFreeSpace { get; }
 
 Gets the total amount of free space available on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The total amount of free space available on a drive, in bytes.
 
@@ -2208,7 +2208,7 @@ long TotalSize { get; }
 
 Gets the total size of storage space on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The total size of storage space on a drive, in bytes.
 
@@ -2272,7 +2272,7 @@ Gets or sets the attributes for the current file or directory.
 
 The attributes for the current file or directory.
 
-**return** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
+**returns** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
 
 The attributes for the current file or directory.
 
@@ -2288,7 +2288,7 @@ Gets or sets the creation time of the current file or directory.
 
 The creation time of the current file or directory.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The creation time of the current file or directory.
 
@@ -2304,7 +2304,7 @@ Gets or sets the creation time, in coordinated universal time (UTC), of the curr
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
@@ -2316,7 +2316,7 @@ bool Exists { get; }
 
 Gets a value indicating whether the file or directory exists.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether the file or directory exists.
 
@@ -2328,7 +2328,7 @@ string Extension { get; }
 
 Gets the extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
@@ -2340,7 +2340,7 @@ string FullName { get; }
 
 Gets the full path of the directory or file.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The full path of the directory or file.
 
@@ -2352,7 +2352,7 @@ DateTime LastAccessTime { get; set; }
 
 Gets or sets the time the current file or directory was last accessed.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time the current file or directory was last accessed.
 
@@ -2368,7 +2368,7 @@ Gets or sets the time, in coordinated universal time (UTC), that the current fil
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
@@ -2384,7 +2384,7 @@ Gets or sets the time when the current file or directory was last written to.
 
 The time when the current file or directory was last written to.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time when the current file or directory was last written to.
 
@@ -2400,7 +2400,7 @@ Gets or sets the time, in coordinated universal time (UTC), when the current fil
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
@@ -2411,7 +2411,7 @@ string Name { get; }
 
 For files, gets the name of the file. For directories, gets the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property gets the name of the directory.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 For files, returns the name of the file. For directories, returns the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property returns the name of the directory.
 
@@ -2491,7 +2491,6 @@ This is a thin facade around [System.IO.DirectoryInfo](https://docs.microsoft.co
 public interface IDirectoryInfo : IFileSystemInfo
 ```
 
-
 ## IDirectoryInfo
 
 - [13.01 Parent](#user-content-idirectoryinfoparent)
@@ -2503,7 +2502,9 @@ public interface IDirectoryInfo : IFileSystemInfo
 - [13.07 Enumerate Files](#user-content-idirectoryinfoenumeratefiles)
 - [13.08 Enumerate File System Infos](#user-content-idirectoryinfoenumeratefilesysteminfos)
 - [13.09 Get Directories](#user-content-idirectoryinfogetdirectories)
-- [13.10 GetFiles](#user-content-idirectoryinfogetfiles)
+- [13.10 Get Files](#user-content-idirectoryinfogetfiles)
+- [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
+- [13.12 Move To](#user-content-idirectoryinfomoveto)
 
 <!--
 #user-content-idirectoryinfo
@@ -2517,7 +2518,7 @@ IDirectoryInfo? Parent { get; }
 
 Gets the parent directory of a specified subdirectory.
 
-**return**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
 
 The parent directory of a specified subdirectory.
 
@@ -2529,7 +2530,7 @@ IDirectoryInfo Root { get; }
 
 Gets the root portion of the directory.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The root portion of the directory.
 
@@ -2553,7 +2554,7 @@ Creates a subdirectory or subdirectories on the specified path. The specified pa
 
 The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The last directory specified in path.
 
@@ -2893,6 +2894,16 @@ An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
 ## IDirectoryInfo.GetFiles
 
+| Signatures                                                                                              |
+|---------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-idirectoryinfogetfiles1'>`IFileInfo[] GetFiles(string, EnumerationOptions);`</a> |
+| <a href='#user-content-idirectoryinfogetfiles2'>`IFileInfo[] GetFiles(string, SearchOption);`</a>       |
+| <a href='#user-content-idirectoryinfogetfiles3'>`IFileInfo[] GetFiles();`</a>                           |
+| <a href='#user-content-idirectoryinfogetfiles4'>`IFileInfo[] GetFiles(string);`</a>                     |
+
+---
+
+<a id='user-content-idirectoryinfogetfiles1'></a>
 ```csharp
 IFileInfo[] GetFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
 ```
@@ -2911,7 +2922,150 @@ An object that describes the search and enumeration configuration to use.
 
 An array of IFileInfo objects that match searchPattern and enumerationOptions.
 
+---
 
+<a id='user-content-idirectoryinfogetfiles2'></a>
+```csharp
+IFileInfo[] GetFiles(string searchPattern, System.IO.SearchOption searchOption);
+```
+
+Returns a file list from the current directory matching the given search pattern and using a value to determine whether to search subdirectories.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**searchOption** [System.IO.SearchOption](https://docs.microsoft.com/en-us/dotnet/api/system.io.searchoption?view=net-6.0)
+
+One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+---
+
+<a id='user-content-idirectoryinfogetfiles3'></a>
+```csharp
+IFileInfo[] GetFiles();
+```
+
+Returns a file list from the current directory.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+---
+
+<a id='user-content-idirectoryinfogetfiles4'></a>
+```csharp
+IFileInfo[] GetFiles(string searchPattern);
+```
+
+Returns a file list from the current directory matching the given search pattern.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+## IDirectoryInfo.GetFileSystemInfos
+
+| Signatures                                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-idirectoryinfogetfilesysteminfos1'>`IFileSystemInfo[] GetFileSystemInfos();`</a>                           |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos2'>`IFileSystemInfo[] GetFileSystemInfos(string);`</a>                     |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos3'>`IFileSystemInfo[] GetFileSystemInfos(string, EnumerationOptions);`</a> |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos4'>`IFileSystemInfo[] GetFileSystemInfos(string, SearchOption);`</a>       |
+
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos1'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos();
+```
+
+Returns an array of IFileSystemInfo entries representing all the files and subdirectories in a directory.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo entries.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos2'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern);
+```
+
+Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search criteria.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo objects matching the search criteria.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos3'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
+```
+
+Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search pattern and enumeration options.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**enumerationOptions** [System.IO.EnumerationOptions](https://docs.microsoft.com/en-us/dotnet/api/system.io.enumerationoptions?view=net-6.0)
+
+An object that describes the search and enumeration configuration to use.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo objects matching searchPattern and enumerationOptions.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos4'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption);
+```
+
+Retrieves an array of IFileSystemInfo objects that represent the files and subdirectories matching the specified search criteria.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**searchOption** [System.IO.SearchOption](https://docs.microsoft.com/en-us/dotnet/api/system.io.searchoption?view=net-6.0)
+
+One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of file system entries that match the search criteria.
+
+## IDirectoryInfo.MoveTo
+
+```csharp
+void MoveTo(string destDirName);
+```
+
+Moves a DirectoryInfo instance and its contents to a new path.
+
+**destDirName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing directory to which you want to add this directory as a subdirectory.
     
 
 ## File Info Factory ##

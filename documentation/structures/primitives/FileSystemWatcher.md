@@ -69,7 +69,7 @@ Gets or sets the filter string used to determine what files are monitored in a d
 
 The filter string used to determine what files are monitored in a directory.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The filter string used to determine what files are monitored in a directory.
 
@@ -97,7 +97,7 @@ Gets or sets a value indicating whether subdirectories within the specified path
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
@@ -129,7 +129,7 @@ Gets or sets the type of changes to watch for.
 
 The type of changes to watch for.
 
-**return** [System.IO.NotifyFilters](https://docs.microsoft.com/en-us/dotnet/api/system.io.notifyfilters?view=net-6.0)
+**returns** [System.IO.NotifyFilters](https://docs.microsoft.com/en-us/dotnet/api/system.io.notifyfilters?view=net-6.0)
 
 The type of changes to watch for.
 

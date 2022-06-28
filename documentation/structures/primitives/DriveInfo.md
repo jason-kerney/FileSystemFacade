@@ -35,7 +35,7 @@ long AvailableFreeSpace { get; }
 
 Indicates the amount of available free space on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The amount of available free space on a drive, in bytes.
 
@@ -47,7 +47,7 @@ string DriveFormat { get; }
 
 Gets the name of the file system, such as NTFS or FAT32.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The name of the file system, such as NTFS or FAT32.
 
@@ -59,7 +59,7 @@ System.IO.DriveType DriveType { get; }
 
 Gets the drive type, such as CD-ROM, removable, network, or fixed.
 
-**return** [System.IO.DriveType](https://docs.microsoft.com/en-us/dotnet/api/system.io.drivetype?view=net-6.0)
+**returns** [System.IO.DriveType](https://docs.microsoft.com/en-us/dotnet/api/system.io.drivetype?view=net-6.0)
 
 The drive type, such as CD-ROM, removable, network, or fixed.
 
@@ -71,7 +71,7 @@ bool IsReady { get; }
 
 Gets a value that indicates whether a drive is ready.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value that indicates whether a drive is ready.
 
@@ -83,7 +83,7 @@ string Name { get; }
 
 Gets the name of a drive, such as C:\.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The name of a drive, such as C:\.
 
@@ -95,7 +95,7 @@ IDirectoryInfo RootDirectory { get; }
 
 Gets the root directory of a drive.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The root directory of a drive.
 
@@ -107,7 +107,7 @@ long TotalFreeSpace { get; }
 
 Gets the total amount of free space available on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The total amount of free space available on a drive, in bytes.
 
@@ -119,7 +119,7 @@ long TotalSize { get; }
 
 Gets the total size of storage space on a drive, in bytes.
 
-**return** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
+**returns** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The total size of storage space on a drive, in bytes.
 

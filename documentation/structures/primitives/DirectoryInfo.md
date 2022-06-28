@@ -13,7 +13,6 @@ This is a thin facade around [System.IO.DirectoryInfo](https://docs.microsoft.co
 public interface IDirectoryInfo : IFileSystemInfo
 ```
 
-
 ## IDirectoryInfo
 
 - [13.01 Parent](#user-content-idirectoryinfoparent)
@@ -25,7 +24,9 @@ public interface IDirectoryInfo : IFileSystemInfo
 - [13.07 Enumerate Files](#user-content-idirectoryinfoenumeratefiles)
 - [13.08 Enumerate File System Infos](#user-content-idirectoryinfoenumeratefilesysteminfos)
 - [13.09 Get Directories](#user-content-idirectoryinfogetdirectories)
-- [13.10 GetFiles](#user-content-idirectoryinfogetfiles)
+- [13.10 Get Files](#user-content-idirectoryinfogetfiles)
+- [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
+- [13.12 Move To](#user-content-idirectoryinfomoveto)
 
 <!--
 #user-content-idirectoryinfo
@@ -39,7 +40,7 @@ IDirectoryInfo? Parent { get; }
 
 Gets the parent directory of a specified subdirectory.
 
-**return**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
 
 The parent directory of a specified subdirectory.
 
@@ -51,7 +52,7 @@ IDirectoryInfo Root { get; }
 
 Gets the root portion of the directory.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The root portion of the directory.
 
@@ -75,7 +76,7 @@ Creates a subdirectory or subdirectories on the specified path. The specified pa
 
 The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
 
-**return** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](#user-content-directory-info)
 
 The last directory specified in path.
 
@@ -415,6 +416,16 @@ An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
 ## IDirectoryInfo.GetFiles
 
+| Signatures                                                                                              |
+|---------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-idirectoryinfogetfiles1'>`IFileInfo[] GetFiles(string, EnumerationOptions);`</a> |
+| <a href='#user-content-idirectoryinfogetfiles2'>`IFileInfo[] GetFiles(string, SearchOption);`</a>       |
+| <a href='#user-content-idirectoryinfogetfiles3'>`IFileInfo[] GetFiles();`</a>                           |
+| <a href='#user-content-idirectoryinfogetfiles4'>`IFileInfo[] GetFiles(string);`</a>                     |
+
+---
+
+<a id='user-content-idirectoryinfogetfiles1'></a>
 ```csharp
 IFileInfo[] GetFiles(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
 ```
@@ -433,3 +444,147 @@ An object that describes the search and enumeration configuration to use.
 
 An array of IFileInfo objects that match searchPattern and enumerationOptions.
 
+---
+
+<a id='user-content-idirectoryinfogetfiles2'></a>
+```csharp
+IFileInfo[] GetFiles(string searchPattern, System.IO.SearchOption searchOption);
+```
+
+Returns a file list from the current directory matching the given search pattern and using a value to determine whether to search subdirectories.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**searchOption** [System.IO.SearchOption](https://docs.microsoft.com/en-us/dotnet/api/system.io.searchoption?view=net-6.0)
+
+One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+---
+
+<a id='user-content-idirectoryinfogetfiles3'></a>
+```csharp
+IFileInfo[] GetFiles();
+```
+
+Returns a file list from the current directory.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+---
+
+<a id='user-content-idirectoryinfogetfiles4'></a>
+```csharp
+IFileInfo[] GetFiles(string searchPattern);
+```
+
+Returns a file list from the current directory matching the given search pattern.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+
+An array of type IFileInfo.
+
+## IDirectoryInfo.GetFileSystemInfos
+
+| Signatures                                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-idirectoryinfogetfilesysteminfos1'>`IFileSystemInfo[] GetFileSystemInfos();`</a>                           |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos2'>`IFileSystemInfo[] GetFileSystemInfos(string);`</a>                     |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos3'>`IFileSystemInfo[] GetFileSystemInfos(string, EnumerationOptions);`</a> |
+| <a href='#user-content-idirectoryinfogetfilesysteminfos4'>`IFileSystemInfo[] GetFileSystemInfos(string, SearchOption);`</a>       |
+
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos1'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos();
+```
+
+Returns an array of IFileSystemInfo entries representing all the files and subdirectories in a directory.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo entries.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos2'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern);
+```
+
+Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search criteria.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo objects matching the search criteria.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos3'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
+```
+
+Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search pattern and enumeration options.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**enumerationOptions** [System.IO.EnumerationOptions](https://docs.microsoft.com/en-us/dotnet/api/system.io.enumerationoptions?view=net-6.0)
+
+An object that describes the search and enumeration configuration to use.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of IFileSystemInfo objects matching searchPattern and enumerationOptions.
+
+---
+
+<a id='user-content-idirectoryinfogetfilesysteminfos4'></a>
+```csharp
+IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption);
+```
+
+Retrieves an array of IFileSystemInfo objects that represent the files and subdirectories matching the specified search criteria.
+
+**searchPattern** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
+
+**searchOption** [System.IO.SearchOption](https://docs.microsoft.com/en-us/dotnet/api/system.io.searchoption?view=net-6.0)
+
+One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+
+An array of file system entries that match the search criteria.
+
+## IDirectoryInfo.MoveTo
+
+```csharp
+void MoveTo(string destDirName);
+```
+
+Moves a DirectoryInfo instance and its contents to a new path.
+
+**destDirName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing directory to which you want to add this directory as a subdirectory.

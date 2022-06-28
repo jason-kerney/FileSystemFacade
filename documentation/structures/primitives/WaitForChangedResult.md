@@ -32,7 +32,7 @@ Gets or sets the type of change that occurred.
 
 The type of change that occurred.
 
-**return** [System.IO.WatcherChangeTypes](https://docs.microsoft.com/en-us/dotnet/api/system.io.watcherchangetypes?view=net-6.0)
+**returns** [System.IO.WatcherChangeTypes](https://docs.microsoft.com/en-us/dotnet/api/system.io.watcherchangetypes?view=net-6.0)
 
 The type of change that occurred.
 
@@ -48,7 +48,7 @@ Gets or sets the name of the file or directory that changed.
 
 The name of the file or directory that changed.
 
-**return** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
 
 The name of the file or directory that changed.
 
@@ -64,7 +64,7 @@ Gets or sets the original name of the file or directory that was renamed.
 
 The original name of the file or directory that was renamed.
 
-**return** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
 
 The original name of the file or directory that was renamed.
 
@@ -81,6 +81,6 @@ Gets or sets a value indicating whether the wait operation timed out.
 
 A value indicating whether the wait operation timed out.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether the wait operation timed out.

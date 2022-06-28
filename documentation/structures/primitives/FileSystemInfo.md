@@ -42,7 +42,7 @@ Gets or sets the attributes for the current file or directory.
 
 The attributes for the current file or directory.
 
-**return** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
+**returns** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
 
 The attributes for the current file or directory.
 
@@ -58,7 +58,7 @@ Gets or sets the creation time of the current file or directory.
 
 The creation time of the current file or directory.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The creation time of the current file or directory.
 
@@ -74,7 +74,7 @@ Gets or sets the creation time, in coordinated universal time (UTC), of the curr
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
@@ -86,7 +86,7 @@ bool Exists { get; }
 
 Gets a value indicating whether the file or directory exists.
 
-**return** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+**returns** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
 
 A value indicating whether the file or directory exists.
 
@@ -98,7 +98,7 @@ string Extension { get; }
 
 Gets the extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
@@ -110,7 +110,7 @@ string FullName { get; }
 
 Gets the full path of the directory or file.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The full path of the directory or file.
 
@@ -122,7 +122,7 @@ DateTime LastAccessTime { get; set; }
 
 Gets or sets the time the current file or directory was last accessed.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time the current file or directory was last accessed.
 
@@ -138,7 +138,7 @@ Gets or sets the time, in coordinated universal time (UTC), that the current fil
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
@@ -154,7 +154,7 @@ Gets or sets the time when the current file or directory was last written to.
 
 The time when the current file or directory was last written to.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time when the current file or directory was last written to.
 
@@ -170,7 +170,7 @@ Gets or sets the time, in coordinated universal time (UTC), when the current fil
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
-**return** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+**returns** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
@@ -181,7 +181,7 @@ string Name { get; }
 
 For files, gets the name of the file. For directories, gets the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property gets the name of the directory.
 
-**return** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 For files, returns the name of the file. For directories, returns the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property returns the name of the directory.
 

@@ -147,33 +147,28 @@ namespace FileSystemFacade.Primitives
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.</param>
         /// <returns>An array of type IFileInfo.</returns>
         IFileInfo[] GetFiles(string searchPattern, System.IO.SearchOption searchOption);
-
         /// <summary>
         /// Returns a file list from the current directory.
         /// </summary>
         /// <returns>An array of type IFileInfo.</returns>
         IFileInfo[] GetFiles();
-        
         /// <summary>
         /// Returns a file list from the current directory matching the given search pattern.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An array of type IFileInfo.</returns>
         IFileInfo[] GetFiles(string searchPattern);
-        
         /// <summary>
         /// Returns an array of IFileSystemInfo entries representing all the files and subdirectories in a directory.
         /// </summary>
         /// <returns>An array of IFileSystemInfo entries.</returns>
         IFileSystemInfo[] GetFileSystemInfos();
-        
         /// <summary>
         /// Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search criteria.
         /// </summary>
         /// <param name="searchPattern">The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An array of IFileSystemInfo objects matching the search criteria.</returns>
         IFileSystemInfo[] GetFileSystemInfos(string searchPattern);
-        
         /// <summary>
         /// Retrieves an array of IFileSystemInfo objects representing the files and subdirectories that match the specified search pattern and enumeration options.
         /// </summary>
@@ -181,7 +176,6 @@ namespace FileSystemFacade.Primitives
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An array of IFileSystemInfo objects matching searchPattern and enumerationOptions.</returns>
         IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.EnumerationOptions enumerationOptions);
-        
         /// <summary>
         /// Retrieves an array of IFileSystemInfo objects that represent the files and subdirectories matching the specified search criteria.
         /// </summary>
@@ -189,6 +183,10 @@ namespace FileSystemFacade.Primitives
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.</param>
         /// <returns>An array of file system entries that match the search criteria.</returns>
         IFileSystemInfo[] GetFileSystemInfos(string searchPattern, System.IO.SearchOption searchOption);
+        /// <summary>
+        /// Moves a DirectoryInfo instance and its contents to a new path.
+        /// </summary>
+        /// <param name="destDirName">The name and path to which to move this directory. The destination cannot be another disk volume or a directory with the identical name. It can be an existing directory to which you want to add this directory as a subdirectory.</param>
         void MoveTo(string destDirName);
     }
 
