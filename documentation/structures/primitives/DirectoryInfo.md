@@ -28,10 +28,6 @@ public interface IDirectoryInfo : IFileSystemInfo
 - [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
 - [13.12 Move To](#user-content-idirectoryinfomoveto)
 
-<!--
-#user-content-idirectoryinfo
--->
-
 ## IDirectoryInfo.Parent
 
 ```csharp
