@@ -3,7 +3,7 @@
     (title "Directory Info Factory"))
 /bl-->
 
-###Summary
+### Summary
 
 A factory for building IDirectoryInfo objects
 
@@ -11,11 +11,11 @@ A factory for building IDirectoryInfo objects
 public interface IDirectoryInfoFactory
 ```
 
-###IDirectoryInfoFactory
+### IDirectoryInfoFactory
 
 - [12.1 Get Directory Info](#user-content-idirectoryinfofactorygetdirectoryinfo)
 
-###IDirectoryInfoFactory.GetDirectoryInfo
+### IDirectoryInfoFactory.GetDirectoryInfo
 
 ```csharp
 IDirectoryInfo GetDirectoryInfo(string path);

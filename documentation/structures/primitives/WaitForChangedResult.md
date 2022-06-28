@@ -3,7 +3,7 @@
     (title "Wait For Changed Result"))
 /bl-->
 
-###Summary
+### Summary
 
 Contains information on the change that occurred.
 
@@ -13,14 +13,14 @@ This is a thin facade over [System.IO.WaitForChangedResult](https://docs.microso
 public interface IWaitForChangedResult
 ```
 
-###IWaitForChangedResult
+### IWaitForChangedResult
 
 - [8.1 Change Type](#user-content-iwaitforchangedresultchangetype)
 - [8.2 Name](#user-content-iwaitforchangedresultname)
 - [8.3 Old Name](#user-content-iwaitforchangedresultoldname)
 - [8.4 Timed Out](#user-content-iwaitforchangedresulttimedout)
 
-###IWaitForChangedResult.ChangeType
+### IWaitForChangedResult.ChangeType
 
 ```csharp
 System.IO.WatcherChangeTypes ChangeType { get; set; }
@@ -36,7 +36,7 @@ The type of change that occurred.
 
 The type of change that occurred.
 
-###IWaitForChangedResult.Name
+### IWaitForChangedResult.Name
 
 ```csharp
 string? Name { get; set; }
@@ -52,7 +52,7 @@ The name of the file or directory that changed.
 
 The name of the file or directory that changed.
 
-###IWaitForChangedResult.OldName
+### IWaitForChangedResult.OldName
 
 ```csharp
 string? OldName { get; set; }
@@ -68,7 +68,7 @@ The original name of the file or directory that was renamed.
 
 The original name of the file or directory that was renamed.
 
-###IWaitForChangedResult.TimedOut
+### IWaitForChangedResult.TimedOut
 
 ```csharp
 bool TimedOut { get; set; }

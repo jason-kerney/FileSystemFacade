@@ -3,7 +3,7 @@
     (title "File System Watcher Factory"))
 /bl-->
 
-###Summary
+### Summary
 
 A factory to build IFileSystemWatcher objects
 
@@ -11,11 +11,11 @@ A factory to build IFileSystemWatcher objects
 public interface IFileSystemWatcherFactory
 ```
 
-###IFileSystemWatcherFactory
+### IFileSystemWatcherFactory
 
 - [6.1 Get File System Watcher](#user-content-ifilesystemwatcherfactorygetfilesystemwatcher)
 
-###IFileSystemWatcherFactory.GetFileSystemWatcher
+### IFileSystemWatcherFactory.GetFileSystemWatcher
 
 | Signatures                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------|

@@ -3,7 +3,7 @@
     (title "File System Info"))
 /bl-->
 
-###Summary
+### Summary
 
 Provides the interface class for both IFileInfo and IDirectoryInfo objects.
 
@@ -13,7 +13,7 @@ This is a thin facade around [System.IO.FileSystemInfo](https://docs.microsoft.c
 public interface IFileSystemInfo
 ```
 
-###IFileSystemInfo
+### IFileSystemInfo
 
 - [11.01 Attributes](#user-content-ifilesysteminfoattributes)
 - [11.02 Creation Time](#user-content-ifilesysteminfocreationtime)
@@ -30,7 +30,7 @@ public interface IFileSystemInfo
 - [11.13 Get Object Data](#user-content-ifilesysteminfogetobjectdata)
 - [11.14 Refresh](#user-content-ifilesysteminforefresh)
 
-###IFileSystemInfo.Attributes
+### IFileSystemInfo.Attributes
 
 ```csharp
 System.IO.FileAttributes Attributes { get; set; }
@@ -46,7 +46,7 @@ The attributes for the current file or directory.
 
 The attributes for the current file or directory.
 
-###IFileSystemInfo.CreationTime
+### IFileSystemInfo.CreationTime
 
 ```csharp
 DateTime CreationTime { get; set; }
@@ -62,7 +62,7 @@ The creation time of the current file or directory.
 
 The creation time of the current file or directory.
 
-###IFileSystemInfo.CreationTimeUtc
+### IFileSystemInfo.CreationTimeUtc
 
 ```csharp
 DateTime CreationTimeUtc { get; set; }
@@ -78,7 +78,7 @@ The creation time, in coordinated universal time (UTC), of the current file or d
 
 The creation time, in coordinated universal time (UTC), of the current file or directory.
 
-###IFileSystemInfo.Exists
+### IFileSystemInfo.Exists
 
 ```csharp
 bool Exists { get; }
@@ -90,7 +90,7 @@ Gets a value indicating whether the file or directory exists.
 
 A value indicating whether the file or directory exists.
 
-###IFileSystemInfo.Extension
+### IFileSystemInfo.Extension
 
 ```csharp
 string Extension { get; }
@@ -102,7 +102,7 @@ Gets the extension part of the file name, including the leading dot . even if it
 
 The extension part of the file name, including the leading dot . even if it is the entire file name, or an empty string if no extension is present.
 
-###IFileSystemInfo.FullName
+### IFileSystemInfo.FullName
 
 ```csharp
 string FullName { get; }
@@ -114,7 +114,7 @@ Gets the full path of the directory or file.
 
 The full path of the directory or file.
 
-###IFileSystemInfo.LastAccessTime
+### IFileSystemInfo.LastAccessTime
 
 ```csharp
 DateTime LastAccessTime { get; set; }
@@ -126,7 +126,7 @@ Gets or sets the time the current file or directory was last accessed.
 
 The time the current file or directory was last accessed.
 
-###IFileSystemInfo.LastAccessTimeUtc
+### IFileSystemInfo.LastAccessTimeUtc
 
 ```csharp
 DateTime LastAccessTimeUtc { get; set; }
@@ -142,7 +142,7 @@ The time, in coordinated universal time (UTC), that the current file or director
 
 The time, in coordinated universal time (UTC), that the current file or directory was last accessed.
 
-###IFileSystemInfo.LastWriteTime
+### IFileSystemInfo.LastWriteTime
 
 ```csharp
 DateTime LastWriteTime { get; set; }
@@ -158,7 +158,7 @@ The time when the current file or directory was last written to.
 
 The time when the current file or directory was last written to.
 
-###IFileSystemInfo.LastWriteTimeUtc
+### IFileSystemInfo.LastWriteTimeUtc
 
 ```csharp
 DateTime LastWriteTimeUtc { get; set; }
@@ -174,7 +174,7 @@ The time, in coordinated universal time (UTC), when the current file or director
 
 The time, in coordinated universal time (UTC), when the current file or directory was last written to.
 
-###IFileSystemInfo.Name
+### IFileSystemInfo.Name
 ```csharp
 string Name { get; }
 ```
@@ -185,7 +185,7 @@ For files, gets the name of the file. For directories, gets the name of the last
 
 For files, returns the name of the file. For directories, returns the name of the last directory in the hierarchy if a hierarchy exists. Otherwise, the Name property returns the name of the directory.
 
-###IFileSystemInfo.Delete
+### IFileSystemInfo.Delete
 
 ```csharp
 void Delete ();
@@ -193,7 +193,7 @@ void Delete ();
 
 Deletes a file or directory.
 
-###IFileSystemInfo.GetObjectData
+### IFileSystemInfo.GetObjectData
 
 ```csharp
 void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
@@ -209,7 +209,7 @@ The SerializationInfo that holds the serialized object data about the exception 
 
 The StreamingContext that contains contextual information about the source or destination.
 
-###IFileSystemInfo.Refresh
+### IFileSystemInfo.Refresh
 
 ```csharp
 void Refresh ();
