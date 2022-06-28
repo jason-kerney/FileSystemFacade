@@ -1654,8 +1654,6 @@ A byte to write to the stream.
 
 ## File System Watcher Factory ##
 
-<-- 6 -->
-
 ## Summary
 
 A factory to build IFileSystemWatcher objects

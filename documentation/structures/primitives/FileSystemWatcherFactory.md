@@ -3,8 +3,6 @@
     (title "File System Watcher Factory"))
 /bl-->
 
-<-- 6 -->
-
 ## Summary
 
 A factory to build IFileSystemWatcher objects
