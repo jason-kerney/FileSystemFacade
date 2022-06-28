@@ -15,7 +15,7 @@ public interface IDirectoryInfoFactory
 
 - [12.1 Get Directory Info](#user-content-idirectoryinfofactorygetdirectoryinfo)
 
-## IDirectoryInfoFactory.
+## IDirectoryInfoFactory.GetDirectoryInfo
 
 ```csharp
 IDirectoryInfo GetDirectoryInfo(string path);
