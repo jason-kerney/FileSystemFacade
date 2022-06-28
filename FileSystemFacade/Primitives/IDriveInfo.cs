@@ -40,8 +40,7 @@
         /// <summary>
         /// Gets or sets the volume label of a drive.
         /// </summary>
-        string VolumeLabel { get; [System.Runtime.Versioning.SupportedOSPlatform("windows")] set; }
-        
+        string VolumeLabel { get; [System.Runtime.Versioning.SupportedOSPlatform("windows")] set; }        
     }
 
     internal class DriveInfo : IDriveInfo
