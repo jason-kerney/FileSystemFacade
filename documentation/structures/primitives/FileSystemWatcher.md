@@ -7,6 +7,8 @@
 
 Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
 
+This is a thin facade around [System.IO.FileSystemWatcher](https://docs.microsoft.com/en-us/dotnet/api/system.io.filesystemwatcher?view=net-6.0)
+
 ```csharp
 interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 ```

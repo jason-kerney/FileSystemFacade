@@ -7,7 +7,7 @@
 
 Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
 
-This class is a facade around [System.IO.FileSystem](https://docs.microsoft.com/en-us/dotnet/api/system.io.filesysteminfo?view=net-6.0)
+This is a thin facade around [System.IO.FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-6.0)
 
 ```csharp
 public interface IFileStream : IDisposable, IAsyncDisposable

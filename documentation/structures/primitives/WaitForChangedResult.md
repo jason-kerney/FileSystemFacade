@@ -7,6 +7,8 @@
 
 Contains information on the change that occurred.
 
+This is a thin facade over [System.IO.WaitForChangedResult](https://docs.microsoft.com/en-us/dotnet/api/system.io.waitforchangedresult?view=net-6.0)
+
 ```csharp
 public interface IWaitForChangedResult
 ```

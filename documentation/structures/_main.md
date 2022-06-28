@@ -1,7 +1,7 @@
 <!--bl
 (filemeta
     (title "File System Facade Structures")
-    (subtitle "A guide to the interfaces and objects in the library."))
+    (subtitle "A guide to the interfaces and objects in this library."))
 
 (table-of-contents
     (section-main "./AtomicFileSystem.md")
@@ -14,6 +14,7 @@
     (section-main "./primitives/WaitForChangedResult.md")
     (section-main "./primitives/DriveInfoFactory.md")
     (section-main "./primitives/DriveInfo.md")
+    (section-main "./primitives/FileSystemInfo.md")
     (section-main "./primitives/DirectoryInfoFactory.md")
     (section-main "./primitives/DirectoryInfo.md")
     (section-main "./primitives/FileInfoFactory.md")

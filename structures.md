@@ -1,7 +1,7 @@
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
 # File System Facade Structures #
-#### A guide to the interfaces and objects in the library. ####
+#### A guide to the interfaces and objects in this library. ####
 
 ## Table Of Contents ##
 
@@ -15,13 +15,14 @@
 - [Section 8: Wait For Changed Result](#user-content-wait-for-changed-result)
 - [Section 9: Drive Info Factory](#user-content-drive-info-factory)
 - [Section 10: Drive Info](#user-content-drive-info)
-- [Section 11: Directory Info Factory](#user-content-directory-info-factory)
-- [Section 12: Directory Info](#user-content-directory-info)
-- [Section 13: File Info Factory](#user-content-file-info-factory)
-- [Section 14: File Info](#user-content-file-info)
-- [Section 15: Drives](#user-content-drives)
-- [Section 16: Directory](#user-content-directory)
-- [Section 17: File](#user-content-file)
+- [Section 11: File System Info](#user-content-file-system-info)
+- [Section 12: Directory Info Factory](#user-content-directory-info-factory)
+- [Section 13: Directory Info](#user-content-directory-info)
+- [Section 14: File Info Factory](#user-content-file-info-factory)
+- [Section 15: File Info](#user-content-file-info)
+- [Section 16: Drives](#user-content-drives)
+- [Section 17: Directory](#user-content-directory)
+- [Section 18: File](#user-content-file)
 
 ## Atomic File System ##
 
@@ -718,7 +719,7 @@ A new instance of the FileStream class with the specified path, creation mode, a
 
 Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
 
-This class is a facade around [System.IO.FileSystem](https://docs.microsoft.com/en-us/dotnet/api/system.io.filesysteminfo?view=net-6.0)
+This is a thin facade around [System.IO.FileStream](https://docs.microsoft.com/en-us/dotnet/api/system.io.filestream?view=net-6.0)
 
 ```csharp
 public interface IFileStream : IDisposable, IAsyncDisposable
@@ -1734,6 +1735,8 @@ A new instance of the FileSystemWatcher class, given the specified directory and
 
 Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
 
+This is a thin facade around [System.IO.FileSystemWatcher](https://docs.microsoft.com/en-us/dotnet/api/system.io.filesystemwatcher?view=net-6.0)
+
 ```csharp
 interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 ```
@@ -1978,6 +1981,8 @@ A WaitForChangedResult that contains specific information on the change that occ
 
 Contains information on the change that occurred.
 
+This is a thin facade over [System.IO.WaitForChangedResult](https://docs.microsoft.com/en-us/dotnet/api/system.io.waitforchangedresult?view=net-6.0)
+
 ```csharp
 public interface IWaitForChangedResult
 ```
@@ -2088,6 +2093,11 @@ Information on the specified drive.
     
 
 ## Drive Info ##
+
+TBD
+    
+
+## File System Info ##
 
 TBD
     
