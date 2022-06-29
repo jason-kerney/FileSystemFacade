@@ -1,28 +1,29 @@
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
-# File System Facade Structures #
-#### A guide to the interfaces and objects in this library. ####
+# File System Facade's Primary File System Access #
+#### A guide to the interfaces and objects that allow you to access the file system. ####
 
 ## Table Of Contents ##
 
 - [Section 1: Atomic File System](#user-content-atomic-file-system)
 - [Section 2: Atomic Actions](#user-content-atomic-actions)
 - [Section 3: Atomic Replacement Builder](#user-content-atomic-replacement-builder)
-- [Section 4: File Stream Factory](#user-content-file-stream-factory)
-- [Section 5: File Stream](#user-content-file-stream)
-- [Section 6: File System Watcher Factory](#user-content-file-system-watcher-factory)
-- [Section 7: File System Watcher](#user-content-file-system-watcher)
-- [Section 8: Wait For Changed Result](#user-content-wait-for-changed-result)
-- [Section 9: Drive Info Factory](#user-content-drive-info-factory)
-- [Section 10: Drive Info](#user-content-drive-info)
-- [Section 11: File System Info](#user-content-file-system-info)
-- [Section 12: Directory Info Factory](#user-content-directory-info-factory)
-- [Section 13: Directory Info](#user-content-directory-info)
-- [Section 14: File Info Factory](#user-content-file-info-factory)
-- [Section 15: File Info](#user-content-file-info)
-- [Section 16: Drives](#user-content-drives)
-- [Section 17: Directory](#user-content-directory)
-- [Section 18: File](#user-content-file)
+- [Section 4: Primitives](#user-content-primitives)
+- [Section 5: File Stream Factory](#user-content-file-stream-factory)
+- [Section 6: File Stream](#user-content-file-stream)
+- [Section 7: File System Watcher Factory](#user-content-file-system-watcher-factory)
+- [Section 8: File System Watcher](#user-content-file-system-watcher)
+- [Section 9: Wait For Changed Result](#user-content-wait-for-changed-result)
+- [Section 10: Drive Info Factory](#user-content-drive-info-factory)
+- [Section 11: Drive Info](#user-content-drive-info)
+- [Section 12: File System Info](#user-content-file-system-info)
+- [Section 13: Directory Info Factory](#user-content-directory-info-factory)
+- [Section 14: Directory Info](#user-content-directory-info)
+- [Section 15: File Info Factory](#user-content-file-info-factory)
+- [Section 16: File Info](#user-content-file-info)
+- [Section 17: Drives](#user-content-drives)
+- [Section 18: Directory](#user-content-directory)
+- [Section 19: File](#user-content-file)
 
 ## Atomic File System ##
 
@@ -72,11 +73,11 @@ Replace builds an [Atomic Replacement Builder](#user-content-atomic-replacement-
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize, System.IO.FileOptions options);
 ```
 
-Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call.
+Returns an IAtomicActions allowing the interaction with a IFileStream specified by the parameters. The IFileStream object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
-A relative or absolute path for the file that the current [IFileStream](#user-content-file-stream) object will encapsulate.
+A relative or absolute path for the file that the current IFileStream object will encapsulate.
 
 **mode** [System.IO.FileMode](https://docs.microsoft.com/en-us/dotnet/api/system.io.filemode?view=net-6.0)
 
@@ -84,7 +85,7 @@ One of the enumeration values that determines how to open or create the file.
 
 **access** [System.IO.FileAccess](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileaccess?view=net-6.0)
 
-A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](#user-content-file-stream) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](#user-content-file-stream) object. CanSeek is true if path specifies a disk file.
+A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.
 
 **share** [System.IO.FileShare](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=net-6.0)
 
@@ -98,9 +99,9 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 A bitwise combination of the enumeration values that specifies additional file options.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](#user-content-file-stream)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
 
-An atomic action allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
+An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
 ---
 
@@ -109,7 +110,7 @@ An atomic action allowing the interaction with a [IFileStream](#user-content-fil
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 ```
 
-Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call.
+Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
@@ -525,6 +526,11 @@ Takes an action, and calls it with a specially configured instance of IAtomicFil
 **doer** [Action\<T\>](https://docs.microsoft.com/en-us/dotnet/api/system.action-1?view=net-6.0)
 
 An action to call with the replaced file system.
+    
+
+## Primitives ##
+
+TBD
     
 
 ## File Stream Factory ##
