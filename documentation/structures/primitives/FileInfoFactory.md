@@ -13,7 +13,7 @@ public interface IFileInfoFactory
 
 ### IFileInfoFactory
 
--[14.1 Get File Info](#user-content-ifileinfofactorygetfileinfo)
+-[11.1 Get File Info](#user-content-ifileinfofactorygetfileinfo)
 
 ### IFileInfoFactory.GetFileInfo
 

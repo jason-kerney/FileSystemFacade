@@ -13,7 +13,7 @@ public interface IFileSystemWatcherFactory
 
 ### IFileSystemWatcherFactory
 
-- [6.1 Get File System Watcher](#user-content-ifilesystemwatcherfactorygetfilesystemwatcher)
+- [3.1 Get File System Watcher](#user-content-ifilesystemwatcherfactorygetfilesystemwatcher)
 
 ### IFileSystemWatcherFactory.GetFileSystemWatcher
 

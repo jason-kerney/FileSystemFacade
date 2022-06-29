@@ -13,7 +13,7 @@ public interface IFileStreamFactory
 
 ### IFileStreamFactory
 
-- [4.1 Get File Stream](#user-content-ifilestreamfactorygetfilestream)
+- [1.1 Get File Stream](#user-content-ifilestreamfactorygetfilestream)
 
 ### IFileStreamFactory.GetFileStream
 

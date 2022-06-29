@@ -13,7 +13,7 @@ public interface IDirectoryInfoFactory
 
 ### IDirectoryInfoFactory
 
-- [12.1 Get Directory Info](#user-content-idirectoryinfofactorygetdirectoryinfo)
+- [9.1 Get Directory Info](#user-content-idirectoryinfofactorygetdirectoryinfo)
 
 ### IDirectoryInfoFactory.GetDirectoryInfo
 

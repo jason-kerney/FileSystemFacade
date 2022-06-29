@@ -15,22 +15,22 @@ public interface IFileInfo: IFileSystemInfo
 
 ### IFileInfo
 
-- [15.01 Directory](#user-content-ifileinfodirectory)
-- [15.02 Directory Name](#user-content-ifileinfodirectoryname)
-- [15.03 Is Read Only](#user-content-ifileinfoisreadonly)
-- [15.04 Length](#user-content-ifileinfolength)
-- [15.05 Append Text](#user-content-ifileinfoappendtext)
-- [15.06 Copy To](#user-content-ifileinfocopyto)
-- [15.07 Create](#user-content-ifileinfocreate)
-- [15.08 Create Text](#user-content-ifileinfocreatetext)
-- [15.09 Decrypt](#user-content-ifileinfodecrypt)
-- [15.10 Encrypt](#user-content-ifileinfoencrypt)
-- [15.11 Move To](#user-content-ifileinfomoveto)
-- [15.12 Open](#user-content-ifileinfoopen)
-- [15.13 Open Read](#user-content-ifileinfoopenread)
-- [15.14 Open Text](#user-content-ifileinfoopentext)
-- [15.15 Open Write](#user-content-ifileinfoopenwrite)
-- [15.16 Replace](#user-content-ifileinforeplace)
+- [12.01 Directory](#user-content-ifileinfodirectory)
+- [12.02 Directory Name](#user-content-ifileinfodirectoryname)
+- [12.03 Is Read Only](#user-content-ifileinfoisreadonly)
+- [12.04 Length](#user-content-ifileinfolength)
+- [12.05 Append Text](#user-content-ifileinfoappendtext)
+- [12.06 Copy To](#user-content-ifileinfocopyto)
+- [12.07 Create](#user-content-ifileinfocreate)
+- [12.08 Create Text](#user-content-ifileinfocreatetext)
+- [12.09 Decrypt](#user-content-ifileinfodecrypt)
+- [12.10 Encrypt](#user-content-ifileinfoencrypt)
+- [12.11 Move To](#user-content-ifileinfomoveto)
+- [12.12 Open](#user-content-ifileinfoopen)
+- [12.13 Open Read](#user-content-ifileinfoopenread)
+- [12.14 Open Text](#user-content-ifileinfoopentext)
+- [12.15 Open Write](#user-content-ifileinfoopenwrite)
+- [12.16 Replace](#user-content-ifileinforeplace)
 
 ### IFileInfo.Directory
 

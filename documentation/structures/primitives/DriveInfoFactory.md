@@ -14,7 +14,7 @@ public interface IDriveInfoFactory
 <!-- 9 -->
 ### IDriveInfoFactory
 
-- [9.1 Drive Info](#user-content-idriveinfofactorydriveInfo)
+- [6.1 Drive Info](#user-content-idriveinfofactorydriveInfo)
 
 ### IDriveInfoFactory.DriveInfo
 

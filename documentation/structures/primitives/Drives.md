@@ -13,7 +13,7 @@ public interface IDrives
 
 ### IDrives
 
-- [16.1 Get Drives](#user-content-idrivesgetdrives)
+- [13.1 Get Drives](#user-content-idrivesgetdrives)
 
 ### IDrives.GetDrives
 

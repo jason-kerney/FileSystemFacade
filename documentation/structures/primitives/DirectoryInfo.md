@@ -15,18 +15,18 @@ public interface IDirectoryInfo : IFileSystemInfo
 
 ### IDirectoryInfo
 
-- [13.01 Parent](#user-content-idirectoryinfoparent)
-- [13.02 Root](#user-content-idirectoryinforoot)
-- [13.03 Create](#user-content-idirectoryinfocreate)
-- [13.04 Create Subdirectory](#user-content-idirectoryinfocreatesubdirectory)
-- [13.05 Delete](#user-content-idirectoryinfodelete)
-- [13.06 Enumerate Directories](#user-content-idirectoryinfoenumeratedirectories)
-- [13.07 Enumerate Files](#user-content-idirectoryinfoenumeratefiles)
-- [13.08 Enumerate File System Infos](#user-content-idirectoryinfoenumeratefilesysteminfos)
-- [13.09 Get Directories](#user-content-idirectoryinfogetdirectories)
-- [13.10 Get Files](#user-content-idirectoryinfogetfiles)
-- [13.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
-- [13.12 Move To](#user-content-idirectoryinfomoveto)
+- [10.01 Parent](#user-content-idirectoryinfoparent)
+- [10.02 Root](#user-content-idirectoryinforoot)
+- [10.03 Create](#user-content-idirectoryinfocreate)
+- [10.04 Create Subdirectory](#user-content-idirectoryinfocreatesubdirectory)
+- [10.05 Delete](#user-content-idirectoryinfodelete)
+- [10.06 Enumerate Directories](#user-content-idirectoryinfoenumeratedirectories)
+- [10.07 Enumerate Files](#user-content-idirectoryinfoenumeratefiles)
+- [10.08 Enumerate File System Infos](#user-content-idirectoryinfoenumeratefilesysteminfos)
+- [10.09 Get Directories](#user-content-idirectoryinfogetdirectories)
+- [10.10 Get Files](#user-content-idirectoryinfogetfiles)
+- [10.11 Get File System Infos](#user-content-idirectoryinfogetfilesysteminfos)
+- [10.12 Move To](#user-content-idirectoryinfomoveto)
 
 ### IDirectoryInfo.Parent
 

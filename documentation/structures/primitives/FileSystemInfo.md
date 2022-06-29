@@ -15,20 +15,20 @@ public interface IFileSystemInfo
 
 ### IFileSystemInfo
 
-- [11.01 Attributes](#user-content-ifilesysteminfoattributes)
-- [11.02 Creation Time](#user-content-ifilesysteminfocreationtime)
-- [11.03 Creation Time Utc](#user-content-ifilesysteminfocreationtimeutc)
-- [11.04 Exists](#user-content-ifilesysteminfoexists)
-- [11.05 Extension](#user-content-ifilesysteminfoextension)
-- [11.06 Full Name](#user-content-ifilesysteminfofullname)
-- [11.07 Last Access Time](#user-content-ifilesysteminfolastaccesstime)
-- [11.08 Last Access Time Utc](#user-content-ifilesysteminfolastaccesstimeutc)
-- [11.09 Last Write Time](#user-content-ifilesysteminfolastwritetime)
-- [11.10 Last Write Time Utc](#user-content-ifilesysteminfolastwritetimeutc)
-- [11.11 Name](#user-content-ifilesysteminfoname)
-- [11.12 Delete](#user-content-ifilesysteminfodelete)
-- [11.13 Get Object Data](#user-content-ifilesysteminfogetobjectdata)
-- [11.14 Refresh](#user-content-ifilesysteminforefresh)
+- [8.01 Attributes](#user-content-ifilesysteminfoattributes)
+- [8.02 Creation Time](#user-content-ifilesysteminfocreationtime)
+- [8.03 Creation Time Utc](#user-content-ifilesysteminfocreationtimeutc)
+- [8.04 Exists](#user-content-ifilesysteminfoexists)
+- [8.05 Extension](#user-content-ifilesysteminfoextension)
+- [8.06 Full Name](#user-content-ifilesysteminfofullname)
+- [8.07 Last Access Time](#user-content-ifilesysteminfolastaccesstime)
+- [8.08 Last Access Time Utc](#user-content-ifilesysteminfolastaccesstimeutc)
+- [8.09 Last Write Time](#user-content-ifilesysteminfolastwritetime)
+- [8.10 Last Write Time Utc](#user-content-ifilesysteminfolastwritetimeutc)
+- [8.11 Name](#user-content-ifilesysteminfoname)
+- [8.12 Delete](#user-content-ifilesysteminfodelete)
+- [8.13 Get Object Data](#user-content-ifilesysteminfogetobjectdata)
+- [8.14 Refresh](#user-content-ifilesysteminforefresh)
 
 ### IFileSystemInfo.Attributes
 

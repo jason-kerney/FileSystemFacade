@@ -15,10 +15,10 @@ public interface IWaitForChangedResult
 
 ### IWaitForChangedResult
 
-- [8.1 Change Type](#user-content-iwaitforchangedresultchangetype)
-- [8.2 Name](#user-content-iwaitforchangedresultname)
-- [8.3 Old Name](#user-content-iwaitforchangedresultoldname)
-- [8.4 Timed Out](#user-content-iwaitforchangedresulttimedout)
+- [5.1 Change Type](#user-content-iwaitforchangedresultchangetype)
+- [5.2 Name](#user-content-iwaitforchangedresultname)
+- [5.3 Old Name](#user-content-iwaitforchangedresultoldname)
+- [5.4 Timed Out](#user-content-iwaitforchangedresulttimedout)
 
 ### IWaitForChangedResult.ChangeType
 

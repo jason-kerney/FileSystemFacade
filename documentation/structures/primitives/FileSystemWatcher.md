@@ -15,19 +15,19 @@ interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 
 ### IFileSystemWatcher
 
-- [7.01 Container](#user-content-ifilesystemwatchercontainer)
-- [7.02 Enable Raising Events](#user-content-ifilesystemwatcherenableraisingevents)
-- [7.03 Filter](#user-content-ifilesystemwatcherfilter)
-- [7.04 Filters](#user-content-ifilesystemwatcherfilters)
-- [7.05 Include Subdirectories](#user-content-ifilesystemwatcherincludesubdirectories)
-- [7.06 Notify Filters](#user-content-ifilesystemwatchernotifyfilters)
-- [7.07 Synchronizing Object](#user-content-ifilesystemwatchersynchronizingobject)
-- [7.08 Changed](#user-content-ifilesystemwatcherchanged)
-- [7.09 Created](#user-content-ifilesystemwatchercreated)
-- [7.10 Deleted](#user-content-ifilesystemwatcherdeleted)
-- [7.11 Error](#user-content-ifilesystemwatchererror)
-- [7.12 Renamed](#user-content-ifilesystemwatcherrenamed)
-- [7.13 Wait For Changed](#user-content-ifilesystemwatcherwaitforchanged)
+- [4.01 Container](#user-content-ifilesystemwatchercontainer)
+- [4.02 Enable Raising Events](#user-content-ifilesystemwatcherenableraisingevents)
+- [4.03 Filter](#user-content-ifilesystemwatcherfilter)
+- [4.04 Filters](#user-content-ifilesystemwatcherfilters)
+- [4.05 Include Subdirectories](#user-content-ifilesystemwatcherincludesubdirectories)
+- [4.06 Notify Filters](#user-content-ifilesystemwatchernotifyfilters)
+- [4.07 Synchronizing Object](#user-content-ifilesystemwatchersynchronizingobject)
+- [4.08 Changed](#user-content-ifilesystemwatcherchanged)
+- [4.09 Created](#user-content-ifilesystemwatchercreated)
+- [4.10 Deleted](#user-content-ifilesystemwatcherdeleted)
+- [4.11 Error](#user-content-ifilesystemwatchererror)
+- [4.12 Renamed](#user-content-ifilesystemwatcherrenamed)
+- [4.13 Wait For Changed](#user-content-ifilesystemwatcherwaitforchanged)
 
 ### IFileSystemWatcher.Container
 

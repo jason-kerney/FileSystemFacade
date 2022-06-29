@@ -15,15 +15,15 @@ public interface IDriveInfo
 
 ### IDriveInfo
 
-- [10.1 Available Free Space](#user-content-idriveinfoavailablefreespace)
-- [10.2 Drive Format](#user-content-idriveinfodriveformat)
-- [10.3 Drive Type](#user-content-idriveinfodrivetype)
-- [10.4 Is Ready](#user-content-idriveinfoisready)
-- [10.5 Name](#user-content-idriveinfoname)
-- [10.6 Root Directory](#user-content-idriveinforootdirectory)
-- [10.7 Total Free Space](#user-content-idriveinfototalfreespace)
-- [10.8 Total Size](#user-content-idriveinfototalsize)
-- [10.9 Volume Label](#user-content-idriveinfovolumelabel)
+- [7.1 Available Free Space](#user-content-idriveinfoavailablefreespace)
+- [7.2 Drive Format](#user-content-idriveinfodriveformat)
+- [7.3 Drive Type](#user-content-idriveinfodrivetype)
+- [7.4 Is Ready](#user-content-idriveinfoisready)
+- [7.5 Name](#user-content-idriveinfoname)
+- [7.6 Root Directory](#user-content-idriveinforootdirectory)
+- [7.7 Total Free Space](#user-content-idriveinfototalfreespace)
+- [7.8 Total Size](#user-content-idriveinfototalsize)
+- [7.9 Volume Label](#user-content-idriveinfovolumelabel)
 
 <!-- user-content-idriveinfo -->
 
