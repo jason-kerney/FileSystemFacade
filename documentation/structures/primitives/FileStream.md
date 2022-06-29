@@ -206,7 +206,7 @@ A value, in milliseconds, that determines how long the stream will attempt to wr
 IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
 ```
 
-Begins an asynchronous read operation. Consider using [`ReadAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamreadasync) instead.
+Begins an asynchronous read operation. Consider using [`ReadAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamreadasync3) instead.
 
 **buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
