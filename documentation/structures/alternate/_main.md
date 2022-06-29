@@ -4,6 +4,7 @@
     (subtitle "A guide to the interfaces and objects that allow you to access the file system from a static class."))
 
 (table-of-contents
+    (section-main "./Description.md")
     (section-main "./Drive.md")
     (section-main "./StaticDriveReplacement.md")
     (section-main "./Directory.md")

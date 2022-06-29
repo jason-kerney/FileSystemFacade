@@ -5,13 +5,21 @@
 
 ## Table Of Contents ##
 
-- [Section 1: Drive](#user-content-drive)
-- [Section 2: Static Drive Replacement](#user-content-static-drive-replacement)
-- [Section 3: Directory](#user-content-directory)
-- [Section 4: Static Directory Replacement](#user-content-static-directory-replacement)
-- [Section 5: File](#user-content-file)
-- [Section 6: Static File Replacement](#user-content-static-file-replacement)
-- [Section 7: Primitives](#user-content-primitives)
+- [Section 1: Description](#user-content-description)
+- [Section 2: Drive](#user-content-drive)
+- [Section 3: Static Drive Replacement](#user-content-static-drive-replacement)
+- [Section 4: Directory](#user-content-directory)
+- [Section 5: Static Directory Replacement](#user-content-static-directory-replacement)
+- [Section 6: File](#user-content-file)
+- [Section 7: Static File Replacement](#user-content-static-file-replacement)
+- [Section 8: Primitives](#user-content-primitives)
+
+## Description ##
+
+The main way to access file system objects is with short lived objects that live only for the length of a single method execution. If this is how you intend to access file system objects in .Net please read the documentation on the [Primary Way](./structures.md).
+
+This documentation is about accessing these objects in a longer lived fashion. The factories that build these objects are static classes. Which means more care is needed when testing their interactions. It also means that fakes generated for testing may impact other parts of the system.
+    
 
 ## Drive ##
 
@@ -63,6 +71,7 @@ This links to the documentation on each of the primitives that are used by the F
 14. [Directory](./documentation/structures/primitives/Directory.md)
 15. [File](./documentation/structures/primitives/File.md)
     
+
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
     

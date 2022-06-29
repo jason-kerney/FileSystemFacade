@@ -60,6 +60,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "alternate", "alternate", "{
 		documentation\structures\alternate\StaticDirectoryReplacement.md = documentation\structures\alternate\StaticDirectoryReplacement.md
 		documentation\structures\alternate\File.md = documentation\structures\alternate\File.md
 		documentation\structures\alternate\StaticFileReplacement.md = documentation\structures\alternate\StaticFileReplacement.md
+		documentation\structures\alternate\Description.md = documentation\structures\alternate\Description.md
 	EndProjectSection
 EndProject
 Global
