@@ -36,7 +36,7 @@ IDirectoryInfo? Parent { get; }
 
 Gets the parent directory of a specified subdirectory.
 
-**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 The parent directory of a specified subdirectory.
 
@@ -48,7 +48,7 @@ IDirectoryInfo Root { get; }
 
 Gets the root portion of the directory.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The root portion of the directory.
 
@@ -72,7 +72,7 @@ Creates a subdirectory or subdirectories on the specified path. The specified pa
 
 The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The last directory specified in path.
 
@@ -114,7 +114,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern and searchOption.
 
@@ -135,7 +135,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern and enumerationOptions.
 
@@ -148,7 +148,7 @@ IEnumerable<IDirectoryInfo> EnumerateDirectories();
 
 Returns an enumerable collection of directory information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories in the current directory.
 
@@ -165,7 +165,7 @@ Returns an enumerable collection of directory information that matches a specifi
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern.
 
@@ -186,7 +186,7 @@ IEnumerable<IFileInfo> EnumerateFiles();
 
 Returns an enumerable collection of file information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of the files in the current directory.
 
@@ -203,7 +203,7 @@ Returns an enumerable collection of file information that matches a search patte
 
 The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern.
 
@@ -224,7 +224,7 @@ The search string to match against the names of files. This parameter can contai
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern and enumerationOptions.
 
@@ -245,7 +245,7 @@ The search string to match against the names of files. This parameter can contai
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern and searchOption.
 
@@ -275,7 +275,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern and searchOption.
 
@@ -288,7 +288,7 @@ IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos();
 
 Returns an enumerable collection of file system information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information in the current directory.
 
@@ -305,7 +305,7 @@ Returns an enumerable collection of file system information that matches a speci
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern.
 
@@ -326,7 +326,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern and enumerationOptions.
 
@@ -347,7 +347,7 @@ Returns the subdirectories of the current directory.
 IDirectoryInfo[] GetDirectories();
 ```
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of IDirectoryInfo objects.
 
@@ -364,7 +364,7 @@ Returns an array of directories in the current IDirectoryInfo matching the given
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern.
 
@@ -385,7 +385,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
@@ -406,7 +406,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
@@ -436,7 +436,7 @@ The search string to match against the names of files. This parameter can contai
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\> 
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\> 
 
 An array of IFileInfo objects that match searchPattern and enumerationOptions.
 
@@ -457,7 +457,7 @@ The search string to match against the names of files. This parameter can contai
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -470,7 +470,7 @@ IFileInfo[] GetFiles();
 
 Returns a file list from the current directory.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -487,7 +487,7 @@ Returns a file list from the current directory matching the given search pattern
 
 The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -510,7 +510,7 @@ IFileSystemInfo[] GetFileSystemInfos();
 
 Returns an array of IFileSystemInfo entries representing all the files and subdirectories in a directory.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo entries.
 
@@ -527,7 +527,7 @@ Retrieves an array of IFileSystemInfo objects representing the files and subdire
 
 The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo objects matching the search criteria.
 
@@ -548,7 +548,7 @@ The search string to match against the names of directories and files. This para
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo objects matching searchPattern and enumerationOptions.
 
@@ -569,7 +569,7 @@ The search string to match against the names of directories and files. This para
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of file system entries that match the search criteria.
 

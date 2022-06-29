@@ -40,11 +40,11 @@ public IDirectoryInfo? Directory { get; }
 
 Gets an instance of the parent directory.
 
-**value parameter** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**value parameter** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An instance of the parent directory.
 
-**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An instance of the parent directory.
 
@@ -114,7 +114,7 @@ Copies an existing file to a new file, disallowing the overwriting of an existin
 
 The name of the new file to copy to.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new file with a fully qualified path.
 
@@ -135,7 +135,7 @@ The name of the new file to copy to.
 
 true to allow an existing file to be overwritten; otherwise, false.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new file, or an overwrite of an existing file if overwrite is true. If the file exists and overwrite is false, an IOException is thrown.
 
@@ -147,7 +147,7 @@ IFileStream Create ();
 
 Creates a file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new file.
 
@@ -239,7 +239,7 @@ Opens a file in the specified mode.
 
 A FileMode constant specifying the mode (for example, Open or Append) in which to open the file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A file opened in the specified mode, with read/write access and unshared.
 
@@ -260,7 +260,7 @@ A FileMode constant specifying the mode (for example, Open or Append) in which t
 
 A FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A FileStream object opened in the specified mode and access, and unshared.
 
@@ -285,7 +285,7 @@ A FileAccess constant specifying whether to open the file with Read, Write, or R
 
 A FileShare constant specifying the type of access other FileStream objects have to this file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A FileStream object opened with the specified mode, access, and sharing options.
 
@@ -297,7 +297,7 @@ IFileStream OpenRead ();
 
 Creates a read-only FileStream.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new read-only FileStream object.
 
@@ -321,7 +321,7 @@ IFileStream OpenWrite ();
 
 Creates a write-only FileStream.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A write-only unshared FileStream object for a new or existing file.
 
@@ -349,7 +349,7 @@ The name of a file to replace with the current file.
 
 The name of a file with which to create a backup of the file described by the destFileName parameter.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A FileInfo object that encapsulates information about the file described by the destFileName parameter.
 
@@ -374,6 +374,6 @@ The name of a file with which to create a backup of the file described by the de
 
 true to ignore merge errors (such as attributes and ACLs) from the replaced file to the replacement file; otherwise false.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A FileInfo object that encapsulates information about the file described by the destFileName parameter.

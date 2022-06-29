@@ -23,6 +23,6 @@ IDriveInfo[] GetDrives ();
 
 Retrieves the drive names of all logical drives on a computer.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDriveInfo](#user-content-drive-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDriveInfo](./DriveInfo.md)\>
 
 An array of type IDriveInfo that represents the logical drives on a computer.

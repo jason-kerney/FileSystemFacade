@@ -27,6 +27,6 @@ Creates a new instance of the IDirectoryInfo interface on the specified path.
 
 A string specifying the path on which to create the IDirectoryInfo.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 A new instance of the IDirectoryInfo interface on the specified path.

@@ -221,7 +221,7 @@ A synchronous method that returns a structure that contains specific information
 
 The WatcherChangeTypes to watch for.
 
-**returns** [IWaitForChangedResult](#user-content-wait-for-changed-result)
+**returns** [IWaitForChangedResult](./WaitForChangedResult.md)
 
 A WaitForChangedResult that contains specific information on the change that occurred.
 
@@ -242,6 +242,6 @@ The WatcherChangeTypes to watch for.
 
 The time (in milliseconds) to wait before timing out.
 
-**returns** [IWaitForChangedResult](#user-content-wait-for-changed-result)
+**returns** [IWaitForChangedResult](./WaitForChangedResult.md)
 
 A WaitForChangedResult that contains specific information on the change that occurred.

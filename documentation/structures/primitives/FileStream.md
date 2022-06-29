@@ -306,7 +306,7 @@ void CopyTo(IFileStream destination);
 
 Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -336,7 +336,7 @@ void CopyTo(IFileStream destination, int bufferSize);
 
 Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -391,7 +391,7 @@ Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken canc
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -437,7 +437,7 @@ Task CopyToAsync(IFileStream destination, CancellationToken cancellationToken);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -479,7 +479,7 @@ Task CopyToAsync(IFileStream destination, int bufferSize);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -517,7 +517,7 @@ Task CopyToAsync(IFileStream destination);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 

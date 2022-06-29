@@ -28,6 +28,6 @@ Provides access to information on the specified drive.
 
 A valid drive path or drive letter. This can be either uppercase or lowercase, 'a' to 'z'. A null value is not valid.
 
-**returns** [IDriveInfo](#user-content-drive-info)
+**returns** [IDriveInfo](./DriveInfo.md)
 
 Information on the specified drive.

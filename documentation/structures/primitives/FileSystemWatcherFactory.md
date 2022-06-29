@@ -32,7 +32,7 @@ IFileSystemWatcher GetFileSystemWatcher();
 
 Creates a new instance of the FileSystemWatcher class.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A  new instance of the FileSystemWatcher class.
 
@@ -49,7 +49,7 @@ Creates a new instance of the FileSystemWatcher class, given the specified direc
 
 The directory to monitor, in standard or Universal Naming Convention (UNC) notation.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A new instance of the FileSystemWatcher class, given the specified directory to monitor.
 
@@ -70,6 +70,6 @@ The directory to monitor, in standard or Universal Naming Convention (UNC) notat
 
 The type of files to watch. For example, "*.txt" watches for changes to all text files.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.

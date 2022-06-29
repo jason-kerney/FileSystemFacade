@@ -27,6 +27,6 @@ Creates a new instance of the FileInfo class, which acts as a wrapper for a file
 
 The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new instance of the FileInfo class, which acts as a wrapper for a file path.

@@ -95,7 +95,7 @@ IDirectoryInfo RootDirectory { get; }
 
 Gets the root directory of a drive.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The root directory of a drive.
 

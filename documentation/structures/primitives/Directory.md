@@ -59,7 +59,7 @@ Creates all directories and subdirectories in the specified path unless they alr
 
 The directory to create.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 An object that represents the directory at the specified path. This object is returned regardless of whether a directory at the specified path already exists.
 
@@ -847,7 +847,7 @@ Retrieves the parent directory of the specified path, including both absolute an
 
 The path for which to retrieve the parent directory.
 
-**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 The parent directory, or null if path is the root directory, including the root of a UNC server or share name.
 

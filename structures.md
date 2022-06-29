@@ -589,7 +589,7 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 A bitwise combination of the enumeration values that specifies additional file options.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, the access other FileStreams can have to the same file, the buffer size, and additional file options.
 
@@ -622,7 +622,7 @@ A bitwise combination of the enumeration values that determines how the file wil
 
 A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, and buffer size.
 
@@ -651,7 +651,7 @@ A bitwise combination of the enumeration values that determines how the file can
 
 A bitwise combination of the enumeration values that determines how the file will be shared by processes.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new instance of the FileStream class with the specified path, creation mode, read/write permission, and sharing permission.
 
@@ -688,7 +688,7 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new instance of the FileStream class with the specified path, creation mode, read/write and sharing permission, buffer size, and synchronous or asynchronous state.
 
@@ -713,7 +713,7 @@ One of the enumeration values that determines how to open or create the file.
 
 A bitwise combination of the enumeration values that determines how the file can be accessed by the FileStream object. This also determines the values returned by the CanRead and CanWrite properties of the FileStream object. CanSeek is true if path specifies a disk file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new instance of the FileStream class with the specified path, creation mode, and read/write permission.
 
@@ -1024,7 +1024,7 @@ void CopyTo(IFileStream destination);
 
 Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1054,7 +1054,7 @@ void CopyTo(IFileStream destination, int bufferSize);
 
 Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1109,7 +1109,7 @@ Task CopyToAsync(IFileStream destination, int bufferSize, CancellationToken canc
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1155,7 +1155,7 @@ Task CopyToAsync(IFileStream destination, CancellationToken cancellationToken);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1197,7 +1197,7 @@ Task CopyToAsync(IFileStream destination, int bufferSize);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1235,7 +1235,7 @@ Task CopyToAsync(IFileStream destination);
 
 Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
 
-**destination** [IFileStream](#user-content-file-stream)
+**destination** [IFileStream](./FileStream.md)
 
 The stream to which the contents of the current stream will be copied.
 
@@ -1689,7 +1689,7 @@ IFileSystemWatcher GetFileSystemWatcher();
 
 Creates a new instance of the FileSystemWatcher class.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A  new instance of the FileSystemWatcher class.
 
@@ -1706,7 +1706,7 @@ Creates a new instance of the FileSystemWatcher class, given the specified direc
 
 The directory to monitor, in standard or Universal Naming Convention (UNC) notation.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A new instance of the FileSystemWatcher class, given the specified directory to monitor.
 
@@ -1727,7 +1727,7 @@ The directory to monitor, in standard or Universal Naming Convention (UNC) notat
 
 The type of files to watch. For example, "*.txt" watches for changes to all text files.
 
-**returns** [IFileSystemWatcher](#user-content-file-system-watcher)
+**returns** [IFileSystemWatcher](./FileSystemWatcher.md)
 
 A new instance of the FileSystemWatcher class, given the specified directory and type of files to monitor.
 
@@ -1953,7 +1953,7 @@ A synchronous method that returns a structure that contains specific information
 
 The WatcherChangeTypes to watch for.
 
-**returns** [IWaitForChangedResult](#user-content-wait-for-changed-result)
+**returns** [IWaitForChangedResult](./WaitForChangedResult.md)
 
 A WaitForChangedResult that contains specific information on the change that occurred.
 
@@ -1974,7 +1974,7 @@ The WatcherChangeTypes to watch for.
 
 The time (in milliseconds) to wait before timing out.
 
-**returns** [IWaitForChangedResult](#user-content-wait-for-changed-result)
+**returns** [IWaitForChangedResult](./WaitForChangedResult.md)
 
 A WaitForChangedResult that contains specific information on the change that occurred.
     
@@ -2091,7 +2091,7 @@ Provides access to information on the specified drive.
 
 A valid drive path or drive letter. This can be either uppercase or lowercase, 'a' to 'z'. A null value is not valid.
 
-**returns** [IDriveInfo](#user-content-drive-info)
+**returns** [IDriveInfo](./DriveInfo.md)
 
 Information on the specified drive.
     
@@ -2190,7 +2190,7 @@ IDirectoryInfo RootDirectory { get; }
 
 Gets the root directory of a drive.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The root directory of a drive.
 
@@ -2480,7 +2480,7 @@ Creates a new instance of the IDirectoryInfo interface on the specified path.
 
 A string specifying the path on which to create the IDirectoryInfo.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 A new instance of the IDirectoryInfo interface on the specified path.
     
@@ -2520,7 +2520,7 @@ IDirectoryInfo? Parent { get; }
 
 Gets the parent directory of a specified subdirectory.
 
-**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns**  [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 The parent directory of a specified subdirectory.
 
@@ -2532,7 +2532,7 @@ IDirectoryInfo Root { get; }
 
 Gets the root portion of the directory.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The root portion of the directory.
 
@@ -2556,7 +2556,7 @@ Creates a subdirectory or subdirectories on the specified path. The specified pa
 
 The specified path. This cannot be a different disk volume or Universal Naming Convention (UNC) name.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 The last directory specified in path.
 
@@ -2598,7 +2598,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern and searchOption.
 
@@ -2619,7 +2619,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern and enumerationOptions.
 
@@ -2632,7 +2632,7 @@ IEnumerable<IDirectoryInfo> EnumerateDirectories();
 
 Returns an enumerable collection of directory information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories in the current directory.
 
@@ -2649,7 +2649,7 @@ Returns an enumerable collection of directory information that matches a specifi
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An enumerable collection of directories that matches searchPattern.
 
@@ -2670,7 +2670,7 @@ IEnumerable<IFileInfo> EnumerateFiles();
 
 Returns an enumerable collection of file information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of the files in the current directory.
 
@@ -2687,7 +2687,7 @@ Returns an enumerable collection of file information that matches a search patte
 
 The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern.
 
@@ -2708,7 +2708,7 @@ The search string to match against the names of files. This parameter can contai
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern and enumerationOptions.
 
@@ -2729,7 +2729,7 @@ The search string to match against the names of files. This parameter can contai
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An enumerable collection of files that matches searchPattern and searchOption.
 
@@ -2759,7 +2759,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern and searchOption.
 
@@ -2772,7 +2772,7 @@ IEnumerable<IFileSystemInfo> EnumerateFileSystemInfos();
 
 Returns an enumerable collection of file system information in the current directory.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information in the current directory.
 
@@ -2789,7 +2789,7 @@ Returns an enumerable collection of file system information that matches a speci
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern.
 
@@ -2810,7 +2810,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](#user-content-file-sysetm-info)\>
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An enumerable collection of file system information objects that matches searchPattern and enumerationOptions.
 
@@ -2831,7 +2831,7 @@ Returns the subdirectories of the current directory.
 IDirectoryInfo[] GetDirectories();
 ```
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of IDirectoryInfo objects.
 
@@ -2848,7 +2848,7 @@ Returns an array of directories in the current IDirectoryInfo matching the given
 
 The search string to match against the names of directories. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern.
 
@@ -2869,7 +2869,7 @@ The search string to match against the names of directories. This parameter can 
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
@@ -2890,7 +2890,7 @@ The search string to match against the names of directories. This parameter can 
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An array of type IDirectoryInfo matching searchPattern and enumerationOptions.
 
@@ -2920,7 +2920,7 @@ The search string to match against the names of files. This parameter can contai
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of IFileInfo objects that match searchPattern and enumerationOptions.
 
@@ -2941,7 +2941,7 @@ The search string to match against the names of files. This parameter can contai
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -2954,7 +2954,7 @@ IFileInfo[] GetFiles();
 
 Returns a file list from the current directory.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -2971,7 +2971,7 @@ Returns a file list from the current directory matching the given search pattern
 
 The search string to match against the names of files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileInfo](./FileInfo.md)\>
 
 An array of type IFileInfo.
 
@@ -2994,7 +2994,7 @@ IFileSystemInfo[] GetFileSystemInfos();
 
 Returns an array of IFileSystemInfo entries representing all the files and subdirectories in a directory.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo entries.
 
@@ -3011,7 +3011,7 @@ Retrieves an array of IFileSystemInfo objects representing the files and subdire
 
 The search string to match against the names of directories and files. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo objects matching the search criteria.
 
@@ -3032,7 +3032,7 @@ The search string to match against the names of directories and files. This para
 
 An object that describes the search and enumeration configuration to use.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of IFileSystemInfo objects matching searchPattern and enumerationOptions.
 
@@ -3053,7 +3053,7 @@ The search string to match against the names of directories and files. This para
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or all subdirectories. The default value is TopDirectoryOnly.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](#user-content-file-system-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IFileSystemInfo](./FileSystemInfo.md)\>
 
 An array of file system entries that match the search criteria.
 
@@ -3096,7 +3096,7 @@ Creates a new instance of the FileInfo class, which acts as a wrapper for a file
 
 The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new instance of the FileInfo class, which acts as a wrapper for a file path.
     
@@ -3140,11 +3140,11 @@ public IDirectoryInfo? Directory { get; }
 
 Gets an instance of the parent directory.
 
-**value parameter** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**value parameter** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An instance of the parent directory.
 
-**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 An instance of the parent directory.
 
@@ -3214,7 +3214,7 @@ Copies an existing file to a new file, disallowing the overwriting of an existin
 
 The name of the new file to copy to.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new file with a fully qualified path.
 
@@ -3235,7 +3235,7 @@ The name of the new file to copy to.
 
 true to allow an existing file to be overwritten; otherwise, false.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A new file, or an overwrite of an existing file if overwrite is true. If the file exists and overwrite is false, an IOException is thrown.
 
@@ -3247,7 +3247,7 @@ IFileStream Create ();
 
 Creates a file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new file.
 
@@ -3339,7 +3339,7 @@ Opens a file in the specified mode.
 
 A FileMode constant specifying the mode (for example, Open or Append) in which to open the file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A file opened in the specified mode, with read/write access and unshared.
 
@@ -3360,7 +3360,7 @@ A FileMode constant specifying the mode (for example, Open or Append) in which t
 
 A FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A FileStream object opened in the specified mode and access, and unshared.
 
@@ -3385,7 +3385,7 @@ A FileAccess constant specifying whether to open the file with Read, Write, or R
 
 A FileShare constant specifying the type of access other FileStream objects have to this file.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A FileStream object opened with the specified mode, access, and sharing options.
 
@@ -3397,7 +3397,7 @@ IFileStream OpenRead ();
 
 Creates a read-only FileStream.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A new read-only FileStream object.
 
@@ -3421,7 +3421,7 @@ IFileStream OpenWrite ();
 
 Creates a write-only FileStream.
 
-**returns** [IFileStream](#user-content-file-stream)
+**returns** [IFileStream](./FileStream.md)
 
 A write-only unshared FileStream object for a new or existing file.
 
@@ -3449,7 +3449,7 @@ The name of a file to replace with the current file.
 
 The name of a file with which to create a backup of the file described by the destFileName parameter.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A FileInfo object that encapsulates information about the file described by the destFileName parameter.
 
@@ -3474,7 +3474,7 @@ The name of a file with which to create a backup of the file described by the de
 
 true to ignore merge errors (such as attributes and ACLs) from the replaced file to the replacement file; otherwise false.
 
-**returns** [IFileInfo](#user-content-file-info)
+**returns** [IFileInfo](./FileInfo.md)
 
 A FileInfo object that encapsulates information about the file described by the destFileName parameter.
     
@@ -3501,7 +3501,7 @@ IDriveInfo[] GetDrives ();
 
 Retrieves the drive names of all logical drives on a computer.
 
-**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDriveInfo](#user-content-drive-info)\>
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[IDriveInfo](./DriveInfo.md)\>
 
 An array of type IDriveInfo that represents the logical drives on a computer.
     
@@ -3564,7 +3564,7 @@ Creates all directories and subdirectories in the specified path unless they alr
 
 The directory to create.
 
-**returns** [IDirectoryInfo](#user-content-directory-info)
+**returns** [IDirectoryInfo](./DirectoryInfo.md)
 
 An object that represents the directory at the specified path. This object is returned regardless of whether a directory at the specified path already exists.
 
@@ -4352,7 +4352,7 @@ Retrieves the parent directory of the specified path, including both absolute an
 
 The path for which to retrieve the parent directory.
 
-**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](#user-content-directory-info)\>
+**returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[IDirectoryInfo](./DirectoryInfo.md)\>
 
 The parent directory, or null if path is the root directory, including the root of a UNC server or share name.
 
