@@ -29,6 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", 
 		documentation\structures\AtomicFileSystem.md = documentation\structures\AtomicFileSystem.md
 		documentation\structures\AtomicReplacementBuilder.md = documentation\structures\AtomicReplacementBuilder.md
 		documentation\structures\Primitives.md = documentation\structures\Primitives.md
+		documentation\structures\_main.bak = documentation\structures\_main.bak
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "primitives", "primitives", "{D68CDB94-0B2E-4DB6-9A50-3C6BB9E39B0F}"
