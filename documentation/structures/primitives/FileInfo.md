@@ -32,10 +32,6 @@ public interface IFileInfo: IFileSystemInfo
 - [15.15 Open Write](#user-content-ifileinfoopenwrite)
 - [15.16 Replace](#user-content-ifileinforeplace)
 
-<!--
-#user-content-ifileinfo
--->
-
 ### IFileInfo.Directory
 
 ```csharp

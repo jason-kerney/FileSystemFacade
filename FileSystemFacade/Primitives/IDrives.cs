@@ -3,7 +3,7 @@
 namespace FileSystemFacade.Primitives
 {
     /// <summary>
-    /// Use IDrives to determine what drives are available, and what type of drives they are. 
+    /// Use IDrives to determine what drives are available, and what type of drives they are.
     /// </summary>
     public interface IDrives
     {
