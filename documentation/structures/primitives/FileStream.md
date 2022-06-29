@@ -35,7 +35,7 @@ public interface IFileStream : IDisposable, IAsyncDisposable
 - [2.20 Flush Async](#user-content-ifilestreamflushasync)
 - [2.21 Lock](#user-content-ifilestreamlock)
 - [2.22 Read](#user-content-ifilestreamread)
-- [2.23 Read Async](#user-content-ifilestreamreadasync)
+- [2.23 Read Async](#user-content-user-content-ifilestreamreadasync)
 - [2.24 Read Byte](#user-content-ifilestreamreadbyte)
 - [2.25 Seek](#user-content-ifilestreamseek)
 - [2.26 Set Length](#user-content-ifilestreamsetlength)
@@ -206,7 +206,7 @@ A value, in milliseconds, that determines how long the stream will attempt to wr
 IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
 ```
 
-Begins an asynchronous read operation. Consider using [`ReadAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamreadasync3) instead.
+Begins an asynchronous read operation. Consider using [`ReadAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-user-content-ifilestreamreadasync3) instead.
 
 **buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
@@ -238,7 +238,7 @@ An object that references the asynchronous read.
 IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
 ```
 
-Begins an asynchronous write operation. Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.
+Begins an asynchronous write operation. Consider using [`WriteAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamwriteasync2) instead.
 
 **buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
@@ -528,7 +528,7 @@ A task that represents the asynchronous copy operation.
 int EndRead(IAsyncResult asyncResult);
 ```
 
-Waits for the pending asynchronous read operation to complete.(Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+Waits for the pending asynchronous read operation to complete.(Consider using [`ReadAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamreadasync3) instead.)
 
 **asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
 
@@ -544,7 +544,7 @@ The number of bytes read from the stream, between 0 and the number of bytes you 
 void EndWrite(IAsyncResult asyncResult);
 ```
 
-Ends an asynchronous write operation and blocks until the I/O operation is complete.(Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.)
+Ends an asynchronous write operation and blocks until the I/O operation is complete.(Consider using [`WriteAsync(Byte[], Int32, Int32, CancellationToken)`](#user-content-ifilestreamwriteasync1) instead.)
 
 **asyncResult** [IAsyncResult](https://docs.microsoft.com/en-us/dotnet/api/system.iasyncresult?view=net-6.0)
 
@@ -686,15 +686,15 @@ The total number of bytes read into the buffer. This can be less than the number
 
 ## IFileStream.ReadAsync
 
-| Signatures                                                                                        |
-|---------------------------------------------------------------------------------------------------|
-| <a href='#ifilestreamreadasync1'>`ValueTask<int> ReadAsync(Memory<byte>, CancellationToken);`</a> |
-| <a href='#ifilestreamreadasync2'>`Task<int> ReadAsync(byte[], int, int);`</a>                     |
-| <a href='#ifilestreamreadasync3'>`Task<int> ReadAsync(byte[], int, int, CancellationToken);`</a>  |
+| Signatures                                                                                                     |
+|----------------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-ifilestreamreadasync1'>`ValueTask<int> ReadAsync(Memory<byte>, CancellationToken);`</a> |
+| <a href='#user-content-ifilestreamreadasync2'>`Task<int> ReadAsync(byte[], int, int);`</a>                     |
+| <a href='#user-content-ifilestreamreadasync3'>`Task<int> ReadAsync(byte[], int, int, CancellationToken);`</a>  |
 
 ---
 
-<a id='ifilestreamreadasync1'></a>
+<a id='user-content-ifilestreamreadasync1'></a>
 ```csharp
 ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default);
 ```
@@ -715,7 +715,7 @@ A task that represents the asynchronous read operation. The value of its Result 
 
 ---
 
-<a id='ifilestreamreadasync2'></a>
+<a id='user-content-ifilestreamreadasync2'></a>
 ```csharp
 Task<int> ReadAsync(byte[] buffer, int offset, int count);
 ```
@@ -740,7 +740,7 @@ A task that represents the asynchronous read operation. The value of the TResult
 
 ---
 
-<a id='ifilestreamreadasync3'></a>
+<a id='user-content-ifilestreamreadasync3'></a>
 ```csharp
 Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken);
 ```
@@ -873,14 +873,14 @@ A region of memory. This method copies the contents of this region to the curren
 
 ## IFileStream.WriteAsync
 
-| Signatures                                                                                             |
-|--------------------------------------------------------------------------------------------------------|
-| <a href='#ifilestreamwriteasync1'>`ValueTask WriteAsync(ReadOnlyMemory<byte>, CancellationToken);`</a> |
-| <a href='#ifilestreamwriteasync2'>`Task WriteAsync(byte[], int, int);`</a>                             |
+| Signatures                                                                                                          |
+|---------------------------------------------------------------------------------------------------------------------|
+| <a href='#user-content-ifilestreamwriteasync1'>`ValueTask WriteAsync(ReadOnlyMemory<byte>, CancellationToken);`</a> |
+| <a href='#user-content-ifilestreamwriteasync2'>`Task WriteAsync(byte[], int, int);`</a>                             |
 
 ---
 
-<a id='ifilestreamwriteasync1'></a>
+<a id='user-content-ifilestreamwriteasync1'></a>
 ```csharp
 ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
 ```
@@ -901,7 +901,7 @@ A task that represents the asynchronous write operation.
 
 ---
 
-<a id='ifilestreamwriteasync2'></a>
+<a id='user-content-ifilestreamwriteasync2'></a>
 ```csharp
 Task WriteAsync(byte[] buffer, int offset, int count);
 ```
