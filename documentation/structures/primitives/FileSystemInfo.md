@@ -196,7 +196,7 @@ Deletes a file or directory.
 ### IFileSystemInfo.GetObjectData
 
 ```csharp
-void GetObjectData (System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
+void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context);
 ```
 
 Sets the SerializationInfo object with the file name and additional exception information.

@@ -22,7 +22,7 @@ namespace FileSystemFacade.Primitives
         /// Gets the size, in bytes, of the current file.
         /// </summary>
         public long Length { get; }
-        
+
         /// <summary>
         /// Creates a StreamWriter that appends text to the file represented by this instance of the FileInfo.
         /// </summary>
@@ -33,14 +33,14 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <param name="destFileName">The name of the new file to copy to.</param>
         /// <returns>A new file with a fully qualified path.</returns>
-        IFileInfo CopyTo (string destFileName);
+        IFileInfo CopyTo(string destFileName);
         /// <summary>
         /// Copies an existing file to a new file, allowing the overwriting of an existing file.
         /// </summary>
         /// <param name="destFileName">The name of the new file to copy to.</param>
         /// <param name="overwrite">true to allow an existing file to be overwritten; otherwise, false.</param>
         /// <returns>A new file, or an overwrite of an existing file if overwrite is true. If the file exists and overwrite is false, an IOException is thrown.</returns>
-        IFileInfo CopyTo (string destFileName, bool overwrite);
+        IFileInfo CopyTo(string destFileName, bool overwrite);
         /// <summary>
         /// Creates a file.
         /// </summary>
@@ -51,43 +51,40 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <returns>A new StreamWriter.</returns>
         System.IO.StreamWriter CreateText ();
-        
         /// <summary>
         /// Decrypts a file that was encrypted by the current account using the Encrypt() method.
         /// </summary>
         [System.Runtime.Versioning.SupportedOSPlatform("windows")]
         void Decrypt ();
-        
         /// <summary>
         /// Encrypts a file so that only the account used to encrypt the file can decrypt it.
         /// </summary>
         [System.Runtime.Versioning.SupportedOSPlatform("windows")]
         void Encrypt ();
-        
         /// <summary>
         /// Moves a specified file to a new location, providing the option to specify a new file name.
         /// </summary>
         /// <param name="destFileName">The path to move the file to, which can specify a different file name.</param>
-        void MoveTo (string destFileName);
+        void MoveTo(string destFileName);
         /// <summary>
         /// Moves a specified file to a new location, providing the options to specify a new file name and to overwrite the destination file if it already exists.
         /// </summary>
         /// <param name="destFileName">The path to move the file to, which can specify a different file name.</param>
         /// <param name="overwrite">true to overwrite the destination file if it already exists; false otherwise.</param>
-        void MoveTo (string destFileName, bool overwrite);
+        void MoveTo(string destFileName, bool overwrite);
         /// <summary>
         /// Opens a file in the specified mode.
         /// </summary>
         /// <param name="mode">A FileMode constant specifying the mode (for example, Open or Append) in which to open the file.</param>
         /// <returns>A file opened in the specified mode, with read/write access and unshared.</returns>
-        IFileStream Open (System.IO.FileMode mode);
+        IFileStream Open(System.IO.FileMode mode);
         /// <summary>
         /// Opens a file in the specified mode with read, write, or read/write access.
         /// </summary>
         /// <param name="mode">A FileMode constant specifying the mode (for example, Open or Append) in which to open the file.</param>
         /// <param name="access">A FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.</param>
         /// <returns>A FileStream object opened in the specified mode and access, and unshared.</returns>
-        IFileStream Open (System.IO.FileMode mode, System.IO.FileAccess access);
+        IFileStream Open(System.IO.FileMode mode, System.IO.FileAccess access);
         /// <summary>
         /// Opens a file in the specified mode with read, write, or read/write access and the specified sharing option.
         /// </summary>
@@ -95,7 +92,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="access">A FileAccess constant specifying whether to open the file with Read, Write, or ReadWrite file access.</param>
         /// <param name="share">A FileShare constant specifying the type of access other FileStream objects have to this file.</param>
         /// <returns>A FileStream object opened with the specified mode, access, and sharing options.</returns>
-        IFileStream Open (System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
+        IFileStream Open(System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
         /// <summary>
         /// Creates a read-only FileStream.
         /// </summary>
@@ -117,15 +114,15 @@ namespace FileSystemFacade.Primitives
         /// <param name="destinationFileName">The name of a file to replace with the current file.</param>
         /// <param name="destinationBackupFileName">The name of a file with which to create a backup of the file described by the destFileName parameter.</param>
         /// <returns>A FileInfo object that encapsulates information about the file described by the destFileName parameter.</returns>
-        IFileInfo Replace (string destinationFileName, string? destinationBackupFileName);
+        IFileInfo Replace(string destinationFileName, string? destinationBackupFileName);
         /// <summary>
         /// Replaces the contents of a specified file with the file described by the current FileInfo object, deleting the original file, and creating a backup of the replaced file. Also specifies whether to ignore merge errors.
         /// </summary>
         /// <param name="destinationFileName">The name of a file to replace with the current file.</param>
         /// <param name="destinationBackupFileName">The name of a file with which to create a backup of the file described by the destFileName parameter.</param>
         /// <param name="ignoreMetadataErrors">true to ignore merge errors (such as attributes and ACLs) from the replaced file to the replacement file; otherwise false.</param>
-        /// <returns></returns>
-        IFileInfo Replace (string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors);
+        /// <returns>A FileInfo object that encapsulates information about the file described by the destFileName parameter.</returns>
+        IFileInfo Replace(string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors);
     }
 
     internal sealed class FileInfo: FileSystemInfo, IFileInfo

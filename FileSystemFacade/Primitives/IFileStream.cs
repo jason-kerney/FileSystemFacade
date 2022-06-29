@@ -68,7 +68,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="callback">The method to be called when the asynchronous read operation is completed</param>
         /// <param name="state">A user-provided object that distinguishes this particular asynchronous read request from other requests.</param>
         /// <returns>An object that references the asynchronous read.</returns>
-        IAsyncResult BeginRead (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+        IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
         /// <summary>
         /// Begins an asynchronous write operation. Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.
         /// </summary>
@@ -78,7 +78,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="callback">The method to be called when the asynchronous write operation is completed.</param>
         /// <param name="state">A user-provided object that distinguishes this particular asynchronous write request from other requests.</param>
         /// <returns>An object that references the asynchronous write.</returns>
-        IAsyncResult BeginWrite (byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
+        IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
         /// <summary>
         /// Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.
         /// </summary>
@@ -87,7 +87,7 @@ namespace FileSystemFacade.Primitives
         /// Reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
-        void CopyTo (System.IO.Stream destination);
+        void CopyTo(System.IO.Stream destination);
         /// <summary>
         /// Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -98,7 +98,7 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="bufferSize">The size of the buffer. This value must be greater than zero. The default size is 81920.</param>
-        void CopyTo (System.IO.Stream destination, int bufferSize);
+        void CopyTo(System.IO.Stream destination, int bufferSize);
         /// <summary>
         /// Reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -112,7 +112,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
+        Task CopyToAsync(System.IO.Stream destination, int bufferSize, CancellationToken cancellationToken);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size and cancellation token. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
@@ -127,51 +127,51 @@ namespace FileSystemFacade.Primitives
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (System.IO.Stream destination, CancellationToken cancellationToken);
+        Task CopyToAsync(System.IO.Stream destination, CancellationToken cancellationToken);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified cancellation token. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (IFileStream destination, CancellationToken cancellationToken);
+        Task CopyToAsync(IFileStream destination, CancellationToken cancellationToken);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (System.IO.Stream destination, int bufferSize);
+        Task CopyToAsync(System.IO.Stream destination, int bufferSize);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream, using a specified buffer size. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (IFileStream destination, int bufferSize);
+        Task CopyToAsync(IFileStream destination, int bufferSize);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (System.IO.Stream destination);
+        Task CopyToAsync(System.IO.Stream destination);
         /// <summary>
         /// Asynchronously reads the bytes from the current stream and writes them to another stream. Both streams positions are advanced by the number of bytes copied.
         /// </summary>
         /// <param name="destination">The stream to which the contents of the current stream will be copied.</param>
         /// <returns>A task that represents the asynchronous copy operation.</returns>
-        Task CopyToAsync (IFileStream destination);
+        Task CopyToAsync(IFileStream destination);
         /// <summary>
         /// Waits for the pending asynchronous read operation to complete. (Consider using ReadAsync(Byte[], Int32, Int32, CancellationToken) instead.)
         /// </summary>
         /// <param name="asyncResult">The reference to the pending asynchronous request to wait for.</param>
         /// <returns>The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block until at least 1 byte is available.</returns>
-        int EndRead (IAsyncResult asyncResult);
+        int EndRead(IAsyncResult asyncResult);
         /// <summary>
         /// Ends an asynchronous write operation and blocks until the I/O operation is complete. (Consider using WriteAsync(Byte[], Int32, Int32, CancellationToken) instead.)
         /// </summary>
         /// <param name="asyncResult">The pending asynchronous I/O request.</param>
-        void EndWrite (IAsyncResult asyncResult);
+        void EndWrite(IAsyncResult asyncResult);
         /// <summary>
         /// Clears buffers for this stream and causes any buffered data to be written to the file.
         /// </summary>
@@ -180,7 +180,7 @@ namespace FileSystemFacade.Primitives
         /// Clears buffers for this stream and causes any buffered data to be written to the file, and also clears all intermediate file buffers.
         /// </summary>
         /// <param name="flushToDisk">true to flush all intermediate file buffers; otherwise, false.</param>
-        void Flush (bool flushToDisk);
+        void Flush(bool flushToDisk);
         /// <summary>
         /// Asynchronously clears all buffers for this stream and causes any buffered data to be written to the underlying device.
         /// </summary>
@@ -191,7 +191,7 @@ namespace FileSystemFacade.Primitives
         /// </summary>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous flush operation.</returns>
-        Task FlushAsync (CancellationToken cancellationToken);
+        Task FlushAsync(CancellationToken cancellationToken);
         
         /// <summary>
         /// Prevents other processes from reading from or writing to the FileStream.
@@ -201,7 +201,7 @@ namespace FileSystemFacade.Primitives
         [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
         [System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
         [System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
-        void Lock (long position, long length);
+        void Lock(long position, long length);
         /// <summary>
         /// Reads a block of bytes from the stream and writes the data in a given buffer.
         /// </summary>
@@ -209,13 +209,13 @@ namespace FileSystemFacade.Primitives
         /// <param name="offset">The byte offset in array at which the read bytes will be placed.</param>
         /// <param name="count">The maximum number of bytes to read.</param>
         /// <returns>The total number of bytes read into the buffer. This might be less than the number of bytes requested if that number of bytes are not currently available, or zero if the end of the stream is reached.</returns>
-        int Read (byte[] buffer, int offset, int count);
+        int Read(byte[] buffer, int offset, int count);
         /// <summary>
         /// Reads a sequence of bytes from the current file stream and advances the position within the file stream by the number of bytes read.
         /// </summary>
         /// <param name="buffer">A region of memory. When this method returns, the contents of this region are replaced by the bytes read from the current file stream.</param>
         /// <returns>The total number of bytes read into the buffer. This can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
-        int Read (Span<byte> buffer);
+        int Read(Span<byte> buffer);
         /// <summary>
         /// Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
         /// </summary>
@@ -251,12 +251,12 @@ namespace FileSystemFacade.Primitives
         /// <param name="offset">The point relative to origin from which to begin seeking.</param>
         /// <param name="origin">Specifies the beginning, the end, or the current position as a reference point for offset, using a value of type SeekOrigin.</param>
         /// <returns>The new position in the stream.</returns>
-        long Seek (long offset, System.IO.SeekOrigin origin);
+        long Seek(long offset, System.IO.SeekOrigin origin);
         /// <summary>
         /// Sets the length of this stream to the given value.
         /// </summary>
         /// <param name="value">The new length of the stream.</param>
-        void SetLength (long value);
+        void SetLength(long value);
         
         /// <summary>
         /// Allows access by other processes to all or part of a file that was previously locked.
@@ -266,26 +266,26 @@ namespace FileSystemFacade.Primitives
         [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
         [System.Runtime.Versioning.UnsupportedOSPlatform("macos")]
         [System.Runtime.Versioning.UnsupportedOSPlatform("tvos")]
-        void Unlock (long position, long length);
+        void Unlock(long position, long length);
         /// <summary>
         /// Writes a block of bytes to the file stream.
         /// </summary>
         /// <param name="buffer">The buffer containing data to write to the stream.</param>
         /// <param name="offset">The zero-based byte offset in array from which to begin copying bytes to the stream.</param>
         /// <param name="count">The maximum number of bytes to write.</param>
-        void Write (byte[] buffer, int offset, int count);
+        void Write(byte[] buffer, int offset, int count);
         /// <summary>
         /// Writes a sequence of bytes from a read-only span to the current file stream and advances the current position within this file stream by the number of bytes written.
         /// </summary>
         /// <param name="buffer">A region of memory. This method copies the contents of this region to the current file stream.</param>
-        void Write (ReadOnlySpan<byte> buffer);
+        void Write(ReadOnlySpan<byte> buffer);
         /// <summary>
         /// Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.
         /// </summary>
         /// <param name="buffer">The region of memory to write data from.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        ValueTask WriteAsync (ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
+        ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default);
         /// <summary>
         /// Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
         /// </summary>
@@ -293,12 +293,12 @@ namespace FileSystemFacade.Primitives
         /// <param name="offset">The zero-based byte offset in buffer from which to begin copying bytes to the stream.</param>
         /// <param name="count">The maximum number of bytes to write.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        Task WriteAsync (byte[] buffer, int offset, int count);
+        Task WriteAsync(byte[] buffer, int offset, int count);
         /// <summary>
         /// Writes a byte to the current position in the file stream.
         /// </summary>
         /// <param name="value">A byte to write to the stream.</param>
-        void WriteByte (byte value);
+        void WriteByte(byte value);
     }
 
     internal class FileStream : MarshalByRefObject, IFileStream
