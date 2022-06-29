@@ -226,13 +226,13 @@ true to overwrite the destination file if it already exists; false otherwise.
 
 | Signatures                                                                                      |
 |-------------------------------------------------------------------------------------------------|
-| <a href="#user-content-iFileinfoopen1">`IFileStream Open(FileMode);`</a>                        |
-| <a href="#user-content-iFileinfoopen2">`IFileStream Open(FileMode, FileAccess);`</a>            |
-| <a href="#user-content-iFileinfoopen3">`IFileStream Open(FileMode, FileAccess, FileShare);`</a> |
+| <a href="#user-content-ifileinfoopen1">`IFileStream Open(FileMode);`</a>                        |
+| <a href="#user-content-ifileinfoopen2">`IFileStream Open(FileMode, FileAccess);`</a>            |
+| <a href="#user-content-ifileinfoopen3">`IFileStream Open(FileMode, FileAccess, FileShare);`</a> |
 
 ---
 
-<a id="user-content-iFileinfoopen1"></a>
+<a id="user-content-ifileinfoopen1"></a>
 ```csharp
 IFileStream Open(System.IO.FileMode mode);
 ```
@@ -249,7 +249,7 @@ A file opened in the specified mode, with read/write access and unshared.
 
 ---
 
-<a id="user-content-iFileinfoopen2"></a>
+<a id="user-content-ifileinfoopen2"></a>
 ```csharp
 IFileStream Open(System.IO.FileMode mode, System.IO.FileAccess access);
 ```
@@ -270,7 +270,7 @@ A FileStream object opened in the specified mode and access, and unshared.
 
 ---
 
-<a id="user-content-iFileinfoopen3"></a>
+<a id="user-content-ifileinfoopen3"></a>
 ```csharp
 IFileStream Open(System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 ```
