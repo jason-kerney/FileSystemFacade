@@ -43,12 +43,12 @@
     },
     {
       "name": "docs",
-      "command": "booklisp ./documentation/readme/_main.md ./README.md && booklisp ./documentation/structures/_main.md ./structures.md && gittey push",
+      "command": "gittey dtest && gittey push",
       "description": "generates the main documentation and publishes it"
     },
     {
       "name": "dtest",
-      "command": "booklisp ./documentation/readme/_main.md ./README.md && booklisp ./documentation/structures/_main.md ./structures.md",
+      "command": "booklisp ./documentation/readme/_main.md ./README.md && booklisp ./documentation/structures/_main.md ./structures.md && booklisp ./documentation/structures/alternate/_main.md ./alternate.md",
       "description": "generates the main documentation"
     },
     {

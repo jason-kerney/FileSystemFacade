@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		documentation\readme\introduction.md = documentation\readme\introduction.md
 		README.md = README.md
 		structures.md = structures.md
+		alternate.md = alternate.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{C8902A6A-A240-4FC4-A39A-0A8C803ED738}"
@@ -29,7 +30,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", 
 		documentation\structures\AtomicFileSystem.md = documentation\structures\AtomicFileSystem.md
 		documentation\structures\AtomicReplacementBuilder.md = documentation\structures\AtomicReplacementBuilder.md
 		documentation\structures\Primitives.md = documentation\structures\Primitives.md
-		documentation\structures\_main.bak = documentation\structures\_main.bak
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "primitives", "primitives", "{D68CDB94-0B2E-4DB6-9A50-3C6BB9E39B0F}"
@@ -49,6 +49,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "primitives", "primitives", 
 		documentation\structures\primitives\FileSystemWatcherFactory.md = documentation\structures\primitives\FileSystemWatcherFactory.md
 		documentation\structures\primitives\WaitForChangedResult.md = documentation\structures\primitives\WaitForChangedResult.md
 		documentation\structures\primitives\FileSystemInfo.md = documentation\structures\primitives\FileSystemInfo.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "alternate", "alternate", "{B371F088-2BCE-4B75-9B40-9C4074E86D38}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\structures\alternate\_main.md = documentation\structures\alternate\_main.md
+		documentation\structures\alternate\Drive.md = documentation\structures\alternate\Drive.md
+		documentation\structures\alternate\StaticDriveReplacement.md = documentation\structures\alternate\StaticDriveReplacement.md
+		documentation\structures\alternate\Directory.md = documentation\structures\alternate\Directory.md
+		documentation\structures\alternate\StaticDirectoryReplacement.md = documentation\structures\alternate\StaticDirectoryReplacement.md
+		documentation\structures\alternate\File.md = documentation\structures\alternate\File.md
+		documentation\structures\alternate\StaticFileReplacement.md = documentation\structures\alternate\StaticFileReplacement.md
 	EndProjectSection
 EndProject
 Global
@@ -81,5 +92,6 @@ Global
 		{FF9F9993-0D67-4467-9A1F-8CAA5B8027D7} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
 		{8299C243-1B95-46C1-B7A4-A374B47E4F99} = {C8902A6A-A240-4FC4-A39A-0A8C803ED738}
 		{D68CDB94-0B2E-4DB6-9A50-3C6BB9E39B0F} = {8299C243-1B95-46C1-B7A4-A374B47E4F99}
+		{B371F088-2BCE-4B75-9B40-9C4074E86D38} = {8299C243-1B95-46C1-B7A4-A374B47E4F99}
 	EndGlobalSection
 EndGlobal
