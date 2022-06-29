@@ -110,11 +110,11 @@ An atomic action allowing the interaction with a IFileStream specified by the pa
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 ```
 
-Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call.
+Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. The [IFileStream](./documentation/structures/primitives/FileStream.md) object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
-A relative or absolute path for the file that the current [IFileStream](#user-content-file-stream) object will encapsulate.
+A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md) object will encapsulate.
 
 **mode** [System.IO.FileMode](https://docs.microsoft.com/en-us/dotnet/api/system.io.filemode?view=net-6.0)
 
@@ -122,7 +122,7 @@ One of the enumeration values that determines how to open or create the file.
 
 **access** [System.IO.FileAccess](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileaccess?view=net-6.0)
 
-A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](#user-content-file-stream) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](#user-content-file-stream) object. CanSeek is true if path specifies a disk file.
+A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md) object. CanSeek is true if path specifies a disk file.
 
 **share** [System.IO.FileShare](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=net-6.0)
 
@@ -132,9 +132,9 @@ A bitwise combination of the enumeration values that determines how the file wil
 
 A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](#user-content-file-stream)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
 
-An atomic action allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
+An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
 ---
 
@@ -143,11 +143,11 @@ An atomic action allowing the interaction with a [IFileStream](#user-content-fil
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 ```
 
-Returns [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters.  The [IFileStream](#user-content-file-stream) object is created before and disposed of after each atomic action method call.
+Returns [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters.  The [IFileStream](./documentation/structures/primitives/FileStream.md) object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
-A relative or absolute path for the file that the current [IFileStream](#user-content-file-stream) object will encapsulate.
+A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md) object will encapsulate.
 
 **mode** [System.IO.FileMode](https://docs.microsoft.com/en-us/dotnet/api/system.io.filemode?view=net-6.0)
 
@@ -155,15 +155,15 @@ One of the enumeration values that determines how to open or create the file.
 
 **access** [System.IO.FileAccess](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileaccess?view=net-6.0)
 
-A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](#user-content-file-stream) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](#user-content-file-stream) object. CanSeek is true if path specifies a disk file.
+A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md) object. CanSeek is true if path specifies a disk file.
 
 **share** [System.IO.FileShare](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=net-6.0)
 
 A bitwise combination of the enumeration values that determines how the file will be shared by processes.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](#user-content-file-stream)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
 
-An atomic action allowing the interaction with a [IFileStream](#user-content-file-stream) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
+An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
 ---
 
@@ -198,7 +198,7 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](#user-content-file-stream)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
@@ -223,7 +223,7 @@ One of the enumeration values that determines how to open or create the file.
 
 A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](#user-content-file-stream)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
@@ -239,7 +239,7 @@ Returns an atomic action allowing the interaction with a IDriveInfo specified by
 
 A valid drive path or drive letter. This can be either uppercase or lowercase, 'a' to 'z'. A null value is not valid.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDriveInfo](#use-content-drive-info)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDriveInfo](./documentation/structures/primitives/DriveInfo.md)>
 
 An atomic action allowing the interaction with a IDriveInfo specified by the drive name.
 
@@ -255,7 +255,7 @@ Returns an atomic action allowing the interaction with a IDirectoryInfo specifie
 
 A string specifying the path on which to create the IDirectoryInfo.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectoryInfo](#user-content-directory-info)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectoryInfo](./documentation/structures/primitives/DirectoryInfo.md)>
 
 An atomic action allowing the interaction with a IDirectoryInfo specified by the path.
 
@@ -271,7 +271,7 @@ Returns an atomic action allowing the interaction with a IFileInfo specified by 
 
 The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
 
-**returns ** [IAtomicActions](#user-content-atomic-actions)<[IFileInfo](#user-content-file-info)>
+**returns ** [IAtomicActions](#user-content-atomic-actions)<[IFileInfo](./documentation/structures/primitives/FileInfo.md)>
 
 An atomic action allowing the interaction with a IFileInfo specified by the file name.
 
@@ -283,7 +283,7 @@ IAtomicActions<IDrives> Drives { get; }
 
 Returns an atomic action allowing the interaction with a IDrives.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDrives](#user-content-drives)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDrives](./documentation/structures/primitives/Drives.md)>
 
 An atomic action allowing the interaction with a IDrives.
 
@@ -295,7 +295,7 @@ IAtomicActions<IDirectory> Directory { get; }
 
 Returns an atomic action allowing the interaction with IDirectory.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectory](#user-content-directory)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectory](./documentation/structures/primitives/Directory.md)>
 
 An atomic action allowing the interaction with IDirectory.
 
@@ -307,7 +307,7 @@ IAtomicActions<IFile> File { get; }
 
 Returns an atomic action allowing the interaction with IFile.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFile](#user-content-file)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFile](./documentation/structures/primitives/File.md)>
 
 An atomic action allowing the interaction with IFile.
     
@@ -395,7 +395,7 @@ IAtomicReplacementBuilder FileStream(IFileStreamFactory factory);
 
 Allows for the factory that builds IFileStream objects to be temporarily replaced.
 
-**factory** [IFileStreamFactory](#user-content-file-stream-factory)
+**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md)
 
 The IFileStream Factory to use when 'Use' is called.
 
@@ -411,7 +411,7 @@ IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
 
 Allows for the factory that builds IFileSystemWatcher objects to be replaced.
 
-**factory** [IFileSystemWatcherFactory](#user-content-file-system-watcher-factory)
+**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
 
 The IFileSystemWatcher Factory to use when 'Use' is called.
 
@@ -427,7 +427,7 @@ IAtomicReplacementBuilder FileInfo(IFileInfoFactory factory);
 
 Allows for the factory that builds IFileInfo objects to be temporarily replaced.
 
-**factory** [IFileInfoFactory](#user-content-file-info-factory)
+**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md)
 
 The IFileInfo Factory to use when 'Use' is called.
 
@@ -443,7 +443,7 @@ IAtomicReplacementBuilder DirectoryInfo(IDirectoryInfoFactory factory);
 
 Allows for the factory that builds IDirectoryInfo objects to be replaced.
 
-**factory** [IDirectoryInfoFactory](#user-content-directory-info-factory)
+**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md)
 
 The IDirectoryInfo Factory to use when 'Use' is called.
 
@@ -459,7 +459,7 @@ IAtomicReplacementBuilder DriveInfo(IDriveInfoFactory factory);
 
 Allows for the factory that builds IDriveInfo objects to be replaced.
 
-**factory** [IDriveInfoFactory](#user-content-drive-info-factory)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
 
 The IDriveInfo Factory to use when 'Use' is called.
 
@@ -475,7 +475,7 @@ IAtomicReplacementBuilder Drives(IDrives newDrives);
 
 Configures IDrives to be replaced.
 
-**newDrives** [IDrives](#user-content-drives)
+**newDrives** [IDrives](./documentation/structures/primitives/Drives.md)
 
 The IDrives to use when 'Use' is called.
 
@@ -491,7 +491,7 @@ IAtomicReplacementBuilder Directory(IDirectory newDirectory);
 
 Configures IDirectory to be replaced.
 
-**newDirectory** [IDirectory](#user-content-directory)
+**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md)
 
 The IDirectory to use when 'Use' is called.
 
@@ -507,7 +507,7 @@ IAtomicReplacementBuilder File(IFile newFile);
 
 Configures IFile to be replaced.
 
-**newFile** [IFile](#user-content-file)
+**newFile** [IFile](./documentation/structures/primitives/File.md)
 
 The IFile to use when 'Use' is called.
 

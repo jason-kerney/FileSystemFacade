@@ -31,7 +31,7 @@ IAtomicReplacementBuilder FileStream(IFileStreamFactory factory);
 
 Allows for the factory that builds IFileStream objects to be temporarily replaced.
 
-**factory** [IFileStreamFactory](#user-content-file-stream-factory)
+**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md)
 
 The IFileStream Factory to use when 'Use' is called.
 
@@ -47,7 +47,7 @@ IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
 
 Allows for the factory that builds IFileSystemWatcher objects to be replaced.
 
-**factory** [IFileSystemWatcherFactory](#user-content-file-system-watcher-factory)
+**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
 
 The IFileSystemWatcher Factory to use when 'Use' is called.
 
@@ -63,7 +63,7 @@ IAtomicReplacementBuilder FileInfo(IFileInfoFactory factory);
 
 Allows for the factory that builds IFileInfo objects to be temporarily replaced.
 
-**factory** [IFileInfoFactory](#user-content-file-info-factory)
+**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md)
 
 The IFileInfo Factory to use when 'Use' is called.
 
@@ -79,7 +79,7 @@ IAtomicReplacementBuilder DirectoryInfo(IDirectoryInfoFactory factory);
 
 Allows for the factory that builds IDirectoryInfo objects to be replaced.
 
-**factory** [IDirectoryInfoFactory](#user-content-directory-info-factory)
+**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md)
 
 The IDirectoryInfo Factory to use when 'Use' is called.
 
@@ -95,7 +95,7 @@ IAtomicReplacementBuilder DriveInfo(IDriveInfoFactory factory);
 
 Allows for the factory that builds IDriveInfo objects to be replaced.
 
-**factory** [IDriveInfoFactory](#user-content-drive-info-factory)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
 
 The IDriveInfo Factory to use when 'Use' is called.
 
@@ -111,7 +111,7 @@ IAtomicReplacementBuilder Drives(IDrives newDrives);
 
 Configures IDrives to be replaced.
 
-**newDrives** [IDrives](#user-content-drives)
+**newDrives** [IDrives](./documentation/structures/primitives/Drives.md)
 
 The IDrives to use when 'Use' is called.
 
@@ -127,7 +127,7 @@ IAtomicReplacementBuilder Directory(IDirectory newDirectory);
 
 Configures IDirectory to be replaced.
 
-**newDirectory** [IDirectory](#user-content-directory)
+**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md)
 
 The IDirectory to use when 'Use' is called.
 
@@ -143,7 +143,7 @@ IAtomicReplacementBuilder File(IFile newFile);
 
 Configures IFile to be replaced.
 
-**newFile** [IFile](#user-content-file)
+**newFile** [IFile](./documentation/structures/primitives/File.md)
 
 The IFile to use when 'Use' is called.
 
