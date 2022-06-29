@@ -3571,7 +3571,7 @@ An object that represents the directory at the specified path. This object is re
 
 ---
 
-<a id="#user-content-idirectorydelete1"></a>
+<a id="user-content-idirectorydelete1"></a>
 ```csharp
 void Delete(string path);
 ```
@@ -3584,7 +3584,7 @@ The name of the empty directory to remove. This directory must be writable and e
 
 ---
 
-<a id="#user-content-idirectorydelete2"></a>
+<a id="user-content-idirectorydelete2"></a>
 ```csharp
 void Delete(string path, bool recursive);
 ```
