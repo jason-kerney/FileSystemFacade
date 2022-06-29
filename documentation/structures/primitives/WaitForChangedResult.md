@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "Wait For Changed Result"))
-/bl-->
+﻿# Wait For Changed Result
 
-### Summary
+## Summary
 
 Contains information on the change that occurred.
 
@@ -13,14 +10,14 @@ This is a thin facade over [System.IO.WaitForChangedResult](https://docs.microso
 public interface IWaitForChangedResult
 ```
 
-### IWaitForChangedResult
+## IWaitForChangedResult
 
 - [5.1 Change Type](#user-content-iwaitforchangedresultchangetype)
 - [5.2 Name](#user-content-iwaitforchangedresultname)
 - [5.3 Old Name](#user-content-iwaitforchangedresultoldname)
 - [5.4 Timed Out](#user-content-iwaitforchangedresulttimedout)
 
-### IWaitForChangedResult.ChangeType
+## IWaitForChangedResult.ChangeType
 
 ```csharp
 System.IO.WatcherChangeTypes ChangeType { get; set; }
@@ -36,7 +33,7 @@ The type of change that occurred.
 
 The type of change that occurred.
 
-### IWaitForChangedResult.Name
+## IWaitForChangedResult.Name
 
 ```csharp
 string? Name { get; set; }
@@ -52,7 +49,7 @@ The name of the file or directory that changed.
 
 The name of the file or directory that changed.
 
-### IWaitForChangedResult.OldName
+## IWaitForChangedResult.OldName
 
 ```csharp
 string? OldName { get; set; }
@@ -68,7 +65,7 @@ The original name of the file or directory that was renamed.
 
 The original name of the file or directory that was renamed.
 
-### IWaitForChangedResult.TimedOut
+## IWaitForChangedResult.TimedOut
 
 ```csharp
 bool TimedOut { get; set; }

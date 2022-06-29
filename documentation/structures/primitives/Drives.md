@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "Drives"))
-/bl-->
+﻿# Drives
 
-### Summary
+## Summary
 
 Use IDrives to determine what drives are available, and what type of drives they are.
 
@@ -11,11 +8,11 @@ Use IDrives to determine what drives are available, and what type of drives they
 public interface IDrives
 ```
 
-### IDrives
+## IDrives
 
 - [13.1 Get Drives](#user-content-idrivesgetdrives)
 
-### IDrives.GetDrives
+## IDrives.GetDrives
 
 ```csharp
 IDriveInfo[] GetDrives ();

@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "File Stream Factory"))
-/bl-->
+﻿# File Stream Factory
 
-### Summary
+## Summary
 
 Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
 
@@ -11,11 +8,11 @@ Provides a Stream for a file, supporting both synchronous and asynchronous read 
 public interface IFileStreamFactory
 ```
 
-### IFileStreamFactory
+## IFileStreamFactory
 
 - [1.1 Get File Stream](#user-content-ifilestreamfactorygetfilestream)
 
-### IFileStreamFactory.GetFileStream
+## IFileStreamFactory.GetFileStream
 
 | Signatures                                                                                                                              |
 |-----------------------------------------------------------------------------------------------------------------------------------------|

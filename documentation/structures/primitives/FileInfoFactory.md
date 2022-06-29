@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "File Info Factory"))
-/bl-->
+﻿# File Info Factory
 
-### Summary
+## Summary
 
 A factory to build IFileInfo Objects
 
@@ -11,11 +8,11 @@ A factory to build IFileInfo Objects
 public interface IFileInfoFactory
 ```
 
-### IFileInfoFactory
+## IFileInfoFactory
 
 -[11.1 Get File Info](#user-content-ifileinfofactorygetfileinfo)
 
-### IFileInfoFactory.GetFileInfo
+## IFileInfoFactory.GetFileInfo
 
 ```csharp
 IFileInfo GetFileInfo(string fileName);

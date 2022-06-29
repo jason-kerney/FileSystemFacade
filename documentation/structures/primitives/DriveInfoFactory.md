@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "Drive Info Factory"))
-/bl-->
+﻿# Drive Info Factory
 
-### Summary
+## Summary
 
 A factory to build IDriveInfos
 
@@ -12,11 +9,11 @@ public interface IDriveInfoFactory
 ```
 
 <!-- 9 -->
-### IDriveInfoFactory
+## IDriveInfoFactory
 
 - [6.1 Drive Info](#user-content-idriveinfofactorydriveInfo)
 
-### IDriveInfoFactory.DriveInfo
+## IDriveInfoFactory.DriveInfo
 
 ```csharp
 IDriveInfo DriveInfo(string driveName);

@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "File System Watcher"))
-/bl-->
+﻿# File System Watcher
 
-### Summary
+## Summary
 
 Listens to the file system change notifications and raises events when a directory, or file in a directory, changes.
 
@@ -13,7 +10,7 @@ This is a thin facade around [System.IO.FileSystemWatcher](https://docs.microsof
 interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 ```
 
-### IFileSystemWatcher
+## IFileSystemWatcher
 
 - [4.01 Container](#user-content-ifilesystemwatchercontainer)
 - [4.02 Enable Raising Events](#user-content-ifilesystemwatcherenableraisingevents)
@@ -29,7 +26,7 @@ interface IFileSystemWatcher : ISupportInitialize, IDisposable, IComponent
 - [4.12 Renamed](#user-content-ifilesystemwatcherrenamed)
 - [4.13 Wait For Changed](#user-content-ifilesystemwatcherwaitforchanged)
 
-### IFileSystemWatcher.Container
+## IFileSystemWatcher.Container
 
 ```csharp
 [Browsable(false)] IContainer? Container { get; }
@@ -41,7 +38,7 @@ Gets the IContainer that contains the Component.
 
 The IContainer that contains the Component.
 
-### IFileSystemWatcher.EnableRaisingEvents
+## IFileSystemWatcher.EnableRaisingEvents
 
 ```csharp
 bool EnableRaisingEvents { get; set; }
@@ -57,7 +54,7 @@ A value indicating whether the component is enabled.
 
 A value indicating whether the component is enabled.
 
-### IFileSystemWatcher.Filter
+## IFileSystemWatcher.Filter
 
 ```csharp
 string Filter { get; set; }
@@ -73,7 +70,7 @@ The filter string used to determine what files are monitored in a directory.
 
 The filter string used to determine what files are monitored in a directory.
 
-### IFileSystemWatcher.Filters
+## IFileSystemWatcher.Filters
 
 ```csharp
 Collection<string> Filters { get; }
@@ -85,7 +82,7 @@ Gets the collection of all the filters used to determine what files are monitore
 
 The collection of all the filters used to determine what files are monitored in a directory.
 
-### IFileSystemWatcher.IncludeSubdirectories
+## IFileSystemWatcher.IncludeSubdirectories
 
 ```csharp
 bool IncludeSubdirectories { get; set; }
@@ -101,7 +98,7 @@ A value indicating whether subdirectories within the specified path should be mo
 
 A value indicating whether subdirectories within the specified path should be monitored.
 
-### IFileSystemWatcher.InternalBufferSize
+## IFileSystemWatcher.InternalBufferSize
 
 ```csharp
 int InternalBufferSize { get; set; }
@@ -117,7 +114,7 @@ The size (in bytes) of the internal buffer.
 
 The size (in bytes) of the internal buffer.
 
-### IFileSystemWatcher.NotifyFilters
+## IFileSystemWatcher.NotifyFilters
 
 ```csharp
 System.IO.NotifyFilters NotifyFilter { get; set; }
@@ -133,7 +130,7 @@ The type of changes to watch for.
 
 The type of changes to watch for.
 
-### IFileSystemWatcher.SynchronizingObject
+## IFileSystemWatcher.SynchronizingObject
 
 ```csharp
 ISynchronizeInvoke? SynchronizingObject { get; set; }
@@ -141,7 +138,7 @@ ISynchronizeInvoke? SynchronizingObject { get; set; }
 
 Gets or sets the object used to marshal the event handler calls issued as a result of a directory change.
 
-### IFileSystemWatcher.Changed
+## IFileSystemWatcher.Changed
 
 ```csharp
 event System.IO.FileSystemEventHandler? Changed;
@@ -153,7 +150,7 @@ Occurs when a file or directory in the specified Path is changed.
 
 A handler that handles when a file or directory in the specified Path is changed.
 
-### IFileSystemWatcher.Created
+## IFileSystemWatcher.Created
 
 ```csharp
 event System.IO.FileSystemEventHandler? Created;
@@ -165,7 +162,7 @@ Occurs when a file or directory in the specified Path is created.
 
 A handler that handles when a file or directory in the specified Path is created.
 
-### IFileSystemWatcher.Deleted
+## IFileSystemWatcher.Deleted
 
 ```csharp
 event System.IO.FileSystemEventHandler? Deleted;
@@ -177,7 +174,7 @@ Occurs when a file or directory in the specified Path is deleted.
 
 A handler that handles when a file or directory in the specified Path is deleted.
 
-### IFileSystemWatcher.Error
+## IFileSystemWatcher.Error
 
 ```csharp
 event System.IO.ErrorEventHandler? Error;
@@ -189,7 +186,7 @@ Occurs when the instance of FileSystemWatcher is unable to continue monitoring c
 
 A handler that handles when the instance of FileSystemWatcher is unable to continue monitoring changes or when the internal buffer overflows.
 
-### IFileSystemWatcher.Renamed
+## IFileSystemWatcher.Renamed
 
 ```csharp
 event System.IO.RenamedEventHandler? Renamed;
@@ -201,7 +198,7 @@ Occurs when a file or directory in the specified Path is renamed.
 
 A handler that handles when a file or directory in the specified Path is renamed.
 
-### IFileSystemWatcher.WaitForChanged
+## IFileSystemWatcher.WaitForChanged
 
 | Signatures                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------|

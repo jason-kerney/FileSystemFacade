@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "File Info"))
-/bl-->
+﻿# File Info
 
-### Summary
+## Summary
 
 Provides properties and instance methods for the creation, copying, deletion, moving, and opening of files, and aids in the creation of IFileStream objects.
 
@@ -13,7 +10,7 @@ This is a thin facade around [System.IO.FileInfo](https://docs.microsoft.com/en-
 public interface IFileInfo: IFileSystemInfo
 ```
 
-### IFileInfo
+## IFileInfo
 
 - [12.01 Directory](#user-content-ifileinfodirectory)
 - [12.02 Directory Name](#user-content-ifileinfodirectoryname)
@@ -32,7 +29,7 @@ public interface IFileInfo: IFileSystemInfo
 - [12.15 Open Write](#user-content-ifileinfoopenwrite)
 - [12.16 Replace](#user-content-ifileinforeplace)
 
-### IFileInfo.Directory
+## IFileInfo.Directory
 
 ```csharp
 public IDirectoryInfo? Directory { get; }
@@ -48,7 +45,7 @@ An instance of the parent directory.
 
 An instance of the parent directory.
 
-### IFileInfo.DirectoryName
+## IFileInfo.DirectoryName
 
 ```csharp
 string? DirectoryName { get; }
@@ -58,7 +55,7 @@ Gets a string representing the directory's full path.
 
 **returns** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
 
-### IFileInfo.IsReadOnly
+## IFileInfo.IsReadOnly
 
 ```csharp
 bool IsReadOnly { get; set; }
@@ -70,7 +67,7 @@ Gets or sets a value that determines if the current file is read only.
 
 A value that determines if the current file is read only.
 
-### IFileInfo.Length
+## IFileInfo.Length
 
 ```csharp
 public long Length { get; }
@@ -82,7 +79,7 @@ Gets the size, in bytes, of the current file.
 
 The size, in bytes, of the current file.
 
-### IFileInfo.AppendText
+## IFileInfo.AppendText
 
 ```csharp
 System.IO.StreamWriter AppendText ();
@@ -94,7 +91,7 @@ Creates a StreamWriter that appends text to the file represented by this instanc
 
 A new StreamWriter.
 
-### IFileInfo.CopyTo
+## IFileInfo.CopyTo
 
 | Signatures                                                                     |
 |--------------------------------------------------------------------------------|
@@ -139,7 +136,7 @@ true to allow an existing file to be overwritten; otherwise, false.
 
 A new file, or an overwrite of an existing file if overwrite is true. If the file exists and overwrite is false, an IOException is thrown.
 
-### IFileInfo.Create
+## IFileInfo.Create
 
 ```csharp
 IFileStream Create ();
@@ -151,7 +148,7 @@ Creates a file.
 
 A new file.
 
-### IFileInfo.CreateText
+## IFileInfo.CreateText
 
 ```csharp
 System.IO.StreamWriter CreateText ();
@@ -163,7 +160,7 @@ Creates a StreamWriter that writes a new text file.
 
 A new StreamWriter.
 
-### IFileInfo.Decrypt
+## IFileInfo.Decrypt
 
 ```csharp
 [System.Runtime.Versioning.SupportedOSPlatform("windows")]
@@ -172,7 +169,7 @@ void Decrypt ();
 
 Decrypts a file that was encrypted by the current account using the Encrypt() method.
 
-### IFileInfo.Encrypt
+## IFileInfo.Encrypt
 
 ```csharp
 [System.Runtime.Versioning.SupportedOSPlatform("windows")]
@@ -181,7 +178,7 @@ void Encrypt ();
 
 Encrypts a file so that only the account used to encrypt the file can decrypt it.
 
-### IFileInfo.MoveTo
+## IFileInfo.MoveTo
 
 | Signatures                                                                |
 |---------------------------------------------------------------------------|
@@ -218,7 +215,7 @@ The path to move the file to, which can specify a different file name.
 
 true to overwrite the destination file if it already exists; false otherwise.
 
-### IFileInfo.Open
+## IFileInfo.Open
 
 | Signatures                                                                                      |
 |-------------------------------------------------------------------------------------------------|
@@ -289,7 +286,7 @@ A FileShare constant specifying the type of access other FileStream objects have
 
 A FileStream object opened with the specified mode, access, and sharing options.
 
-### IFileInfo.OpenRead
+## IFileInfo.OpenRead
 
 ```csharp
 IFileStream OpenRead ();
@@ -301,7 +298,7 @@ Creates a read-only FileStream.
 
 A new read-only FileStream object.
 
-### IFileInfo.OpenText
+## IFileInfo.OpenText
 
 ```csharp
 System.IO.StreamReader OpenText ();
@@ -313,7 +310,7 @@ Creates a StreamReader with UTF8 encoding that reads from an existing text file.
 
 A new StreamReader with UTF8 encoding.
 
-### IFileInfo.OpenWrite
+## IFileInfo.OpenWrite
 
 ```csharp
 IFileStream OpenWrite ();
@@ -325,7 +322,7 @@ Creates a write-only FileStream.
 
 A write-only unshared FileStream object for a new or existing file.
 
-### IFileInfo.Replace
+## IFileInfo.Replace
 
 | Signatures                                                                                |
 |-------------------------------------------------------------------------------------------|

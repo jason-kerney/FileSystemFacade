@@ -1,9 +1,6 @@
-<!--bl
-(filemeta
-    (title "File Stream"))
-/bl-->
+# File Stream
 
-### Summary
+## Summary
 
 Provides a Stream for a file, supporting both synchronous and asynchronous read and write operations.
 
@@ -13,7 +10,7 @@ This is a thin facade around [System.IO.FileStream](https://docs.microsoft.com/e
 public interface IFileStream : IDisposable, IAsyncDisposable
 ```
 
-### IFileStream
+## IFileStream
 
 - [2.01 Stream](#user-content-ifilestreamstream)
 - [2.02 Can Read](#user-content-ifilestreamcanread)
@@ -47,7 +44,7 @@ public interface IFileStream : IDisposable, IAsyncDisposable
 - [2.29 Write Async](#user-content-ifilestreamwriteasync)
 - [2.30 Write Byte](#user-content-ifilestreamwritebyte)
 
-### IFileStream.Stream
+## IFileStream.Stream
 
 ```csharp
 System.IO.Stream Stream { get; }
@@ -59,7 +56,7 @@ Gets the underlying stream.
 
 The underlying stream.
 
-### IFileStream.CanRead
+## IFileStream.CanRead
 
 ```csharp
 bool CanRead { get; }
@@ -71,7 +68,7 @@ Gets a value that indicates whether the current stream supports reading.
 
 A value that indicates whether the current stream supports reading.
 
-### IFileStream.CanSeek
+## IFileStream.CanSeek
 
 ```csharp
 bool CanSeek { get; }
@@ -83,7 +80,7 @@ Gets a value that indicates whether the current stream supports seeking.
 
 A value that indicates whether the current stream supports seeking.
 
-### IFileStream.CanTimeout
+## IFileStream.CanTimeout
 
 ```csharp
 bool CanTimeout { get; }
@@ -95,7 +92,7 @@ Gets a value that determines whether the current stream can time out.
 
 A value that determines whether the current stream can time out.
 
-### IFileStream.CanWrite
+## IFileStream.CanWrite
 
 ```csharp
 bool CanWrite { get; }
@@ -107,7 +104,7 @@ Gets a value that indicates whether the current stream supports writing.
 
 A value that indicates whether the current stream supports writing.
 
-### IFileStream.IsAsync
+## IFileStream.IsAsync
 
 ```csharp
 bool IsAsync { get; }
@@ -119,7 +116,7 @@ Gets a value that indicates whether the FileStream was opened asynchronously or 
 
 A value that indicates whether the FileStream was opened asynchronously or synchronously.
 
-### IFileStream.Length
+## IFileStream.Length
 
 ```csharp
 long Length { get; }
@@ -131,7 +128,7 @@ Gets the length in bytes of the stream.
 
 The length in bytes of the stream.
 
-### IFileStream.Name
+## IFileStream.Name
 
 ```csharp
 string Name { get; }
@@ -143,7 +140,7 @@ Gets the absolute path of the file opened in the FileStream.
 
 The absolute path of the file opened in the FileStream.
 
-### IFileStream.Position
+## IFileStream.Position
 
 ```csharp
 long Position { get; set; }
@@ -159,7 +156,7 @@ The current position of this stream.
 
 The current position of this stream.
 
-### IFileStream.ReadTimeout
+## IFileStream.ReadTimeout
 
 ```csharp
 int ReadTimeout { get; set; }
@@ -175,7 +172,7 @@ A value, in milliseconds, that determines how long the stream will attempt to re
 
 A value, in milliseconds, that determines how long the stream will attempt to read before timing out.
 
-### IFileStream.SafeFileHandle
+## IFileStream.SafeFileHandle
 
 ```csharp
 SafeFileHandle SafeFileHandle { get; }
@@ -187,7 +184,7 @@ Gets a SafeFileHandle object that represents the operating system file handle fo
 
 A SafeFileHandle object that represents the operating system file handle for the file that the current FileStream object encapsulates.
 
-### IFileStream.WriteTimeout
+## IFileStream.WriteTimeout
 
 ```csharp
 int WriteTimeout { get; set; }
@@ -203,7 +200,7 @@ A value, in milliseconds, that determines how long the stream will attempt to wr
 
 A value, in milliseconds, that determines how long the stream will attempt to write before timing out.
 
-### IFileStream.BeginRead
+## IFileStream.BeginRead
 
 ```csharp
 IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
@@ -235,7 +232,7 @@ A user-provided object that distinguishes this particular asynchronous read requ
 
 An object that references the asynchronous read.
 
-### IFileStream.BeginWrite
+## IFileStream.BeginWrite
 
 ```csharp
 IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state);
@@ -267,7 +264,7 @@ A user-provided object that distinguishes this particular asynchronous write req
 
 An object that references the asynchronous write.
 
-### IFileStream.Close
+## IFileStream.Close
 
 ```csharp
 void Close();
@@ -275,7 +272,7 @@ void Close();
 
 Closes the current stream and releases any resources(such as sockets and file handles) associated with the current stream. Instead of calling this method, ensure that the stream is properly disposed.
 
-### IFileStream.CopyTo
+## IFileStream.CopyTo
 
 | Signatures                                                         |
 |--------------------------------------------------------------------|
@@ -344,7 +341,7 @@ The stream to which the contents of the current stream will be copied.
 
 The size of the buffer. This value must be greater than zero. The default size is 81920.
 
-### IFileStream.CopyToAsync
+## IFileStream.CopyToAsync
 
 | Signatures                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------------------------|
@@ -525,7 +522,7 @@ The stream to which the contents of the current stream will be copied.
 
 A task that represents the asynchronous copy operation.
 
-### IFileStream.EndRead
+## IFileStream.EndRead
 
 ```csharp
 int EndRead(IAsyncResult asyncResult);
@@ -541,7 +538,7 @@ The reference to the pending asynchronous request to wait for.
 
 The number of bytes read from the stream, between 0 and the number of bytes you requested. Streams only return 0 at the end of the stream, otherwise, they should block until at least 1 byte is available.
 
-### IFileStream.EndWrite
+## IFileStream.EndWrite
 
 ```csharp
 void EndWrite(IAsyncResult asyncResult);
@@ -553,7 +550,7 @@ Ends an asynchronous write operation and blocks until the I/O operation is compl
 
 The pending asynchronous I/O request.
 
-### IFileStream.Flush
+## IFileStream.Flush
 
 | Signatures                                                       |
 |------------------------------------------------------------------|
@@ -582,7 +579,7 @@ Clears buffers for this stream and causes any buffered data to be written to the
 
 true to flush all intermediate file buffers; otherwise, false.
 
-### IFileStream.FlushAsync
+## IFileStream.FlushAsync
 
 | Signatures                                                                  |
 |-----------------------------------------------------------------------------|
@@ -619,7 +616,7 @@ The token to monitor for cancellation requests. The default value is None.
 
 A task that represents the asynchronous flush operation.
 
-### IFileStream.Lock
+## IFileStream.Lock
 
 ```csharp
 [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
@@ -638,7 +635,7 @@ The beginning of the range to lock. The value of this parameter must be equal to
 
 The range to be locked.
 
-### IFileStream.Read
+## IFileStream.Read
 
 | Signatures                                                    |
 |---------------------------------------------------------------|
@@ -687,7 +684,7 @@ A region of memory. When this method returns, the contents of this region are re
 
 The total number of bytes read into the buffer. This can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or zero(0) if the end of the stream has been reached.
 
-### IFileStream.ReadAsync
+## IFileStream.ReadAsync
 
 | Signatures                                                                                        |
 |---------------------------------------------------------------------------------------------------|
@@ -770,7 +767,7 @@ The token to monitor for cancellation requests. The default value is None.
 
 A task that represents the asynchronous read operation. The value of the TResult parameter contains the total number of bytes read into the buffer. The result value can be less than the number of bytes requested if the number of bytes currently available is less than the requested number, or it can be 0(zero) if the end of the stream has been reached.
 
-### IFileStream.ReadByte
+## IFileStream.ReadByte
 
 ```csharp
 int ReadByte();
@@ -782,7 +779,7 @@ Reads a byte from the file and advances the read position one byte.
 
 The byte, cast to an Int32, or -1 if the end of the stream has been reached.
 
-### IFileStream.Seek
+## IFileStream.Seek
 
 ```csharp
 long Seek(long offset, System.IO.SeekOrigin origin);
@@ -802,7 +799,7 @@ Specifies the beginning, the end, or the current position as a reference point f
 
 The new position in the stream.
 
-### IFileStream.SetLength
+## IFileStream.SetLength
 
 ```csharp
 void SetLength(long value);
@@ -814,7 +811,7 @@ Sets the length of this stream to the given value.
 
 The new length of the stream.
 
-### IFileStream.Unlock
+## IFileStream.Unlock
 
 ```csharp
 [System.Runtime.Versioning.UnsupportedOSPlatform("ios")]
@@ -833,7 +830,7 @@ The beginning of the range to unlock.
 
 The range to be unlocked.
 
-### IFileStream.Write
+## IFileStream.Write
 
 | Signatures                                                         |
 |--------------------------------------------------------------------|
@@ -874,7 +871,7 @@ Writes a sequence of bytes from a read-only span to the current file stream and 
 
 A region of memory. This method copies the contents of this region to the current file stream.
 
-### IFileStream.WriteAsync
+## IFileStream.WriteAsync
 
 | Signatures                                                                                             |
 |--------------------------------------------------------------------------------------------------------|
@@ -927,7 +924,7 @@ The maximum number of bytes to write.
 
 A task that represents the asynchronous write operation.
 
-### IFileStream.WriteByte
+## IFileStream.WriteByte
 
 ```csharp
 void WriteByte(byte value);

@@ -1,9 +1,6 @@
-﻿<!--bl
-(filemeta
-    (title "Directory"))
-/bl-->
+﻿# Directory
 
-### Summary
+## Summary
 
 Exposes methods for creating, moving, and enumerating through directories and subdirectories without the need for an object representing those things.
 
@@ -13,7 +10,7 @@ This is a thin facade around [System.IO.Directory](https://docs.microsoft.com/en
 public interface IDirectory
 ```
 
-### IDirectory
+## IDirectory
 
 - [14.01 Create Directory](#user-content-idirectorycreatedirectory)
 - [14.01 Delete](#user-content-idirectorydelete)
@@ -47,7 +44,7 @@ public interface IDirectory
 #user-content-idirectory
 -->
 
-### IDirectory.CreateDirectory
+## IDirectory.CreateDirectory
 
 ```csharp
 IDirectoryInfo CreateDirectory(string path);
@@ -63,7 +60,7 @@ The directory to create.
 
 An object that represents the directory at the specified path. This object is returned regardless of whether a directory at the specified path already exists.
 
-### IDirectory.Delete
+## IDirectory.Delete
 
 | Signatures                                                                 |
 |----------------------------------------------------------------------------|
@@ -100,7 +97,7 @@ The name of the directory to remove.
 
 true to remove directories, subdirectories, and files in path; otherwise, false.
 
-### IDirectory.EnumerateDirectories
+## IDirectory.EnumerateDirectories
 
 | Signatures                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -197,7 +194,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern and search option.
 
-### IDirectory.EnumerateFiles
+## IDirectory.EnumerateFiles
 
 | Signatures                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------|
@@ -294,7 +291,7 @@ The search string to match against the names of files in path. This parameter ca
 
 An enumerable collection of the full names (including paths) for the files in the directory specified by path and that match the specified search pattern.
 
-### IDirectory.EnumerateFileSystemEntries
+## IDirectory.EnumerateFileSystemEntries
 
 | Signatures                                                                                                                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -391,7 +388,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An enumerable collection of file-system entries in the directory specified by path and that match the specified search pattern and option.
 
-### IDirectory.Exists
+## IDirectory.Exists
 
 ```csharp
 bool Exists(string? path);
@@ -407,7 +404,7 @@ The path to test.
 
 true if path refers to an existing directory; false if the directory does not exist or an error occurs when trying to determine if the specified directory exists.
 
-### IDirectory.GetCreationTime
+## IDirectory.GetCreationTime
 
 ```csharp
 DateTime GetCreationTime(string path);
@@ -423,7 +420,7 @@ The path of the directory.
 
 A structure that is set to the creation date and time for the specified directory. This value is expressed in local time.
 
-### IDirectory.GetCreationTimeUtc
+## IDirectory.GetCreationTimeUtc
 
 ```csharp
 DateTime GetCreationTimeUtc(string path);
@@ -439,7 +436,7 @@ The path of the directory.
 
 A structure that is set to the creation date and time for the specified directory. This value is expressed in UTC time.
 
-### IDirectory.GetCurrentDirectory
+## IDirectory.GetCurrentDirectory
 
 ```csharp
 string GetCurrentDirectory();
@@ -451,7 +448,7 @@ Gets the current working directory of the application.
 
 A string that contains the absolute path of the current working directory, and does not end with a backslash (\).
 
-### IDirectory.GetDirectories
+## IDirectory.GetDirectories
 
 | Signatures                                                                                                           |
 |----------------------------------------------------------------------------------------------------------------------|
@@ -549,7 +546,7 @@ The search string to match against the names of subdirectories in path. This par
 
 An array of the full names (including paths) of the subdirectories that match the search pattern in the specified directory, or an empty array if no directories are found.
 
-### IDirectory.GetDirectoryRoot
+## IDirectory.GetDirectoryRoot
 
 ```csharp
 string GetDirectoryRoot(string path);
@@ -565,7 +562,7 @@ The path of a file or directory.
 
 A string that contains the volume information, root information, or both for the specified path.
 
-### IDirectory.GetFiles
+## IDirectory.GetFiles
 
 | Signatures                                                                                               |
 |----------------------------------------------------------------------------------------------------------|
@@ -662,7 +659,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of the full names (including paths) for the files in the specified directory that match the specified search pattern and option, or an empty array if no files are found.
 
-### IDirectory.GetFileSystemEntries
+## IDirectory.GetFileSystemEntries
 
 | Signatures                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------|
@@ -759,7 +756,7 @@ One of the enumeration values that specifies whether the search operation should
 
 An array of file the file names and directory names that match the specified search criteria, or an empty array if no files or directories are found.
 
-### IDirectory.GetLastAccessTime
+## IDirectory.GetLastAccessTime
 
 ```csharp
 DateTime GetLastAccessTime(string path);
@@ -775,7 +772,7 @@ The file or directory for which to obtain access date and time information.
 
 A structure that is set to the date and time the specified file or directory was last accessed. This value is expressed in local time.
 
-### IDirectory.GetLastAccessTimeUtc
+## IDirectory.GetLastAccessTimeUtc
 
 ```csharp
 DateTime GetLastAccessTimeUtc(string path);
@@ -791,7 +788,7 @@ The file or directory for which to obtain access date and time information.
 
 A structure that is set to the date and time the specified file or directory was last accessed. This value is expressed in UTC time.
 
-### IDirectory.GetLastWriteTime
+## IDirectory.GetLastWriteTime
 
 ```csharp
 DateTime GetLastWriteTime(string path);
@@ -807,7 +804,7 @@ The file or directory for which to obtain modification date and time information
 
 A structure that is set to the date and time the specified file or directory was last written to. This value is expressed in local time.
 
-### IDirectory.GetLastWriteTimeUtc
+## IDirectory.GetLastWriteTimeUtc
 
 ```csharp
 DateTime GetLastWriteTimeUtc(string path);
@@ -823,7 +820,7 @@ The file or directory for which to obtain modification date and time information
 
 A structure that is set to the date and time the specified file or directory was last written to. This value is expressed in UTC time.
 
-### IDirectory.GetLogicalDrives
+## IDirectory.GetLogicalDrives
 
 ```csharp
 string[] GetLogicalDrives();
@@ -835,7 +832,7 @@ Retrieves the names of the logical drives on this computer in the form "<drive l
 
 The logical drives on this computer.
 
-### IDirectory.GetParent
+## IDirectory.GetParent
 
 ```csharp
 IDirectoryInfo? GetParent(string path);
@@ -851,7 +848,7 @@ The path for which to retrieve the parent directory.
 
 The parent directory, or null if path is the root directory, including the root of a UNC server or share name.
 
-### IDirectory.Move
+## IDirectory.Move
 
 ```csharp
 void Move(string sourceDirName, string destDirName);
@@ -867,7 +864,7 @@ The path of the file or directory to move.
 
 The path to the new location for sourceDirName or its contents. If sourceDirName is a file, then destDirName must also be a file name.
 
-### IDirectory.SetCreationTime
+## IDirectory.SetCreationTime
 
 ```csharp
 void SetCreationTime(string path, DateTime creationTime);
@@ -883,7 +880,7 @@ The file or directory for which to set the creation date and time information.
 
 The date and time the file or directory was last written to. This value is expressed in local time.
 
-### IDirectory.SetCreationTimeUtc
+## IDirectory.SetCreationTimeUtc
 
 ```csharp
 void SetCreationTimeUtc(string path, DateTime creationTimeUtc);
@@ -899,7 +896,7 @@ The file or directory for which to set the creation date and time information.
 
 The date and time the directory or file was created. This value is expressed in local time.
 
-### IDirectory.SetCurrentDirectory
+## IDirectory.SetCurrentDirectory
 
 ```csharp
 void SetCurrentDirectory(string path);
@@ -911,7 +908,7 @@ Sets the application's current working directory to the specified directory.
 
 The path to which the current working directory is set.
 
-### IDirectory.SetLastAccessTime
+## IDirectory.SetLastAccessTime
 
 ```csharp
 void SetLastAccessTime(string path, DateTime lastAccessTime);
@@ -927,7 +924,7 @@ The file or directory for which to set the access date and time information.
 
 An object that contains the value to set for the access date and time of path. This value is expressed in local time.
 
-### IDirectory.SetLastAccessTimeUtc
+## IDirectory.SetLastAccessTimeUtc
 
 ```csharp
 void SetLastAccessTimeUtc(string path, DateTime lastAccessTimeUtc);
@@ -943,7 +940,7 @@ The file or directory for which to set the access date and time information.
 
 An object that contains the value to set for the access date and time of path. This value is expressed in UTC time.
 
-### IDirectory.SetLastWriteTime
+## IDirectory.SetLastWriteTime
 
 ```csharp
 void SetLastWriteTime(string path, DateTime lastWriteTime);
@@ -959,7 +956,7 @@ The path of the directory.
 
 The date and time the directory was last written to. This value is expressed in local time.
 
-### IDirectory.SetLastWriteTimeUtc
+## IDirectory.SetLastWriteTimeUtc
 
 ```csharp
 void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc);

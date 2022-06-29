@@ -1,6 +1,3 @@
-﻿<!--bl
-(filemeta
-    (title "File"))
-/bl-->
+﻿# File
 
 TBD
