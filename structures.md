@@ -3946,7 +3946,7 @@ string GetCurrentDirectory();
 
 Gets the current working directory of the application.
 
-**returns**
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 A string that contains the absolute path of the current working directory, and does not end with a backslash (\).
 
