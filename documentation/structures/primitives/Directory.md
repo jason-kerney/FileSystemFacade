@@ -193,9 +193,9 @@ The search string to match against the names of directories in path. This parame
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories. The default value is TopDirectoryOnly.
 
-**returns**
-
 **returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern and search option.
 
 ### IDirectory.EnumerateFiles
 
@@ -907,7 +907,7 @@ void SetCurrentDirectory(string path);
 
 Sets the application's current working directory to the specified directory.
 
-**path**
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The path to which the current working directory is set.
 

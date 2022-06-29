@@ -186,7 +186,7 @@ IEnumerable<IFileInfo> EnumerateFiles();
 
 Returns an enumerable collection of file information in the current directory.
 
-**returns**
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
 
 An enumerable collection of the files in the current directory.
 

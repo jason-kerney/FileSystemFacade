@@ -939,7 +939,7 @@ The maximum number of bytes to read.
 
 The method to be called when the asynchronous read operation is completed
 
-**state**
+**state** [Nullable](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)\<[object](https://docs.microsoft.com/en-us/dotnet/api/system.object?view=net-6.0)\>
 
 A user-provided object that distinguishes this particular asynchronous read request from other requests.
 
@@ -1366,7 +1366,7 @@ int Read(byte[] buffer, int offset, int count);
 
 Reads a block of bytes from the stream and writes the data in a given buffer.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 When this method returns, contains the specified byte array with the values between offset and(offset + count - 1) replaced by the bytes read from the current source.
 
@@ -1437,7 +1437,7 @@ Task<int> ReadAsync(byte[] buffer, int offset, int count);
 
 Asynchronously reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer to write the data into.
 
@@ -1462,7 +1462,7 @@ Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken canc
 
 Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer to write the data into.
 
@@ -1522,7 +1522,7 @@ void SetLength(long value);
 
 Sets the length of this stream to the given value.
 
-**value**
+**value** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The new length of the stream.
 
@@ -1537,11 +1537,11 @@ void Unlock(long position, long length);
 
 Allows access by other processes to all or part of a file that was previously locked.
 
-**position**
+**position** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The beginning of the range to unlock.
 
-**length**
+**length** [long](https://docs.microsoft.com/en-us/dotnet/api/system.int64?view=net-6.0)
 
 The range to be unlocked.
 
@@ -1561,7 +1561,7 @@ void Write(byte[] buffer, int offset, int count);
 
 Writes a block of bytes to the file stream.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer containing data to write to the stream.
 
@@ -1623,7 +1623,7 @@ Task WriteAsync(byte[] buffer, int offset, int count);
 
 Asynchronously writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
 
-**buffer** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)[\[ \]](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)
+**buffer** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The buffer to write data from.
 
@@ -1647,7 +1647,7 @@ void WriteByte(byte value);
 
 Writes a byte to the current position in the file stream.
 
-**value**
+**value** [byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)
 
 A byte to write to the stream.
     
@@ -2664,7 +2664,7 @@ IEnumerable<IFileInfo> EnumerateFiles();
 
 Returns an enumerable collection of file information in the current directory.
 
-**returns**
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[IFileInfo](#user-content-file-info)\>
 
 An enumerable collection of the files in the current directory.
 
@@ -3692,9 +3692,9 @@ The search string to match against the names of directories in path. This parame
 
 One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories. The default value is TopDirectoryOnly.
 
-**returns**
-
 **returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern and search option.
 
 ### IDirectory.EnumerateFiles
 
@@ -4406,7 +4406,7 @@ void SetCurrentDirectory(string path);
 
 Sets the application's current working directory to the specified directory.
 
-**path**
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
 The path to which the current working directory is set.
 
