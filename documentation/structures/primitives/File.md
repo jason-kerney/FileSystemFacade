@@ -1221,6 +1221,16 @@ A task that represents the asynchronous write operation.
 
 ## IFile.WriteAllLines
 
+| Signatures                                                                                                   |
+|--------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealllines1">`void WriteAllLines(string, string[], Encoding);`</a>            |
+| <a href="#user-content-ifilewritealllines2">`void WriteAllLines(string, IEnumerable<string>, Encoding);`</a> |
+| <a href="#user-content-ifilewritealllines3">`void WriteAllLines(string, IEnumerable<string>);`</a>           |
+| <a href="#user-content-ifilewritealllines4">`void WriteAllLines(string, string[]);`</a>                      |
+
+---
+
+<a id="user-content-ifilewritealllines1"></a>
 ```csharp
 void WriteAllLines(string path, string[] contents, Encoding encoding);
 ```
@@ -1239,17 +1249,9 @@ The string array to write to the file.
 
 An Encoding object that represents the character encoding applied to the string array.
 
-## IFile.WriteAllLines
+--
 
-| Signatures                                                                                                   |
-|--------------------------------------------------------------------------------------------------------------|
-| <a href="#user-content-ifilewritealllines1">`void WriteAllLines(string, IEnumerable<string>, Encoding);`</a> |
-| <a href="#user-content-ifilewritealllines2">`void WriteAllLines(string, IEnumerable<string>);`</a>           |
-| <a href="#user-content-ifilewritealllines3">`void WriteAllLines(string, string[]);`</a>                      |
-
----
-
-<a id="user-content-ifilewritealllines1"></a>
+<a id="user-content-ifilewritealllines2"></a>
 ```csharp
 void WriteAllLines(string path, IEnumerable<string> contents, Encoding encoding);
 ```
@@ -1270,7 +1272,7 @@ The character encoding to use.
 
 ---
 
-<a id="user-content-ifilewritealllines2"></a>
+<a id="user-content-ifilewritealllines3"></a>
 ```csharp
 void WriteAllLines(string path, IEnumerable<string> contents);
 ```
@@ -1287,7 +1289,7 @@ The lines to write to the file.
 
 ---
 
-<a id="user-content-ifilewritealllines3"></a>
+<a id="user-content-ifilewritealllines4"></a>
 ```csharp
 void WriteAllLines(string path, string[] contents);
 ```
