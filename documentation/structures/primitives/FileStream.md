@@ -676,7 +676,7 @@ int Read(Span<byte> buffer);
 
 Reads a sequence of bytes from the current file stream and advances the position within the file stream by the number of bytes read.
 
-**buffer** [Span](https://docs.microsoft.com/en-us/dotnet/api/system.span-1?view=net-6.0)<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)>
+**buffer** [Span](https://docs.microsoft.com/en-us/dotnet/api/system.span-1?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 A region of memory. When this method returns, the contents of this region are replaced by the bytes read from the current file stream.
 
@@ -701,7 +701,7 @@ ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToke
 
 Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.
 
-**buffer** [Memory](https://docs.microsoft.com/en-us/dotnet/api/system.memory-1?view=net-6.0)<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)>
+**buffer** [Memory](https://docs.microsoft.com/en-us/dotnet/api/system.memory-1?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
 
 The region of memory to write the data into.
 
@@ -709,7 +709,7 @@ The region of memory to write the data into.
 
 The token to monitor for cancellation requests. The default value is None.
 
-**returns** [ValueTask](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1?view=net-6.0)<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)>
+**returns** [ValueTask](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.valuetask-1?view=net-6.0)\<[int](https://docs.microsoft.com/en-us/dotnet/api/system.int32?view=net-6.0)\>
 
 A task that represents the asynchronous read operation. The value of its Result property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0(zero) if the end of the stream has been reached.
 

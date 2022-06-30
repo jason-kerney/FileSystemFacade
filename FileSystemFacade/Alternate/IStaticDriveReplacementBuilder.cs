@@ -19,7 +19,6 @@ namespace FileSystemFacade.Alternate
         /// <param name="drives">The IDrives to use when the static file system is put into replacement mode.</param>
         /// <returns>An instance of the builder with the IDrives configured to be replaced.</returns>
         IStaticDriveReplacementBuilder ReplaceDrives(IDrives drives);
-
         /// <summary>
         /// Builds the configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
         /// </summary>

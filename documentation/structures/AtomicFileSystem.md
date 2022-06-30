@@ -247,7 +247,7 @@ Returns an atomic action allowing the interaction with a IFileInfo specified by 
 
 The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
 
-**returns ** [IAtomicActions](#user-content-atomic-actions)<[IFileInfo](./documentation/structures/primitives/FileInfo.md)>
+**returns ** [IAtomicActions](#user-content-atomic-actions)\<[IFileInfo](./documentation/structures/primitives/FileInfo.md)\>
 
 An atomic action allowing the interaction with a IFileInfo specified by the file name.
 
@@ -259,7 +259,7 @@ IAtomicActions<IDrives> Drives { get; }
 
 Returns an atomic action allowing the interaction with a IDrives.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDrives](./documentation/structures/primitives/Drives.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDrives](./documentation/structures/primitives/Drives.md)\>
 
 An atomic action allowing the interaction with a IDrives.
 
@@ -271,7 +271,7 @@ IAtomicActions<IDirectory> Directory { get; }
 
 Returns an atomic action allowing the interaction with IDirectory.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectory](./documentation/structures/primitives/Directory.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDirectory](./documentation/structures/primitives/Directory.md)\>
 
 An atomic action allowing the interaction with IDirectory.
 
@@ -283,6 +283,6 @@ IAtomicActions<IFile> File { get; }
 
 Returns an atomic action allowing the interaction with IFile.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFile](./documentation/structures/primitives/File.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IFile](./documentation/structures/primitives/File.md)\>
 
 An atomic action allowing the interaction with IFile.
