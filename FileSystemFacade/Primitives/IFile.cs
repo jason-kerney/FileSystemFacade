@@ -304,7 +304,7 @@ namespace FileSystemFacade.Primitives
         Task<string[]> ReadAllLinesAsync(string path, Encoding encoding, CancellationToken cancellationToken = default);
         
         /// <summary>
-        ///Opens a file, reads all text in the file with the specified encoding, and then closes the file.
+        /// Opens a file, reads all text in the file with the specified encoding, and then closes the file.
         /// </summary>
         /// <param name="path">The file to open for reading.</param>
         /// <param name="encoding">The encoding applied to the contents of the file.</param>
@@ -365,8 +365,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="destinationFileName">The name of the file being replaced.</param>
         /// <param name="destinationBackupFileName">The name of the backup file.</param>
         /// <param name="ignoreMetadataErrors">true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise, false.</param>
-        void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName,
-            bool ignoreMetadataErrors);
+        void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors);
 
         /// <summary>
         /// Sets the specified FileAttributes of the file on the specified path.
@@ -471,8 +470,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="contents">The lines to write to the file.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        Task WriteAllLinesAsync(string path, IEnumerable<string> contents,
-            CancellationToken cancellationToken = default);
+        Task WriteAllLinesAsync(string path, IEnumerable<string> contents, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Asynchronously creates a new file, write the specified lines to the file by using the specified encoding, and then closes the file.
@@ -482,8 +480,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-            CancellationToken cancellationToken = default);
+        Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
@@ -517,8 +514,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="encoding">The encoding to apply to the string.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        Task WriteAllTextAsync(string path, string? contents, Encoding encoding,
-            CancellationToken cancellationToken = default);
+        Task WriteAllTextAsync(string path, string? contents, Encoding encoding, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Decrypts a file that was encrypted by the current account using the Encrypt(String) method.

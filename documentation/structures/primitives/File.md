@@ -36,6 +36,26 @@ public interface IFile
 - [15.22 Open Write](#user-content-ifileopenwrite)
 - [15.23 Read All Bytes](#user-content-ifilereadallbytes)
 - [15.24 Read All Bytes Async](#user-content-ifilereadallbytesasync)
+- [15.25 Read All Lines](#user-content-ifilereadalllines)
+- [15.26 Read All Lines Async](#user-content-ifilereadalllinesasync)
+- [15.27 Read All Text](#user-content-ifilereadalltext)
+- [15.28 Read All Text Async](#user-content-ifilereadalltextasync)
+- [15.29 Read Lines](#user-content-ifilereadlines)
+- [15.30 Set Attributes](#user-content-ifilesetattributes)
+- [15.31 Set Creation Time](#user-content-ifilesetcreationtime)
+- [15.32 Set Creation Time Utc](#user-content-ifilesetcreationtimeutc)
+- [15.33 Set Last Access Time](#user-content-ifilesetlastaccesstime)
+- [15.34 Set Last Access Time Utc](#user-content-ifilesetlastaccesstimeutc)
+- [15.35 Set Last Write Time](#user-content-ifilesetlastwritetime)
+- [15.36 Set LastWrite Time Utc](#user-content-ifilesetlastwritetimeutc)
+- [15.37 Write All Bytes](#user-content-ifilewriteallbytes)
+- [15.38 Write All Bytes Async](#user-content-ifilewriteallbytesasync)
+- [15.39 Write All Lines](#user-content-ifilewritealllines)
+- [15.40 Write All Lines Async](#user-content-ifilewritealllinesasync)
+- [15.41 Write All Text](#user-content-ifilewritealltext)
+- [15.42 Write All Text Async](#user-content-ifilewritealltextasync)
+- [15.43 Decrypt](#user-content-ifiledecrypt)
+- [15.44 Encrypt](#user-content-ifileencrypt)
 
 <!-- 
 #user-content-ifile
@@ -751,3 +771,712 @@ The token to monitor for cancellation requests. The default value is None.
 
 A task that represents the asynchronous read operation, which wraps the byte array containing the contents of the file.
 
+## IFile.ReadAllLines
+
+| Signatures                                                                                |
+|-------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereadalllines1">`string[] ReadAllLines(string);`</a>           |
+| <a href="#user-content-ifilereadalllines2">`string[] ReadAllLines(string, Encoding);`</a> |
+
+---
+
+<a id="user-content-ifilereadalllines1"></a>
+```csharp
+string[] ReadAllLines(string path);
+```
+
+Opens a text file, reads all lines of the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+A string array containing all lines of the file.
+
+---
+
+<a id="user-content-ifilereadalllines2"></a>
+```csharp
+string[] ReadAllLines(string path, Encoding encoding);
+```
+
+Opens a file, reads all lines of the file with the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding applied to the contents of the file.
+
+**returns** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+A string array containing all lines of the file.
+
+## IFile.ReadAllLinesAsync
+
+| Signatures                                                                                                                   |
+|------------------------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereadalllinesasync1">`Task<string[]> ReadAllLinesAsync(string, CancellationToken);`</a>           |
+| <a href="#user-content-ifilereadalllinesasync2">`Task<string[]> ReadAllLinesAsync(string, Encoding, CancellationToken);`</a> |
+
+---
+
+<a id="user-content-ifilereadalllinesasync1"></a>
+```csharp
+Task<string[]> ReadAllLinesAsync(string path, CancellationToken cancellationToken = default);
+```
+
+Asynchronously opens a text file, reads all lines of the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>\>
+
+A task that represents the asynchronous read operation, which wraps the string array containing all lines of the file.
+
+---
+
+<a id="user-content-ifilereadalllinesasync2"></a>
+```csharp
+Task<string[]> ReadAllLinesAsync(string path, Encoding encoding, CancellationToken cancellationToken = default);
+```
+
+Asynchronously opens a text file, reads all lines of the file with the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding applied to the contents of the file.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>\>
+
+A task that represents the asynchronous read operation, which wraps the string array containing all lines of the file.
+
+## IFile.ReadAllText
+
+| Signatures                                                                            |
+|---------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereadalltext1">`string ReadAllText(string, Encoding);`</a> |
+
+---
+
+<a id="user-content-ifilereadalltext1"></a>
+```csharp
+string ReadAllText(string path, Encoding encoding);
+```
+
+Opens a file, reads all text in the file with the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding applied to the contents of the file.
+
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+A string containing all text in the file.
+
+---
+
+<a id="user-content-ifilereadalltext2"></a>
+```csharp
+string ReadAllText(string path);
+```
+
+Opens a text file, reads all the text in the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**returns** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+A string containing all the text in the file.
+
+## IFile.ReadAllTextAsync
+
+| Signatures                                                                                                               |
+|--------------------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereadalltextasync1">`Task<string> ReadAllTextAsync(string, CancellationToken);`</a>           |
+| <a href="#user-content-ifilereadalltextasync2">`Task<string> ReadAllTextAsync(string, Encoding, CancellationToken);`</a> |
+
+---
+
+<a id="user-content-ifilereadalltextasync1"></a>
+```csharp
+Task<string> ReadAllTextAsync(string path, CancellationToken cancellationToken = default);
+```
+
+Asynchronously opens a text file, reads all the text in the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+A task that represents the asynchronous read operation, which wraps the string containing all text in the file.
+
+---
+
+<a id="user-content-ifilereadalltextasync2"></a>
+```csharp
+Task<string> ReadAllTextAsync(string path, Encoding encoding, CancellationToken cancellationToken = default);
+```
+
+Asynchronously opens a text file, reads all text in the file with the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to open for reading.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding applied to the contents of the file.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+A task that represents the asynchronous read operation, which wraps the string containing all text in the file.
+
+## IFile.ReadLines
+
+```csharp
+IEnumerable<string> ReadLines(string path);
+```
+
+Reads the lines of a file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to read.
+
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+All the lines of the file, or the lines that are the result of a query.
+
+---
+
+```csharp
+IEnumerable<string> ReadLines(string path, Encoding encoding);
+```
+
+Read the lines of a file that has a specified encoding.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to read.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding that is applied to the contents of the file.
+
+**returns** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+All the lines of the file, or the lines that are the result of a query.
+
+## IFile.Replace
+
+| Signature                                                                                |
+|------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereplace1">`void Replace(string, string, string?);`</a>       |
+| <a href="#user-content-ifilereplace2">`void Replace(string, string, string?, bool);`</a> |
+
+---
+
+<a id="user-content-ifilereplace1"></a>
+```csharp
+void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName);
+```
+
+Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file.
+
+**sourceFileName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name of a file that replaces the file specified by destinationFileName.
+
+**destinationFileName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name of the file being replaced.
+
+**destinationBackupFileName** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The name of the backup file.
+
+---
+
+<a id="user-content-ifilereplace2"></a>
+```csharp
+void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors);
+```
+
+Replaces the contents of a specified file with the contents of another file, deleting the original file, and creating a backup of the replaced file and optionally ignores merge errors.
+
+**sourceFileName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name of a file that replaces the file specified by destinationFileName.
+
+**destinationFileName** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The name of the file being replaced.
+
+**destinationBackupFileName** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The name of the backup file.
+
+**ignoreMetadataErrors** [bool](https://docs.microsoft.com/en-us/dotnet/api/system.boolean?view=net-6.0)
+
+true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise, false.
+
+## IFile.SetAttributes
+
+```csharp
+void SetAttributes(string path, System.IO.FileAttributes fileAttributes);
+```
+
+Sets the specified FileAttributes of the file on the specified path.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The path to the file.
+
+**fileAttributes** [System.IO.FileAttributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view=net-6.0)
+
+A bitwise combination of the enumeration values.
+
+## IFile.SetCreationTime
+
+```csharp
+void SetCreationTime(string path, DateTime creationTime);
+```
+
+Sets the date and time the file was created.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the creation date and time information.
+
+**creationTime** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the creation date and time of path. This value is expressed in local time.
+
+## IFile.SetCreationTimeUtc
+
+```csharp
+void SetCreationTimeUtc(string path, DateTime creationTimeUtc);
+```
+
+Sets the date and time, in coordinated universal time (UTC), that the file was created.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the creation date and time information.
+
+**creationTimeUtc** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the creation date and time of path. This value is expressed in UTC time.
+
+## IFile.SetLastAccessTime
+
+```csharp
+void SetLastAccessTime(string path, DateTime lastAccessTime);
+```
+
+Sets the date and time the specified file was last accessed.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the access date and time information.
+
+**lastAccessTime** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the last access date and time of path. This value is expressed in local time.
+
+## IFile.SetLastAccessTimeUtc
+
+```csharp
+void SetLastAccessTimeUtc(string path, DateTime lastAccessTimeUtc);
+```
+
+Sets the date and time, in coordinated universal time (UTC), that the specified file was last accessed.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the access date and time information.
+
+**lastAccessTimeUtc** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the last access date and time of path. This value is expressed in UTC time.
+
+## IFile.SetLastWriteTime
+
+```csharp
+void SetLastWriteTime(string path, DateTime lastWriteTime);
+```
+
+Sets the date and time that the specified file was last written to.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the date and time information.
+
+**lastWriteTime** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the last write date and time of path. This value is expressed in local time.
+
+## IFile.SetLastWriteTimeUtc
+
+```csharp
+void SetLastWriteTimeUtc(string path, DateTime lastWriteTimeUtc);
+```
+
+Sets the date and time, in coordinated universal time (UTC), that the specified file was last written to.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file for which to set the date and time information.
+
+**lastWriteTimeUtc** [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=net-6.0)
+
+A DateTime containing the value to set for the last write date and time of path. This value is expressed in UTC time.
+
+## IFile.WriteAllBytes
+
+```csharp
+void WriteAllBytes(string path, byte[] bytes);
+```
+
+Creates a new file, writes the specified byte array to the file, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**bytes** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
+
+The bytes to write to the file.
+
+## IFile.WriteAllBytesAsync
+
+```csharp
+Task WriteAllBytesAsync(string path, byte[] bytes, CancellationToken cancellationToken = default);
+```
+
+Asynchronously creates a new file, writes the specified byte array to the file, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**bytes** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[byte](https://docs.microsoft.com/en-us/dotnet/api/system.byte?view=net-6.0)\>
+
+The bytes to write to the file.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+## IFile.WriteAllLines
+
+```csharp
+void WriteAllLines(string path, string[] contents, Encoding encoding);
+```
+
+Creates a new file, writes the specified string array to the file by using the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string array to write to the file.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+An Encoding object that represents the character encoding applied to the string array.
+
+## IFile.WriteAllLines
+
+| Signatures                                                                                                   |
+|--------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealllines1">`void WriteAllLines(string, IEnumerable<string>, Encoding);`</a> |
+| <a href="#user-content-ifilewritealllines2">`void WriteAllLines(string, IEnumerable<string>);`</a>           |
+| <a href="#user-content-ifilewritealllines3">`void WriteAllLines(string, string[]);`</a>                      |
+
+---
+
+<a id="user-content-ifilewritealllines1"></a>
+```csharp
+void WriteAllLines(string path, IEnumerable<string> contents, Encoding encoding);
+```
+
+Creates a new file by using the specified encoding, writes a collection of strings to the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The lines to write to the file.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The character encoding to use.
+
+---
+
+<a id="user-content-ifilewritealllines2"></a>
+```csharp
+void WriteAllLines(string path, IEnumerable<string> contents);
+```
+
+Creates a new file, writes a collection of strings to the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The lines to write to the file.
+
+---
+
+<a id="user-content-ifilewritealllines3"></a>
+```csharp
+void WriteAllLines(string path, string[] contents);
+```
+
+Creates a new file, write the specified string array to the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string array to write to the file.
+
+## IFile.WriteAllLinesAsync
+
+| Signatures                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealllinesasync1">`Task WriteAllLinesAsync(string, IEnumerable<string>, CancellationToken);`</a> |
+
+---
+
+<a id="user-content-ifilewritealllinesasync1"></a>
+```csharp
+Task WriteAllLinesAsync(string path, IEnumerable<string> contents, CancellationToken cancellationToken = default);
+```
+
+Asynchronously creates a new file, writes the specified lines to the file, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The lines to write to the file.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+---
+
+```csharp
+Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default);
+```
+
+Asynchronously creates a new file, write the specified lines to the file by using the specified encoding, and then closes the file.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The lines to write to the file.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The character encoding to use.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+## IFile.WriteAllText
+
+| Signature                                                                                      |
+|------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealltext1">`void WriteAllText(string, string?);`</a>           |
+| <a href="#user-content-ifilewritealltext2">`void WriteAllText(string, string?, Encoding);`</a> |
+
+---
+
+<a id="user-content-ifilewritealltext1"></a>
+```csharp
+void WriteAllText(string path, string? contents);
+```
+
+Creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string to write to the file.
+
+---
+
+<a id="user-content-ifilewritealltext2"></a>
+```csharp
+void WriteAllText(string path, string? contents, Encoding encoding);
+```
+
+Creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string to write to the file.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding to apply to the string.
+
+## IFile.WriteAllTextAsync
+
+| Signatures                                                                                                                  |
+|-----------------------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealltextasync1">`Task WriteAllTextAsync(string, string?, CancellationToken);`</a>           |
+| <a href="#user-content-ifilewritealltextasync2">`Task WriteAllTextAsync(string, string?, Encoding, CancellationToken);`</a> |
+
+---
+
+<a id="user-content-ifilewritealltextasync1"></a>
+```csharp
+Task WriteAllTextAsync(string path, string? contents, CancellationToken cancellationToken = default);
+```
+
+Asynchronously creates a new file, writes the specified string to the file, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string to write to the file.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+---
+
+<a id="user-content-ifilewritealltextasync2"></a>
+```csharp
+Task WriteAllTextAsync(string path, string? contents, Encoding encoding, CancellationToken cancellationToken = default);
+```
+
+Asynchronously creates a new file, writes the specified string to the file using the specified encoding, and then closes the file. If the target file already exists, it is overwritten.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+The file to write to.
+
+**contents** [Nullable](https://docs.microsoft.com/en-us/dotnet/api/system.nullable-1?view=net-6.0)\<[string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)\>
+
+The string to write to the file.
+
+**encoding** [Encoding](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-6.0)
+
+The encoding to apply to the string.
+
+**cancellationToken** [CancellationToken](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=net-6.0)
+
+The token to monitor for cancellation requests. The default value is None.
+
+**returns** [Task](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-6.0)
+
+A task that represents the asynchronous write operation.
+
+## IFile.Decrypt
+
+```csharp
+[System.Runtime.Versioning.SupportedOSPlatform("windows")]
+void Decrypt(string path);
+```
+
+Decrypts a file that was encrypted by the current account using the Encrypt(String) method.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+A path that describes a file to decrypt.
+
+## IFile.Encrypt
+
+```csharp
+[System.Runtime.Versioning.SupportedOSPlatform("windows")]
+void Encrypt(string path);
+```
+
+Encrypts a file so that only the account used to encrypt the file can decrypt it.
+
+**path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
+
+A path that describes a file to encrypt.
