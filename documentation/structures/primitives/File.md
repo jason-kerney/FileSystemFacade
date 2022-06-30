@@ -876,6 +876,7 @@ A task that represents the asynchronous read operation, which wraps the string a
 | Signatures                                                                            |
 |---------------------------------------------------------------------------------------|
 | <a href="#user-content-ifilereadalltext1">`string ReadAllText(string, Encoding);`</a> |
+| <a href="#user-content-ifilereadalltext2">`string ReadAllText(string);`</a>           |
 
 ---
 
