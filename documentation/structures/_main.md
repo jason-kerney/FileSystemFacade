@@ -8,5 +8,6 @@
     (section-main "./AtomicActions.md")
     (section-main "./AtomicReplacementBuilder.md")
     (section-main "./Primitives.md")
+    (section-main "./AlternateAccess.md")
 )
 /bl-->

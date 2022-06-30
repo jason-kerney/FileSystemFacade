@@ -9,6 +9,7 @@
 - [Section 2: Atomic Actions](#user-content-atomic-actions)
 - [Section 3: Atomic Replacement Builder](#user-content-atomic-replacement-builder)
 - [Section 4: Primitives](#user-content-primitives)
+- [Section 5: Alternate File System Access](#user-content-alternate-file-system-access)
 
 ## Atomic File System ##
 
@@ -532,6 +533,13 @@ This links to the documentation on each of the primitives that are used by the F
 13. [Drives](./documentation/structures/primitives/Drives.md)
 14. [Directory](./documentation/structures/primitives/Directory.md)
 15. [File](./documentation/structures/primitives/File.md)
+    
+
+## Alternate File System Access ##
+
+There is a whole other way to access file system objects that allows for long lived objects. It is however harder to test, and as such not considered the primary way to access those objects.
+
+You can find those objects documented here: [Alternate File System Access](./alternate.md)
     
 
 <!-- GENERATED DOCUMENT! DO NOT EDIT! -->
