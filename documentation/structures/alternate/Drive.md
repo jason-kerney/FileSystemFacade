@@ -30,7 +30,7 @@ Puts the static Drive class in replacement mode. This temporarily causes the sta
 
 This is used to allow testing.
 
-_<font style='font-weight: bold; color: red'>WARNING:</font>_ This allows changing of how the system works until the returned object is disposed.
+<em style='font-weight: bold; color: red;'>WARNING:</em> This allows changing of how the system works until the returned object is disposed.
 
 **replacement** [IStaticDriveReplacement](#user-content-static-drive-replacement)
 
@@ -40,7 +40,7 @@ The configuration of how to replace the inners of the static class.
 
 An IDisposable that when disposed reverts the static Drive class to its default behavior
 
-_<font style='font-weight: bold; color: red'>WARNING:</font>_ This allows changing of how the system works until the returned object is disposed.
+<em style='font-weight: bold; color: red'>WARNING:</em> This allows changing of how the system works until the returned object is disposed.
 
 ### Drive.DriveInfo
 
