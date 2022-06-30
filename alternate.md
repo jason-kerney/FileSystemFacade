@@ -7,12 +7,15 @@
 
 - [Section 1: Description](#user-content-description)
 - [Section 2: Drive](#user-content-drive)
-- [Section 3: Static Drive Replacement](#user-content-static-drive-replacement)
-- [Section 4: Directory](#user-content-directory)
-- [Section 5: Static Directory Replacement](#user-content-static-directory-replacement)
-- [Section 6: File](#user-content-file)
-- [Section 7: Static File Replacement](#user-content-static-file-replacement)
-- [Section 8: Primitives](#user-content-primitives)
+- [Section 3: Static Drive Replacement Builder](#user-content-static-drive-replacement-builder)
+- [Section 4: Static Drive Replacement](#user-content-static-drive-replacement)
+- [Section 5: Directory](#user-content-directory)
+- [Section 6: Static Directory Replacement Builder](#user-content-static-directory-replacement-builder)
+- [Section 7: Static Directory Replacement](#user-content-static-directory-replacement)
+- [Section 8: File](#user-content-file)
+- [Section 9: Static File Replacement Builder](#user-content-static-file-replacement-builder)
+- [Section 10: Static File Replacement](#user-content-static-file-replacement)
+- [Section 11: Primitives](#user-content-primitives)
 
 ## Description ##
 
@@ -31,14 +34,10 @@ It is preferable to use the [Atomic File System](./structures.md). This should o
 
 ### Drive
 
-- [1.1 Replace](#user-content-drivereplace)
-- [1.2 Drive Info](#user-content-drivedriveinfo)
-- [1.3 Get Drives](#user-content-drivegetdrives)
-- [1.4 Build Replacement](#user-content-drivebuildreplacement)
-
-<!--
-#user-content-drive
--->
+- [2.1 Replace](#user-content-drivereplace)
+- [2.2 Drive Info](#user-content-drivedriveinfo)
+- [2.3 Get Drives](#user-content-drivegetdrives)
+- [2.4 Build Replacement](#user-content-drivebuildreplacement)
 
 ### Drive.Replace
 
@@ -101,6 +100,11 @@ This method facilitates testing.
 A builder to build the configuration object used by the 'Replace' method.
     
 
+## Static Drive Replacement Builder ##
+
+TBD
+    
+
 ## Static Drive Replacement ##
 
 TBD
@@ -111,12 +115,22 @@ TBD
 TBD
     
 
+## Static Directory Replacement Builder ##
+
+TBD
+    
+
 ## Static Directory Replacement ##
 
 TBD
     
 
 ## File ##
+
+TBD
+    
+
+## Static File Replacement Builder ##
 
 TBD
     

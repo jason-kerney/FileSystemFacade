@@ -11,14 +11,10 @@ It is preferable to use the [Atomic File System](./structures.md). This should o
 
 ### Drive
 
-- [1.1 Replace](#user-content-drivereplace)
-- [1.2 Drive Info](#user-content-drivedriveinfo)
-- [1.3 Get Drives](#user-content-drivegetdrives)
-- [1.4 Build Replacement](#user-content-drivebuildreplacement)
-
-<!--
-#user-content-drive
--->
+- [2.1 Replace](#user-content-drivereplace)
+- [2.2 Drive Info](#user-content-drivedriveinfo)
+- [2.3 Get Drives](#user-content-drivegetdrives)
+- [2.4 Build Replacement](#user-content-drivebuildreplacement)
 
 ### Drive.Replace
 
