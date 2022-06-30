@@ -1249,7 +1249,7 @@ The string array to write to the file.
 
 An Encoding object that represents the character encoding applied to the string array.
 
---
+---
 
 <a id="user-content-ifilewritealllines2"></a>
 ```csharp
