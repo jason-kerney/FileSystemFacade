@@ -30,7 +30,7 @@ Puts the static Drive class in replacement mode. This temporarily causes the sta
 
 This is used to allow testing.
 
-***Warning*** This allows changing of how the system works until the returned object is disposed.
+***WARNING:*** This allows changing of how the system works until the returned object is disposed.
 
 **replacement** [IStaticDriveReplacement](#user-content-static-drive-replacement)
 
