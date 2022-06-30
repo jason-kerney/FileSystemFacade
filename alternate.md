@@ -50,7 +50,7 @@ Puts the static Drive class in replacement mode. This temporarily causes the sta
 
 This is used to allow testing.
 
-<em style='font-weight: bold; color: red;'>WARNING:</em> This allows changing of how the system works until the returned object is disposed.
+-! Warning !- This allows changing of how the system works until the returned object is disposed.
 
 **replacement** [IStaticDriveReplacement](#user-content-static-drive-replacement)
 
