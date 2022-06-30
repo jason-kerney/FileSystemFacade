@@ -33,8 +33,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="contents">The lines to append to the file.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        Task AppendAllLinesAsync(string path, IEnumerable<string> contents,
-            CancellationToken cancellationToken = default);
+        Task AppendAllLinesAsync(string path, IEnumerable<string> contents, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Asynchronously appends lines to a file by using a specified encoding, and then closes the file. If the specified file does not exist, this method creates a file, writes the specified lines to the file, and then closes the file.
@@ -44,8 +43,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        Task AppendAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-            CancellationToken cancellationToken = default);
+        Task AppendAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Opens a file, appends the specified string to the file, and then closes the file. If the file does not exist, this method creates a file, writes the specified string to the file, then closes the file.
@@ -79,8 +77,7 @@ namespace FileSystemFacade.Primitives
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        Task AppendAllTextAsync(string path, string? contents, Encoding encoding,
-            CancellationToken cancellationToken = default);
+        Task AppendAllTextAsync(string path, string? contents, Encoding encoding, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Creates a StreamWriter that appends UTF-8 encoded text to an existing file, or to a new file if the specified file does not exist.
