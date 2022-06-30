@@ -1306,9 +1306,10 @@ The string array to write to the file.
 
 ## IFile.WriteAllLinesAsync
 
-| Signatures                                                                                                                      |
-|---------------------------------------------------------------------------------------------------------------------------------|
-| <a href="#user-content-ifilewritealllinesasync1">`Task WriteAllLinesAsync(string, IEnumerable<string>, CancellationToken);`</a> |
+| Signatures                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilewritealllinesasync1">`Task WriteAllLinesAsync(string, IEnumerable<string>, CancellationToken);`</a>           |
+| <a href="#user-content-ifilewritealllinesasync2">`Task WriteAllLinesAsync(string, IEnumerable<string>, Encoding, CancellationToken);`</a> |
 
 ---
 
@@ -1337,6 +1338,7 @@ A task that represents the asynchronous write operation.
 
 ---
 
+<a id="user-content-ifilewritealllinesasync2"></a>
 ```csharp
 Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default);
 ```
