@@ -169,9 +169,10 @@ A task that represents the asynchronous append operation.
 
 ## IFile.AppendAllText
 
-| Signatures                                                                             |
-|----------------------------------------------------------------------------------------|
-| <a href="#user-content-ifileappendalltext1">`void AppendAllText(string, string?);`</a> |
+| Signatures                                                                                       |
+|--------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifileappendalltext1">`void AppendAllText(string, string?);`</a>           |
+| <a href="#user-content-ifileappendalltext2">`void AppendAllText(string, string?, Encoding);`</a> |
 
 ---
 
@@ -192,6 +193,7 @@ The string to append to the file.
 
 ---
 
+<a id="user-content-ifileappendalltext2"></a>
 ```csharp
 void AppendAllText(string path, string? contents, Encoding encoding);
 ```
