@@ -971,6 +971,14 @@ A task that represents the asynchronous read operation, which wraps the string c
 
 ## IFile.ReadLines
 
+| Signatures                                                                                     |
+|------------------------------------------------------------------------------------------------|
+| <a href="#user-content-ifilereadlines1">`IEnumerable<string> ReadLines(string);`</a>           |
+| <a href="#user-content-ifilereadlines2">`IEnumerable<string> ReadLines(string, Encoding);`</a> |
+
+---
+
+<a id="user-content-ifilereadlines1"></a>
 ```csharp
 IEnumerable<string> ReadLines(string path);
 ```
@@ -987,6 +995,7 @@ All the lines of the file, or the lines that are the result of a query.
 
 ---
 
+<a id="user-content-ifilereadlines2"></a>
 ```csharp
 IEnumerable<string> ReadLines(string path, Encoding encoding);
 ```
