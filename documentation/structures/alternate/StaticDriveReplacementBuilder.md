@@ -15,6 +15,7 @@ public interface IStaticDriveReplacementBuilder
 
 - [3.1 Replace Drive Info](#user-content-istaticdrivereplacementbuilderreplacedriveinfo)
 - [3.2 Replace Drives](#user-content-istaticdrivereplacementbuilderreplacedrives)
+- [3.3 Build](#user-content-istaticdrivereplacementbuilderbuild)
 
 <!--
 #user-content-istaticdrivereplacementbuilder
@@ -51,4 +52,16 @@ The IDrives to use when the static file system is put into replacement mode.
 **returns**
 
 An instance of the builder with the IDrives configured to be replaced.
+
+### IStaticDriveReplacementBuilder.Build
+
+```csharp
+IStaticDriveReplacement Build();
+```
+
+Builds the configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
+
+**returns** [IStaticDriveReplacement](#user-content-istaticdrivereplacementbuilder)
+
+The configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
 
