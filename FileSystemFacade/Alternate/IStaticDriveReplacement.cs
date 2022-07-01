@@ -12,7 +12,7 @@ namespace FileSystemFacade.Alternate
         /// </summary>
         IDriveInfoFactory DriveInfo { get; }
         /// <summary>
-        /// The IDrives to use when the static file system is set to replacement mode.
+        /// Gets the IDrives to use when the static file system is set to replacement mode.
         /// </summary>
         IDrives Drives { get; }
     }
