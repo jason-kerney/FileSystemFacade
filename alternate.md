@@ -160,7 +160,7 @@ IStaticDriveReplacement Build();
 
 Builds the configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
 
-**returns** [IStaticDriveReplacement](#user-content-istaticdrivereplacement)
+**returns** [IStaticDriveReplacement](#user-content-static-drive-replacement)
 
 The configuration item that is used to tell the static file system what drive based objects to use when put into replacement mode.
 
