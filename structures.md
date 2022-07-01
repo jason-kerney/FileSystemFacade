@@ -85,7 +85,7 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 A bitwise combination of the enumeration values that specifies additional file options.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md#file-stream)>
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
@@ -96,11 +96,11 @@ An atomic action allowing the interaction with a IFileStream specified by the pa
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, int bufferSize);
 ```
 
-Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. The [IFileStream](./documentation/structures/primitives/FileStream.md) object is created before and disposed of after each atomic action method call.
+Returns an [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) specified by the parameters. The [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
-A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md) object will encapsulate.
+A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object will encapsulate.
 
 **mode** [System.IO.FileMode](https://docs.microsoft.com/en-us/dotnet/api/system.io.filemode?view=net-6.0)
 
@@ -108,7 +108,7 @@ One of the enumeration values that determines how to open or create the file.
 
 **access** [System.IO.FileAccess](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileaccess?view=net-6.0)
 
-A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md) object. CanSeek is true if path specifies a disk file.
+A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object. CanSeek is true if path specifies a disk file.
 
 **share** [System.IO.FileShare](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=net-6.0)
 
@@ -118,9 +118,9 @@ A bitwise combination of the enumeration values that determines how the file wil
 
 A positive Int32 value greater than 0 indicating the buffer size. The default buffer size is 4096.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md#file-stream)>
 
-An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
+An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
 ---
 
@@ -129,11 +129,11 @@ An atomic action allowing the interaction with a [IFileStream](./documentation/s
 IAtomicActions<IFileStream> FileStream(string path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share);
 ```
 
-Returns [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters.  The [IFileStream](./documentation/structures/primitives/FileStream.md) object is created before and disposed of after each atomic action method call.
+Returns [IAtomicActions](#user-content-atomic-actions) allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) specified by the parameters.  The [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object is created before and disposed of after each atomic action method call.
 
 **path** [string](https://docs.microsoft.com/en-us/dotnet/api/system.string?view=net-6.0)
 
-A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md) object will encapsulate.
+A relative or absolute path for the file that the current [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object will encapsulate.
 
 **mode** [System.IO.FileMode](https://docs.microsoft.com/en-us/dotnet/api/system.io.filemode?view=net-6.0)
 
@@ -141,15 +141,15 @@ One of the enumeration values that determines how to open or create the file.
 
 **access** [System.IO.FileAccess](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileaccess?view=net-6.0)
 
-A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md) object. CanSeek is true if path specifies a disk file.
+A bitwise combination of the enumeration values that determines how the file can be accessed by the [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object. This also determines the values returned by the CanRead and CanWrite properties of the [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) object. CanSeek is true if path specifies a disk file.
 
 **share** [System.IO.FileShare](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileshare?view=net-6.0)
 
 A bitwise combination of the enumeration values that determines how the file will be shared by processes.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md#file-stream)>
 
-An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
+An atomic action allowing the interaction with a [IFileStream](./documentation/structures/primitives/FileStream.md#file-stream) specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
 ---
 
@@ -184,7 +184,7 @@ A positive Int32 value greater than 0 indicating the buffer size. The default bu
 
 Specifies whether to use asynchronous I/O or synchronous I/O. However, note that the underlying operating system might not support asynchronous I/O, so when specifying true, the handle might be opened synchronously depending on the platform. When opened asynchronously, the BeginRead(Byte[], Int32, Int32, AsyncCallback, Object) and BeginWrite(Byte[], Int32, Int32, AsyncCallback, Object) methods perform better on large reads or writes, but they might be much slower for small reads or writes. If the application is designed to take advantage of asynchronous I/O, set the useAsync parameter to true. Using asynchronous I/O correctly can speed up applications by as much as a factor of 10, but using it without redesigning the application for asynchronous I/O can decrease performance by as much as a factor of 10.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md#file-stream)>
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
@@ -209,7 +209,7 @@ One of the enumeration values that determines how to open or create the file.
 
 A bitwise combination of the enumeration values that determines how the file can be accessed by the IFileStream object. This also determines the values returned by the CanRead and CanWrite properties of the IFileStream object. CanSeek is true if path specifies a disk file.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IFileStream](./documentation/structures/primitives/FileStream.md#file-stream)>
 
 An atomic action allowing the interaction with a IFileStream specified by the parameters. NOTE: The file stream is created just before each of the atomic action's methods and disposed of afterwards.
 
@@ -225,7 +225,7 @@ Returns an atomic action allowing the interaction with a IDriveInfo specified by
 
 A valid drive path or drive letter. This can be either uppercase or lowercase, 'a' to 'z'. A null value is not valid.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDriveInfo](./documentation/structures/primitives/DriveInfo.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDriveInfo](./documentation/structures/primitives/DriveInfo.md#drive-info)>
 
 An atomic action allowing the interaction with a IDriveInfo specified by the drive name.
 
@@ -241,7 +241,7 @@ Returns an atomic action allowing the interaction with a IDirectoryInfo specifie
 
 A string specifying the path on which to create the IDirectoryInfo.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectoryInfo](./documentation/structures/primitives/DirectoryInfo.md)>
+**returns** [IAtomicActions](#user-content-atomic-actions)<[IDirectoryInfo](./documentation/structures/primitives/DirectoryInfo.md#directory-info)>
 
 An atomic action allowing the interaction with a IDirectoryInfo specified by the path.
 
@@ -257,7 +257,7 @@ Returns an atomic action allowing the interaction with a IFileInfo specified by 
 
 The fully qualified name of the new file, or the relative file name. Do not end the path with the directory separator character.
 
-**returns ** [IAtomicActions](#user-content-atomic-actions)\<[IFileInfo](./documentation/structures/primitives/FileInfo.md)\>
+**returns ** [IAtomicActions](#user-content-atomic-actions)\<[IFileInfo](./documentation/structures/primitives/FileInfo.md#file-info)\>
 
 An atomic action allowing the interaction with a IFileInfo specified by the file name.
 
@@ -281,7 +281,7 @@ IAtomicActions<IDirectory> Directory { get; }
 
 Returns an atomic action allowing the interaction with IDirectory.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDirectory](./documentation/structures/primitives/Directory.md)\>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDirectory](./documentation/structures/primitives/Directory.md#directory)\>
 
 An atomic action allowing the interaction with IDirectory.
 
@@ -293,7 +293,7 @@ IAtomicActions<IFile> File { get; }
 
 Returns an atomic action allowing the interaction with IFile.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)\<[IFile](./documentation/structures/primitives/File.md)\>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IFile](./documentation/structures/primitives/File.md#file)\>
 
 An atomic action allowing the interaction with IFile.
     
@@ -381,7 +381,7 @@ IAtomicReplacementBuilder FileStream(IFileStreamFactory factory);
 
 Allows for the factory that builds IFileStream objects to be temporarily replaced.
 
-**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md)
+**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md#file-stream-factory)
 
 The IFileStream Factory to use when 'Use' is called.
 
@@ -397,7 +397,7 @@ IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
 
 Allows for the factory that builds IFileSystemWatcher objects to be replaced.
 
-**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
+**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md#file-system-watcher-factory)
 
 The IFileSystemWatcher Factory to use when 'Use' is called.
 
@@ -413,7 +413,7 @@ IAtomicReplacementBuilder FileInfo(IFileInfoFactory factory);
 
 Allows for the factory that builds IFileInfo objects to be temporarily replaced.
 
-**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md)
+**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md#file-info-factory)
 
 The IFileInfo Factory to use when 'Use' is called.
 
@@ -429,7 +429,7 @@ IAtomicReplacementBuilder DirectoryInfo(IDirectoryInfoFactory factory);
 
 Allows for the factory that builds IDirectoryInfo objects to be replaced.
 
-**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md)
+**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md#directory-info-factory)
 
 The IDirectoryInfo Factory to use when 'Use' is called.
 
@@ -477,7 +477,7 @@ IAtomicReplacementBuilder Directory(IDirectory newDirectory);
 
 Configures IDirectory to be replaced.
 
-**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md)
+**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md#directory)
 
 The IDirectory to use when 'Use' is called.
 
@@ -493,7 +493,7 @@ IAtomicReplacementBuilder File(IFile newFile);
 
 Configures IFile to be replaced.
 
-**newFile** [IFile](./documentation/structures/primitives/File.md)
+**newFile** [IFile](./documentation/structures/primitives/File.md#file)
 
 The IFile to use when 'Use' is called.
 
@@ -518,21 +518,21 @@ An action to call with the replaced file system.
 
 This links to the documentation on each of the primitives that are used by the File System Facade
 
-1. [File Stream Factory](./documentation/structures/primitives/FileStreamFactory.md)
-2. [File Stream](./documentation/structures/primitives/FileStream.md)
-3. [File System Watcher Factory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
-4. [File System Watcher](./documentation/structures/primitives/FileSystemWatcher.md)
-5. [Wait For Changed Result](./documentation/structures/primitives/WaitForChangedResult.md)
+1. [File Stream Factory](./documentation/structures/primitives/FileStreamFactory.md#file-stream-factory)
+2. [File Stream](./documentation/structures/primitives/FileStream.md#file-stream)
+3. [File System Watcher Factory](./documentation/structures/primitives/FileSystemWatcherFactory.md#file-system-watcher-factory)
+4. [File System Watcher](./documentation/structures/primitives/FileSystemWatcher.md#file-system-watcher)
+5. [Wait For Changed Result](./documentation/structures/primitives/WaitForChangedResult.md#wait-for-changed-result)
 6. [Drive Info Factory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
-7. [Drive Info](./documentation/structures/primitives/DriveInfo.md)
-8. [File System Info](./documentation/structures/primitives/FileSystemInfo.md)
-9. [Directory Info Factory](./documentation/structures/primitives/DirectoryInfoFactory.md)
-10. [Directory Info](./documentation/structures/primitives/DirectoryInfo.md)
-11. [File Info Factory](./documentation/structures/primitives/FileInfoFactory.md)
-12. [File Info](./documentation/structures/primitives/FileInfo.md)
+7. [Drive Info](./documentation/structures/primitives/DriveInfo.md#drive-info)
+8. [File System Info](./documentation/structures/primitives/FileSystemInfo.md#file-system-info)
+9. [Directory Info Factory](./documentation/structures/primitives/DirectoryInfoFactory.md#directory-info-factory)
+10. [Directory Info](./documentation/structures/primitives/DirectoryInfo.md#directory-info)
+11. [File Info Factory](./documentation/structures/primitives/FileInfoFactory.md#file-info-factory)
+12. [File Info](./documentation/structures/primitives/FileInfo.md#file-info)
 13. [Drives](./documentation/structures/primitives/Drives.md#drives)
-14. [Directory](./documentation/structures/primitives/Directory.md)
-15. [File](./documentation/structures/primitives/File.md)
+14. [Directory](./documentation/structures/primitives/Directory.md#directory)
+15. [File](./documentation/structures/primitives/File.md#file)
     
 
 ## Alternate File System Access ##

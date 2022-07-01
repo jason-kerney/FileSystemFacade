@@ -31,7 +31,7 @@ IAtomicReplacementBuilder FileStream(IFileStreamFactory factory);
 
 Allows for the factory that builds IFileStream objects to be temporarily replaced.
 
-**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md)
+**factory** [IFileStreamFactory](./documentation/structures/primitives/FileStreamFactory.md#file-stream-factory)
 
 The IFileStream Factory to use when 'Use' is called.
 
@@ -47,7 +47,7 @@ IAtomicReplacementBuilder FilesSystemWatcher(IFilesSystemWatcherFactory factory)
 
 Allows for the factory that builds IFileSystemWatcher objects to be replaced.
 
-**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
+**factory** [IFileSystemWatcherFactory](./documentation/structures/primitives/FileSystemWatcherFactory.md#file-system-watcher-factory)
 
 The IFileSystemWatcher Factory to use when 'Use' is called.
 
@@ -63,7 +63,7 @@ IAtomicReplacementBuilder FileInfo(IFileInfoFactory factory);
 
 Allows for the factory that builds IFileInfo objects to be temporarily replaced.
 
-**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md)
+**factory** [IFileInfoFactory](./documentation/structures/primitives/FileInfoFactory.md#file-info-factory)
 
 The IFileInfo Factory to use when 'Use' is called.
 
@@ -79,7 +79,7 @@ IAtomicReplacementBuilder DirectoryInfo(IDirectoryInfoFactory factory);
 
 Allows for the factory that builds IDirectoryInfo objects to be replaced.
 
-**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md)
+**factory** [IDirectoryInfoFactory](./documentation/structures/primitives/DirectoryInfoFactory.md#directory-info-factory)
 
 The IDirectoryInfo Factory to use when 'Use' is called.
 
@@ -127,7 +127,7 @@ IAtomicReplacementBuilder Directory(IDirectory newDirectory);
 
 Configures IDirectory to be replaced.
 
-**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md)
+**newDirectory** [IDirectory](./documentation/structures/primitives/Directory.md#directory)
 
 The IDirectory to use when 'Use' is called.
 
@@ -143,7 +143,7 @@ IAtomicReplacementBuilder File(IFile newFile);
 
 Configures IFile to be replaced.
 
-**newFile** [IFile](./documentation/structures/primitives/File.md)
+**newFile** [IFile](./documentation/structures/primitives/File.md#file)
 
 The IFile to use when 'Use' is called.
 

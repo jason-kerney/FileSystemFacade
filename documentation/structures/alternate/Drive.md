@@ -58,7 +58,7 @@ public static IDriveInfo[] GetDrives();
 
 Retrieves the drive names of all logical drives on a computer.
 
-**returns** [IDriveInfo](./documentation/structures/primitives/DriveInfo.md)
+**returns** [IDriveInfo](./documentation/structures/primitives/DriveInfo.md#drive-info)
 
 An array of type IDriveInfo that represents the logical drives on a computer.
 
