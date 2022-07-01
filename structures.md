@@ -445,7 +445,7 @@ IAtomicReplacementBuilder DriveInfo(IDriveInfoFactory factory);
 
 Allows for the factory that builds IDriveInfo objects to be replaced.
 
-**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfo Factory to use when 'Use' is called.
 
@@ -523,7 +523,7 @@ This links to the documentation on each of the primitives that are used by the F
 3. [File System Watcher Factory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
 4. [File System Watcher](./documentation/structures/primitives/FileSystemWatcher.md)
 5. [Wait For Changed Result](./documentation/structures/primitives/WaitForChangedResult.md)
-6. [Drive Info Factory](./documentation/structures/primitives/DriveInfoFactory.md)
+6. [Drive Info Factory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 7. [Drive Info](./documentation/structures/primitives/DriveInfo.md)
 8. [File System Info](./documentation/structures/primitives/FileSystemInfo.md)
 9. [Directory Info Factory](./documentation/structures/primitives/DirectoryInfoFactory.md)

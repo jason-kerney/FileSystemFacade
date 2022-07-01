@@ -95,7 +95,7 @@ IAtomicReplacementBuilder DriveInfo(IDriveInfoFactory factory);
 
 Allows for the factory that builds IDriveInfo objects to be replaced.
 
-**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfo Factory to use when 'Use' is called.
 

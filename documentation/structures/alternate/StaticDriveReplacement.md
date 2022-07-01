@@ -28,7 +28,7 @@ IDriveInfoFactory DriveInfo { get; }
 
 Gets the IDriveInfoFactory to use when the static file system is set to replacement mode.
 
-**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfoFactory to use when the static file system is set to replacement mode.
 

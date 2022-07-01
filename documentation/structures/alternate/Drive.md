@@ -46,7 +46,7 @@ public static IDriveInfoFactory DriveInfo { get; }
 
 This returns an IDriveInfoFactory used to build information about a Drive on the system.
 
-**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 An IDriveInfoFactory used to build information about a Drive on the system.
 

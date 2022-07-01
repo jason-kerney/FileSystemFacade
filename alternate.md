@@ -69,7 +69,7 @@ public static IDriveInfoFactory DriveInfo { get; }
 
 This returns an IDriveInfoFactory used to build information about a Drive on the system.
 
-**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 An IDriveInfoFactory used to build information about a Drive on the system.
 
@@ -128,7 +128,7 @@ IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoFactory factory);
 
 Configures the IDriveInfoFactory to use when the static file system is put into replacement mode.
 
-**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfoFactory to use.
 
@@ -192,7 +192,7 @@ IDriveInfoFactory DriveInfo { get; }
 
 Gets the IDriveInfoFactory to use when the static file system is set to replacement mode.
 
-**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**returns** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfoFactory to use when the static file system is set to replacement mode.
 
@@ -248,7 +248,7 @@ This links to the documentation on each of the primitives that are used by the F
 3. [File System Watcher Factory](./documentation/structures/primitives/FileSystemWatcherFactory.md)
 4. [File System Watcher](./documentation/structures/primitives/FileSystemWatcher.md)
 5. [Wait For Changed Result](./documentation/structures/primitives/WaitForChangedResult.md)
-6. [Drive Info Factory](./documentation/structures/primitives/DriveInfoFactory.md)
+6. [Drive Info Factory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 7. [Drive Info](./documentation/structures/primitives/DriveInfo.md)
 8. [File System Info](./documentation/structures/primitives/FileSystemInfo.md)
 9. [Directory Info Factory](./documentation/structures/primitives/DirectoryInfoFactory.md)

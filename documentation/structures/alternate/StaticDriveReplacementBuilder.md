@@ -29,7 +29,7 @@ IStaticDriveReplacementBuilder ReplaceDriveInfo(IDriveInfoFactory factory);
 
 Configures the IDriveInfoFactory to use when the static file system is put into replacement mode.
 
-**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md)
+**factory** [IDriveInfoFactory](./documentation/structures/primitives/DriveInfoFactory.md#drive-info-factory)
 
 The IDriveInfoFactory to use.
 
