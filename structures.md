@@ -269,7 +269,7 @@ IAtomicActions<IDrives> Drives { get; }
 
 Returns an atomic action allowing the interaction with a IDrives.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDrives](./documentation/structures/primitives/Drives.md)\>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDrives](./documentation/structures/primitives/Drives.md#drives)\>
 
 An atomic action allowing the interaction with a IDrives.
 
@@ -461,7 +461,7 @@ IAtomicReplacementBuilder Drives(IDrives newDrives);
 
 Configures IDrives to be replaced.
 
-**newDrives** [IDrives](./documentation/structures/primitives/Drives.md)
+**newDrives** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when 'Use' is called.
 
@@ -530,7 +530,7 @@ This links to the documentation on each of the primitives that are used by the F
 10. [Directory Info](./documentation/structures/primitives/DirectoryInfo.md)
 11. [File Info Factory](./documentation/structures/primitives/FileInfoFactory.md)
 12. [File Info](./documentation/structures/primitives/FileInfo.md)
-13. [Drives](./documentation/structures/primitives/Drives.md)
+13. [Drives](./documentation/structures/primitives/Drives.md#drives)
 14. [Directory](./documentation/structures/primitives/Directory.md)
 15. [File](./documentation/structures/primitives/File.md)
     

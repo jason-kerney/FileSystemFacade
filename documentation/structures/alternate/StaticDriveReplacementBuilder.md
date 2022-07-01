@@ -45,7 +45,7 @@ IStaticDriveReplacementBuilder ReplaceDrives(IDrives drives);
 
 Configures the IDrives to use when the static file system is put into replacement mode.
 
-**drives** [IDrives](./documentation/structures/primitives/Drives.md)
+**drives** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when the static file system is put into replacement mode.
 

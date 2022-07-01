@@ -144,7 +144,7 @@ IStaticDriveReplacementBuilder ReplaceDrives(IDrives drives);
 
 Configures the IDrives to use when the static file system is put into replacement mode.
 
-**drives** [IDrives](./documentation/structures/primitives/Drives.md)
+**drives** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when the static file system is put into replacement mode.
 
@@ -204,7 +204,7 @@ IDrives Drives { get; }
 
 Gets the IDrives to use when the static file system is set to replacement mode.
 
-**returns** [IDrives](./documentation/structures/primitives/Drives.md)
+**returns** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when the static file system is set to replacement mode.
     
@@ -255,7 +255,7 @@ This links to the documentation on each of the primitives that are used by the F
 10. [Directory Info](./documentation/structures/primitives/DirectoryInfo.md)
 11. [File Info Factory](./documentation/structures/primitives/FileInfoFactory.md)
 12. [File Info](./documentation/structures/primitives/FileInfo.md)
-13. [Drives](./documentation/structures/primitives/Drives.md)
+13. [Drives](./documentation/structures/primitives/Drives.md#drives)
 14. [Directory](./documentation/structures/primitives/Directory.md)
 15. [File](./documentation/structures/primitives/File.md)
     

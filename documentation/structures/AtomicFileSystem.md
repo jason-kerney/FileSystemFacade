@@ -259,7 +259,7 @@ IAtomicActions<IDrives> Drives { get; }
 
 Returns an atomic action allowing the interaction with a IDrives.
 
-**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDrives](./documentation/structures/primitives/Drives.md)\>
+**returns** [IAtomicActions](#user-content-atomic-actions)\<[IDrives](./documentation/structures/primitives/Drives.md#drives)\>
 
 An atomic action allowing the interaction with a IDrives.
 

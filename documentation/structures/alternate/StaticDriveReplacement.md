@@ -40,6 +40,6 @@ IDrives Drives { get; }
 
 Gets the IDrives to use when the static file system is set to replacement mode.
 
-**returns** [IDrives](./documentation/structures/primitives/Drives.md)
+**returns** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when the static file system is set to replacement mode.

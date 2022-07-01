@@ -111,7 +111,7 @@ IAtomicReplacementBuilder Drives(IDrives newDrives);
 
 Configures IDrives to be replaced.
 
-**newDrives** [IDrives](./documentation/structures/primitives/Drives.md)
+**newDrives** [IDrives](./documentation/structures/primitives/Drives.md#drives)
 
 The IDrives to use when 'Use' is called.
 
