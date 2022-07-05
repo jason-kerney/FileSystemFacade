@@ -613,7 +613,7 @@ An enumerable collection of file-system entries in the directory specified by pa
 
 ---
 
-<a id="`user-content-directoryenumeratefilesystementries3`"></a>
+<a id="user-content-directoryenumeratefilesystementries3"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions);
 ```
@@ -638,7 +638,7 @@ An enumerable collection of file-system entries in the directory specified by pa
 
 ---
 
-<a id="`user-content-directoryenumeratefilesystementries4`"></a>
+<a id="user-content-directoryenumeratefilesystementries4"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.SearchOption searchOption);
 ```
