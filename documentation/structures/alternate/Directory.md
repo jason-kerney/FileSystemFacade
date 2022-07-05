@@ -22,7 +22,7 @@ public static class Directory
 - [5.05 Replace](#user-content-directoryreplace)
 - [5.06 Build Replacement](#user-content-directorybuildreplacement)
 - [5.07 Enumerate Directories](#user-content-directoryenumeratedirectories)
-- [5.08 Enumerate Files](#user-content-directoryenumerateFiles)
+- [5.08 Enumerate Files](#user-content-directoryenumeratefiles)
 - [5.09 Enumerate File System Entries](#user-content-directoryenumeratefilesystementries)
 - [5.10 Exists](#user-content-directoryexists)
 - [5.11 Get Creation Time](#user-content-directorygetcreationtime)
