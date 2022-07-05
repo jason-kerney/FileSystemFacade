@@ -16,7 +16,7 @@ namespace FileSystemFacade.Alternate
         /// </summary>
         IDirectoryInfoFactory DirectorInfo { get; }
         /// <summary>
-        /// Then IDirectory to use when the static file system is put into replacement mode.
+        /// The IDirectory to use when the static file system is put into replacement mode.
         /// </summary>
         IDirectory Directory { get; }
     }

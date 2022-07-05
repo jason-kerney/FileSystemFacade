@@ -18,10 +18,6 @@ public interface IStaticDirectoryReplacementBuilder
 - [6.3 Replace File System Watcher](#user-content-istaticdirectoryreplacementbuilderreplacefilesystemwatcher)
 - [6.4 Build](#user-content-istaticdirectoryreplacementbuilderbuild)
 
-<!--
-#user-content-istaticdirectoryreplacementbuilder
--->
-
 ### IStaticDirectoryReplacementBuilder.ReplaceDirectoryInfo
 
 ```csharp
