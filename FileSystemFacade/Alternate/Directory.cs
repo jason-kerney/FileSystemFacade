@@ -16,7 +16,7 @@ namespace FileSystemFacade.Alternate
         public static IDirectoryInfoFactory DirectoryInfo { get; private set; } = new DirectoryInfoFactory();
         
         /// <summary>
-        /// Returns a factory to build IFileSystemWatcher objects
+        /// Returns a factory to build IFileSystemWatcher objects.
         /// </summary>
         public static IFileSystemWatcherFactory FileSystemWatcher { get; private set; } = new FileSystemWatcherFactory();
         
@@ -91,8 +91,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="path">The relative or absolute path to the directory to search. This string is not case-sensitive.</param>
         /// <param name="searchPattern">The search string to match against the names of directories in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern.</returns>
-        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern) =>
-            Obj.EnumerateDirectories(path, searchPattern);
+        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern) => Obj.EnumerateDirectories(path, searchPattern);
 
         /// <summary>
         /// Returns an enumerable collection of the directory full names that match a search pattern in a specified path, and optionally searches subdirectories.
@@ -101,9 +100,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of directories in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern and enumeration options.</returns>
-        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions) =>
-            Obj.EnumerateDirectories(path, searchPattern, enumerationOptions);
+        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) => Obj.EnumerateDirectories(path, searchPattern, enumerationOptions);
 
         /// <summary>
         /// Returns an enumerable collection of directory full names that match a search pattern in a specified path, and optionally searches subdirectories.
@@ -112,8 +109,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of directories in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories. The default value is TopDirectoryOnly.</param>
         /// <returns>An enumerable collection of the full names (including paths) for the directories in the directory specified by path and that match the specified search pattern and search option.</returns>
-        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern,
-            System.IO.SearchOption searchOption) => Obj.EnumerateDirectories(path, searchPattern, searchOption);
+        public static IEnumerable<string> EnumerateDirectories(string path, string searchPattern, System.IO.SearchOption searchOption) => Obj.EnumerateDirectories(path, searchPattern, searchOption);
 
         /// <summary>
         /// Returns an enumerable collection of full file names that match a search pattern in a specified path, and optionally searches subdirectories.
@@ -131,9 +127,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of files in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of the full names (including paths) for the files in the directory specified by path and that match the specified search pattern and enumeration options.</returns>
-        public static IEnumerable<string> EnumerateFiles(string path, string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions) =>
-            Obj.EnumerateFiles(path, searchPattern, enumerationOptions);
+        public static IEnumerable<string> EnumerateFiles(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) => Obj.EnumerateFiles(path, searchPattern, enumerationOptions);
 
         /// <summary>
         /// Returns an enumerable collection of full file names in a specified path.
@@ -148,16 +142,14 @@ namespace FileSystemFacade.Alternate
         /// <param name="path">The relative or absolute path to the directory to search. This string is not case-sensitive.</param>
         /// <param name="searchPattern">The search string to match against the names of files in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of the full names (including paths) for the files in the directory specified by path and that match the specified search pattern.</returns>
-        public static IEnumerable<string> EnumerateFiles(string path, string searchPattern) =>
-            Obj.EnumerateFiles(path, searchPattern);
+        public static IEnumerable<string> EnumerateFiles(string path, string searchPattern) => Obj.EnumerateFiles(path, searchPattern);
 
         /// <summary>
         /// Returns an enumerable collection of file names and directory names in a specified path.
         /// </summary>
         /// <param name="path">The relative or absolute path to the directory to search. This string is not case-sensitive.</param>
         /// <returns>An enumerable collection of file-system entries in the directory specified by path.</returns>
-        public static IEnumerable<string> EnumerateFileSystemEntries(string path) =>
-            Obj.EnumerateFileSystemEntries(path);
+        public static IEnumerable<string> EnumerateFileSystemEntries(string path) => Obj.EnumerateFileSystemEntries(path);
 
         /// <summary>
         /// Returns an enumerable collection of file names and directory names that match a search pattern in a specified path.
@@ -165,8 +157,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="path">The relative or absolute path to the directory to search. This string is not case-sensitive.</param>
         /// <param name="searchPattern">The search string to match against the names of file-system entries in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An enumerable collection of file-system entries in the directory specified by path and that match the specified search pattern.</returns>
-        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern) =>
-            Obj.EnumerateFileSystemEntries(path, searchPattern);
+        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern) => Obj.EnumerateFileSystemEntries(path, searchPattern);
 
         /// <summary>
         /// Returns an enumerable collection of file names and directory names that match a search pattern and enumeration options in a specified path.
@@ -175,9 +166,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of subdirectories in path. This parameter can contain a combination of valid literal and wildcard characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An enumerable collection of file-system entries in the directory specified by path, that match the specified search pattern and the specified enumeration options.</returns>
-        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions) =>
-            Obj.EnumerateFileSystemEntries(path, searchPattern, enumerationOptions);
+        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) => Obj.EnumerateFileSystemEntries(path, searchPattern, enumerationOptions);
 
         /// <summary>
         /// Returns an enumerable collection of file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.
@@ -186,8 +175,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against file-system entries in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include only the current directory or should include all subdirectories. The default value is TopDirectoryOnly.</param>
         /// <returns>An enumerable collection of file-system entries in the directory specified by path and that match the specified search pattern and option.</returns>
-        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern,
-            System.IO.SearchOption searchOption) => Obj.EnumerateFileSystemEntries(path, searchPattern, searchOption);
+        public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.SearchOption searchOption) => Obj.EnumerateFileSystemEntries(path, searchPattern, searchOption);
 
         /// <summary>
         /// Determines whether the given path refers to an existing directory on disk.
@@ -222,8 +210,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of subdirectories in path. This parameter can contain a combination of valid literal and wildcard characters, but it doesn't support regular expressions.</param>
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
         /// <returns>An array of the full names (including paths) of the subdirectories that match the specified criteria, or an empty array if no directories are found.</returns>
-        public static string[] GetDirectories(string path, string searchPattern, System.IO.SearchOption searchOption) =>
-            Obj.GetDirectories(path, searchPattern, searchOption);
+        public static string[] GetDirectories(string path, string searchPattern, System.IO.SearchOption searchOption) => Obj.GetDirectories(path, searchPattern, searchOption);
 
         /// <summary>
         /// Returns the names of subdirectories (including their paths) that match the specified search pattern and enumeration options in the specified directory.
@@ -232,8 +219,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of subdirectories in path. This parameter can contain a combination of valid literal and wildcard characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An array of the full names (including paths) of the subdirectories that match the search pattern and enumeration options in the specified directory, or an empty array if no directories are found.</returns>
-        public static string[] GetDirectories(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) =>
-            Obj.GetDirectories(path, searchPattern, enumerationOptions);
+        public static string[] GetDirectories(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) => Obj.GetDirectories(path, searchPattern, enumerationOptions);
 
         /// <summary>
         /// Returns the names of subdirectories (including their paths) in the specified directory.
@@ -289,8 +275,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of files in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <param name="searchOption">One of the enumeration values that specifies whether the search operation should include all subdirectories or only the current directory.</param>
         /// <returns>An array of the full names (including paths) for the files in the specified directory that match the specified search pattern and option, or an empty array if no files are found.</returns>
-        public static string[] GetFiles(string path, string searchPattern, System.IO.SearchOption searchOption) =>
-            Obj.GetFiles(path, searchPattern, searchOption);
+        public static string[] GetFiles(string path, string searchPattern, System.IO.SearchOption searchOption) => Obj.GetFiles(path, searchPattern, searchOption);
 
         /// <summary>
         /// Returns the names of all files and subdirectories in a specified path.
@@ -305,8 +290,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="path">The relative or absolute path to the directory to search. This string is not case-sensitive.</param>
         /// <param name="searchPattern">The search string to match against the names of file and directories in path. This parameter can contain a combination of valid literal path and wildcard (* and ?) characters, but it doesn't support regular expressions.</param>
         /// <returns>An array of file names and directory names that match the specified search criteria, or an empty array if no files or directories are found.</returns>
-        public static string[] GetFileSystemEntries(string path, string searchPattern) =>
-            Obj.GetFileSystemEntries(path, searchPattern);
+        public static string[] GetFileSystemEntries(string path, string searchPattern) => Obj.GetFileSystemEntries(path, searchPattern);
 
         /// <summary>
         /// Returns an array of file names and directory names that match a search pattern and enumeration options in a specified path. 
@@ -315,9 +299,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="searchPattern">The search string to match against the names of subdirectories in path. This parameter can contain a combination of valid literal and wildcard characters, but it doesn't support regular expressions.</param>
         /// <param name="enumerationOptions">An object that describes the search and enumeration configuration to use.</param>
         /// <returns>An array of file names and directory names that match the specified search pattern and enumeration options, or an empty array if no files or directories are found.</returns>
-        public static string[] GetFileSystemEntries(string path, string searchPattern,
-            System.IO.EnumerationOptions enumerationOptions) =>
-            Obj.GetFileSystemEntries(path, searchPattern, enumerationOptions);
+        public static string[] GetFileSystemEntries(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions) => Obj.GetFileSystemEntries(path, searchPattern, enumerationOptions);
 
         /// <summary>
         /// Returns an array of all the file names and directory names that match a search pattern in a specified path, and optionally searches subdirectories.

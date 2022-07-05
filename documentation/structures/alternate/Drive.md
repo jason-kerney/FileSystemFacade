@@ -7,7 +7,7 @@
 
 A static class that aids in getting Drive info and an enumeration of drives on the system.
 
-It is preferable to use the [Atomic File System](./structures.md). This should only be used when you are creating long file items that live longer then a single method.
+It is preferable to use the [Atomic File System](./structures.md#file-system-facades-primary-file-system-access). This should only be used when you are creating long file items that live longer then a single method.
 
 ### Drive
 
