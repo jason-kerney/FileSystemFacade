@@ -46,9 +46,6 @@ public static class Directory
 - [5.29 Set Last Write Time](#user-content-directorysetlastwritetime)
 - [5.30 Set Last Write Time Utc](#user-content-directorysetlastwritetimeutc)
 
-<!--
-#user-content-directory
--->
 
 ### Directory.DirectoryInfo
 

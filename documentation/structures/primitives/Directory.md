@@ -39,10 +39,6 @@ public interface IDirectory
 - [14.24 Set Last Access Time Utc](#user-content-idirectorysetlastaccesstimeutc)
 - [14.25 Set Last Write Time](#user-content-idirectorysetlastwritetime)
 - [14.26 Set Last Write Time Utc](#user-content-idirectorysetlastwritetimeutc)
-  
-<!--
-#user-content-idirectory
--->
 
 ## IDirectory.CreateDirectory
 

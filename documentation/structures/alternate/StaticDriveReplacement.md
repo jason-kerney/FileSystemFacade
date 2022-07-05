@@ -16,10 +16,6 @@ public interface IStaticDriveReplacement
 - [4.1 Drive Info](#user-content-istaticdrivereplacementdriveinfo)
 - [4.2 Drives](#user-content-istaticdrivereplacementdrives)
 
-<!--
-#user-content-istaticdrivereplacement
--->
-
 ### IStaticDriveReplacement.DriveInfo
 
 ```csharp

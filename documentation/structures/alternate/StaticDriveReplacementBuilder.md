@@ -17,10 +17,6 @@ public interface IStaticDriveReplacementBuilder
 - [3.2 Replace Drives](#user-content-istaticdrivereplacementbuilderreplacedrives)
 - [3.3 Build](#user-content-istaticdrivereplacementbuilderbuild)
 
-<!--
-#user-content-istaticdrivereplacementbuilder
--->
-
 ### IStaticDriveReplacementBuilder.ReplaceDriveInfo
 
 ```csharp
