@@ -575,7 +575,7 @@ An enumerable collection of the full names (including paths) for the files in th
 
 ---
 
-<a href="user-content-directoryenumeratefilesystementries1"></a>
+<a id="user-content-directoryenumeratefilesystementries1"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path);
 ```
@@ -592,7 +592,7 @@ An enumerable collection of file-system entries in the directory specified by pa
 
 ---
 
-<a href="user-content-directoryenumeratefilesystementries2"></a>
+<a id="user-content-directoryenumeratefilesystementries2"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern);
 ```
@@ -613,7 +613,7 @@ An enumerable collection of file-system entries in the directory specified by pa
 
 ---
 
-<a href="`user-content-directoryenumeratefilesystementries3`"></a>
+<a id="`user-content-directoryenumeratefilesystementries3`"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.EnumerationOptions enumerationOptions);
 ```
@@ -638,7 +638,7 @@ An enumerable collection of file-system entries in the directory specified by pa
 
 ---
 
-<a href="`user-content-directoryenumeratefilesystementries4`"></a>
+<a id="`user-content-directoryenumeratefilesystementries4`"></a>
 ```csharp
 public static IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, System.IO.SearchOption searchOption);
 ```
