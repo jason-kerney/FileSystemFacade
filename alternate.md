@@ -1393,7 +1393,7 @@ public static class File
 - [8.13 Exists](#user-content-fileexists)
 - [8.14 Get Attributes](#user-content-filegetattributes)
 - [8.15 Get Creation Time](#user-content-filegetcreationtime)
-- [8.16 Get Creation Time Utc](#user-content-filegetcreationTimeutc)
+- [8.16 Get Creation Time Utc](#user-content-filegetcreationtimeutc)
 - [8.17 Get Last Access Time](#user-content-filegetlastaccesstime)
 - [8.18 Get Last Access Time Utc](#user-content-filegetlastaccesstimeutc)
 - [8.19 Get Last Write Time](#user-content-filegetlastwritetime)
