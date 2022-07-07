@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{FF9F99
 		documentation\readme\_main.md = documentation\readme\_main.md
 		documentation\readme\contributors.md = documentation\readme\contributors.md
 		documentation\readme\introduction.md = documentation\readme\introduction.md
+		documentation\readme\access_main.md = documentation\readme\access_main.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structures", "structures", "{8299C243-1B95-46C1-B7A4-A374B47E4F99}"
