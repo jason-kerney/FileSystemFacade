@@ -11,15 +11,15 @@ It is preferable to use the [Atomic File System](./structures.md#file-system-fac
 
 ### Drive
 
-- [2.1 Replace](#user-content-drivereplace)
+- [2.1 ReplaceStaticDriveSubSystem](#user-content-drivereplacestaticdrivesubsystem)
 - [2.2 Drive Info](#user-content-drivedriveinfo)
 - [2.3 Get Drives](#user-content-drivegetdrives)
 - [2.4 Build Replacement](#user-content-drivebuildreplacement)
 
-### Drive.Replace
+### Drive.ReplaceStaticDriveSubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticDriveReplacement replacement)
+public static IDisposable ReplaceStaticDriveSubSystem(IStaticDriveReplacement replacement)
 ```
 
 Puts the static Drive class in replacement mode. This temporarily causes the static Drive class to replace how it works.

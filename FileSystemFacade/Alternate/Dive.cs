@@ -19,7 +19,7 @@ namespace FileSystemFacade.Alternate
         /// An IDisposable that when disposed reverts the static Drive class to its default behavior
         /// WARNING: This allows changing of how the system works until the returned object is disposed.
         /// </returns>
-        public static IDisposable Replace(IStaticDriveReplacement replacement)
+        public static IDisposable ReplaceStaticDriveSubSystem(IStaticDriveReplacement replacement)
         {
             var original = new StaticDriveReplacement(DriveInfo, Obj);
 

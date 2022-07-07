@@ -15,7 +15,7 @@ public static class File
 
 ### File
 
-- [8.01 Replace](#user-content-filereplace)
+- [8.01 Replace Static File Sub System](#user-content-filereplacestaticfilesubsystem)
 - [8.02 Build Replacement](#user-content-filebuildreplacement)
 - [8.03 File Info Factory](#user-content-filefileinfofactory)
 - [8.04 File Stream Factory](#user-content-filefilestreamfactory)
@@ -69,10 +69,10 @@ public static class File
 #user-content-file
 -->
 
-### File.Replace
+### File.ReplaceStaticFileSubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticFileReplacement replacement);
+public static IDisposable ReplaceStaticFileSubSystem(IStaticFileReplacement replacement);
 ```
 
 Puts the static File object into replacement mode. This is used to allow testing. It changes the way the static File class behaves.

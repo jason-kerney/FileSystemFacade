@@ -22,7 +22,7 @@ namespace FileSystemFacade.Alternate
         /// An IDisposable that when disposed returns the static File class to its default behavior.
         /// WARNING: the static File's behavior will be changed until dispose is called on the returned value.
         /// </returns>
-        public static IDisposable Replace(IStaticFileReplacement replacement)
+        public static IDisposable ReplaceStaticFileSubSystem(IStaticFileReplacement replacement)
         {
             var original = new StaticFileReplacement(FileStreamFactory, FileInfoFactory, Obj);
 

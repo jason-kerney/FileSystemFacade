@@ -19,7 +19,7 @@ public static class Directory
 - [5.02 FileSystem Watcher](#user-content-directoryfilesystemwatcher)
 - [5.03 Create Directory](#user-content-directorycreatedirectory)
 - [5.04 Delete](#user-content-directorydelete)
-- [5.05 Replace](#user-content-directoryreplace)
+- [5.05 ReplaceStaticDirectorySubSystem](#user-content-directoryreplacestaticdirectorysubsystem)
 - [5.06 Build Replacement](#user-content-directorybuildreplacement)
 - [5.07 Enumerate Directories](#user-content-directoryenumeratedirectories)
 - [5.08 Enumerate Files](#user-content-directoryenumeratefiles)
@@ -123,10 +123,10 @@ The name of the directory to remove.
 
 true to remove directories, subdirectories, and files in path; otherwise, false.
 
-### Directory.Replace
+### Directory.ReplaceStaticDirectorySubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticDirectoryReplacement replacement);
+public static IDisposable ReplaceStaticDirectorySubSystem(IStaticDirectoryReplacement replacement);
 ```
 
 Puts the static Directory class in replacement mode. This allows for the temporary replacement of how the Directory class works.

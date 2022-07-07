@@ -34,15 +34,15 @@ It is preferable to use the [Atomic File System](./structures.md#file-system-fac
 
 ### Drive
 
-- [2.1 Replace](#user-content-drivereplace)
+- [2.1 ReplaceStaticDriveSubSystem](#user-content-drivereplacestaticdrivesubsystem)
 - [2.2 Drive Info](#user-content-drivedriveinfo)
 - [2.3 Get Drives](#user-content-drivegetdrives)
 - [2.4 Build Replacement](#user-content-drivebuildreplacement)
 
-### Drive.Replace
+### Drive.ReplaceStaticDriveSubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticDriveReplacement replacement)
+public static IDisposable ReplaceStaticDriveSubSystem(IStaticDriveReplacement replacement)
 ```
 
 Puts the static Drive class in replacement mode. This temporarily causes the static Drive class to replace how it works.
@@ -219,7 +219,7 @@ public static class Directory
 - [5.02 FileSystem Watcher](#user-content-directoryfilesystemwatcher)
 - [5.03 Create Directory](#user-content-directorycreatedirectory)
 - [5.04 Delete](#user-content-directorydelete)
-- [5.05 Replace](#user-content-directoryreplace)
+- [5.05 ReplaceStaticDirectorySubSystem](#user-content-directoryreplacestaticdirectorysubsystem)
 - [5.06 Build Replacement](#user-content-directorybuildreplacement)
 - [5.07 Enumerate Directories](#user-content-directoryenumeratedirectories)
 - [5.08 Enumerate Files](#user-content-directoryenumeratefiles)
@@ -323,10 +323,10 @@ The name of the directory to remove.
 
 true to remove directories, subdirectories, and files in path; otherwise, false.
 
-### Directory.Replace
+### Directory.ReplaceStaticDirectorySubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticDirectoryReplacement replacement);
+public static IDisposable ReplaceStaticDirectorySubSystem(IStaticDirectoryReplacement replacement);
 ```
 
 Puts the static Directory class in replacement mode. This allows for the temporary replacement of how the Directory class works.
@@ -1377,7 +1377,7 @@ public static class File
 
 ### File
 
-- [8.01 Replace](#user-content-filereplace)
+- [8.01 Replace Static File Sub System](#user-content-filereplacestaticfilesubsystem)
 - [8.02 Build Replacement](#user-content-filebuildreplacement)
 - [8.03 File Info Factory](#user-content-filefileinfofactory)
 - [8.04 File Stream Factory](#user-content-filefilestreamfactory)
@@ -1431,10 +1431,10 @@ public static class File
 #user-content-file
 -->
 
-### File.Replace
+### File.ReplaceStaticFileSubSystem
 
 ```csharp
-public static IDisposable Replace(IStaticFileReplacement replacement);
+public static IDisposable ReplaceStaticFileSubSystem(IStaticFileReplacement replacement);
 ```
 
 Puts the static File object into replacement mode. This is used to allow testing. It changes the way the static File class behaves.

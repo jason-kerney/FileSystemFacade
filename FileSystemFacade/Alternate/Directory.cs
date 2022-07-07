@@ -52,7 +52,7 @@ namespace FileSystemFacade.Alternate
         /// An IDisposable that when disposed will ensure that the Directory static class will return to default behaviors.
         /// WARNING: This allows changing of how the system works until the returned object is disposed.
         /// </returns>
-        public static IDisposable Replace(IStaticDirectoryReplacement replacement)
+        public static IDisposable ReplaceStaticDirectorySubSystem(IStaticDirectoryReplacement replacement)
         {
             var original = new StaticDirectoryReplacement(DirectoryInfo, Obj, FileSystemWatcher);
 
