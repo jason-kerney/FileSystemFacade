@@ -84,8 +84,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="contents">The lines to append to the file.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        public static Task AppendAllLinesAsync(string path, IEnumerable<string> contents,
-            CancellationToken cancellationToken = default) =>
+        public static Task AppendAllLinesAsync(string path, IEnumerable<string> contents, CancellationToken cancellationToken = default) =>
             Obj.AppendAllLinesAsync(path, contents, cancellationToken);
 
         /// <summary>
@@ -96,8 +95,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        public static Task AppendAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-            CancellationToken cancellationToken = default) =>
+        public static Task AppendAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default) =>
             Obj.AppendAllLinesAsync(path, contents, encoding, cancellationToken);
 
         /// <summary>
@@ -133,8 +131,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous append operation.</returns>
-        public static Task AppendAllTextAsync(string path, string? contents, Encoding encoding,
-            CancellationToken cancellationToken = default) =>
+        public static Task AppendAllTextAsync(string path, string? contents, Encoding encoding, CancellationToken cancellationToken = default) =>
             Obj.AppendAllTextAsync(path, contents, encoding, cancellationToken);
 
         /// <summary>
@@ -369,7 +366,7 @@ namespace FileSystemFacade.Alternate
         public static Task<string[]> ReadAllLinesAsync(string path, Encoding encoding, CancellationToken cancellationToken = default) => Obj.ReadAllLinesAsync(path, encoding, cancellationToken);
 
         /// <summary>
-        ///Opens a file, reads all text in the file with the specified encoding, and then closes the file.
+        /// Opens a file, reads all text in the file with the specified encoding, and then closes the file.
         /// </summary>
         /// <param name="path">The file to open for reading.</param>
         /// <param name="encoding">The encoding applied to the contents of the file.</param>
@@ -432,9 +429,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="destinationFileName">The name of the file being replaced.</param>
         /// <param name="destinationBackupFileName">The name of the backup file.</param>
         /// <param name="ignoreMetadataErrors">true to ignore merge errors (such as attributes and access control lists (ACLs)) from the replaced file to the replacement file; otherwise, false.</param>
-        public static void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName,
-            bool ignoreMetadataErrors) => Obj.Replace(sourceFileName, destinationFileName, destinationBackupFileName,
-            ignoreMetadataErrors);
+        public static void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors) => Obj.Replace(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
 
         /// <summary>
         /// Sets the specified FileAttributes of the file on the specified path.
@@ -549,8 +544,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="contents">The lines to write to the file.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        public static Task WriteAllLinesAsync(string path, IEnumerable<string> contents,
-            CancellationToken cancellationToken = default) => Obj.WriteAllLinesAsync(path, contents, cancellationToken);
+        public static Task WriteAllLinesAsync(string path, IEnumerable<string> contents, CancellationToken cancellationToken = default) => Obj.WriteAllLinesAsync(path, contents, cancellationToken);
 
         /// <summary>
         /// Asynchronously creates a new file, write the specified lines to the file by using the specified encoding, and then closes the file.
@@ -560,8 +554,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="encoding">The character encoding to use.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        public static Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding,
-            CancellationToken cancellationToken = default) =>
+        public static Task WriteAllLinesAsync(string path, IEnumerable<string> contents, Encoding encoding, CancellationToken cancellationToken = default) =>
             Obj.WriteAllLinesAsync(path, contents, encoding, cancellationToken);
 
         /// <summary>
@@ -597,8 +590,7 @@ namespace FileSystemFacade.Alternate
         /// <param name="encoding">The encoding to apply to the string.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests. The default value is None.</param>
         /// <returns>A task that represents the asynchronous write operation.</returns>
-        public static Task WriteAllTextAsync(string path, string? contents, Encoding encoding,
-            CancellationToken cancellationToken = default) =>
+        public static Task WriteAllTextAsync(string path, string? contents, Encoding encoding, CancellationToken cancellationToken = default) =>
             Obj.WriteAllTextAsync(path, contents, encoding, cancellationToken);
         
         /// <summary>

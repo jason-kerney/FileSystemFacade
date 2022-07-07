@@ -17,10 +17,6 @@ public interface IStaticDirectoryReplacement
 - [7.2 Director Info](#user-content-istaticdirectoryreplacementdirectorinfo)
 - [7.3 Directory](#user-content-istaticdirectoryreplacementdirectory)
 
-<!--
-#user-content-istaticdirectoryreplacement
--->
-
 ### IStaticDirectoryReplacement.FileSystemWatcher
 
 ```csharp

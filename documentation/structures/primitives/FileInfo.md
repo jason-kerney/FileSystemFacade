@@ -282,7 +282,7 @@ A FileAccess constant specifying whether to open the file with Read, Write, or R
 
 A FileShare constant specifying the type of access other FileStream objects have to this file.
 
-**returns** [IFileStream](./FileStream.md)
+**returns** [IFileStream](./FileStream.md#file-stream)
 
 A FileStream object opened with the specified mode, access, and sharing options.
 
@@ -294,7 +294,7 @@ IFileStream OpenRead ();
 
 Creates a read-only FileStream.
 
-**returns** [IFileStream](./FileStream.md)
+**returns** [IFileStream](./FileStream.md#file-stream)
 
 A new read-only FileStream object.
 
@@ -318,7 +318,7 @@ IFileStream OpenWrite ();
 
 Creates a write-only FileStream.
 
-**returns** [IFileStream](./FileStream.md)
+**returns** [IFileStream](./FileStream.md#file-stream)
 
 A write-only unshared FileStream object for a new or existing file.
 
