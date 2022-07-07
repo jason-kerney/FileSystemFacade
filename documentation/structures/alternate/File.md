@@ -19,7 +19,7 @@ public static class File
 - [8.02 Build Replacement](#user-content-filebuildreplacement)
 - [8.03 File Info Factory](#user-content-filefileinfofactory)
 - [8.04 File Stream Factory](#user-content-filefilestreamfactory)
-- [8.05 Append All Lines](#user-content-filerppendalllines)
+- [8.05 Append All Lines](#user-content-fileappendalllines)
 - [8.06 Append All Lines Async](#user-content-fileappendalllinesasync)
 - [8.07 Append All Text](#user-content-fileappendalltext)
 - [8.08 Append All Text Async](#user-content-fileappendalltextasync)
