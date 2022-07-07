@@ -70,7 +70,7 @@ The IFile to use instead of the default one.
 
 Returns an instance of the builder with the IFile set up to be replaced.
 
-### IStaticFileReplacementBuilder.
+### IStaticFileReplacementBuilder.Build
 
 ```csharp
 IStaticFileReplacement Build();
