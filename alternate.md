@@ -2938,7 +2938,7 @@ public interface IStaticFileReplacementBuilder
 
 ### IStaticFileReplacementBuilder
 
-- [9.1 Replace File Stream](#user-content-istaticfilereplacementbuilderaeplacefilestream)
+- [9.1 Replace File Stream](#user-content-istaticfilereplacementbuilderreplacefilestream)
 - [9.2 Replace File Info](#user-content-istaticfilereplacementbuilderreplacefileinfo)
 - [9.3 Replace File](#user-content-istaticfilereplacementbuilderreplacefile)
 - [9.4 Build](#user-content-istaticfilereplacementbuilderbuild)
