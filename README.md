@@ -7,8 +7,9 @@
 
 - [Section 1: Introduction](#user-content-introduction)
 - [Section 2: Main File System Access](#user-content-main-file-system-access)
-- [Section 3: Primitives](#user-content-primitives)
-- [Section 4: Contributors ✨](#user-content-contributors-✨)
+- [Section 3: Alternate File System Access](#user-content-alternate-file-system-access)
+- [Section 4: Primitives](#user-content-primitives)
+- [Section 5: Contributors ✨](#user-content-contributors-✨)
 
 ## Introduction ##
 
@@ -28,6 +29,25 @@ These are the the objects that are intended to be the main facade over the .Net 
 - [Atomic File System](./structures.md#user-content-atomic-file-system)
 - [Atomic Actions](./structures.md#user-content-atomic-actions)
 - [Atomic Replacement Builder](./structures.md#user-content-atomic-replacement-builder)
+    
+
+## Alternate File System Access ##
+
+These are the the objects that allow for an alternate facade over the .Net File System.
+
+### Alternate Access API Documentation
+
+[Alternate Structures](./alternate.md#file-system-facades-alternate-file-system-access)
+
+- [Drive](./alternate.md#user-content-drive)
+- [Static Drive Replacement Builder](./alternate.md#user-content-static-drive-replacement-builder)
+- [Static Drive Replacement](./alternate.md#user-content-static-drive-replacement)
+- [Directory](./alternate.md#user-content-directory)
+- [Static Directory Replacement Builder](./alternate.md#user-content-static-directory-replacement-builder)
+- [Static Directory Replacement](./alternate.md#user-content-static-directory-replacement)
+- [File](./alternate.md#user-content-file)
+- [Static File Replacement Builder](./alternate.md#user-content-static-file-replacement-builder)
+- [Static File Replacement](./alternate.md#user-content-static-file-replacement)
     
 
 ## Primitives ##

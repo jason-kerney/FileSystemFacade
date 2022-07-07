@@ -6,6 +6,7 @@
 (table-of-contents
     (section-main "./introduction.md")
     (section-main "./access_main.md")
+    (section-main "./access_alternate.md")
     (section-main "../structures/Primitives.md")
     (section-main "./contributors.md")
 )
